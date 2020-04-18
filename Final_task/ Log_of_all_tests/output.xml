@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on linux)" generated="20200418 13:35:50.885" rpa="false">
+<suite id="s1" name="Final task" source="/home/ricknash/PycharmProjects/Nexign_cource/Final_task">
+<suite id="s1-s1" name="Test suit current weather" source="/home/ricknash/PycharmProjects/Nexign_cource/Final_task/Test_suit_current_weather">
+<suite id="s1-s1-s1" name="Current Weather" source="/home/ricknash/PycharmProjects/Nexign_cource/Final_task/Test_suit_current_weather/current_weather.robot">
+<test id="s1-s1-s1-t1" name="City And Temperature">
+<kw name="Get Temp And City" library="ParceCity">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:36:44.975" level="INFO">${result} = {'Rambagh': 37.0, 'Artist Village': 32.0, 'Huyen Yen Lap': 32.52, 'Huyen Thanh Hoa': 31.29, 'Huyen Song Thao': 31.95, 'Huyen Tam Thanh': 30.0, 'Huyen Phong Chau': 30.0, 'Huyen Ba Vi': 30.0, 'Sicong': ...</msg>
+<msg timestamp="20200418 13:36:44.975" level="INFO">${status} = 1</msg>
+<status status="PASS" starttime="20200418 13:35:51.085" endtime="20200418 13:36:44.975"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200418 13:36:44.977" level="INFO">Dictionary size is 19 and it contains following items:
+Artist Village: 32.0
+Bahori: 26.0
+Buutuo: 26.39
+City of Balikpapan: 29.37
+Huyen Ba Vi: 30.0
+Huyen Phong Chau: 30.0
+Huyen Song Thao: 31.95
+Huyen Tam Thanh: 30.0
+Huyen Thanh Hoa: 31.29
+Huyen Yen Lap: 32.52
+Magwi County: 27.27
+Mijiang: 25.58
+PAJOK Pogee,: 27.06
+Rambagh: 37.0
+Shanjeev Home: 31.16
+Sicong: 25.45
+Taylors Beach: 26.2
+Xiadong: 25.47
+Xinshao: 28.92</msg>
+<status status="PASS" starttime="20200418 13:36:44.976" endtime="20200418 13:36:44.977"></status>
+</kw>
+<status status="PASS" starttime="20200418 13:36:44.976" endtime="20200418 13:36:44.977"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:36:44.977" endtime="20200418 13:36:44.978"></status>
+</kw>
+<doc>Get a list of cities with temperatures above 25 Celsius</doc>
+<tags>
+<tag>final task</tag>
+<tag>temperature</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200418 13:35:51.084" endtime="20200418 13:36:44.978" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Day Length">
+<kw name="Get Day Length" library="ParceCity">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:37:38.352" level="INFO">${result} = {'Habay': '13:56:43', 'Santa Mustiola': '13:35:43', 'Rambagh': '12:52:32', 'Modiin Ilit': '13:03:27', 'Nof Ayalon': '13:03:19', 'Hashmonaim': '13:03:27', 'Lapid': '13:03:26', 'Kfar NaOranim': '13:03:2...</msg>
+<msg timestamp="20200418 13:37:38.352" level="INFO">${status} = 1</msg>
+<status status="PASS" starttime="20200418 13:36:44.980" endtime="20200418 13:37:38.352"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200418 13:37:38.354" level="INFO">Dictionary size is 74 and it contains following items:
+Amirabad: 13:08:30
+Appleby-in-Westmorland: 14:18:57
+Ariel: 13:03:52
+Artist Village: 12:37:42
+Asklipieio: 13:17:17
+Bahori: 13:16:28
+Balshavik: 14:15:40
+Beit Horon: 13:03:20
+Beldibi: 13:25:27
+Bellaria-Igea Marina: 13:36:24
+Borovlyany: 14:15:40
+Buutuo: 12:17:29
+Ca Savio: 13:40:45
+Calderino: 13:37:27
+Cancello ed Arnone: 13:26:57
+Casale di Mezzani: 13:38:59
+Caseo: 13:39:04
+Castelletto: 13:37:23
+Catterick Garrison: 14:17:55
+Cradley Heath: 14:08:40
+Cras: 13:43:13
+Dolev: 13:03:28
+Gerakas: 13:18:24
+Givat Zeev: 13:03:18
+Givon HaHadasha: 13:03:17
+Grottola: 13:27:41
+Habay: 13:56:43
+Hashmonaim: 13:03:27
+Kfar NaOranim: 13:03:26
+Kolonaki: 13:18:18
+Lapid: 13:03:26
+Lyasny: 14:15:43
+Lyeskawka: 14:15:40
+Magwi County: 12:13:12
+Megalo Chorio: 13:16:54
+Mehron: 13:21:53
+Mevo horon: 13:03:17
+Miola di Pine: 13:43:07
+Modiin Ilit: 13:03:27
+Naale: 13:03:31
+Nirit: 13:03:57
+Nof Ayalon: 13:03:19
+Novyi Svit: 13:38:29
+Oktjabrskij: 14:15:52
+Oranit: 13:03:55
+PAJOK Pogee,: 12:12:38
+Pentre: 14:04:58
+Pontyclun: 14:04:23
+Praticello di Gattatico: 13:38:35
+Rambagh: 12:52:32
+Revava: 13:03:53
+Saint-Antoine-de-Tilly: 13:45:42
+San Polo: 13:38:53
+Sankt-Peterburg: 14:50:38
+Santa Lucia: 13:27:38
+Santa Mustiola: 13:35:43
+Santiago de Alcantara: 13:22:56
+Santo Stefano: 13:43:22
+Shanjeev Home: 12:18:16
+Shirley: 14:08:23
+Silvi Marina: 13:31:23
+Stanley: 14:20:27
+Stockton Heath: 14:12:55
+Svetlogorsk: 14:09:03
+Tagliuno: 13:41:25
+Talmon: 13:03:29
+Terraverde: 13:40:20
+Torchiati: 13:26:13
+Usjazh: 14:16:03
+Vico: 13:44:08
+Villa Fornace: 13:39:10
+Waterloo: 14:13:24
+West Greenwich: 13:29:15
+Голубинка: 13:37:42</msg>
+<status status="PASS" starttime="20200418 13:37:38.354" endtime="20200418 13:37:38.354"></status>
+</kw>
+<status status="PASS" starttime="20200418 13:37:38.353" endtime="20200418 13:37:38.355"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:37:38.355" endtime="20200418 13:37:38.356"></status>
+</kw>
+<doc>Get a list of cities with day length &gt; 12 hours</doc>
+<tags>
+<tag>final task</tag>
+<tag>sun day</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200418 13:36:44.979" endtime="20200418 13:37:38.356" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Fly Conditions">
+<kw name="Get Fly Condition" library="ParceCity">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:38:32.620" level="INFO">${result} = {'Santa Mustiola': 'Good flight conditions but coronavirus!', 'kankrabari Dovan': 'Good flight conditions but coronavirus!', 'Rambagh': 'Good flight conditions but coronavirus!', 'Modiin Ilit': 'Good ...</msg>
+<msg timestamp="20200418 13:38:32.620" level="INFO">${status} = 1</msg>
+<status status="PASS" starttime="20200418 13:37:38.358" endtime="20200418 13:38:32.620"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200418 13:38:32.622" level="INFO">Dictionary size is 59 and it contains following items:
+Ariel: Good flight conditions but coronavirus!
+Artist Village: Good flight conditions but coronavirus!
+Bahori: Good flight conditions but coronavirus!
+Balshavik: Good flight conditions but coronavirus!
+Beit Horon: Good flight conditions but coronavirus!
+Beldibi: Good flight conditions but coronavirus!
+Bellaria-Igea Marina: Good flight conditions but coronavirus!
+Borovlyany: Good flight conditions but coronavirus!
+Ca Savio: Good flight conditions but coronavirus!
+Calderino: Good flight conditions but coronavirus!
+Cancello ed Arnone: Good flight conditions but coronavirus!
+Casale di Mezzani: Good flight conditions but coronavirus!
+Castelletto: Good flight conditions but coronavirus!
+Catterick Garrison: Good flight conditions but coronavirus!
+Dolev: Good flight conditions but coronavirus!
+El Castillo: Good flight conditions but coronavirus!
+Emar: Good flight conditions but coronavirus!
+Gerakas: Good flight conditions but coronavirus!
+Givat Zeev: Good flight conditions but coronavirus!
+Givon HaHadasha: Good flight conditions but coronavirus!
+Hashmonaim: Good flight conditions but coronavirus!
+Huyen Ba Vi: Good flight conditions but coronavirus!
+Huyen Phong Chau: Good flight conditions but coronavirus!
+Huyen Tam Thanh: Good flight conditions but coronavirus!
+Jiulonghu: Good flight conditions but coronavirus!
+Kfar NaOranim: Good flight conditions but coronavirus!
+Kolonaki: Good flight conditions but coronavirus!
+Lapid: Good flight conditions but coronavirus!
+Lyasny: Good flight conditions but coronavirus!
+Lyeskawka: Good flight conditions but coronavirus!
+Megalo Chorio: Good flight conditions but coronavirus!
+Mevo horon: Good flight conditions but coronavirus!
+Modiin Ilit: Good flight conditions but coronavirus!
+Naale: Good flight conditions but coronavirus!
+Nirit: Good flight conditions but coronavirus!
+Nof Ayalon: Good flight conditions but coronavirus!
+Oktjabrskij: Good flight conditions but coronavirus!
+Oranit: Good flight conditions but coronavirus!
+Pontyclun: Good flight conditions but coronavirus!
+Praticello di Gattatico: Good flight conditions but coronavirus!
+Rambagh: Good flight conditions but coronavirus!
+Recoleta: Good flight conditions but coronavirus!
+Revava: Good flight conditions but coronavirus!
+Saint-Antoine-de-Tilly: Good flight conditions but coronavirus!
+San Polo: Good flight conditions but coronavirus!
+Sankt-Peterburg: Good flight conditions but coronavirus!
+Santa Lucia: Good flight conditions but coronavirus!
+Santa Mustiola: Good flight conditions but coronavirus!
+Shirley: Good flight conditions but coronavirus!
+Silvi Marina: Good flight conditions but coronavirus!
+Stanley: Good flight conditions but coronavirus!
+Stockton Heath: Good flight conditions but coronavirus!
+Tagliuno: Good flight conditions but coronavirus!
+Talmon: Good flight conditions but coronavirus!
+Usjazh: Good flight conditions but coronavirus!
+Vico: Good flight conditions but coronavirus!
+Waterloo: Good flight conditions but coronavirus!
+Yangshan: Good flight conditions but coronavirus!
+kankrabari Dovan: Good flight conditions but coronavirus!</msg>
+<status status="PASS" starttime="20200418 13:38:32.621" endtime="20200418 13:38:32.622"></status>
+</kw>
+<status status="PASS" starttime="20200418 13:38:32.621" endtime="20200418 13:38:32.622"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:38:32.622" endtime="20200418 13:38:32.623"></status>
+</kw>
+<doc>Get a list of cities with good fly conditions</doc>
+<tags>
+<tag>final task</tag>
+<tag>fly</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200418 13:37:38.357" endtime="20200418 13:38:32.623" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Cities With Snow">
+<kw name="Get Cities With Snow" library="ParceCity">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:39:25.300" level="INFO">${result} = {}</msg>
+<msg timestamp="20200418 13:39:25.300" level="INFO">${status} = 0</msg>
+<status status="PASS" starttime="20200418 13:38:32.624" endtime="20200418 13:39:25.300"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:39:25.301" endtime="20200418 13:39:25.302"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found with snow!</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>No cities found with snow!</arg>
+</arguments>
+<msg timestamp="20200418 13:39:25.303" level="FAIL">No cities found with snow!</msg>
+<status status="FAIL" starttime="20200418 13:39:25.302" endtime="20200418 13:39:25.303"></status>
+</kw>
+<status status="FAIL" starttime="20200418 13:39:25.302" endtime="20200418 13:39:25.303"></status>
+</kw>
+<doc>Get a list of cities with snow</doc>
+<tags>
+<tag>final task</tag>
+<tag>snow</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="FAIL" starttime="20200418 13:38:32.624" endtime="20200418 13:39:25.304" critical="yes">No cities found with snow!</status>
+</test>
+<test id="s1-s1-s1-t5" name="Humidity And Pressure">
+<kw name="Get Humidity And Pressure" library="ParceCity">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:40:18.228" level="INFO">${result} = {'Habay': 'humidity: 85% pressure: 1016 мм.рт.ст', 'Grottola': 'humidity: 76% pressure: 1019 мм.рт.ст', 'Taylors Beach': 'humidity: 81% pressure: 1012 мм.рт.ст', 'Santiago de Alcantara': 'humidity: 78...</msg>
+<msg timestamp="20200418 13:40:18.228" level="INFO">${status} = 1</msg>
+<status status="PASS" starttime="20200418 13:39:25.305" endtime="20200418 13:40:18.228"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200418 13:40:18.230" level="INFO">Dictionary size is 15 and it contains following items:
+Buutuo: humidity: 81% pressure: 1012 мм.рт.ст
+Ca Savio: humidity: 77% pressure: 1018 мм.рт.ст
+City of Balikpapan: humidity: 76% pressure: 1007 мм.рт.ст
+Cradley Heath: humidity: 91% pressure: 1020 мм.рт.ст
+Gerton: humidity: 90% pressure: 1008 мм.рт.ст
+Grottola: humidity: 76% pressure: 1019 мм.рт.ст
+Habay: humidity: 85% pressure: 1016 мм.рт.ст
+Longqiu: humidity: 78% pressure: 1015 мм.рт.ст
+Pentre: humidity: 89% pressure: 1018 мм.рт.ст
+Pontyclun: humidity: 93% pressure: 1018 мм.рт.ст
+Santiago de Alcantara: humidity: 78% pressure: 1015 мм.рт.ст
+Shirley: humidity: 93% pressure: 1019 мм.рт.ст
+Situ: humidity: 78% pressure: 1015 мм.рт.ст
+Taylors Beach: humidity: 81% pressure: 1012 мм.рт.ст
+West Greenwich: humidity: 82% pressure: 1009 мм.рт.ст</msg>
+<status status="PASS" starttime="20200418 13:40:18.229" endtime="20200418 13:40:18.230"></status>
+</kw>
+<status status="PASS" starttime="20200418 13:40:18.229" endtime="20200418 13:40:18.230"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:40:18.230" endtime="20200418 13:40:18.231"></status>
+</kw>
+<doc>Get a list of cities with humidity and pressure by comndition</doc>
+<tags>
+<tag>final task</tag>
+<tag>humiditi, pressure</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200418 13:39:25.304" endtime="20200418 13:40:18.231" critical="yes"></status>
+</test>
+<doc>Test current weather API</doc>
+<status status="FAIL" starttime="20200418 13:35:51.080" endtime="20200418 13:40:18.232"></status>
+</suite>
+<doc>Testing https://openweathermap.org</doc>
+<metadata>
+<item name="User">Ilya Lyasin</item>
+</metadata>
+<status status="FAIL" starttime="20200418 13:35:50.904" endtime="20200418 13:40:18.240"></status>
+</suite>
+<suite id="s1-s2" name="Test suit daily forecast" source="/home/ricknash/PycharmProjects/Nexign_cource/Final_task/Test_suit_daily_forecast">
+<suite id="s1-s2-s1" name="Forecast Five Days Weather" source="/home/ricknash/PycharmProjects/Nexign_cource/Final_task/Test_suit_daily_forecast/forecast_five_days_weather.robot">
+<test id="s1-s2-s1-t1" name="Cities With Clouds">
+<kw name="Cloud Forecast" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:40:20.308" level="INFO">${result} = {'Saint Petersburg:date 2020-04-18 12:00:00+00:00': 'Clouds chance: 100% light snow', 'Saint Petersburg:date 2020-04-18 15:00:00+00:00': 'Clouds chance: 100% light snow', 'Saint Petersburg:date 2020-0...</msg>
+<msg timestamp="20200418 13:40:20.308" level="INFO">${status} = 1</msg>
+<status status="PASS" starttime="20200418 13:40:18.257" endtime="20200418 13:40:20.308"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200418 13:40:20.310" level="INFO">Dictionary size is 66 and it contains following items:
+Arkhangelka:date 2020-04-18 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-18 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-18 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 00:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 21:00:00+00:00: Clouds chance: 93% overcast clouds
+Arkhangelka:date 2020-04-20 15:00:00+00:00: Clouds chance: 99% overcast clouds
+Arkhangelka:date 2020-04-20 18:00:00+00:00: Clouds chance: 99% overcast clouds
+Arkhangelka:date 2020-04-20 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-21 00:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-23 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-18 12:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-18 15:00:00+00:00: Clouds chance: 92% light rain
+Moscow:date 2020-04-19 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-19 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-19 09:00:00+00:00: Clouds chance: 100% light snow
+Moscow:date 2020-04-19 12:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-19 15:00:00+00:00: Clouds chance: 98% overcast clouds
+Moscow:date 2020-04-19 18:00:00+00:00: Clouds chance: 98% overcast clouds
+Moscow:date 2020-04-21 15:00:00+00:00: Clouds chance: 99% overcast clouds
+Moscow:date 2020-04-21 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-21 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-22 00:00:00+00:00: Clouds chance: 94% overcast clouds
+Moscow:date 2020-04-22 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-22 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Saint Petersburg:date 2020-04-18 12:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-18 15:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-18 18:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-18 21:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-19 00:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-19 03:00:00+00:00: Clouds chance: 99% light snow
+Saint Petersburg:date 2020-04-19 06:00:00+00:00: Clouds chance: 99% light snow
+Saint Petersburg:date 2020-04-19 09:00:00+00:00: Clouds chance: 99% light snow
+Saint Petersburg:date 2020-04-19 12:00:00+00:00: Clouds chance: 99% overcast clouds
+Saint Petersburg:date 2020-04-19 15:00:00+00:00: Clouds chance: 97% overcast clouds
+Saint Petersburg:date 2020-04-20 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Saint Petersburg:date 2020-04-21 06:00:00+00:00: Clouds chance: 92% overcast clouds
+Saint Petersburg:date 2020-04-21 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Saint Petersburg:date 2020-04-22 00:00:00+00:00: Clouds chance: 98% overcast clouds
+Volgograd:date 2020-04-19 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 12:00:00+00:00: Clouds chance: 99% overcast clouds
+Volgograd:date 2020-04-19 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-20 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-20 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-20 09:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 12:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 15:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 18:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 21:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-21 00:00:00+00:00: Clouds chance: 100% moderate rain
+Volgograd:date 2020-04-21 06:00:00+00:00: Clouds chance: 93% light rain
+Volgograd:date 2020-04-22 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-22 12:00:00+00:00: Clouds chance: 98% overcast clouds
+Volgograd:date 2020-04-23 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-20 00:00:00+00:00: Clouds chance: 93% overcast clouds
+Zemlyanukha:date 2020-04-21 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 12:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-22 00:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-22 03:00:00+00:00: Clouds chance: 97% overcast clouds</msg>
+<status status="PASS" starttime="20200418 13:40:20.309" endtime="20200418 13:40:20.310"></status>
+</kw>
+<status status="PASS" starttime="20200418 13:40:20.308" endtime="20200418 13:40:20.310"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:40:20.310" endtime="20200418 13:40:20.311"></status>
+</kw>
+<doc>Get a list of cities with clouds over 90%</doc>
+<tags>
+<tag>clouds</tag>
+<tag>final task</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200418 13:40:18.257" endtime="20200418 13:40:20.311" critical="yes"></status>
+</test>
+<test id="s1-s2-s1-t2" name="Cities With Heavy Rain">
+<kw name="Rain Forecast" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:40:22.973" level="INFO">${result} = {}</msg>
+<msg timestamp="20200418 13:40:22.973" level="INFO">${status} = 0</msg>
+<status status="PASS" starttime="20200418 13:40:20.312" endtime="20200418 13:40:22.973"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:40:22.974" endtime="20200418 13:40:22.974"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>No cities found by condition!</arg>
+</arguments>
+<msg timestamp="20200418 13:40:22.976" level="FAIL">No cities found by condition!</msg>
+<status status="FAIL" starttime="20200418 13:40:22.975" endtime="20200418 13:40:22.976"></status>
+</kw>
+<status status="FAIL" starttime="20200418 13:40:22.975" endtime="20200418 13:40:22.976"></status>
+</kw>
+<doc>Get a list of cities with heavy rain</doc>
+<tags>
+<tag>final task</tag>
+<tag>rain</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="FAIL" starttime="20200418 13:40:20.311" endtime="20200418 13:40:22.976" critical="yes">No cities found by condition!</status>
+</test>
+<test id="s1-s2-s1-t3" name="Cities With Difference Temperature">
+<kw name="Difference Temperature Forecast" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:40:26.435" level="INFO">${result} = {}</msg>
+<msg timestamp="20200418 13:40:26.435" level="INFO">${status} = 0</msg>
+<status status="PASS" starttime="20200418 13:40:22.978" endtime="20200418 13:40:26.435"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:40:26.436" endtime="20200418 13:40:26.436"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>No cities found by condition!</arg>
+</arguments>
+<msg timestamp="20200418 13:40:26.438" level="FAIL">No cities found by condition!</msg>
+<status status="FAIL" starttime="20200418 13:40:26.437" endtime="20200418 13:40:26.438"></status>
+</kw>
+<status status="FAIL" starttime="20200418 13:40:26.436" endtime="20200418 13:40:26.438"></status>
+</kw>
+<doc>Get a list of cities with a temperature difference of more than 10 degrees</doc>
+<tags>
+<tag>difference</tag>
+<tag>final task</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="FAIL" starttime="20200418 13:40:22.977" endtime="20200418 13:40:26.438" critical="yes">No cities found by condition!</status>
+</test>
+<doc>Final tests</doc>
+<status status="FAIL" starttime="20200418 13:40:18.251" endtime="20200418 13:40:26.440"></status>
+</suite>
+<doc>Testing https://openweathermap.org 16/daily forecast</doc>
+<metadata>
+<item name="User">Ilya Lyasin</item>
+</metadata>
+<status status="FAIL" starttime="20200418 13:40:18.243" endtime="20200418 13:40:26.443"></status>
+</suite>
+<status status="FAIL" starttime="20200418 13:35:50.886" endtime="20200418 13:40:26.446"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="3">Critical Tests</stat>
+<stat pass="5" fail="3">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">clouds</stat>
+<stat pass="0" fail="1">difference</stat>
+<stat pass="5" fail="3">final task</stat>
+<stat pass="1" fail="0">fly</stat>
+<stat pass="1" fail="0">humiditi, pressure</stat>
+<stat pass="0" fail="1">rain</stat>
+<stat pass="0" fail="1">snow</stat>
+<stat pass="1" fail="0">sun day</stat>
+<stat pass="1" fail="0">temperature</stat>
+</tag>
+<suite>
+<stat pass="5" fail="3" id="s1" name="Final task">Final task</stat>
+<stat pass="4" fail="1" id="s1-s1" name="Test suit current weather">Final task.Test suit current weather</stat>
+<stat pass="4" fail="1" id="s1-s1-s1" name="Current Weather">Final task.Test suit current weather.Current Weather</stat>
+<stat pass="1" fail="2" id="s1-s2" name="Test suit daily forecast">Final task.Test suit daily forecast</stat>
+<stat pass="1" fail="2" id="s1-s2-s1" name="Forecast Five Days Weather">Final task.Test suit daily forecast.Forecast Five Days Weather</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

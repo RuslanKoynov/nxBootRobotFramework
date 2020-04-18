@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on linux)" generated="20200418 13:33:45.030" rpa="false">
+<suite id="s1" name="Forecast Five Days Weather" source="/home/ricknash/PycharmProjects/Nexign_cource/Final_task/Test_suit_daily_forecast/forecast_five_days_weather.robot">
+<test id="s1-t1" name="Cities With Clouds">
+<kw name="Cloud Forecast" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:33:47.635" level="INFO">${result} = {'Saint Petersburg:date 2020-04-18 12:00:00+00:00': 'Clouds chance: 100% light snow', 'Saint Petersburg:date 2020-04-18 15:00:00+00:00': 'Clouds chance: 100% light snow', 'Saint Petersburg:date 2020-0...</msg>
+<msg timestamp="20200418 13:33:47.635" level="INFO">${status} = 1</msg>
+<status status="PASS" starttime="20200418 13:33:45.237" endtime="20200418 13:33:47.635"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200418 13:33:47.637" level="INFO">Dictionary size is 66 and it contains following items:
+Arkhangelka:date 2020-04-18 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-18 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-18 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 00:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-19 21:00:00+00:00: Clouds chance: 93% overcast clouds
+Arkhangelka:date 2020-04-20 15:00:00+00:00: Clouds chance: 99% overcast clouds
+Arkhangelka:date 2020-04-20 18:00:00+00:00: Clouds chance: 99% overcast clouds
+Arkhangelka:date 2020-04-20 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-21 00:00:00+00:00: Clouds chance: 100% overcast clouds
+Arkhangelka:date 2020-04-23 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-18 12:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-18 15:00:00+00:00: Clouds chance: 92% light rain
+Moscow:date 2020-04-19 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-19 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-19 09:00:00+00:00: Clouds chance: 100% light snow
+Moscow:date 2020-04-19 12:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-19 15:00:00+00:00: Clouds chance: 98% overcast clouds
+Moscow:date 2020-04-19 18:00:00+00:00: Clouds chance: 98% overcast clouds
+Moscow:date 2020-04-21 15:00:00+00:00: Clouds chance: 99% overcast clouds
+Moscow:date 2020-04-21 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-21 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-22 00:00:00+00:00: Clouds chance: 94% overcast clouds
+Moscow:date 2020-04-22 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Moscow:date 2020-04-22 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Saint Petersburg:date 2020-04-18 12:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-18 15:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-18 18:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-18 21:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-19 00:00:00+00:00: Clouds chance: 100% light snow
+Saint Petersburg:date 2020-04-19 03:00:00+00:00: Clouds chance: 99% light snow
+Saint Petersburg:date 2020-04-19 06:00:00+00:00: Clouds chance: 99% light snow
+Saint Petersburg:date 2020-04-19 09:00:00+00:00: Clouds chance: 99% light snow
+Saint Petersburg:date 2020-04-19 12:00:00+00:00: Clouds chance: 99% overcast clouds
+Saint Petersburg:date 2020-04-19 15:00:00+00:00: Clouds chance: 97% overcast clouds
+Saint Petersburg:date 2020-04-20 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Saint Petersburg:date 2020-04-21 06:00:00+00:00: Clouds chance: 92% overcast clouds
+Saint Petersburg:date 2020-04-21 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Saint Petersburg:date 2020-04-22 00:00:00+00:00: Clouds chance: 98% overcast clouds
+Volgograd:date 2020-04-19 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 12:00:00+00:00: Clouds chance: 99% overcast clouds
+Volgograd:date 2020-04-19 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-19 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-20 03:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-20 06:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-20 09:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 12:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 15:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 18:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-20 21:00:00+00:00: Clouds chance: 100% light rain
+Volgograd:date 2020-04-21 00:00:00+00:00: Clouds chance: 100% moderate rain
+Volgograd:date 2020-04-21 06:00:00+00:00: Clouds chance: 93% light rain
+Volgograd:date 2020-04-22 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Volgograd:date 2020-04-22 12:00:00+00:00: Clouds chance: 98% overcast clouds
+Volgograd:date 2020-04-23 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-20 00:00:00+00:00: Clouds chance: 93% overcast clouds
+Zemlyanukha:date 2020-04-21 09:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 12:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 15:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 18:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-21 21:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-22 00:00:00+00:00: Clouds chance: 100% overcast clouds
+Zemlyanukha:date 2020-04-22 03:00:00+00:00: Clouds chance: 97% overcast clouds</msg>
+<status status="PASS" starttime="20200418 13:33:47.636" endtime="20200418 13:33:47.637"></status>
+</kw>
+<status status="PASS" starttime="20200418 13:33:47.636" endtime="20200418 13:33:47.637"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:33:47.637" endtime="20200418 13:33:47.638"></status>
+</kw>
+<doc>Get a list of cities with clouds over 90%</doc>
+<tags>
+<tag>clouds</tag>
+</tags>
+<status status="PASS" starttime="20200418 13:33:45.236" endtime="20200418 13:33:47.638" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Cities With Heavy Rain">
+<kw name="Rain Forecast" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:33:49.378" level="INFO">${result} = {}</msg>
+<msg timestamp="20200418 13:33:49.378" level="INFO">${status} = 0</msg>
+<status status="PASS" starttime="20200418 13:33:47.639" endtime="20200418 13:33:49.378"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:33:49.379" endtime="20200418 13:33:49.379"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>No cities found by condition!</arg>
+</arguments>
+<msg timestamp="20200418 13:33:49.381" level="FAIL">No cities found by condition!</msg>
+<status status="FAIL" starttime="20200418 13:33:49.380" endtime="20200418 13:33:49.381"></status>
+</kw>
+<status status="FAIL" starttime="20200418 13:33:49.380" endtime="20200418 13:33:49.381"></status>
+</kw>
+<doc>Get a list of cities with heavy rain</doc>
+<tags>
+<tag>rain</tag>
+</tags>
+<status status="FAIL" starttime="20200418 13:33:47.638" endtime="20200418 13:33:49.381" critical="yes">No cities found by condition!</status>
+</test>
+<test id="s1-t3" name="Cities With Difference Temperature">
+<kw name="Difference Temperature Forecast" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200418 13:33:51.316" level="INFO">${result} = {}</msg>
+<msg timestamp="20200418 13:33:51.316" level="INFO">${status} = 0</msg>
+<status status="PASS" starttime="20200418 13:33:49.383" endtime="20200418 13:33:51.316"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200418 13:33:51.316" endtime="20200418 13:33:51.317"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${status}' == '1'</arg>
+<arg>Fail</arg>
+<arg>No cities found by condition!</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>No cities found by condition!</arg>
+</arguments>
+<msg timestamp="20200418 13:33:51.318" level="FAIL">No cities found by condition!</msg>
+<status status="FAIL" starttime="20200418 13:33:51.318" endtime="20200418 13:33:51.319"></status>
+</kw>
+<status status="FAIL" starttime="20200418 13:33:51.317" endtime="20200418 13:33:51.319"></status>
+</kw>
+<doc>Get a list of cities with a temperature difference of more than 10 degrees</doc>
+<tags>
+<tag>difference</tag>
+</tags>
+<status status="FAIL" starttime="20200418 13:33:49.382" endtime="20200418 13:33:51.319" critical="yes">No cities found by condition!</status>
+</test>
+<doc>Final tests</doc>
+<status status="FAIL" starttime="20200418 13:33:45.031" endtime="20200418 13:33:51.320"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2">Critical Tests</stat>
+<stat pass="1" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">clouds</stat>
+<stat pass="0" fail="1">difference</stat>
+<stat pass="0" fail="1">rain</stat>
+</tag>
+<suite>
+<stat pass="1" fail="2" id="s1" name="Forecast Five Days Weather">Forecast Five Days Weather</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
