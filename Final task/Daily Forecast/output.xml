@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200423 00:16:16.276" rpa="false">
+<suite id="s1" name="Daily Forecast" source="D:\Bootcamp\Robot\Final task\Daily Forecast\daily_forecast.robot">
+<test id="s1-t1" name="Cloudy Weather">
+<kw name="Get Cloudy Weather" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:17:09.613" level="INFO">${result} = {'Valmiera, date: 2020-04-23 09:00:00+00:00': ', clouds amount: 97% ', 'Valmiera, date: 2020-04-24 09:00:00+00:00': ', clouds amount: 97% ', 'Valmiera, date: 2020-04-24 12:00:00+00:00': ', clouds amou...</msg>
+<msg timestamp="20200423 00:17:09.613" level="INFO">${flag} = True</msg>
+<status status="PASS" starttime="20200423 00:16:16.708" endtime="20200423 00:17:09.613"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log Dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 00:17:09.615" level="INFO">Dictionary size is 620 and it contains following items:
+Jaundubulti, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jaundubulti, date: 2020-04-24 09:00:00+00:00: , clouds amount: 95% 
+Jaundubulti, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Jaundubulti, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jaundubulti, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Jaundubulti, date: 2020-04-27 03:00:00+00:00: , clouds amount: 95% 
+Jaunjelgava, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jaunjelgava, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Jaunjelgava, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Jaunjelgava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jaunjelgava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Jaunjelgava, date: 2020-04-26 21:00:00+00:00: , clouds amount: 92% 
+Jaunpiebalga, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Jaunpiebalga, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Jaunpiebalga, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jaunpiebalga, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Jaunpiebalga, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Jaunpiebalga, date: 2020-04-27 06:00:00+00:00: , clouds amount: 100% 
+Jaunpiebalga, date: 2020-04-27 09:00:00+00:00: , clouds amount: 95% 
+Jaunpiebalga, date: 2020-04-27 12:00:00+00:00: , clouds amount: 95% 
+Jaunpils, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jaunpils, date: 2020-04-24 03:00:00+00:00: , clouds amount: 100% 
+Jaunpils, date: 2020-04-24 06:00:00+00:00: , clouds amount: 92% 
+Jaunpils, date: 2020-04-24 09:00:00+00:00: , clouds amount: 93% 
+Jaunpils, date: 2020-04-24 12:00:00+00:00: , clouds amount: 93% 
+Jaunpils, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jaunpils, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Jaunpils, date: 2020-04-26 15:00:00+00:00: , clouds amount: 100% 
+Jelgava, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jelgava, date: 2020-04-24 03:00:00+00:00: , clouds amount: 97% 
+Jelgava, date: 2020-04-24 06:00:00+00:00: , clouds amount: 92% 
+Jelgava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jelgava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Jelgavas novads, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jelgavas novads, date: 2020-04-24 03:00:00+00:00: , clouds amount: 98% 
+Jelgavas novads, date: 2020-04-24 06:00:00+00:00: , clouds amount: 95% 
+Jelgavas novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jelgavas novads, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Jumprava, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jumprava, date: 2020-04-24 09:00:00+00:00: , clouds amount: 99% 
+Jumprava, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Jumprava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jumprava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Jēkabpils Municipality, date: 2020-04-23 09:00:00+00:00: , clouds amount: 91% 
+Jēkabpils Municipality, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Jēkabpils Municipality, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Jēkabpils Municipality, date: 2020-04-24 15:00:00+00:00: , clouds amount: 98% 
+Jēkabpils Municipality, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Jēkabpils Municipality, date: 2020-04-24 21:00:00+00:00: , clouds amount: 97% 
+Jēkabpils Municipality, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Jēkabpils, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Jēkabpils, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Jēkabpils, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jēkabpils, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Jēkabpils, date: 2020-04-24 21:00:00+00:00: , clouds amount: 95% 
+Jēkabpils, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Jūrmala, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Jūrmala, date: 2020-04-24 03:00:00+00:00: , clouds amount: 92% 
+Jūrmala, date: 2020-04-24 09:00:00+00:00: , clouds amount: 93% 
+Jūrmala, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Jūrmala, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Jūrmala, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Jūrmala, date: 2020-04-27 03:00:00+00:00: , clouds amount: 93% 
+Kalnciems, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Kalnciems, date: 2020-04-24 03:00:00+00:00: , clouds amount: 97% 
+Kalnciems, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Kalnciems, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Kandava, date: 2020-04-23 09:00:00+00:00: , clouds amount: 94% 
+Kandava, date: 2020-04-24 03:00:00+00:00: , clouds amount: 95% 
+Kandava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Kandava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Kandava, date: 2020-04-26 15:00:00+00:00: , clouds amount: 97% 
+Kandava, date: 2020-04-26 18:00:00+00:00: , clouds amount: 94% 
+Kokari, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Kokari, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Kokari, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Kokari, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Kokari, date: 2020-04-24 21:00:00+00:00: , clouds amount: 94% 
+Kokari, date: 2020-04-27 03:00:00+00:00: , clouds amount: 91% 
+Kokari, date: 2020-04-27 06:00:00+00:00: , clouds amount: 93% 
+Koknese, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Koknese, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Koknese, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Koknese, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Koknese, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Koknese, date: 2020-04-26 21:00:00+00:00: , clouds amount: 92% 
+Koknese, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Kolka, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Kolka, date: 2020-04-24 03:00:00+00:00: , clouds amount: 93% 
+Kolka, date: 2020-04-24 06:00:00+00:00: , clouds amount: 97% 
+Kolka, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Kolka, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Kolka, date: 2020-04-24 15:00:00+00:00: , clouds amount: 99% 
+Krāslava, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Krāslava, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Krāslava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 94% 
+Krāslava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Krāslava, date: 2020-04-24 21:00:00+00:00: , clouds amount: 100% 
+Krāslava, date: 2020-04-25 00:00:00+00:00: , clouds amount: 96% 
+Krāslava, date: 2020-04-25 15:00:00+00:00: , clouds amount: 94% 
+Krāslava, date: 2020-04-26 15:00:00+00:00: , clouds amount: 99% 
+Krāslavas novads, date: 2020-04-24 09:00:00+00:00: , clouds amount: 99% 
+Krāslavas novads, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Krāslavas novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Krāslavas novads, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Krāslavas novads, date: 2020-04-24 21:00:00+00:00: , clouds amount: 100% 
+Krāslavas novads, date: 2020-04-25 00:00:00+00:00: , clouds amount: 100% 
+Krāslavas novads, date: 2020-04-25 15:00:00+00:00: , clouds amount: 100% 
+Krāslavas novads, date: 2020-04-25 18:00:00+00:00: , clouds amount: 92% 
+Krāslavas novads, date: 2020-04-26 15:00:00+00:00: , clouds amount: 91% 
+Krāslavas novads, date: 2020-04-27 06:00:00+00:00: , clouds amount: 91% 
+Kuldīga, date: 2020-04-23 09:00:00+00:00: , clouds amount: 99% 
+Kuldīga, date: 2020-04-24 06:00:00+00:00: , clouds amount: 91% 
+Kuldīga, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Kuldīga, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Kuldīgas novads, date: 2020-04-23 09:00:00+00:00: , clouds amount: 99% 
+Kuldīgas novads, date: 2020-04-24 06:00:00+00:00: , clouds amount: 93% 
+Kuldīgas novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Kuldīgas novads, date: 2020-04-24 18:00:00+00:00: , clouds amount: 98% 
+Kārsava, date: 2020-04-24 03:00:00+00:00: , clouds amount: 96% 
+Kārsava, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Kārsava, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Kārsava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Kārsava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Kārsava, date: 2020-04-24 21:00:00+00:00: , clouds amount: 96% 
+Kārsava, date: 2020-04-27 09:00:00+00:00: , clouds amount: 95% 
+Latvia, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Latvia, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Latvia, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Latvia, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Latvia, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Latvia, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Lejasciems, date: 2020-04-23 09:00:00+00:00: , clouds amount: 97% 
+Lejasciems, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Lejasciems, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Lejasciems, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Lejasciems, date: 2020-04-24 18:00:00+00:00: , clouds amount: 98% 
+Lejasciems, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Lejasciems, date: 2020-04-27 06:00:00+00:00: , clouds amount: 99% 
+Lejasciems, date: 2020-04-27 09:00:00+00:00: , clouds amount: 100% 
+Lejasciems, date: 2020-04-27 12:00:00+00:00: , clouds amount: 96% 
+Lielvārde, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Lielvārde, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Lielvārde, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Lielvārde, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Lielvārde, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Lielvārde, date: 2020-04-27 03:00:00+00:00: , clouds amount: 92% 
+Liepāja, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Liepāja, date: 2020-04-24 03:00:00+00:00: , clouds amount: 100% 
+Liepāja, date: 2020-04-24 06:00:00+00:00: , clouds amount: 100% 
+Liepāja, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Liepāja, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Liepāja, date: 2020-04-27 15:00:00+00:00: , clouds amount: 97% 
+Liepāja, date: 2020-04-27 18:00:00+00:00: , clouds amount: 98% 
+Liepāja, date: 2020-04-27 21:00:00+00:00: , clouds amount: 98% 
+Liepājas Rajons, date: 2020-04-23 06:00:00+00:00: , clouds amount: 91% 
+Liepājas Rajons, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Liepājas Rajons, date: 2020-04-23 12:00:00+00:00: , clouds amount: 92% 
+Liepājas Rajons, date: 2020-04-24 03:00:00+00:00: , clouds amount: 97% 
+Liepājas Rajons, date: 2020-04-24 06:00:00+00:00: , clouds amount: 99% 
+Liepājas Rajons, date: 2020-04-24 09:00:00+00:00: , clouds amount: 92% 
+Liepājas Rajons, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Liepājas Rajons, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Liepājas Rajons, date: 2020-04-27 15:00:00+00:00: , clouds amount: 92% 
+Lieģi, date: 2020-04-23 06:00:00+00:00: , clouds amount: 91% 
+Lieģi, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Lieģi, date: 2020-04-24 03:00:00+00:00: , clouds amount: 98% 
+Lieģi, date: 2020-04-24 06:00:00+00:00: , clouds amount: 99% 
+Lieģi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Lieģi, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Lieģi, date: 2020-04-27 15:00:00+00:00: , clouds amount: 91% 
+Limbaži, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Limbaži, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Limbaži, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Limbaži, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Limbaži, date: 2020-04-26 21:00:00+00:00: , clouds amount: 91% 
+Limbaži, date: 2020-04-27 00:00:00+00:00: , clouds amount: 94% 
+Limbaži, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Limbažu novads, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Limbažu novads, date: 2020-04-24 09:00:00+00:00: , clouds amount: 99% 
+Limbažu novads, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Limbažu novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Limbažu novads, date: 2020-04-27 00:00:00+00:00: , clouds amount: 93% 
+Limbažu novads, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Loja, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Loja, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Loja, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Loja, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Loja, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Lubāna, date: 2020-04-23 09:00:00+00:00: , clouds amount: 97% 
+Lubāna, date: 2020-04-24 09:00:00+00:00: , clouds amount: 95% 
+Lubāna, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Lubāna, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Lubāna, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Lubāna, date: 2020-04-24 21:00:00+00:00: , clouds amount: 97% 
+Lubāna, date: 2020-04-27 03:00:00+00:00: , clouds amount: 95% 
+Lubāna, date: 2020-04-27 06:00:00+00:00: , clouds amount: 97% 
+Ludza, date: 2020-04-24 03:00:00+00:00: , clouds amount: 94% 
+Ludza, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Ludza, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Ludza, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ludza, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Ludza, date: 2020-04-24 21:00:00+00:00: , clouds amount: 99% 
+Ludza, date: 2020-04-25 00:00:00+00:00: , clouds amount: 96% 
+Ludza, date: 2020-04-27 09:00:00+00:00: , clouds amount: 91% 
+Ludzas novads, date: 2020-04-24 03:00:00+00:00: , clouds amount: 95% 
+Ludzas novads, date: 2020-04-24 09:00:00+00:00: , clouds amount: 93% 
+Ludzas novads, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Ludzas novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ludzas novads, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Ludzas novads, date: 2020-04-24 21:00:00+00:00: , clouds amount: 100% 
+Ludzas novads, date: 2020-04-25 00:00:00+00:00: , clouds amount: 99% 
+Ludzas novads, date: 2020-04-27 09:00:00+00:00: , clouds amount: 91% 
+Lācīši, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Lācīši, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Lācīši, date: 2020-04-24 15:00:00+00:00: , clouds amount: 95% 
+Lācīši, date: 2020-04-24 18:00:00+00:00: , clouds amount: 98% 
+Lācīši, date: 2020-04-24 21:00:00+00:00: , clouds amount: 100% 
+Lācīši, date: 2020-04-25 15:00:00+00:00: , clouds amount: 98% 
+Lācīši, date: 2020-04-27 03:00:00+00:00: , clouds amount: 99% 
+Līgatne, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Līgatne, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Līgatne, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Līgatne, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Līgatne, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Līvāni, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Līvāni, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Līvāni, date: 2020-04-24 15:00:00+00:00: , clouds amount: 98% 
+Līvāni, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Līvāni, date: 2020-04-24 21:00:00+00:00: , clouds amount: 94% 
+Līvāni, date: 2020-04-25 15:00:00+00:00: , clouds amount: 99% 
+Līvāni, date: 2020-04-25 18:00:00+00:00: , clouds amount: 93% 
+Līvāni, date: 2020-04-27 03:00:00+00:00: , clouds amount: 99% 
+Madona Municipality, date: 2020-04-23 09:00:00+00:00: , clouds amount: 93% 
+Madona Municipality, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Madona Municipality, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Madona Municipality, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Madona Municipality, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Madona Municipality, date: 2020-04-24 21:00:00+00:00: , clouds amount: 94% 
+Madona Municipality, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Madona Municipality, date: 2020-04-27 06:00:00+00:00: , clouds amount: 92% 
+Madona, date: 2020-04-23 09:00:00+00:00: , clouds amount: 93% 
+Madona, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Madona, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Madona, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Madona, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Madona, date: 2020-04-24 21:00:00+00:00: , clouds amount: 94% 
+Madona, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Madona, date: 2020-04-27 06:00:00+00:00: , clouds amount: 93% 
+Mazsalaca, date: 2020-04-23 09:00:00+00:00: , clouds amount: 99% 
+Mazsalaca, date: 2020-04-24 09:00:00+00:00: , clouds amount: 99% 
+Mazsalaca, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Mazsalaca, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Mazsalaca, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Mazsalaca, date: 2020-04-27 06:00:00+00:00: , clouds amount: 97% 
+Murmuiža, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Murmuiža, date: 2020-04-24 09:00:00+00:00: , clouds amount: 93% 
+Murmuiža, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Murmuiža, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Murmuiža, date: 2020-04-24 18:00:00+00:00: , clouds amount: 93% 
+Murmuiža, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Murmuiža, date: 2020-04-27 06:00:00+00:00: , clouds amount: 98% 
+Mālpils, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Mālpils, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Mālpils, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Mālpils, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Mālpils, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Mālpils, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Mērsrags, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Mērsrags, date: 2020-04-24 03:00:00+00:00: , clouds amount: 100% 
+Mērsrags, date: 2020-04-24 06:00:00+00:00: , clouds amount: 95% 
+Mērsrags, date: 2020-04-24 09:00:00+00:00: , clouds amount: 99% 
+Mērsrags, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Mērsrags, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Nida, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Nida, date: 2020-04-24 03:00:00+00:00: , clouds amount: 97% 
+Nida, date: 2020-04-24 06:00:00+00:00: , clouds amount: 98% 
+Nida, date: 2020-04-24 09:00:00+00:00: , clouds amount: 91% 
+Nida, date: 2020-04-24 15:00:00+00:00: , clouds amount: 99% 
+Nida, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Ogre, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ogre, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Ogre, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Ogre, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ogre, date: 2020-04-24 18:00:00+00:00: , clouds amount: 92% 
+Ogre, date: 2020-04-27 03:00:00+00:00: , clouds amount: 95% 
+Olaine, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Olaine, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Olaine, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Olaine, date: 2020-04-27 03:00:00+00:00: , clouds amount: 91% 
+Ozolnieki, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ozolnieki, date: 2020-04-24 03:00:00+00:00: , clouds amount: 95% 
+Ozolnieki, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ozolnieki, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Pilsrundāle, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Pilsrundāle, date: 2020-04-23 12:00:00+00:00: , clouds amount: 94% 
+Pilsrundāle, date: 2020-04-24 03:00:00+00:00: , clouds amount: 98% 
+Pilsrundāle, date: 2020-04-24 06:00:00+00:00: , clouds amount: 99% 
+Pilsrundāle, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Pilsrundāle, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Piltene, date: 2020-04-23 06:00:00+00:00: , clouds amount: 92% 
+Piltene, date: 2020-04-23 09:00:00+00:00: , clouds amount: 94% 
+Piltene, date: 2020-04-24 03:00:00+00:00: , clouds amount: 96% 
+Piltene, date: 2020-04-24 06:00:00+00:00: , clouds amount: 91% 
+Piltene, date: 2020-04-24 12:00:00+00:00: , clouds amount: 92% 
+Piltene, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Piņķi, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Piņķi, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Piņķi, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Piņķi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Piņķi, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Piņķi, date: 2020-04-27 03:00:00+00:00: , clouds amount: 96% 
+Preiļi Municipality, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Preiļi Municipality, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Preiļi Municipality, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Preiļi Municipality, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Preiļi Municipality, date: 2020-04-24 21:00:00+00:00: , clouds amount: 94% 
+Preiļi Municipality, date: 2020-04-25 15:00:00+00:00: , clouds amount: 100% 
+Preiļi Municipality, date: 2020-04-25 18:00:00+00:00: , clouds amount: 93% 
+Preiļi Municipality, date: 2020-04-27 03:00:00+00:00: , clouds amount: 95% 
+Preiļi, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Preiļi, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Preiļi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Preiļi, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Preiļi, date: 2020-04-24 21:00:00+00:00: , clouds amount: 96% 
+Preiļi, date: 2020-04-25 15:00:00+00:00: , clouds amount: 100% 
+Preiļi, date: 2020-04-25 18:00:00+00:00: , clouds amount: 92% 
+Preiļi, date: 2020-04-27 03:00:00+00:00: , clouds amount: 94% 
+Priekule, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Priekule, date: 2020-04-23 12:00:00+00:00: , clouds amount: 92% 
+Priekule, date: 2020-04-24 03:00:00+00:00: , clouds amount: 98% 
+Priekule, date: 2020-04-24 06:00:00+00:00: , clouds amount: 98% 
+Priekule, date: 2020-04-24 09:00:00+00:00: , clouds amount: 93% 
+Priekule, date: 2020-04-24 15:00:00+00:00: , clouds amount: 99% 
+Priekule, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Pāvilosta, date: 2020-04-23 06:00:00+00:00: , clouds amount: 93% 
+Pāvilosta, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Pāvilosta, date: 2020-04-24 03:00:00+00:00: , clouds amount: 100% 
+Pāvilosta, date: 2020-04-24 06:00:00+00:00: , clouds amount: 96% 
+Pāvilosta, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Pļaviņas, date: 2020-04-23 09:00:00+00:00: , clouds amount: 92% 
+Pļaviņas, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Pļaviņas, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Pļaviņas, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Pļaviņas, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Pļaviņas, date: 2020-04-24 21:00:00+00:00: , clouds amount: 91% 
+Pļaviņas, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Pļavnieki, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Pļavnieki, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Pļavnieki, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Pļavnieki, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Pļavnieki, date: 2020-04-24 18:00:00+00:00: , clouds amount: 91% 
+Pļavnieki, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Riga, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Riga, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Riga, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Riga, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Riga, date: 2020-04-24 18:00:00+00:00: , clouds amount: 93% 
+Riga, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Ropaži, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ropaži, date: 2020-04-24 09:00:00+00:00: , clouds amount: 99% 
+Ropaži, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Ropaži, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ropaži, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Roya, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Roya, date: 2020-04-24 03:00:00+00:00: , clouds amount: 95% 
+Roya, date: 2020-04-24 06:00:00+00:00: , clouds amount: 97% 
+Roya, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Roya, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Roya, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Roya, date: 2020-04-26 21:00:00+00:00: , clouds amount: 93% 
+Roya, date: 2020-04-27 00:00:00+00:00: , clouds amount: 97% 
+Rugāji, date: 2020-04-23 09:00:00+00:00: , clouds amount: 98% 
+Rugāji, date: 2020-04-24 09:00:00+00:00: , clouds amount: 93% 
+Rugāji, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Rugāji, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Rugāji, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Rugāji, date: 2020-04-24 21:00:00+00:00: , clouds amount: 95% 
+Rugāji, date: 2020-04-26 15:00:00+00:00: , clouds amount: 96% 
+Rugāji, date: 2020-04-27 06:00:00+00:00: , clouds amount: 94% 
+Rugāji, date: 2020-04-27 09:00:00+00:00: , clouds amount: 100% 
+Rugāji, date: 2020-04-27 12:00:00+00:00: , clouds amount: 94% 
+Rēzekne, date: 2020-04-24 09:00:00+00:00: , clouds amount: 92% 
+Rēzekne, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Rēzekne, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Rēzekne, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Rēzekne, date: 2020-04-24 21:00:00+00:00: , clouds amount: 99% 
+Rēzekne, date: 2020-04-25 00:00:00+00:00: , clouds amount: 97% 
+Rēzekne, date: 2020-04-25 15:00:00+00:00: , clouds amount: 99% 
+Rēzekne, date: 2020-04-27 06:00:00+00:00: , clouds amount: 92% 
+Rēzeknes Novads, date: 2020-04-24 09:00:00+00:00: , clouds amount: 91% 
+Rēzeknes Novads, date: 2020-04-24 12:00:00+00:00: , clouds amount: 95% 
+Rēzeknes Novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Rēzeknes Novads, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Rēzeknes Novads, date: 2020-04-24 21:00:00+00:00: , clouds amount: 99% 
+Rēzeknes Novads, date: 2020-04-25 00:00:00+00:00: , clouds amount: 97% 
+Rēzeknes Novads, date: 2020-04-25 15:00:00+00:00: , clouds amount: 100% 
+Rēzeknes Novads, date: 2020-04-27 06:00:00+00:00: , clouds amount: 91% 
+Rīga, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Rīga, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Rīga, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Rīga, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Rīga, date: 2020-04-24 18:00:00+00:00: , clouds amount: 92% 
+Rīga, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Rīgas Rajons, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Rīgas Rajons, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Rīgas Rajons, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Rīgas Rajons, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Rīgas Rajons, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Rūjiena, date: 2020-04-23 09:00:00+00:00: , clouds amount: 93% 
+Rūjiena, date: 2020-04-23 21:00:00+00:00: , clouds amount: 94% 
+Rūjiena, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Rūjiena, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Rūjiena, date: 2020-04-24 15:00:00+00:00: , clouds amount: 99% 
+Rūjiena, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Rūjiena, date: 2020-04-27 06:00:00+00:00: , clouds amount: 99% 
+Sabile, date: 2020-04-24 06:00:00+00:00: , clouds amount: 92% 
+Sabile, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Sabile, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Sabile, date: 2020-04-26 15:00:00+00:00: , clouds amount: 99% 
+Sabile, date: 2020-04-26 18:00:00+00:00: , clouds amount: 93% 
+Salacgrīva, date: 2020-04-23 09:00:00+00:00: , clouds amount: 97% 
+Salacgrīva, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Salacgrīva, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Salacgrīva, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Salacgrīva, date: 2020-04-27 00:00:00+00:00: , clouds amount: 94% 
+Salacgrīva, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Salaspils, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Salaspils, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Salaspils, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Salaspils, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Salaspils, date: 2020-04-27 03:00:00+00:00: , clouds amount: 96% 
+Saldus Municipality, date: 2020-04-23 09:00:00+00:00: , clouds amount: 96% 
+Saldus Municipality, date: 2020-04-24 03:00:00+00:00: , clouds amount: 96% 
+Saldus Municipality, date: 2020-04-24 15:00:00+00:00: , clouds amount: 94% 
+Saldus Municipality, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Saldus Municipality, date: 2020-04-25 15:00:00+00:00: , clouds amount: 97% 
+Saldus Municipality, date: 2020-04-26 15:00:00+00:00: , clouds amount: 100% 
+Saldus, date: 2020-04-23 09:00:00+00:00: , clouds amount: 96% 
+Saldus, date: 2020-04-24 03:00:00+00:00: , clouds amount: 96% 
+Saldus, date: 2020-04-24 15:00:00+00:00: , clouds amount: 94% 
+Saldus, date: 2020-04-24 18:00:00+00:00: , clouds amount: 97% 
+Saldus, date: 2020-04-25 15:00:00+00:00: , clouds amount: 96% 
+Saldus, date: 2020-04-26 15:00:00+00:00: , clouds amount: 100% 
+Saulkrasti, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Saulkrasti, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Saulkrasti, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Saulkrasti, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Saulkrasti, date: 2020-04-27 03:00:00+00:00: , clouds amount: 99% 
+Seda, date: 2020-04-24 09:00:00+00:00: , clouds amount: 95% 
+Seda, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Seda, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Seda, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Seda, date: 2020-04-27 06:00:00+00:00: , clouds amount: 98% 
+Sidgunda, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Sidgunda, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Sidgunda, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Sidgunda, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Sidgunda, date: 2020-04-24 18:00:00+00:00: , clouds amount: 95% 
+Sidgunda, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Sigulda, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Sigulda, date: 2020-04-24 09:00:00+00:00: , clouds amount: 100% 
+Sigulda, date: 2020-04-24 12:00:00+00:00: , clouds amount: 100% 
+Sigulda, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Sigulda, date: 2020-04-27 03:00:00+00:00: , clouds amount: 99% 
+Skrunda, date: 2020-04-23 09:00:00+00:00: , clouds amount: 99% 
+Skrunda, date: 2020-04-24 03:00:00+00:00: , clouds amount: 94% 
+Skrunda, date: 2020-04-24 06:00:00+00:00: , clouds amount: 94% 
+Skrunda, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Skrunda, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Skulte, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Skulte, date: 2020-04-24 09:00:00+00:00: , clouds amount: 92% 
+Skulte, date: 2020-04-24 12:00:00+00:00: , clouds amount: 95% 
+Skulte, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Skulte, date: 2020-04-24 18:00:00+00:00: , clouds amount: 95% 
+Skulte, date: 2020-04-27 03:00:00+00:00: , clouds amount: 96% 
+Smiltene, date: 2020-04-24 09:00:00+00:00: , clouds amount: 95% 
+Smiltene, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Smiltene, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Smiltene, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Smiltene, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Smiltene, date: 2020-04-27 06:00:00+00:00: , clouds amount: 99% 
+Smiltene, date: 2020-04-27 09:00:00+00:00: , clouds amount: 91% 
+Somerseta, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Somerseta, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Somerseta, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Somerseta, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Somerseta, date: 2020-04-24 21:00:00+00:00: , clouds amount: 100% 
+Somerseta, date: 2020-04-25 00:00:00+00:00: , clouds amount: 98% 
+Somerseta, date: 2020-04-25 15:00:00+00:00: , clouds amount: 100% 
+Somerseta, date: 2020-04-26 15:00:00+00:00: , clouds amount: 95% 
+Somerseta, date: 2020-04-27 03:00:00+00:00: , clouds amount: 94% 
+Staicele, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Staicele, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Staicele, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Staicele, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Staicele, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Staicele, date: 2020-04-27 06:00:00+00:00: , clouds amount: 92% 
+Stende, date: 2020-04-23 09:00:00+00:00: , clouds amount: 91% 
+Stende, date: 2020-04-24 06:00:00+00:00: , clouds amount: 92% 
+Stende, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Stende, date: 2020-04-26 15:00:00+00:00: , clouds amount: 99% 
+Stende, date: 2020-04-26 18:00:00+00:00: , clouds amount: 91% 
+Strenči, date: 2020-04-23 09:00:00+00:00: , clouds amount: 91% 
+Strenči, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Strenči, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Strenči, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Strenči, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Strenči, date: 2020-04-27 06:00:00+00:00: , clouds amount: 99% 
+Subate, date: 2020-04-23 09:00:00+00:00: , clouds amount: 99% 
+Subate, date: 2020-04-24 09:00:00+00:00: , clouds amount: 98% 
+Subate, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Subate, date: 2020-04-24 15:00:00+00:00: , clouds amount: 92% 
+Subate, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Subate, date: 2020-04-24 21:00:00+00:00: , clouds amount: 99% 
+Subate, date: 2020-04-25 15:00:00+00:00: , clouds amount: 91% 
+Subate, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Talsi Municipality, date: 2020-04-23 09:00:00+00:00: , clouds amount: 96% 
+Talsi Municipality, date: 2020-04-24 06:00:00+00:00: , clouds amount: 93% 
+Talsi Municipality, date: 2020-04-24 12:00:00+00:00: , clouds amount: 94% 
+Talsi Municipality, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Talsi Municipality, date: 2020-04-26 15:00:00+00:00: , clouds amount: 92% 
+Talsi, date: 2020-04-23 09:00:00+00:00: , clouds amount: 95% 
+Talsi, date: 2020-04-24 06:00:00+00:00: , clouds amount: 93% 
+Talsi, date: 2020-04-24 12:00:00+00:00: , clouds amount: 91% 
+Talsi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Talsi, date: 2020-04-26 15:00:00+00:00: , clouds amount: 94% 
+Torņakalns, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Torņakalns, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Torņakalns, date: 2020-04-24 12:00:00+00:00: , clouds amount: 96% 
+Torņakalns, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Torņakalns, date: 2020-04-24 18:00:00+00:00: , clouds amount: 93% 
+Torņakalns, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Tukuma novads, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Tukuma novads, date: 2020-04-24 03:00:00+00:00: , clouds amount: 100% 
+Tukuma novads, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Tukuma novads, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Tukuma novads, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Tukuma novads, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Tukuma novads, date: 2020-04-26 15:00:00+00:00: , clouds amount: 100% 
+Tukuma novads, date: 2020-04-26 18:00:00+00:00: , clouds amount: 96% 
+Tukums, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Tukums, date: 2020-04-24 03:00:00+00:00: , clouds amount: 100% 
+Tukums, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Tukums, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Tukums, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Tukums, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Tukums, date: 2020-04-26 15:00:00+00:00: , clouds amount: 98% 
+Tīreļi, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Tīreļi, date: 2020-04-24 03:00:00+00:00: , clouds amount: 97% 
+Tīreļi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Tīreļi, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Ulbroka, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ulbroka, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Ulbroka, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Ulbroka, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ulbroka, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Vaiņode, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Vaiņode, date: 2020-04-24 03:00:00+00:00: , clouds amount: 99% 
+Vaiņode, date: 2020-04-24 06:00:00+00:00: , clouds amount: 97% 
+Vaiņode, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Vaiņode, date: 2020-04-24 15:00:00+00:00: , clouds amount: 99% 
+Vaiņode, date: 2020-04-24 18:00:00+00:00: , clouds amount: 99% 
+Valdemārpils, date: 2020-04-23 09:00:00+00:00: , clouds amount: 97% 
+Valdemārpils, date: 2020-04-24 06:00:00+00:00: , clouds amount: 93% 
+Valdemārpils, date: 2020-04-24 09:00:00+00:00: , clouds amount: 91% 
+Valdemārpils, date: 2020-04-24 12:00:00+00:00: , clouds amount: 95% 
+Valdemārpils, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Valka Municipality, date: 2020-04-24 09:00:00+00:00: , clouds amount: 95% 
+Valka Municipality, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Valka Municipality, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Valka Municipality, date: 2020-04-24 18:00:00+00:00: , clouds amount: 95% 
+Valka Municipality, date: 2020-04-27 03:00:00+00:00: , clouds amount: 97% 
+Valka Municipality, date: 2020-04-27 06:00:00+00:00: , clouds amount: 99% 
+Valka Municipality, date: 2020-04-27 09:00:00+00:00: , clouds amount: 93% 
+Valka, date: 2020-04-23 21:00:00+00:00: , clouds amount: 93% 
+Valka, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Valka, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Valka, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Valka, date: 2020-04-27 06:00:00+00:00: , clouds amount: 94% 
+Valka, date: 2020-04-27 09:00:00+00:00: , clouds amount: 96% 
+Valka, date: 2020-04-27 15:00:00+00:00: , clouds amount: 95% 
+Valmiera, date: 2020-04-23 09:00:00+00:00: , clouds amount: 97% 
+Valmiera, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Valmiera, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Valmiera, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Valmiera, date: 2020-04-27 03:00:00+00:00: , clouds amount: 100% 
+Valmiera, date: 2020-04-27 06:00:00+00:00: , clouds amount: 98% 
+Ķegums, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ķegums, date: 2020-04-24 09:00:00+00:00: , clouds amount: 96% 
+Ķegums, date: 2020-04-24 12:00:00+00:00: , clouds amount: 98% 
+Ķegums, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ķegums, date: 2020-04-24 18:00:00+00:00: , clouds amount: 95% 
+Ķegums, date: 2020-04-27 03:00:00+00:00: , clouds amount: 94% 
+Ķekava, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ķekava, date: 2020-04-24 12:00:00+00:00: , clouds amount: 93% 
+Ķekava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ķekava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 93% 
+Ķekava, date: 2020-04-27 03:00:00+00:00: , clouds amount: 95% 
+Ķiviļi, date: 2020-04-23 09:00:00+00:00: , clouds amount: 100% 
+Ķiviļi, date: 2020-04-24 03:00:00+00:00: , clouds amount: 99% 
+Ķiviļi, date: 2020-04-24 06:00:00+00:00: , clouds amount: 99% 
+Ķiviļi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ķiviļi, date: 2020-04-24 18:00:00+00:00: , clouds amount: 96% 
+Ķiviļi, date: 2020-04-27 15:00:00+00:00: , clouds amount: 95% 
+Ķiviļi, date: 2020-04-27 18:00:00+00:00: , clouds amount: 94% 
+Ļurbava, date: 2020-04-24 03:00:00+00:00: , clouds amount: 96% 
+Ļurbava, date: 2020-04-24 09:00:00+00:00: , clouds amount: 97% 
+Ļurbava, date: 2020-04-24 12:00:00+00:00: , clouds amount: 99% 
+Ļurbava, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ļurbava, date: 2020-04-24 18:00:00+00:00: , clouds amount: 100% 
+Ļurbava, date: 2020-04-24 21:00:00+00:00: , clouds amount: 96% 
+Ļurbava, date: 2020-04-27 09:00:00+00:00: , clouds amount: 94% 
+Ūdriņi, date: 2020-04-23 09:00:00+00:00: , clouds amount: 91% 
+Ūdriņi, date: 2020-04-24 09:00:00+00:00: , clouds amount: 94% 
+Ūdriņi, date: 2020-04-24 12:00:00+00:00: , clouds amount: 97% 
+Ūdriņi, date: 2020-04-24 15:00:00+00:00: , clouds amount: 100% 
+Ūdriņi, date: 2020-04-24 18:00:00+00:00: , clouds amount: 91% 
+Ūdriņi, date: 2020-04-27 03:00:00+00:00: , clouds amount: 98% 
+Ūdriņi, date: 2020-04-27 06:00:00+00:00: , clouds amount: 99% </msg>
+<status status="PASS" starttime="20200423 00:17:09.614" endtime="20200423 00:17:09.617"></status>
+</kw>
+<status status="PASS" starttime="20200423 00:17:09.614" endtime="20200423 00:17:09.617"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Облачности &gt;90% нигде не наблюдается.</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:17:09.618" endtime="20200423 00:17:09.618"></status>
+</kw>
+<doc>Города, где облачность выше 90%</doc>
+<tags>
+<tag>clouds</tag>
+</tags>
+<status status="PASS" starttime="20200423 00:16:16.707" endtime="20200423 00:17:09.619" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Heavy Intensity Rain">
+<kw name="Get Rainy Weather" library="DailyForecast">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:18:00.425" level="INFO">${result} = {}</msg>
+<msg timestamp="20200423 00:18:00.425" level="INFO">${flag} = False</msg>
+<status status="PASS" starttime="20200423 00:17:09.621" endtime="20200423 00:18:00.425"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log Dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:18:00.426" endtime="20200423 00:18:00.426"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Сейчас нигде не идёт проливной дождь.</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Сейчас нигде не идёт проливной дождь.</arg>
+</arguments>
+<msg timestamp="20200423 00:18:00.427" level="FAIL">Сейчас нигде не идёт проливной дождь.</msg>
+<status status="FAIL" starttime="20200423 00:18:00.427" endtime="20200423 00:18:00.427"></status>
+</kw>
+<status status="FAIL" starttime="20200423 00:18:00.427" endtime="20200423 00:18:00.427"></status>
+</kw>
+<doc>Города, где идёт сильный дождь</doc>
+<tags>
+<tag>heavy rain</tag>
+</tags>
+<status status="FAIL" starttime="20200423 00:17:09.620" endtime="20200423 00:18:00.428" critical="yes">Сейчас нигде не идёт проливной дождь.</status>
+</test>
+<doc>Daily Forecast Task</doc>
+<status status="FAIL" starttime="20200423 00:16:16.278" endtime="20200423 00:18:00.431"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">clouds</stat>
+<stat pass="0" fail="1">heavy rain</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Daily Forecast">Daily Forecast</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200423 00:18:16.203" rpa="false">
+<suite id="s1" name="Current Weather" source="D:\Bootcamp\Robot\Final task\Current Weather\current_weather.robot">
+<test id="s1-t1" name="Air Temperature">
+<kw name="Get Temp" library="CurrentWeather">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:18:19.579" level="INFO">${result} = {'Dahasuways': 27.33, 'Ash Shihr': 28.1, 'Ash Shuqayrah': 25.16, 'Mustaba': 29.66, 'Dayr al Ḩisī': 30.49, 'Xarardheere': 27.25, 'Wanlaweyn': 26.5, 'Somalia': 28.32, 'Gobolka Shabeellaha Hoose': 26.07,...</msg>
+<msg timestamp="20200423 00:18:19.579" level="INFO">${flag} = True</msg>
+<status status="PASS" starttime="20200423 00:18:16.682" endtime="20200423 00:18:19.579"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 00:18:19.580" level="INFO">{'Dahasuways': 27.33, 'Ash Shihr': 28.1, 'Ash Shuqayrah': 25.16, 'Mustaba': 29.66, 'Dayr al Ḩisī': 30.49, 'Xarardheere': 27.25, 'Wanlaweyn': 26.5, 'Somalia': 28.32, 'Gobolka Shabeellaha Hoose': 26.07, 'Gobolka Shabeellaha Dhexe': 26.03, 'Saacow': 25.54, 'Qoryooley': 26.47, 'Qandala': 29.01, 'Gobolka Nugaal': 25.06, 'Mogadishu': 28.49, 'Gobolka Mudug': 27.47, 'Marka': 27.43, 'Mahaddayweyne': 27.29, 'Lughaye': 28.44, 'Laasqoray': 28.46, 'Kismaayo': 27.49, 'Gobolka Jubbada Hoose': 25.36, 'Gobolka Jubbada Dhexe': 25.24, 'Jilib': 25.18, 'Jawhar': 27.34, 'Jamaame': 26.0, 'Jalalaqsi': 26.61, 'Iskushuban': 26.61, 'Hobyo': 28.84, 'Gobolka Hiiraan': 25.85, 'Garoowe': 26.39, 'Gobolka Galguduud': 27.92, 'Gaalkacyo': 27.42, 'Eyl': 28.7, 'El Ad': 28.69, 'Dujuuma': 25.45, 'Doon': 28.0, 'Dusa Marreb': 27.95, 'Cheli Gu': 25.43, 'Ceeldheer': 28.26, 'Ceelbuur': 28.23, 'Ceek': 25.71, 'Caluula': 28.37, 'Cadale': 28.03, 'Buur Gaabo': 27.43, 'Buulobarde': 26.07, 'Buaale': 25.45, 'Boosaaso': 28.66, 'Bereeda': 27.96, 'Berbera': 28.77, 'Beledweyne': 25.56, 'Behelidle': 25.12, 'Bargaal': 27.82, 'Bandarbeyla': 27.96, 'Gobolka Banaadir': 28.23, 'Baardheere': 25.35, 'Afgooye': 27.25, 'Cadayo': 27.7, 'Zinjibar': 28.3, 'Zabīd': 30.05, 'Zabid': 30.02, 'Usaylan': 26.47, 'Ubal': 28.25, 'Thamud': 27.36, 'Tarim': 27.63, 'Abs': 29.97, 'Sif': 25.54, 'Shuḩayr': 28.16, 'Shihan as Sufla': 27.55, 'Sayhut': 28.22, 'Sana': 26.72, 'Sah': 25.82, 'Ar Raydah': 28.26, 'Rudum': 27.78, 'Qulansiyah': 28.07, 'Qishn': 28.32, 'Al Musaymir': 25.14, 'Morī': 27.93, 'Manwakh': 29.16, 'Mayfaah': 26.64, 'Maidi': 29.0, 'Mawza': 29.08, 'Al Jawl': 27.51}</msg>
+<status status="PASS" starttime="20200423 00:18:19.580" endtime="20200423 00:18:19.580"></status>
+</kw>
+<status status="PASS" starttime="20200423 00:18:19.579" endtime="20200423 00:18:19.580"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Везде не так жарко!</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:18:19.581" endtime="20200423 00:18:19.581"></status>
+</kw>
+<doc>Города, где температура выше 25 градусов по Цельсию</doc>
+<tags>
+<tag>temperature</tag>
+</tags>
+<status status="PASS" starttime="20200423 00:18:16.681" endtime="20200423 00:18:19.582" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Daylight Length">
+<kw name="Get Daylight" library="CurrentWeather">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:18:22.528" level="INFO">${result} = {'Ḩeşār-e Sefīd': 47931, 'Ayn Halaqim': 48037, 'Taglag': 48656, 'Qabāghlū': 48244, 'Ariqah': 47699, 'Kalāteh-ye Dowlat': 48239, 'Behjatābād': 48331, 'Ţālesh Maḩalleh': 48369, 'Shahrīār Kandeh': 48322,...</msg>
+<msg timestamp="20200423 00:18:22.528" level="INFO">${flag} = True</msg>
+<status status="PASS" starttime="20200423 00:18:19.586" endtime="20200423 00:18:22.528"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 00:18:22.529" level="INFO">{'Ḩeşār-e Sefīd': 47931, 'Ayn Halaqim': 48037, 'Taglag': 48656, 'Qabāghlū': 48244, 'Ariqah': 47699, 'Kalāteh-ye Dowlat': 48239, 'Behjatābād': 48331, 'Ţālesh Maḩalleh': 48369, 'Shahrīār Kandeh': 48322, 'Bālā Aḩmad Kolā': 48326, 'As Sawarah as Sughra': 47721, 'Āqdūz': 48798, 'Azadshahr': 48008, 'Gollar': 48459, 'Dīgāleh': 48490, 'Qarālar-e Mīrzā Ḩoseynqolī': 48512, 'Protaras': 48049, 'Kahriz': 47939, 'Nurabad': 47888, 'Rokan Sarā': 48447, 'Zīrjān': 47907, 'Dahasuways': 45362, 'Ash Shihr': 45249, 'Al Ghaylah': 45231, 'Judaydah': 45287, 'Dawran': 45134, 'Najd al Jumai': 45152, 'Zalmat al Alya': 45172, 'Suq ar Rabu': 45220, 'Ash Shuqayrah': 45060, 'Mashraah': 45106, 'Ar Rawnah': 45133, 'Ar Ramadi': 45157, 'Al Ahad': 45192, 'Ad Dil': 45240, 'Al Jabin': 45243, 'Badrābād-e `Olyā': 47783, 'Istgah-e Garmsar': 48081, 'Qarchak': 48116, 'Suq Sirwah': 45331, 'Majzar': 45378, 'Bidbadah': 45329, 'Matwah': 45286, 'Suwayr': 45418, 'Wadarah': 45362, 'Suq Shamar': 45382, 'Mustaba': 45424, 'An Nazir': 45505, 'Dayr al Ḩisī': 45403, 'Tabrīz Jānī': 48597, 'Andīmeshk': 47637, 'Ravīndūzaq': 48653, 'Māmā’ī': 48368, 'Reẕāābād': 48477, 'Khorram Darreh': 48250, 'Kūchaklī': 48122, 'Koshtārgāh': 47330, 'Jozf-e Soflá': 47304, 'Republic of Rwanda': 43398, 'Yeed': 44101, 'Xuddur': 44054, 'Xarardheere': 44111, 'Gobolka Woqooyi Galbeed': 44703, 'Wanlaweyn': 43892, 'Waajid': 44021, 'Gobolka Togdheer': 44628, 'Tayeeglow': 44043, 'Somalia': 44259, 'Gobolka Shabeellaha Hoose': 43806, 'Gobolka Shabeellaha Dhexe': 43932, 'Gobolka Sanaag': 44759, 'Saacow': 43784, 'Qoryooley': 43801, 'Qandala': 44870, 'Qaloocan': 44651, 'Oodweyne': 44637, 'Gobolka Nugaal': 44498, 'Mogadishu': 43828, 'Gobolka Mudug': 44369, 'Marka': 43794, 'Mahaddayweyne': 43929, 'Luuq': 44018, 'Lughaye': 44782, 'Laasqoray': 44834, 'Kismaayo': 43569, 'Gobolka Jubbada Hoose': 43609, 'Gobolka Jubbada Dhexe': 43752, 'Jilib': 43662, 'Jawhar': 43909, 'Jamaame': 43616, 'Jalalaqsi': 43974, 'Iskushuban': 44735, 'Hobyo': 44188, 'Gobolka Hiiraan': 44041, 'Hargeysa': 44654, 'Gobolka Gedo': 43933, 'Garoowe': 44525, 'Garbahaarrey': 43968, 'Gobolka Galguduud': 44150, 'Gaalkacyo': 44344, 'Eyl': 44478, 'El Dubat': 44649, 'El Ad': 44848, 'Dujuuma': 43743, 'Doon': 44844, 'Dusa Marreb': 44209, 'Dalooldho': 44657, 'Cheli Gu': 44087, 'Ceerigaabo': 44773, 'Ceeldheer': 44025, 'Ceelbuur': 44115, 'Ceek': 44591, 'Caluula': 44926, 'Cadale': 43906, 'Buurhakaba': 43911, 'Buur Gaabo': 43478, 'Buulobarde': 44024, 'Burco': 44649, 'Buaale': 43725, 'Boosaaso': 44847, 'Bereeda': 44915, 'Berbera': 44753, 'Beledweyne': 44121, 'Behelidle': 43859, 'Baydhabo': 43945, 'Gobolka Bay': 43933, 'Gobolka Bari': 44703, 'Bargaal': 44849, 'Bandarbeyla': 44645, 'Gobolka Banaadir': 43837, 'Baardheere': 43861, 'Afgooye': 43840, 'Cadayo': 44084, 'Yasuj': 47348, 'Shāhrūd': 48285, '‘Abbāsābād-e Qūsheh': 47689, 'At Tawilah': 45336, 'Zinjibar': 45059, 'Zarajah': 45263, 'Az Zahir': 45157, 'Zabīd': 45194, 'Zabid': 45184, 'Yufrus': 45098, 'Republic of Yemen': 45337, 'Yarīm': 45190, 'Yarim': 45195, 'Washhah': 45434, 'Walan': 45287, 'Dhi Jalal': 45117, 'Usaylan': 45281, 'Ubal': 45277, 'Thamud': 45552, 'Tarim': 45403, 'At Ta‘izzīyah': 45125, 'Muḩāfaz̧at Ta‘izz': 45103, 'Ta‘izz': 45253, 'Taizz': 45112, 'As Suwayda': 45137, 'Al Anan': 45483, 'Abs': 45397, 'Sif': 45314, 'Shuḩayr': 45240, 'Shihan as Sufla': 45608, 'Shibam': 45338, 'Ash Sharyah': 45203, 'Sharas': 45362, 'Shaharat al Ghis': 45418, 'Muḩāfaz̧at Shabwah': 45278, 'Sayyan': 45298, 'Sayhut': 45302, 'Sanhan': 45305, 'Sanaa': 45319, 'Sana': 45324, 'Sahar': 45316, 'Sah': 45346, 'Muḩāfaz̧at Şa‘dah': 45523, 'Sadah': 45509, 'Rihab': 45188, 'Rada': 45210, 'Muḩāfaz̧at Raymah': 45234, 'Ar Raydah': 45282, 'Raydah': 45374, 'Rakkat al ‘Askarī': 45415, 'Rudum': 45171, 'Qulansiyah': 45007, 'Qishn': 45327, 'Qatabah': 45143, 'Nisab': 45221, 'Al Musaymir': 45096, 'Mukayras': 45154, 'Mudiyah': 45153, 'Markaz Mudhaykirah': 45148, 'Morī': 45002, 'Manwakh': 45493, 'Mayfaah': 45192, 'Maidi': 45435, 'Mawza': 45076, 'Mawiyah': 45112, 'Al Jawl': 45214}</msg>
+<status status="PASS" starttime="20200423 00:18:22.529" endtime="20200423 00:18:22.530"></status>
+</kw>
+<status status="PASS" starttime="20200423 00:18:22.529" endtime="20200423 00:18:22.530"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Светло меньше 12 часов в сутки!</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:18:22.530" endtime="20200423 00:18:22.531"></status>
+</kw>
+<doc>Города, где продолжительность светового дня больше 12 часов</doc>
+<tags>
+<tag>daylight</tag>
+</tags>
+<status status="PASS" starttime="20200423 00:18:19.585" endtime="20200423 00:18:22.531" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Airport Conditions">
+<kw name="Get Airport" library="CurrentWeather">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:18:25.398" level="INFO">${result} = {'Ḩeşār-e Sefīd': 'Good conditions', 'Ayn Halaqim': 'Good conditions', 'Ariqah': 'Good conditions', 'Behjatābād': 'Good conditions', 'Ţālesh Maḩalleh': 'Good conditions', 'Shahrīār Kandeh': 'Good cond...</msg>
+<msg timestamp="20200423 00:18:25.398" level="INFO">${flag} = True</msg>
+<status status="PASS" starttime="20200423 00:18:22.534" endtime="20200423 00:18:25.398"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 00:18:25.400" level="INFO">{'Ḩeşār-e Sefīd': 'Good conditions', 'Ayn Halaqim': 'Good conditions', 'Ariqah': 'Good conditions', 'Behjatābād': 'Good conditions', 'Ţālesh Maḩalleh': 'Good conditions', 'Shahrīār Kandeh': 'Good conditions', 'Bālā Aḩmad Kolā': 'Good conditions', 'As Sawarah as Sughra': 'Good conditions', 'Azadshahr': 'Good conditions', 'Dīgāleh': 'Good conditions', 'Qarālar-e Mīrzā Ḩoseynqolī': 'Good conditions', 'Protaras': 'Good conditions', 'Kahriz': 'Good conditions', 'Qarchak': 'Good conditions', 'Tabrīz Jānī': 'Good conditions', 'Māmā’ī': 'Good conditions', 'Reẕāābād': 'Good conditions', 'Kūchaklī': 'Good conditions', 'Koshtārgāh': 'Good conditions', 'Jozf-e Soflá': 'Good conditions', 'Republic of Rwanda': 'Good conditions', 'Doon': 'Good conditions', 'Yasuj': 'Good conditions', '‘Abbāsābād-e Qūsheh': 'Good conditions', 'Maidi': 'Good conditions'}</msg>
+<status status="PASS" starttime="20200423 00:18:25.399" endtime="20200423 00:18:25.400"></status>
+</kw>
+<status status="PASS" starttime="20200423 00:18:25.399" endtime="20200423 00:18:25.400"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Улететь не получиться :(</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:18:25.400" endtime="20200423 00:18:25.401"></status>
+</kw>
+<doc>Города с благоприятными условиями для аэропортов</doc>
+<tags>
+<tag>airport</tag>
+</tags>
+<status status="PASS" starttime="20200423 00:18:22.533" endtime="20200423 00:18:25.401" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Snow Weather">
+<kw name="Get Snow Weather" library="CurrentWeather">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:18:28.161" level="INFO">${result} = {}</msg>
+<msg timestamp="20200423 00:18:28.161" level="INFO">${flag} = False</msg>
+<status status="PASS" starttime="20200423 00:18:25.404" endtime="20200423 00:18:28.161"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:18:28.162" endtime="20200423 00:18:28.162"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Снега нет!</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Снега нет!</arg>
+</arguments>
+<msg timestamp="20200423 00:18:28.164" level="FAIL">Снега нет!</msg>
+<status status="FAIL" starttime="20200423 00:18:28.163" endtime="20200423 00:18:28.164"></status>
+</kw>
+<status status="FAIL" starttime="20200423 00:18:28.163" endtime="20200423 00:18:28.164"></status>
+</kw>
+<doc>Города, где сейчас идёт снег</doc>
+<tags>
+<tag>snow</tag>
+</tags>
+<status status="FAIL" starttime="20200423 00:18:25.403" endtime="20200423 00:18:28.164" critical="yes">Снега нет!</status>
+</test>
+<test id="s1-t5" name="Humidity And Pressure">
+<kw name="Get Humidity And Pressure" library="CurrentWeather">
+<assign>
+<var>${result}</var>
+<var>${flag}</var>
+</assign>
+<msg timestamp="20200423 00:18:31.164" level="INFO">${result} = {'Behjatābād': '93%, 1014', 'Ţālesh Maḩalleh': '93%, 1013', 'Shahrīār Kandeh': '93%, 1013', 'Bālā Aḩmad Kolā': '93%, 1013', 'Dīgāleh': '93%, 1011', 'Qarālar-e Mīrzā Ḩoseynqolī': '93%, 1011', 'Rokan Sa...</msg>
+<msg timestamp="20200423 00:18:31.164" level="INFO">${flag} = True</msg>
+<status status="PASS" starttime="20200423 00:18:28.168" endtime="20200423 00:18:31.165"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'True'</arg>
+<arg>Log</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 00:18:31.166" level="INFO">{'Behjatābād': '93%, 1014', 'Ţālesh Maḩalleh': '93%, 1013', 'Shahrīār Kandeh': '93%, 1013', 'Bālā Aḩmad Kolā': '93%, 1013', 'Dīgāleh': '93%, 1011', 'Qarālar-e Mīrzā Ḩoseynqolī': '93%, 1011', 'Rokan Sarā': '80%, 1012', 'Māmā’ī': '93%, 1014', 'Reẕāābād': '77%, 1014', 'Koshtārgāh': '78%, 1009', 'Republic of Rwanda': '100%, 1023', 'Wanlaweyn': '79%, 1011', 'Waajid': '79%, 1011', 'Gobolka Shabeellaha Hoose': '79%, 1011', 'Saacow': '78%, 1011', 'Qoryooley': '78%, 1011', 'Marka': '76%, 1010', 'Luuq': '78%, 1011', 'Kismaayo': '82%, 1010', 'Gobolka Jubbada Hoose': '89%, 1011', 'Gobolka Jubbada Dhexe': '83%, 1011', 'Jilib': '89%, 1011', 'Jamaame': '86%, 1011', 'Gobolka Hiiraan': '76%, 1011', 'Garbahaarrey': '76%, 1011', 'Dujuuma': '83%, 1011', 'Doon': '78%, 1016', 'Ceeldheer': '76%, 1010', 'Buurhakaba': '80%, 1011', 'Buur Gaabo': '83%, 1010', 'Buulobarde': '76%, 1011', 'Buaale': '85%, 1011', 'Baydhabo': '81%, 1011', 'Gobolka Bay': '81%, 1011', 'Yasuj': '87%, 1020', '‘Abbāsābād-e Qūsheh': '93%, 1017', 'Maidi': '79%, 1011'}</msg>
+<status status="PASS" starttime="20200423 00:18:31.166" endtime="20200423 00:18:31.166"></status>
+</kw>
+<status status="PASS" starttime="20200423 00:18:31.165" endtime="20200423 00:18:31.166"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${flag}' == 'False'</arg>
+<arg>Fail</arg>
+<arg>Везде сухо и не давит :)</arg>
+</arguments>
+<status status="PASS" starttime="20200423 00:18:31.166" endtime="20200423 00:18:31.167"></status>
+</kw>
+<doc>Города влажностью воздуха больше 75% и атм. давлением больше 770 мм рт.ст.</doc>
+<tags>
+<tag>humidity, pressure</tag>
+</tags>
+<status status="PASS" starttime="20200423 00:18:28.167" endtime="20200423 00:18:31.167" critical="yes"></status>
+</test>
+<doc>Current Weather Task</doc>
+<status status="FAIL" starttime="20200423 00:18:16.206" endtime="20200423 00:18:31.170"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1">Critical Tests</stat>
+<stat pass="4" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">airport</stat>
+<stat pass="1" fail="0">daylight</stat>
+<stat pass="1" fail="0">humidity, pressure</stat>
+<stat pass="0" fail="1">snow</stat>
+<stat pass="1" fail="0">temperature</stat>
+</tag>
+<suite>
+<stat pass="4" fail="1" id="s1" name="Current Weather">Current Weather</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
