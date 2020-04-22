@@ -9,7 +9,7 @@ owm = pyowm.OWM(Conf.weatherToken)
 
 def parse_city():
     with open("/home/ricknash/PycharmProjects/Nexign_cource/Final_task/libraries/city.list.json", "r") as read_file:
-        data = json.load(read_file)[-100:]  # получаем 100 последних городов из списка
+        data = json.load(read_file)[-200:]  # получаем 100 последних городов из списка
     id_list = []  # лист для хранения id городов
     list_tmp = []
     count = 0  # счетчик
@@ -18,7 +18,7 @@ def parse_city():
     while count < len(data):
         list_tmp += owm.weather_at_ids(id_list[count:(count + 20)])
         count += 20
-        time.sleep(10)
+        time.sleep(5)
     return list_tmp
 
 
