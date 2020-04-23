@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200423 21:57:16.213" rpa="false">
+<suite id="s1" name="Final Task" source="D:\robotfr\final_task">
+<suite id="s1-s1" name="01 Current Weather" source="D:\robotfr\final_task\01_current_weather.robot">
+<test id="s1-s1-t1" name="TC1_temperature">
+<kw name="Get Current Temperature" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:57:20.503" level="INFO">${cities} = {'City': 'Dahasuways', 'Temperature': 29.21}</msg>
+<status status="PASS" starttime="20200423 21:57:16.584" endtime="20200423 21:57:20.503"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:57:20.508" level="INFO">Length is 2</msg>
+<msg timestamp="20200423 21:57:20.509" level="INFO">${length} = 2</msg>
+<status status="PASS" starttime="20200423 21:57:20.506" endtime="20200423 21:57:20.509"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>log dictionary</arg>
+<arg>${cities}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<msg timestamp="20200423 21:57:20.514" level="INFO">Dictionary size is 2 and it contains following items:
+City: Dahasuways
+Temperature: 29.21</msg>
+<status status="PASS" starttime="20200423 21:57:20.511" endtime="20200423 21:57:20.514"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:57:20.511" endtime="20200423 21:57:20.514"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Fail</arg>
+<arg>No cities with given temperature</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:57:20.516" endtime="20200423 21:57:20.517"></status>
+</kw>
+<doc>Searching for a city with temperature above 25.0 Celsius; if none then failed</doc>
+<tags>
+<tag>open weather</tag>
+<tag>temperature</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 21:57:16.583" endtime="20200423 21:57:20.519" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TC2_daylight">
+<kw name="Get Day Length" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:57:21.872" level="INFO">${cities} = {'City': 'Ḩeşār-e Sefīd', 'Day length': '13:18:51'}</msg>
+<status status="PASS" starttime="20200423 21:57:20.532" endtime="20200423 21:57:21.872"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:57:21.874" level="INFO">Length is 2</msg>
+<msg timestamp="20200423 21:57:21.874" level="INFO">${length} = 2</msg>
+<status status="PASS" starttime="20200423 21:57:21.873" endtime="20200423 21:57:21.874"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>log dictionary</arg>
+<arg>${cities}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<msg timestamp="20200423 21:57:21.878" level="INFO">Dictionary size is 2 and it contains following items:
+City: Ḩeşār-e Sefīd
+Day length: 13:18:51</msg>
+<status status="PASS" starttime="20200423 21:57:21.877" endtime="20200423 21:57:21.878"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:57:21.875" endtime="20200423 21:57:21.878"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Fail</arg>
+<arg>No cities with given daylight hours</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:57:21.878" endtime="20200423 21:57:21.879"></status>
+</kw>
+<doc>Searching for a city with daylight hours more than 12h; if none then failed</doc>
+<tags>
+<tag>daylight hours</tag>
+<tag>open weather</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 21:57:20.527" endtime="20200423 21:57:21.880" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="TC3_conditions">
+<kw name="Get Conditions" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:57:23.335" level="INFO">${cities} = {'City': 'Ḩeşār-e Sefīd'}</msg>
+<status status="PASS" starttime="20200423 21:57:21.885" endtime="20200423 21:57:23.335"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>City</arg>
+</arguments>
+<assign>
+<var>${city}</var>
+</assign>
+<msg timestamp="20200423 21:57:23.337" level="INFO">${city} = Ḩeşār-e Sefīd</msg>
+<status status="PASS" starttime="20200423 21:57:23.336" endtime="20200423 21:57:23.337"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:57:23.339" level="INFO">Length is 1</msg>
+<msg timestamp="20200423 21:57:23.339" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20200423 21:57:23.338" endtime="20200423 21:57:23.339"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${city}' == ''</arg>
+<arg>log</arg>
+<arg>City - ${city}. Good conditions.</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>City - ${city}. Good conditions.</arg>
+</arguments>
+<msg timestamp="20200423 21:57:23.341" level="INFO">City - Ḩeşār-e Sefīd. Good conditions.</msg>
+<status status="PASS" starttime="20200423 21:57:23.340" endtime="20200423 21:57:23.341"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:57:23.340" endtime="20200423 21:57:23.341"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${city}' == ''</arg>
+<arg>Fail</arg>
+<arg>No cities with such conditions</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:57:23.342" endtime="20200423 21:57:23.342"></status>
+</kw>
+<doc>Searching for a city with visibility more than 300m and wind speed less than 20mps; if none then failed</doc>
+<tags>
+<tag>open weather</tag>
+<tag>visibility and wind</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 21:57:21.883" endtime="20200423 21:57:23.343" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="TC4_snow">
+<kw name="Get Snow" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:57:50.565" level="INFO">${cities} = {'City': ''}</msg>
+<status status="PASS" starttime="20200423 21:57:23.346" endtime="20200423 21:57:50.565"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>City</arg>
+</arguments>
+<assign>
+<var>${city}</var>
+</assign>
+<msg timestamp="20200423 21:57:50.567" level="INFO">${city} = </msg>
+<status status="PASS" starttime="20200423 21:57:50.566" endtime="20200423 21:57:50.567"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${city}' == ''</arg>
+<arg>log</arg>
+<arg>City - ${city}. Snow.</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:57:50.568" endtime="20200423 21:57:50.568"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${city}' == ''</arg>
+<arg>Fail</arg>
+<arg>It's not snowing anywhere</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>It's not snowing anywhere</arg>
+</arguments>
+<msg timestamp="20200423 21:57:50.570" level="FAIL">It's not snowing anywhere</msg>
+<status status="FAIL" starttime="20200423 21:57:50.569" endtime="20200423 21:57:50.570"></status>
+</kw>
+<status status="FAIL" starttime="20200423 21:57:50.568" endtime="20200423 21:57:50.570"></status>
+</kw>
+<doc>Searching for a city where it's snowing; if none then failed</doc>
+<tags>
+<tag>open weather</tag>
+<tag>snow</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="FAIL" starttime="20200423 21:57:23.345" endtime="20200423 21:57:50.570" critical="yes">It's not snowing anywhere</status>
+</test>
+<test id="s1-s1-t5" name="TC5_humidity_pressure">
+<kw name="Get Humidity And Pressure" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:57:51.602" level="INFO">${cities} = {'City': 'Ḩeşār-e Sefīd', 'humidity': 87, 'pressure': 1013}</msg>
+<status status="PASS" starttime="20200423 21:57:50.572" endtime="20200423 21:57:51.602"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:57:51.607" level="INFO">Length is 3</msg>
+<msg timestamp="20200423 21:57:51.607" level="INFO">${length} = 3</msg>
+<status status="PASS" starttime="20200423 21:57:51.605" endtime="20200423 21:57:51.607"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>log dictionary</arg>
+<arg>${cities}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${cities}</arg>
+</arguments>
+<msg timestamp="20200423 21:57:51.611" level="INFO">Dictionary size is 3 and it contains following items:
+City: Ḩeşār-e Sefīd
+humidity: 87
+pressure: 1013</msg>
+<status status="PASS" starttime="20200423 21:57:51.610" endtime="20200423 21:57:51.612"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:57:51.608" endtime="20200423 21:57:51.612"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Fail</arg>
+<arg>No cities with such conditions</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:57:51.612" endtime="20200423 21:57:51.613"></status>
+</kw>
+<doc>Searching for a city with humidity more than 75% and pressusre more than 770 mm Hg, if none then failed</doc>
+<tags>
+<tag>humidity and pressure</tag>
+<tag>open weather</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 21:57:50.572" endtime="20200423 21:57:51.614" critical="yes"></status>
+</test>
+<doc>Current Weather</doc>
+<status status="FAIL" starttime="20200423 21:57:16.250" endtime="20200423 21:57:51.618"></status>
+</suite>
+<suite id="s1-s2" name="02 5 Day" source="D:\robotfr\final_task\02_5_day.robot">
+<test id="s1-s2-t1" name="TC6_cloudiness">
+<kw name="Get Cloudiness" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:57:52.731" level="INFO">${cities} = {'City': 'Ḩeşār-e Sefīd', 'info': [{'cloudiness': 94, 'date': '2020-04-24'}, {'cloudiness': 96, 'date': '2020-04-25'}, {'cloudiness': 94, 'date': '2020-04-25'}, {'cloudiness': 100, 'date': '2020-04-25...</msg>
+<status status="PASS" starttime="20200423 21:57:51.649" endtime="20200423 21:57:52.731"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>info</arg>
+</arguments>
+<assign>
+<var>${info}</var>
+</assign>
+<msg timestamp="20200423 21:57:52.735" level="INFO">${info} = [{'cloudiness': 94, 'date': '2020-04-24'}, {'cloudiness': 96, 'date': '2020-04-25'}, {'cloudiness': 94, 'date': '2020-04-25'}, {'cloudiness': 100, 'date': '2020-04-25'}, {'cloudiness': 100, 'date': '2...</msg>
+<status status="PASS" starttime="20200423 21:57:52.733" endtime="20200423 21:57:52.736"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>City</arg>
+</arguments>
+<assign>
+<var>${city}</var>
+</assign>
+<msg timestamp="20200423 21:57:52.740" level="INFO">${city} = Ḩeşār-e Sefīd</msg>
+<status status="PASS" starttime="20200423 21:57:52.737" endtime="20200423 21:57:52.740"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${info}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:57:52.743" level="INFO">Length is 11</msg>
+<msg timestamp="20200423 21:57:52.744" level="INFO">${length} = 11</msg>
+<status status="PASS" starttime="20200423 21:57:52.741" endtime="20200423 21:57:52.744"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Run Keywords</arg>
+<arg>log</arg>
+<arg>${city}</arg>
+<arg>AND</arg>
+<arg>log list</arg>
+<arg>${info}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>log</arg>
+<arg>${city}</arg>
+<arg>AND</arg>
+<arg>log list</arg>
+<arg>${info}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20200423 21:57:52.751" level="INFO">Ḩeşār-e Sefīd</msg>
+<status status="PASS" starttime="20200423 21:57:52.748" endtime="20200423 21:57:52.751"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<arguments>
+<arg>${info}</arg>
+</arguments>
+<msg timestamp="20200423 21:57:52.754" level="INFO">List length is 11 and it contains following items:
+0: {'cloudiness': 94, 'date': '2020-04-24'}
+1: {'cloudiness': 96, 'date': '2020-04-25'}
+2: {'cloudiness': 94, 'date': '2020-04-25'}
+3: {'cloudiness': 100, 'date': '2020-04-25'}
+4: {'cloudiness': 100, 'date': '2020-04-26'}
+5: {'cloudiness': 95, 'date': '2020-04-27'}
+6: {'cloudiness': 97, 'date': '2020-04-27'}
+7: {'cloudiness': 93, 'date': '2020-04-28'}
+8: {'cloudiness': 97, 'date': '2020-04-28'}
+9: {'cloudiness': 99, 'date': '2020-04-28'}
+10: {'cloudiness': 92, 'date': '2020-04-28'}</msg>
+<status status="PASS" starttime="20200423 21:57:52.752" endtime="20200423 21:57:52.754"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:57:52.747" endtime="20200423 21:57:52.754"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:57:52.746" endtime="20200423 21:57:52.754"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Fail</arg>
+<arg>No cities found</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:57:52.756" endtime="20200423 21:57:52.757"></status>
+</kw>
+<doc>Searching for a city with cloudiness more than 90%; if none then failed</doc>
+<tags>
+<tag>cloudiness</tag>
+<tag>open weather</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 21:57:51.647" endtime="20200423 21:57:52.758" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="TC7_rain">
+<kw name="Get Rain" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:58:06.212" level="INFO">${cities} = {'City': 'Saacow', 'info': [{'Heavy intensity rain': '2020-04-25'}]}</msg>
+<status status="PASS" starttime="20200423 21:57:52.765" endtime="20200423 21:58:06.212"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>info</arg>
+</arguments>
+<assign>
+<var>${info}</var>
+</assign>
+<msg timestamp="20200423 21:58:06.217" level="INFO">${info} = [{'Heavy intensity rain': '2020-04-25'}]</msg>
+<status status="PASS" starttime="20200423 21:58:06.214" endtime="20200423 21:58:06.217"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>City</arg>
+</arguments>
+<assign>
+<var>${city}</var>
+</assign>
+<msg timestamp="20200423 21:58:06.221" level="INFO">${city} = Saacow</msg>
+<status status="PASS" starttime="20200423 21:58:06.219" endtime="20200423 21:58:06.221"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${info}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:58:06.225" level="INFO">Length is 1</msg>
+<msg timestamp="20200423 21:58:06.226" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20200423 21:58:06.223" endtime="20200423 21:58:06.226"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Run Keywords</arg>
+<arg>log</arg>
+<arg>${city}</arg>
+<arg>AND</arg>
+<arg>log list</arg>
+<arg>${info}</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>log</arg>
+<arg>${city}</arg>
+<arg>AND</arg>
+<arg>log list</arg>
+<arg>${info}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20200423 21:58:06.232" level="INFO">Saacow</msg>
+<status status="PASS" starttime="20200423 21:58:06.230" endtime="20200423 21:58:06.232"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<arguments>
+<arg>${info}</arg>
+</arguments>
+<msg timestamp="20200423 21:58:06.234" level="INFO">List has one item:
+{'Heavy intensity rain': '2020-04-25'}</msg>
+<status status="PASS" starttime="20200423 21:58:06.233" endtime="20200423 21:58:06.235"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:58:06.229" endtime="20200423 21:58:06.235"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:58:06.228" endtime="20200423 21:58:06.235"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Fail</arg>
+<arg>No cities found</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:58:06.237" endtime="20200423 21:58:06.238"></status>
+</kw>
+<doc>Searching for a city with heavy intensity rain; if none then failed</doc>
+<tags>
+<tag>open weather</tag>
+<tag>rain</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 21:57:52.763" endtime="20200423 21:58:06.239" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="TC8_difference">
+<kw name="Get Difference" library="OWMRequests">
+<assign>
+<var>${cities}</var>
+</assign>
+<msg timestamp="20200423 21:58:44.942" level="INFO">${cities} = {'info': [], 'City': ''}</msg>
+<status status="PASS" starttime="20200423 21:58:06.246" endtime="20200423 21:58:44.942"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>info</arg>
+</arguments>
+<assign>
+<var>${info}</var>
+</assign>
+<msg timestamp="20200423 21:58:44.946" level="INFO">${info} = []</msg>
+<status status="PASS" starttime="20200423 21:58:44.944" endtime="20200423 21:58:44.946"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${cities}</arg>
+<arg>City</arg>
+</arguments>
+<assign>
+<var>${city}</var>
+</assign>
+<msg timestamp="20200423 21:58:44.950" level="INFO">${city} = </msg>
+<status status="PASS" starttime="20200423 21:58:44.948" endtime="20200423 21:58:44.951"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${info}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200423 21:58:44.956" level="INFO">Length is 0</msg>
+<msg timestamp="20200423 21:58:44.956" level="INFO">${length} = 0</msg>
+<status status="PASS" starttime="20200423 21:58:44.953" endtime="20200423 21:58:44.957"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Run Keywords</arg>
+<arg>log</arg>
+<arg>${city}</arg>
+<arg>AND</arg>
+<arg>log list</arg>
+<arg>${info}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:58:44.958" endtime="20200423 21:58:44.960"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} == 0</arg>
+<arg>Fail</arg>
+<arg>No cities found</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>No cities found</arg>
+</arguments>
+<msg timestamp="20200423 21:58:44.966" level="FAIL">No cities found</msg>
+<status status="FAIL" starttime="20200423 21:58:44.963" endtime="20200423 21:58:44.966"></status>
+</kw>
+<status status="FAIL" starttime="20200423 21:58:44.961" endtime="20200423 21:58:44.966"></status>
+</kw>
+<doc>Searching for a city with difference between morning temperature and day temperature more than 10 Celsius; if none then failed</doc>
+<tags>
+<tag>open weather</tag>
+<tag>temperature difference</tag>
+</tags>
+<timeout value="2 minutes"></timeout>
+<status status="FAIL" starttime="20200423 21:58:06.243" endtime="20200423 21:58:44.968" critical="yes">No cities found</status>
+</test>
+<doc>5 day / 3 hour weather forecast</doc>
+<status status="FAIL" starttime="20200423 21:57:51.629" endtime="20200423 21:58:44.973"></status>
+</suite>
+<doc>Open Weather</doc>
+<status status="FAIL" starttime="20200423 21:57:16.217" endtime="20200423 21:58:44.983"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="2">Critical Tests</stat>
+<stat pass="6" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">cloudiness</stat>
+<stat pass="1" fail="0">daylight hours</stat>
+<stat pass="1" fail="0">humidity and pressure</stat>
+<stat pass="6" fail="2">open weather</stat>
+<stat pass="1" fail="0">rain</stat>
+<stat pass="0" fail="1">snow</stat>
+<stat pass="1" fail="0">temperature</stat>
+<stat pass="0" fail="1">temperature difference</stat>
+<stat pass="1" fail="0">visibility and wind</stat>
+</tag>
+<suite>
+<stat pass="6" fail="2" id="s1" name="Final Task">Final Task</stat>
+<stat pass="4" fail="1" id="s1-s1" name="01 Current Weather">Final Task.01 Current Weather</stat>
+<stat pass="2" fail="1" id="s1-s2" name="02 5 Day">Final Task.02 5 Day</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
