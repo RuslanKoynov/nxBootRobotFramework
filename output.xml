@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200423 23:37:39.675" rpa="false">
+<suite id="s1" name="Final Task" source="D:\Robot\final_task">
+<suite id="s1-s1" name="5Daily" source="D:\Robot\final_task\5daily.robot">
+<test id="s1-s1-t1" name="Test One Clouds">
+<kw name="Get Citys With Cloud In 5days" library="5_day_3_hours_forecast">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200423 23:37:45.793" level="INFO">${result} = {'Saint Petersburg Clouds - 100%, date - 2020-04-23 21:00:00+00:00': '', 'Saint Petersburg Clouds - 100%, date - 2020-04-24 00:00:00+00:00': '', 'Saint Petersburg Clouds - 100%, date - 2020-04-24 03:0...</msg>
+<status status="PASS" starttime="20200423 23:37:39.934" endtime="20200423 23:37:45.793"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 23:37:45.797" level="INFO">Dictionary size is 309 and it contains following items:
+Al Ghaylah Clouds - 91%, date - 2020-04-25 00:00:00+00:00: 
+Al Ghaylah Clouds - 94%, date - 2020-04-27 15:00:00+00:00: 
+Aş Şūrah aş Şaghīrah Clouds - 100%, date - 2020-04-24 09:00:00+00:00: 
+Aş Şūrah aş Şaghīrah Clouds - 93%, date - 2020-04-27 12:00:00+00:00: 
+Aş Şūrah aş Şaghīrah Clouds - 98%, date - 2020-04-27 09:00:00+00:00: 
+Behjatābād Clouds - 100%, date - 2020-04-26 09:00:00+00:00: 
+Behjatābād Clouds - 100%, date - 2020-04-26 12:00:00+00:00: 
+Behjatābād Clouds - 100%, date - 2020-04-26 15:00:00+00:00: 
+Behjatābād Clouds - 100%, date - 2020-04-28 03:00:00+00:00: 
+Behjatābād Clouds - 91%, date - 2020-04-24 21:00:00+00:00: 
+Behjatābād Clouds - 91%, date - 2020-04-26 03:00:00+00:00: 
+Behjatābād Clouds - 92%, date - 2020-04-27 21:00:00+00:00: 
+Behjatābād Clouds - 93%, date - 2020-04-27 15:00:00+00:00: 
+Behjatābād Clouds - 94%, date - 2020-04-23 21:00:00+00:00: 
+Behjatābād Clouds - 94%, date - 2020-04-25 00:00:00+00:00: 
+Behjatābād Clouds - 95%, date - 2020-04-24 03:00:00+00:00: 
+Behjatābād Clouds - 95%, date - 2020-04-25 03:00:00+00:00: 
+Behjatābād Clouds - 96%, date - 2020-04-24 12:00:00+00:00: 
+Behjatābād Clouds - 96%, date - 2020-04-28 00:00:00+00:00: 
+Behjatābād Clouds - 96%, date - 2020-04-28 06:00:00+00:00: 
+Behjatābād Clouds - 97%, date - 2020-04-24 06:00:00+00:00: 
+Behjatābād Clouds - 97%, date - 2020-04-24 09:00:00+00:00: 
+Behjatābād Clouds - 97%, date - 2020-04-24 18:00:00+00:00: 
+Behjatābād Clouds - 98%, date - 2020-04-24 00:00:00+00:00: 
+Behjatābād Clouds - 98%, date - 2020-04-24 15:00:00+00:00: 
+Behjatābād Clouds - 99%, date - 2020-04-26 18:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-24 09:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-24 15:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-24 18:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-26 09:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-26 12:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-26 15:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-26 18:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-28 03:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 100%, date - 2020-04-28 06:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 91%, date - 2020-04-25 00:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 94%, date - 2020-04-24 03:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 97%, date - 2020-04-23 21:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 97%, date - 2020-04-24 06:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 98%, date - 2020-04-25 03:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 99%, date - 2020-04-24 00:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 99%, date - 2020-04-24 12:00:00+00:00: 
+Bālā Aḩmad Kolā Clouds - 99%, date - 2020-04-27 03:00:00+00:00: 
+Dawran Clouds - 93%, date - 2020-04-27 15:00:00+00:00: 
+Dīgāleh Clouds - 100%, date - 2020-04-24 21:00:00+00:00: 
+Dīgāleh Clouds - 100%, date - 2020-04-28 09:00:00+00:00: 
+Dīgāleh Clouds - 100%, date - 2020-04-28 12:00:00+00:00: 
+Dīgāleh Clouds - 92%, date - 2020-04-25 00:00:00+00:00: 
+Dīgāleh Clouds - 96%, date - 2020-04-27 18:00:00+00:00: 
+Dīgāleh Clouds - 97%, date - 2020-04-28 06:00:00+00:00: 
+Dīgāleh Clouds - 98%, date - 2020-04-27 21:00:00+00:00: 
+Dīgāleh Clouds - 98%, date - 2020-04-28 00:00:00+00:00: 
+Dīgāleh Clouds - 98%, date - 2020-04-28 03:00:00+00:00: 
+Dīgāleh Clouds - 99%, date - 2020-04-27 15:00:00+00:00: 
+Dīgāleh Clouds - 99%, date - 2020-04-28 15:00:00+00:00: 
+Gollar Clouds - 100%, date - 2020-04-23 21:00:00+00:00: 
+Gollar Clouds - 100%, date - 2020-04-24 00:00:00+00:00: 
+Gollar Clouds - 100%, date - 2020-04-28 03:00:00+00:00: 
+Gollar Clouds - 100%, date - 2020-04-28 09:00:00+00:00: 
+Gollar Clouds - 100%, date - 2020-04-28 12:00:00+00:00: 
+Gollar Clouds - 93%, date - 2020-04-28 06:00:00+00:00: 
+Gollar Clouds - 94%, date - 2020-04-24 21:00:00+00:00: 
+Gollar Clouds - 95%, date - 2020-04-25 06:00:00+00:00: 
+Gollar Clouds - 95%, date - 2020-04-27 09:00:00+00:00: 
+Gollar Clouds - 96%, date - 2020-04-27 12:00:00+00:00: 
+Gollar Clouds - 96%, date - 2020-04-27 21:00:00+00:00: 
+Gollar Clouds - 98%, date - 2020-04-28 00:00:00+00:00: 
+Judaydah Clouds - 92%, date - 2020-04-25 03:00:00+00:00: 
+Judaydah Clouds - 95%, date - 2020-04-28 18:00:00+00:00: 
+Kahrīz Clouds - 100%, date - 2020-04-26 03:00:00+00:00: 
+Kahrīz Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Kahrīz Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Kahrīz Clouds - 91%, date - 2020-04-28 12:00:00+00:00: 
+Kahrīz Clouds - 93%, date - 2020-04-27 18:00:00+00:00: 
+Kahrīz Clouds - 94%, date - 2020-04-25 12:00:00+00:00: 
+Kahrīz Clouds - 94%, date - 2020-04-26 12:00:00+00:00: 
+Kahrīz Clouds - 95%, date - 2020-04-25 09:00:00+00:00: 
+Kahrīz Clouds - 96%, date - 2020-04-24 12:00:00+00:00: 
+Kahrīz Clouds - 97%, date - 2020-04-24 09:00:00+00:00: 
+Kahrīz Clouds - 97%, date - 2020-04-24 21:00:00+00:00: 
+Kahrīz Clouds - 97%, date - 2020-04-25 21:00:00+00:00: 
+Kahrīz Clouds - 97%, date - 2020-04-26 09:00:00+00:00: 
+Kahrīz Clouds - 97%, date - 2020-04-28 03:00:00+00:00: 
+Kahrīz Clouds - 98%, date - 2020-04-25 00:00:00+00:00: 
+Kahrīz Clouds - 98%, date - 2020-04-26 00:00:00+00:00: 
+Kahrīz Clouds - 99%, date - 2020-04-26 06:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 100%, date - 2020-04-26 21:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 100%, date - 2020-04-27 00:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 94%, date - 2020-04-26 15:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 94%, date - 2020-04-27 09:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 97%, date - 2020-04-26 18:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 97%, date - 2020-04-28 09:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 99%, date - 2020-04-27 03:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 99%, date - 2020-04-27 06:00:00+00:00: 
+Kalāteh-ye Dowlat Clouds - 99%, date - 2020-04-28 12:00:00+00:00: 
+Najd al Jama`i Clouds - 95%, date - 2020-04-27 18:00:00+00:00: 
+Najd al Jama`i Clouds - 97%, date - 2020-04-27 15:00:00+00:00: 
+Nūrābād Clouds - 100%, date - 2020-04-24 21:00:00+00:00: 
+Nūrābād Clouds - 100%, date - 2020-04-26 03:00:00+00:00: 
+Nūrābād Clouds - 100%, date - 2020-04-26 06:00:00+00:00: 
+Nūrābād Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Nūrābād Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Nūrābād Clouds - 91%, date - 2020-04-28 12:00:00+00:00: 
+Nūrābād Clouds - 91%, date - 2020-04-28 15:00:00+00:00: 
+Nūrābād Clouds - 92%, date - 2020-04-28 03:00:00+00:00: 
+Nūrābād Clouds - 95%, date - 2020-04-27 18:00:00+00:00: 
+Nūrābād Clouds - 96%, date - 2020-04-25 21:00:00+00:00: 
+Nūrābād Clouds - 97%, date - 2020-04-27 15:00:00+00:00: 
+Nūrābād Clouds - 98%, date - 2020-04-26 00:00:00+00:00: 
+Nūrābād Clouds - 99%, date - 2020-04-25 00:00:00+00:00: 
+Protaras Clouds - 100%, date - 2020-04-24 03:00:00+00:00: 
+Protaras Clouds - 100%, date - 2020-04-24 09:00:00+00:00: 
+Protaras Clouds - 100%, date - 2020-04-24 12:00:00+00:00: 
+Protaras Clouds - 100%, date - 2020-04-24 18:00:00+00:00: 
+Protaras Clouds - 100%, date - 2020-04-27 03:00:00+00:00: 
+Protaras Clouds - 92%, date - 2020-04-26 15:00:00+00:00: 
+Protaras Clouds - 93%, date - 2020-04-25 15:00:00+00:00: 
+Protaras Clouds - 93%, date - 2020-04-27 06:00:00+00:00: 
+Protaras Clouds - 94%, date - 2020-04-26 18:00:00+00:00: 
+Protaras Clouds - 94%, date - 2020-04-27 00:00:00+00:00: 
+Protaras Clouds - 99%, date - 2020-04-24 06:00:00+00:00: 
+Protaras Clouds - 99%, date - 2020-04-24 15:00:00+00:00: 
+Qabāghlū Clouds - 100%, date - 2020-04-25 03:00:00+00:00: 
+Qabāghlū Clouds - 100%, date - 2020-04-27 09:00:00+00:00: 
+Qabāghlū Clouds - 100%, date - 2020-04-27 12:00:00+00:00: 
+Qabāghlū Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Qabāghlū Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Qabāghlū Clouds - 92%, date - 2020-04-28 06:00:00+00:00: 
+Qabāghlū Clouds - 93%, date - 2020-04-28 12:00:00+00:00: 
+Qabāghlū Clouds - 94%, date - 2020-04-27 15:00:00+00:00: 
+Qabāghlū Clouds - 95%, date - 2020-04-23 21:00:00+00:00: 
+Qabāghlū Clouds - 95%, date - 2020-04-25 00:00:00+00:00: 
+Qabāghlū Clouds - 95%, date - 2020-04-28 09:00:00+00:00: 
+Qabāghlū Clouds - 96%, date - 2020-04-27 18:00:00+00:00: 
+Qabāghlū Clouds - 99%, date - 2020-04-28 03:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 100%, date - 2020-04-24 21:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 100%, date - 2020-04-27 15:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 100%, date - 2020-04-28 12:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 91%, date - 2020-04-25 06:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 95%, date - 2020-04-25 00:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 97%, date - 2020-04-28 06:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 98%, date - 2020-04-27 18:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 98%, date - 2020-04-28 03:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 99%, date - 2020-04-27 21:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 99%, date - 2020-04-28 00:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 99%, date - 2020-04-28 09:00:00+00:00: 
+Qarālar-e Mīrzā Ḩoseynqolī Clouds - 99%, date - 2020-04-28 15:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-23 21:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-24 00:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-24 03:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-24 06:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-24 15:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-26 03:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-26 06:00:00+00:00: 
+Rokan Sarā Clouds - 100%, date - 2020-04-28 03:00:00+00:00: 
+Rokan Sarā Clouds - 92%, date - 2020-04-25 15:00:00+00:00: 
+Rokan Sarā Clouds - 93%, date - 2020-04-25 18:00:00+00:00: 
+Rokan Sarā Clouds - 95%, date - 2020-04-26 09:00:00+00:00: 
+Rokan Sarā Clouds - 95%, date - 2020-04-26 12:00:00+00:00: 
+Rokan Sarā Clouds - 96%, date - 2020-04-25 03:00:00+00:00: 
+Rokan Sarā Clouds - 96%, date - 2020-04-28 06:00:00+00:00: 
+Rokan Sarā Clouds - 97%, date - 2020-04-25 06:00:00+00:00: 
+Rokan Sarā Clouds - 98%, date - 2020-04-24 18:00:00+00:00: 
+Rokan Sarā Clouds - 99%, date - 2020-04-24 09:00:00+00:00: 
+Rokan Sarā Clouds - 99%, date - 2020-04-24 12:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-23 21:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-24 00:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-24 03:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-24 06:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-24 09:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-24 12:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-24 15:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-28 09:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-28 12:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-28 15:00:00+00:00: 
+Saint Petersburg Clouds - 100%, date - 2020-04-28 18:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-24 00:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-25 21:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-26 00:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-26 09:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-26 12:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-26 15:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-26 18:00:00+00:00: 
+Shahrīār Kandeh Clouds - 100%, date - 2020-04-27 03:00:00+00:00: 
+Shahrīār Kandeh Clouds - 103%, date - 2020-04-23 21:00:00+00:00: 
+Shahrīār Kandeh Clouds - 91%, date - 2020-04-24 21:00:00+00:00: 
+Shahrīār Kandeh Clouds - 91%, date - 2020-04-28 09:00:00+00:00: 
+Shahrīār Kandeh Clouds - 92%, date - 2020-04-24 06:00:00+00:00: 
+Shahrīār Kandeh Clouds - 92%, date - 2020-04-26 06:00:00+00:00: 
+Shahrīār Kandeh Clouds - 93%, date - 2020-04-27 21:00:00+00:00: 
+Shahrīār Kandeh Clouds - 95%, date - 2020-04-24 12:00:00+00:00: 
+Shahrīār Kandeh Clouds - 95%, date - 2020-04-25 00:00:00+00:00: 
+Shahrīār Kandeh Clouds - 97%, date - 2020-04-25 03:00:00+00:00: 
+Shahrīār Kandeh Clouds - 97%, date - 2020-04-27 06:00:00+00:00: 
+Shahrīār Kandeh Clouds - 97%, date - 2020-04-28 00:00:00+00:00: 
+Shahrīār Kandeh Clouds - 98%, date - 2020-04-26 21:00:00+00:00: 
+Shahrīār Kandeh Clouds - 99%, date - 2020-04-24 09:00:00+00:00: 
+Shahrīār Kandeh Clouds - 99%, date - 2020-04-24 15:00:00+00:00: 
+Shahrīār Kandeh Clouds - 99%, date - 2020-04-24 18:00:00+00:00: 
+Shahrīār Kandeh Clouds - 99%, date - 2020-04-27 00:00:00+00:00: 
+Shahrīār Kandeh Clouds - 99%, date - 2020-04-28 03:00:00+00:00: 
+Shahrīār Kandeh Clouds - 99%, date - 2020-04-28 06:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-23 21:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-24 21:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-25 00:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-25 09:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-25 15:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-27 15:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-27 18:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-28 15:00:00+00:00: 
+Taglag Clouds - 100%, date - 2020-04-28 18:00:00+00:00: 
+Taglag Clouds - 93%, date - 2020-04-25 06:00:00+00:00: 
+Taglag Clouds - 94%, date - 2020-04-28 09:00:00+00:00: 
+Taglag Clouds - 95%, date - 2020-04-24 06:00:00+00:00: 
+Taglag Clouds - 95%, date - 2020-04-26 15:00:00+00:00: 
+Taglag Clouds - 97%, date - 2020-04-28 12:00:00+00:00: 
+Taglag Clouds - 98%, date - 2020-04-24 03:00:00+00:00: 
+Taglag Clouds - 98%, date - 2020-04-25 12:00:00+00:00: 
+Taglag Clouds - 98%, date - 2020-04-28 03:00:00+00:00: 
+Taglag Clouds - 99%, date - 2020-04-25 18:00:00+00:00: 
+Zalmah al `Ulya Clouds - 95%, date - 2020-04-27 18:00:00+00:00: 
+Zalmah al `Ulya Clouds - 96%, date - 2020-04-24 15:00:00+00:00: 
+Zalmah al `Ulya Clouds - 98%, date - 2020-04-27 15:00:00+00:00: 
+Zīrjān Clouds - 100%, date - 2020-04-27 03:00:00+00:00: 
+Zīrjān Clouds - 100%, date - 2020-04-27 06:00:00+00:00: 
+Zīrjān Clouds - 92%, date - 2020-04-26 18:00:00+00:00: 
+Zīrjān Clouds - 95%, date - 2020-04-26 21:00:00+00:00: 
+Zīrjān Clouds - 97%, date - 2020-04-27 00:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-24 03:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-24 06:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-24 15:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-24 18:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-24 21:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-25 00:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-25 03:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-25 06:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-25 09:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-25 12:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Āqdūz Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Āqdūz Clouds - 91%, date - 2020-04-26 06:00:00+00:00: 
+Āqdūz Clouds - 92%, date - 2020-04-28 06:00:00+00:00: 
+Āqdūz Clouds - 94%, date - 2020-04-26 03:00:00+00:00: 
+Āqdūz Clouds - 94%, date - 2020-04-28 15:00:00+00:00: 
+Āqdūz Clouds - 95%, date - 2020-04-23 21:00:00+00:00: 
+Āqdūz Clouds - 97%, date - 2020-04-25 21:00:00+00:00: 
+Āqdūz Clouds - 97%, date - 2020-04-28 09:00:00+00:00: 
+Āqdūz Clouds - 98%, date - 2020-04-24 00:00:00+00:00: 
+Āqdūz Clouds - 98%, date - 2020-04-24 09:00:00+00:00: 
+Āqdūz Clouds - 98%, date - 2020-04-24 12:00:00+00:00: 
+Āqdūz Clouds - 98%, date - 2020-04-28 03:00:00+00:00: 
+Āqdūz Clouds - 98%, date - 2020-04-28 12:00:00+00:00: 
+Āqdūz Clouds - 99%, date - 2020-04-25 15:00:00+00:00: 
+Āqdūz Clouds - 99%, date - 2020-04-25 18:00:00+00:00: 
+Āzādshahr Clouds - 100%, date - 2020-04-26 03:00:00+00:00: 
+Āzādshahr Clouds - 100%, date - 2020-04-26 06:00:00+00:00: 
+Āzādshahr Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Āzādshahr Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Āzādshahr Clouds - 92%, date - 2020-04-26 09:00:00+00:00: 
+Āzādshahr Clouds - 94%, date - 2020-04-24 12:00:00+00:00: 
+Āzādshahr Clouds - 97%, date - 2020-04-28 03:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 100%, date - 2020-04-24 03:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 100%, date - 2020-04-26 09:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 100%, date - 2020-04-26 15:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 100%, date - 2020-04-27 15:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 100%, date - 2020-04-28 03:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 93%, date - 2020-04-25 03:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 93%, date - 2020-04-25 06:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 94%, date - 2020-04-24 09:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 95%, date - 2020-04-24 15:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 95%, date - 2020-04-25 00:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 96%, date - 2020-04-23 21:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 96%, date - 2020-04-24 12:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 96%, date - 2020-04-24 18:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 96%, date - 2020-04-24 21:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 96%, date - 2020-04-28 06:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 97%, date - 2020-04-27 18:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 98%, date - 2020-04-24 00:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 99%, date - 2020-04-24 06:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 99%, date - 2020-04-26 03:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 99%, date - 2020-04-26 06:00:00+00:00: 
+Ţālesh Maḩalleh Clouds - 99%, date - 2020-04-26 12:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 100%, date - 2020-04-26 03:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 100%, date - 2020-04-27 21:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 100%, date - 2020-04-28 00:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 91%, date - 2020-04-24 12:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 91%, date - 2020-04-26 12:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 92%, date - 2020-04-24 09:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 93%, date - 2020-04-24 21:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 93%, date - 2020-04-27 18:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 94%, date - 2020-04-25 21:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 94%, date - 2020-04-26 09:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 95%, date - 2020-04-25 00:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 95%, date - 2020-04-28 03:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 97%, date - 2020-04-26 00:00:00+00:00: 
+Ḩeşār-e Sefīd Clouds - 97%, date - 2020-04-26 06:00:00+00:00: 
+‘Arīqah Clouds - 100%, date - 2020-04-24 09:00:00+00:00: 
+‘Arīqah Clouds - 91%, date - 2020-04-24 00:00:00+00:00: 
+‘Arīqah Clouds - 91%, date - 2020-04-27 12:00:00+00:00: 
+‘Arīqah Clouds - 94%, date - 2020-04-27 09:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 100%, date - 2020-04-24 09:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 100%, date - 2020-04-24 12:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 100%, date - 2020-04-24 15:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 100%, date - 2020-04-27 09:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 97%, date - 2020-04-27 03:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 97%, date - 2020-04-27 06:00:00+00:00: 
+‘Ayn Ḩalāqīm Clouds - 98%, date - 2020-04-27 21:00:00+00:00: </msg>
+<status status="PASS" starttime="20200423 23:37:45.796" endtime="20200423 23:37:45.797"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:37:45.794" endtime="20200423 23:37:45.797"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов, в которых хотя бы в один из дней будет облачность &gt; 90%</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:37:45.798" endtime="20200423 23:37:45.799"></status>
+</kw>
+<doc>Города, в которых хотя бы в один из дней будет облачность &gt; 90%</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:37:39.934" endtime="20200423 23:37:45.800" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Test Two Rains">
+<kw name="Get Citys With Rain In 5days" library="5_day_3_hours_forecast">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200423 23:37:51.458" level="INFO">${result} = {}</msg>
+<status status="PASS" starttime="20200423 23:37:45.801" endtime="20200423 23:37:51.459"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:37:51.460" endtime="20200423 23:37:51.461"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов, в которых хотя бы в один из дней будет дождь с описанием heavy intensity rain</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Отсутствие городов, в которых хотя бы в один из дней будет дождь с описанием heavy intensity rain</arg>
+</arguments>
+<msg timestamp="20200423 23:37:51.465" level="INFO">Отсутствие городов, в которых хотя бы в один из дней будет дождь с описанием heavy intensity rain</msg>
+<status status="PASS" starttime="20200423 23:37:51.463" endtime="20200423 23:37:51.465"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:37:51.462" endtime="20200423 23:37:51.465"></status>
+</kw>
+<doc>Города, в которых хотя бы в один из дней будет дождь с описанием heavy intensity rain</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:37:45.800" endtime="20200423 23:37:51.467" critical="yes"></status>
+</test>
+<doc>Robot final test 5 daily check</doc>
+<status status="PASS" starttime="20200423 23:37:39.699" endtime="20200423 23:37:51.469"></status>
+</suite>
+<suite id="s1-s2" name="Currentweather" source="D:\Robot\final_task\currentweather.robot">
+<test id="s1-s2-t1" name="Test One Temperature">
+<kw name="Get Temp From Citys" library="currentweather">
+<assign>
+<var>${result_name}</var>
+</assign>
+<msg timestamp="20200423 23:37:53.551" level="INFO">${result_name} = {'Dahasuways': 27.61, 'Ash Shihr': 28.46, 'Judaydah': 26.48, 'Ash Shuqayrah': 25.84, 'Suq Sirwah': 25.48, 'Majzar': 26.44, 'Wadarah': 25.63, 'Mustaba': 29.98, 'Dayr al Ḩisī': 30.4, 'Andīmeshk': 25.38,...</msg>
+<status status="PASS" starttime="20200423 23:37:51.495" endtime="20200423 23:37:53.551"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result_name}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result_name}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result_name}</arg>
+</arguments>
+<msg timestamp="20200423 23:37:53.556" level="INFO">Dictionary size is 92 and it contains following items:
+Abs: 30.16
+Afgooye: 27.46
+Al Musaymir: 25.61
+Andīmeshk: 25.38
+Ar Raydah: 28.49
+Ash Shihr: 28.46
+Ash Shuqayrah: 25.84
+Baardheere: 27.86
+Bandarbeyla: 28.24
+Bargaal: 27.99
+Behelidle: 27.65
+Beledweyne: 27.9
+Berbera: 28.67
+Bereeda: 28.06
+Boosaaso: 29.13
+Buaale: 26.59
+Buulobarde: 27.32
+Buur Gaabo: 27.36
+Cadale: 28.7
+Cadayo: 27.34
+Caluula: 28.32
+Ceek: 25.83
+Ceelbuur: 27.92
+Ceeldheer: 28.61
+Cheli Gu: 27.31
+Dahasuways: 27.61
+Dayr al Ḩisī: 30.4
+Doon: 28.0
+Dujuuma: 26.88
+Dusa Marreb: 27.67
+El Ad: 29.17
+Eyl: 28.96
+Gaalkacyo: 27.3
+Garbahaarrey: 26.06
+Garoowe: 26.25
+Gobolka Banaadir: 28.07
+Gobolka Bari: 25.08
+Gobolka Galguduud: 28.21
+Gobolka Gedo: 25.86
+Gobolka Hiiraan: 27.44
+Gobolka Jubbada Dhexe: 26.7
+Gobolka Jubbada Hoose: 25.05
+Gobolka Mudug: 27.36
+Gobolka Shabeellaha Dhexe: 26.02
+Gobolka Shabeellaha Hoose: 26.97
+Hobyo: 29.25
+Iskushuban: 27.17
+Jalalaqsi: 27.22
+Jamaame: 27.16
+Jawhar: 27.22
+Jilib: 26.11
+Judaydah: 26.48
+Kismaayo: 27.71
+Laasqoray: 29.64
+Lughaye: 28.69
+Mahaddayweyne: 27.43
+Maidi: 30.0
+Majzar: 26.44
+Manwakh: 30.08
+Marka: 27.92
+Mawza: 29.91
+Mayfaah: 26.53
+Mogadishu: 28.43
+Morī: 27.82
+Mustaba: 29.98
+Nisab: 25.39
+Qandala: 29.56
+Qishn: 28.51
+Qoryooley: 27.35
+Qulansiyah: 28.31
+Rakkat al ‘Askarī: 25.79
+Rudum: 27.73
+Saacow: 27.6
+Sah: 25.75
+Sana: 26.28
+Sayhut: 28.52
+Sharas: 25.08
+Shihan as Sufla: 27.82
+Shuḩayr: 28.43
+Sif: 25.43
+Somalia: 28.41
+Suq Sirwah: 25.48
+Tarim: 28.0
+Thamud: 27.46
+Ubal: 29.67
+Usaylan: 27.71
+Wadarah: 25.63
+Wanlaweyn: 26.82
+Xarardheere: 27.4
+Zabid: 30.3
+Zabīd: 30.45
+Zinjibar: 28.6</msg>
+<status status="PASS" starttime="20200423 23:37:53.554" endtime="20200423 23:37:53.556"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:37:53.552" endtime="20200423 23:37:53.557"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result_name}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов с температурой больше 25</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:37:53.558" endtime="20200423 23:37:53.560"></status>
+</kw>
+<doc>Города, в которых температура воздуха больше 25 градусов Цельсия.</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:37:51.493" endtime="20200423 23:37:53.561" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Test Two Sundaytime">
+<kw name="Get Sundaytime" library="currentweather">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200423 23:37:55.661" level="INFO">${result} = {'Sankt-Peterburg': 55041, 'Ḩeşār-e Sefīd': 48046, 'Ayn Halaqim': 48037, 'Taglag': 48792, 'Qabāghlū': 48369, 'Ariqah': 47699, 'Kalāteh-ye Dowlat': 48364, 'Behjatābād': 48457, 'Ţālesh Maḩalleh': 48497,...</msg>
+<status status="PASS" starttime="20200423 23:37:53.565" endtime="20200423 23:37:55.661"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 23:37:55.668" level="INFO">Dictionary size is 198 and it contains following items:
+Abs: 45397
+Ad Dil: 45240
+Afgooye: 43840
+Al Ahad: 45192
+Al Anan: 45483
+Al Ghaylah: 45231
+Al Jabin: 45243
+Al Musaymir: 45096
+An Nazir: 45505
+Andīmeshk: 47746
+Ar Ramadi: 45157
+Ar Rawnah: 45133
+Ar Raydah: 45282
+Ariqah: 47699
+As Sawarah as Sughra: 47721
+As Suwayda: 45137
+Ash Sharyah: 45203
+Ash Shihr: 45249
+Ash Shuqayrah: 45060
+At Tawilah: 45336
+At Ta‘izzīyah: 45125
+Ayn Halaqim: 48037
+Az Zahir: 45157
+Azadshahr: 48125
+Baardheere: 43861
+Badrābād-e `Olyā: 47895
+Bandarbeyla: 44645
+Bargaal: 44849
+Baydhabo: 43945
+Behelidle: 43859
+Behjatābād: 48457
+Beledweyne: 44121
+Berbera: 44753
+Bereeda: 44915
+Bidbadah: 45329
+Boosaaso: 44847
+Buaale: 43725
+Burco: 44649
+Buulobarde: 44024
+Buur Gaabo: 43478
+Buurhakaba: 43911
+Bālā Aḩmad Kolā: 48453
+Cadale: 43906
+Cadayo: 44084
+Caluula: 44926
+Ceek: 44591
+Ceelbuur: 44115
+Ceeldheer: 44025
+Ceerigaabo: 44773
+Cheli Gu: 44087
+Dahasuways: 45362
+Dalooldho: 44657
+Dawran: 45134
+Dayr al Ḩisī: 45403
+Dhi Jalal: 45117
+Doon: 44844
+Dujuuma: 43743
+Dusa Marreb: 44209
+Dīgāleh: 48622
+El Ad: 44848
+El Dubat: 44649
+Eyl: 44478
+Gaalkacyo: 44344
+Garbahaarrey: 43968
+Garoowe: 44525
+Gobolka Banaadir: 43837
+Gobolka Bari: 44703
+Gobolka Bay: 43933
+Gobolka Galguduud: 44150
+Gobolka Gedo: 43933
+Gobolka Hiiraan: 44041
+Gobolka Jubbada Dhexe: 43752
+Gobolka Jubbada Hoose: 43609
+Gobolka Mudug: 44369
+Gobolka Nugaal: 44498
+Gobolka Sanaag: 44759
+Gobolka Shabeellaha Dhexe: 43932
+Gobolka Shabeellaha Hoose: 43806
+Gobolka Togdheer: 44628
+Gobolka Woqooyi Galbeed: 44703
+Gollar: 48589
+Hargeysa: 44654
+Hobyo: 44188
+Iskushuban: 44735
+Istgah-e Garmsar: 48200
+Jalalaqsi: 43974
+Jamaame: 43616
+Jawhar: 43909
+Jilib: 43662
+Jozf-e Soflá: 47402
+Judaydah: 45287
+Kahriz: 48056
+Kalāteh-ye Dowlat: 48364
+Khorram Darreh: 48375
+Kismaayo: 43569
+Koshtārgāh: 47430
+Kūchaklī: 48243
+Laasqoray: 44834
+Lughaye: 44782
+Luuq: 44018
+Mahaddayweyne: 43929
+Maidi: 45435
+Majzar: 45378
+Manwakh: 45493
+Marka: 43794
+Markaz Mudhaykirah: 45148
+Mashraah: 45106
+Matwah: 45286
+Mawza: 45076
+Mayfaah: 45192
+Mogadishu: 43828
+Morī: 45002
+Mudiyah: 45153
+Mukayras: 45154
+Mustaba: 45424
+Muḩāfaz̧at Raymah: 45234
+Muḩāfaz̧at Shabwah: 45278
+Muḩāfaz̧at Ta‘izz: 45103
+Muḩāfaz̧at Şa‘dah: 45523
+Māmā’ī: 48496
+Najd al Jumai: 45152
+Nisab: 45221
+Nurabad: 48002
+Oodweyne: 44637
+Protaras: 48049
+Qabāghlū: 48369
+Qaloocan: 44651
+Qandala: 44870
+Qarchak: 48238
+Qarālar-e Mīrzā Ḩoseynqolī: 48644
+Qatabah: 45143
+Qishn: 45327
+Qoryooley: 43801
+Qulansiyah: 45007
+Rada: 45210
+Rakkat al ‘Askarī: 45415
+Ravīndūzaq: 48789
+Raydah: 45374
+Republic of Rwanda: 43393
+Republic of Yemen: 45337
+Reẕāābād: 48608
+Rihab: 45188
+Rokan Sarā: 48577
+Rudum: 45171
+Saacow: 43784
+Sadah: 45509
+Sah: 45346
+Sahar: 45316
+Sana: 45324
+Sanaa: 45319
+Sanhan: 45305
+Sankt-Peterburg: 55041
+Sayhut: 45302
+Sayyan: 45298
+Shaharat al Ghis: 45418
+Shahrīār Kandeh: 48449
+Sharas: 45362
+Shibam: 45338
+Shihan as Sufla: 45608
+Shuḩayr: 45240
+Shāhrūd: 48410
+Sif: 45314
+Somalia: 44259
+Suq Shamar: 45382
+Suq Sirwah: 45331
+Suq ar Rabu: 45220
+Suwayr: 45418
+Tabrīz Jānī: 48730
+Taglag: 48792
+Taizz: 45112
+Tarim: 45403
+Tayeeglow: 44043
+Ta‘izz: 45253
+Thamud: 45552
+Ubal: 45277
+Usaylan: 45281
+Waajid: 44021
+Wadarah: 45362
+Walan: 45287
+Wanlaweyn: 43892
+Washhah: 45434
+Xarardheere: 44111
+Xuddur: 44054
+Yarim: 45195
+Yarīm: 45190
+Yasuj: 47448
+Yeed: 44101
+Yufrus: 45098
+Zabid: 45184
+Zabīd: 45194
+Zalmat al Alya: 45172
+Zarajah: 45263
+Zinjibar: 45059
+Zīrjān: 48023
+Āqdūz: 48937
+Ţālesh Maḩalleh: 48497
+Ḩeşār-e Sefīd: 48046
+‘Abbāsābād-e Qūsheh: 47798</msg>
+<status status="PASS" starttime="20200423 23:37:55.666" endtime="20200423 23:37:55.669"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:37:55.663" endtime="20200423 23:37:55.669"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов c солнечным временем больше 12</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:37:55.670" endtime="20200423 23:37:55.673"></status>
+</kw>
+<doc>Города, в которых солнечное время длится больше 12 часов</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:37:53.563" endtime="20200423 23:37:55.674" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Test Three Flycheck">
+<kw name="Get Good Fly Airports" library="currentweather">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200423 23:37:57.780" level="INFO">${result} = {'Sankt-Peterburg': 'Good conditions', 'Ḩeşār-e Sefīd': 'Good conditions', 'Ayn Halaqim': 'Good conditions', 'Ariqah': 'Good conditions', 'Behjatābād': 'Good conditions', 'Ţālesh Maḩalleh': 'Good cond...</msg>
+<status status="PASS" starttime="20200423 23:37:55.676" endtime="20200423 23:37:57.780"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 23:37:57.782" level="INFO">Dictionary size is 24 and it contains following items:
+Ariqah: Good conditions
+As Sawarah as Sughra: Good conditions
+Ayn Halaqim: Good conditions
+Behjatābād: Good conditions
+Bālā Aḩmad Kolā: Good conditions
+Doon: Good conditions
+Dīgāleh: Good conditions
+Jozf-e Soflá: Good conditions
+Kahriz: Good conditions
+Koshtārgāh: Good conditions
+Kūchaklī: Good conditions
+Maidi: Good conditions
+Māmā’ī: Good conditions
+Protaras: Good conditions
+Qarchak: Good conditions
+Qarālar-e Mīrzā Ḩoseynqolī: Good conditions
+Reẕāābād: Good conditions
+Sankt-Peterburg: Good conditions
+Shahrīār Kandeh: Good conditions
+Tabrīz Jānī: Good conditions
+Yasuj: Good conditions
+Ţālesh Maḩalleh: Good conditions
+Ḩeşār-e Sefīd: Good conditions
+‘Abbāsābād-e Qūsheh: Good conditions</msg>
+<status status="PASS" starttime="20200423 23:37:57.781" endtime="20200423 23:37:57.782"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:37:57.780" endtime="20200423 23:37:57.782"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов, в которых удовлетворительное состояние аэропортов</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:37:57.782" endtime="20200423 23:37:57.783"></status>
+</kw>
+<doc>Города, в которых удовлетворительное состояние аэропортов</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:37:55.675" endtime="20200423 23:37:57.783" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Test Four Flycheck">
+<kw name="Get City With Snow" library="currentweather">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200423 23:38:00.000" level="INFO">${result} = {}</msg>
+<status status="PASS" starttime="20200423 23:37:57.785" endtime="20200423 23:38:00.000"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:38:00.002" endtime="20200423 23:38:00.003"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов, в которых идёт снег</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Отсутствие городов, в которых идёт снег</arg>
+</arguments>
+<msg timestamp="20200423 23:38:00.007" level="INFO">Отсутствие городов, в которых идёт снег</msg>
+<status status="PASS" starttime="20200423 23:38:00.006" endtime="20200423 23:38:00.007"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:38:00.004" endtime="20200423 23:38:00.008"></status>
+</kw>
+<doc>Города, в которых идёт снег</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:37:57.784" endtime="20200423 23:38:00.009" critical="yes"></status>
+</test>
+<test id="s1-s2-t5" name="Test Five Davlenie+Vlagnost">
+<kw name="Get Vlagnost And Davlenie" library="currentweather">
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200423 23:38:02.062" level="INFO">${result} = {'Ayn Halaqim': 'Humidity - 77% pressure - 1011', 'Behjatābād': 'Humidity - 93% pressure - 1017', 'Ţālesh Maḩalleh': 'Humidity - 100% pressure - 1017', 'Shahrīār Kandeh': 'Humidity - 100% pressure - 1...</msg>
+<status status="PASS" starttime="20200423 23:38:00.014" endtime="20200423 23:38:02.062"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log dictionary</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20200423 23:38:02.066" level="INFO">Dictionary size is 37 and it contains following items:
+Afgooye: Humidity - 76% pressure - 1011
+Ayn Halaqim: Humidity - 77% pressure - 1011
+Baydhabo: Humidity - 81% pressure - 1012
+Behjatābād: Humidity - 93% pressure - 1017
+Berbera: Humidity - 79% pressure - 1011
+Bereeda: Humidity - 77% pressure - 1011
+Buur Gaabo: Humidity - 79% pressure - 1011
+Buurhakaba: Humidity - 86% pressure - 1012
+Bālā Aḩmad Kolā: Humidity - 100% pressure - 1018
+Caluula: Humidity - 78% pressure - 1011
+Doon: Humidity - 83% pressure - 1015
+Eyl: Humidity - 76% pressure - 1011
+Gobolka Banaadir: Humidity - 76% pressure - 1011
+Gobolka Bay: Humidity - 81% pressure - 1012
+Gobolka Jubbada Hoose: Humidity - 80% pressure - 1011
+Gobolka Shabeellaha Dhexe: Humidity - 78% pressure - 1011
+Gobolka Shabeellaha Hoose: Humidity - 78% pressure - 1011
+Jamaame: Humidity - 79% pressure - 1011
+Jawhar: Humidity - 76% pressure - 1011
+Jilib: Humidity - 77% pressure - 1011
+Kismaayo: Humidity - 78% pressure - 1011
+Kūchaklī: Humidity - 93% pressure - 1013
+Lughaye: Humidity - 78% pressure - 1012
+Luuq: Humidity - 83% pressure - 1012
+Māmā’ī: Humidity - 93% pressure - 1018
+Protaras: Humidity - 77% pressure - 1009
+Qoryooley: Humidity - 76% pressure - 1011
+Republic of Rwanda: Humidity - 88% pressure - 1020
+Reẕāābād: Humidity - 93% pressure - 1016
+Rokan Sarā: Humidity - 86% pressure - 1016
+Shahrīār Kandeh: Humidity - 100% pressure - 1018
+Tayeeglow: Humidity - 78% pressure - 1012
+Waajid: Humidity - 80% pressure - 1012
+Wanlaweyn: Humidity - 77% pressure - 1012
+Yasuj: Humidity - 76% pressure - 1020
+Yeed: Humidity - 78% pressure - 1011
+Ţālesh Maḩalleh: Humidity - 100% pressure - 1017</msg>
+<status status="PASS" starttime="20200423 23:38:02.065" endtime="20200423 23:38:02.066"></status>
+</kw>
+<status status="PASS" starttime="20200423 23:38:02.063" endtime="20200423 23:38:02.066"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>len(${result}) &gt; 0</arg>
+<arg>Log</arg>
+<arg>Отсутствие городов, в которых влажность &gt; 75% и давление &gt; 770 мм рт. ст.</arg>
+</arguments>
+<status status="PASS" starttime="20200423 23:38:02.067" endtime="20200423 23:38:02.068"></status>
+</kw>
+<doc>Города, в которых влажность &gt; 75% и давление &gt; 770 мм рт. ст.</doc>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" starttime="20200423 23:38:00.012" endtime="20200423 23:38:02.069" critical="yes"></status>
+</test>
+<doc>Robot final test current weather</doc>
+<status status="PASS" starttime="20200423 23:37:51.474" endtime="20200423 23:38:02.072"></status>
+</suite>
+<doc>Current weather test</doc>
+<status status="PASS" starttime="20200423 23:37:39.676" endtime="20200423 23:38:02.079"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="Final Task">Final Task</stat>
+<stat pass="2" fail="0" id="s1-s1" name="5Daily">Final Task.5Daily</stat>
+<stat pass="5" fail="0" id="s1-s2" name="Currentweather">Final Task.Currentweather</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
