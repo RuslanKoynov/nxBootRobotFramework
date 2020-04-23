@@ -1,0 +1,2656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200421 15:49:46.414" rpa="false">
+<suite id="s1" name="Test Suit4" source="D:\Testing\Practise\autotests\test_suit4.robot">
+<test id="s1-t1" name="Create new task with start_date = current date">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:49:46.590" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:49:46.589" endtime="20200421 15:49:50.541"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:49:46.589" endtime="20200421 15:49:50.541"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:49:55.542" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:49:50.542" endtime="20200421 15:49:55.542"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:49:55.543" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:49:55.543" endtime="20200421 15:49:55.607"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:49:55.608" level="INFO">${random_name} = tIlUQFunccnjXyhZEvcqLaAEMdLUmRZqxwQihSKAGfRDRlzgcoFdlTbTgXTyaAEyBxhOZFHsvKNcislvwHBkCWyaYYtNXimZQyEWrrsizrJOYDmzgaMexbuWuRRdkfUlAQNerHTxKigChguSrGKPkTkDAaVOitgFAfyLtqiXlqLapLmCVumHneewhjbcrWjzkXSOTboL...</msg>
+<status status="PASS" starttime="20200421 15:49:55.608" endtime="20200421 15:49:55.609"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:49:55.611" level="INFO">${random_description} = PfYitPElNehyfPkheiDFgJWFKQKZVSTNswMgOltJxPCjLrFcDxrnDPRDfjERnTBiziQMuIHMOnHyyvHeODvAzJLgMUKzDwBZRssveMyfmsVfywTGTXCRDmJViljlAhCepxXwIjAAmlwBPHxpyZQUNrWRYeEvZOyAJRzcaBBSzZHkpVodgxldnCLCzFZUUHXdaPhIcIgv...</msg>
+<status status="PASS" starttime="20200421 15:49:55.609" endtime="20200421 15:49:55.611"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:49:55.612" level="INFO">Typing text 'tIlUQFunccnjXyhZEvcqLaAEMdLUmRZqxwQihSKAGfRDRlzgcoFdlTbTgXTyaAEyBxhOZFHsvKNcislvwHBkCWyaYYtNXimZQyEWrrsizrJOYDmzgaMexbuWuRRdkfUlAQNerHTxKigChguSrGKPkTkDAaVOitgFAfyLtqiXlqLapLmCVumHneewhjbcrWjzkXSOTboLXRGzuQDgdXJOLvbkBGUCoqfkIdORhQTmPXgevtnTYylbWtBPj' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:49:55.611" endtime="20200421 15:49:56.579"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:49:56.580" level="INFO">Typing text 'PfYitPElNehyfPkheiDFgJWFKQKZVSTNswMgOltJxPCjLrFcDxrnDPRDfjERnTBiziQMuIHMOnHyyvHeODvAzJLgMUKzDwBZRssveMyfmsVfywTGTXCRDmJViljlAhCepxXwIjAAmlwBPHxpyZQUNrWRYeEvZOyAJRzcaBBSzZHkpVodgxldnCLCzFZUUHXdaPhIcIgvSDhRVvUghCZMbdBFwvxySCOXvsBapQTlfViMhFzMVhMhmnTDskDsJCsuOYcJonGzGlYpueuKCmXshoiXzEqnSCDrnjPPUyrRIqsqBPZXzhKIhMfiLzHcyDRFcmTpBjKEGMqxqWogoJjUOiqQtlyMABnZGNMEZhqSsCpiBZHGzYRPyuGFZwTjcMjJRZgNujsSISMCooxkRClSSWHMUGvbvMpgLfHdsdmcuCQwGmTYDbrfAIYujMQinMOKMSblteUhxtwNtPOsROnnRyHGWJYxlODYMkOEQhjQLBzmgsRGfJGrmsDTaIFpCVpBctffALRXrdNBOzDbrfIDKdrOGuaJElWJNyxcLBosEJONpcHMIaeChtiLWiXEBHcevZkSgGLGPwQsFrzAYZDVKGFvwjMSHXGlmuBCfuGVWVDCwfSBbjuLDfihvFbEiKGJwzPUnUnWMPXcwrZpIMCYRgJJsLbgWCdPfMCIEkqPagmzuPmKIYGLnpsBaDYHDkkxgUFbJrKRCCCNDORcVhNlUpjOzgpVifGlZipnnhynAdJlHFZVUUaXTFmtSNXCueTbruHzWQKEHGRQHstsAOpjrnWnRCfscQPRrZWROcbSRNNuNyPnheHKmaQURGJzHedqCBgMbcZeJiCkYyoazQRPExAoOYvVsEGJdAkOdwCZbFpAljHQHCPZulmrjlegqgvCISOQAbXLDVJvthERiGzIIySwtjTKHDXnNLDbdkARvybQMmxqTZblHAfuVTuDCdQZVWXFTJviDTgThzYghHfeYVtPrWVcNkhWdrESHmV' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:49:56.580" endtime="20200421 15:50:00.382"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:00.383" level="INFO">${StartDate} = 21-04-2020</msg>
+<status status="PASS" starttime="20200421 15:50:00.383" endtime="20200421 15:50:00.383"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:00.384" level="INFO">Typing text '21-04-2020' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:50:00.384" endtime="20200421 15:50:00.467"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:00.468" level="INFO">${EndDate} = 21-04-2020</msg>
+<status status="PASS" starttime="20200421 15:50:00.467" endtime="20200421 15:50:00.468"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:00.468" level="INFO">Typing text '21-04-2020' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:50:00.468" endtime="20200421 15:50:00.546"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:50:00.547" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:50:00.546" endtime="20200421 15:50:00.614"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:05.616" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:00.615" endtime="20200421 15:50:05.616"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:05.617" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:50:05.616" endtime="20200421 15:50:05.648"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:05.649" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:50:05.649" endtime="20200421 15:50:05.702"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:50:05.703" endtime="20200421 15:50:06.535"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:11.537" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:06.536" endtime="20200421 15:50:11.537"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:50:11.538" endtime="20200421 15:50:13.594"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с имеющимся в системе пользователем, именем &lt; 250 симв., описанием &lt; 1000 симв. Ожидаем успешное создании задачи.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:49:46.588" endtime="20200421 15:50:13.594" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Create new task with start_date earlier than current date">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:13.597" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:50:13.597" endtime="20200421 15:50:17.196"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:50:13.597" endtime="20200421 15:50:17.196"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:22.198" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:17.197" endtime="20200421 15:50:22.198"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:22.199" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:50:22.198" endtime="20200421 15:50:22.267"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:50:22.269" level="INFO">${random_name} = WTJiEPBSgHEZyiWCeYqRfmWmZKsLxlFjdyiNxsCgbaZWJyURgpShvrjcXrJKzyhOMaQIsPxcfdhUmfusfEZAPQEzcharUCZbnTkVJbyXmLKZixHHNSJJDMCKZSKGVQpFtckGCAImjCqrRhYThAPiKUqLTVHmxzofOnKjFAZoOBmPQDaZQWrBXbipHAsYASuHGqjQaYVu...</msg>
+<status status="PASS" starttime="20200421 15:50:22.268" endtime="20200421 15:50:22.269"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:50:22.271" level="INFO">${random_description} = kkgVQscUnvPDuXWylJpWoxYfJFYqtCkgvglqIxhKmpjcyCkyllpTwaCsJtGWzsRNMZwhQfyaUGpzyamJaaTUSIzzeuFRUpwSJjcOoBDLWCAztLnBeZmPEEXGciWsHKZbIbAAPufiOzoqXblDRWeyIhnikvkzpAXGjzJetHPDdkwURPUrEXpxocExEhdeNjjuQyoloTJz...</msg>
+<status status="PASS" starttime="20200421 15:50:22.269" endtime="20200421 15:50:22.271"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:22.272" level="INFO">Typing text 'WTJiEPBSgHEZyiWCeYqRfmWmZKsLxlFjdyiNxsCgbaZWJyURgpShvrjcXrJKzyhOMaQIsPxcfdhUmfusfEZAPQEzcharUCZbnTkVJbyXmLKZixHHNSJJDMCKZSKGVQpFtckGCAImjCqrRhYThAPiKUqLTVHmxzofOnKjFAZoOBmPQDaZQWrBXbipHAsYASuHGqjQaYVuFkWqKktYwbBoZNTPvuRqvlYCXdmsVinNgDsIBBjIRdmdhDihl' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:50:22.271" endtime="20200421 15:50:23.329"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:23.330" level="INFO">Typing text 'kkgVQscUnvPDuXWylJpWoxYfJFYqtCkgvglqIxhKmpjcyCkyllpTwaCsJtGWzsRNMZwhQfyaUGpzyamJaaTUSIzzeuFRUpwSJjcOoBDLWCAztLnBeZmPEEXGciWsHKZbIbAAPufiOzoqXblDRWeyIhnikvkzpAXGjzJetHPDdkwURPUrEXpxocExEhdeNjjuQyoloTJzuwZTFKeobLHblbHvCgYPqAJMibzIYkWiidtnmsjPhPkXECARySPhODmqmaNLfpNBDrpwhwKImPxrQPXFcyxdePkDClPvcNfxKXvEUomYutakvJZOQHdVDgyHqosYDCbfjIbdqCNBGocZNlYdLPpUfltwueUxvDRvKolhAXDSzPGMgsEpvkzRIBsgIindtLCVTIguwMfaRCEApIjQTAILiCnTWvqaPJlhJuTQYeUieBuJCGlnhlbolVbpdwCzfmGcHIwFGrTtJWPNXIEeURINKnpiETgHPREBpgZZpQdzStYGQQmCOJhAOVPinnrrtEOUVmtcrieIwbQDzgekLLFzlJdBURUCqWUhkRCescgahuThivciqitIWgYPAmDBPqXhoYUROUZdPftGPMbbHGBGUYrEKDcKHzLKFvvjrMzNafbElZusIkcZBKUHCnLAcBxIhHuZbMLiZrxKzaeKhDdKXgzxVbpRHxVPZSpJCPuPxYZoQyCHJwBLNlUfhdTNBUZUiuMqdzRgPKMwFrkmEXklKUWKpBlcJIWceJOpoLJEWBRiRIcygnziqynEPrTjGOAAsRvubCqzOQtwGQkPtOLrzMGJgcXOkHcZCMSzipJTblFPxVSYvUbyDaVZTJtwsWlpkuckPPkFWzsUJiEVAffHWGcNLJgHOcTtdPxcuGtDbNhUvinxcDCfFyDgGhxQQFFmkhSgZSZXBqtNLQqlizeIytzqljXwOfGkPWtupVCdhNvWKXbVXQqUgMdCQKWVxLSnaoTJzgztEqoYNHKIxdCjYWajCgHUVUK' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:50:23.330" endtime="20200421 15:50:27.387"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:27.388" level="INFO">${CurrentDate} = 2020-04-21</msg>
+<status status="PASS" starttime="20200421 15:50:27.388" endtime="20200421 15:50:27.388"></status>
+</kw>
+<kw name="Subtract Time From Date" library="DateTime">
+<doc>Subtracts time from date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>1 day</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:27.391" level="INFO">${NewDate} = 2020-04-20 00:00:00.000</msg>
+<status status="PASS" starttime="20200421 15:50:27.388" endtime="20200421 15:50:27.391"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:27.392" level="INFO">${StartDate} = 20-04-2020</msg>
+<status status="PASS" starttime="20200421 15:50:27.391" endtime="20200421 15:50:27.392"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:27.392" level="INFO">Typing text '20-04-2020' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:50:27.392" endtime="20200421 15:50:27.476"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:27.476" level="INFO">${EndDate} = 21-04-2020</msg>
+<status status="PASS" starttime="20200421 15:50:27.476" endtime="20200421 15:50:27.477"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}у</arg>
+</arguments>
+<msg timestamp="20200421 15:50:27.477" level="INFO">Typing text '21-04-2020у' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:50:27.477" endtime="20200421 15:50:27.557"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:50:27.557" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:50:27.557" endtime="20200421 15:50:27.623"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:32.625" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:27.623" endtime="20200421 15:50:32.625"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:32.626" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:50:32.625" endtime="20200421 15:50:32.658"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:32.659" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:50:32.659" endtime="20200421 15:50:32.857"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Request failed</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:50:32.858" endtime="20200421 15:50:33.486"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:38.487" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:33.486" endtime="20200421 15:50:38.487"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:50:38.488" endtime="20200421 15:50:40.557"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с датой начала раньше, чем текущая дата. Ожидаем ошибку при создании задачи.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:50:13.596" endtime="20200421 15:50:40.557" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Create new task with start_date later than current date">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:40.560" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:50:40.560" endtime="20200421 15:50:44.114"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:50:40.560" endtime="20200421 15:50:44.114"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:49.115" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:44.114" endtime="20200421 15:50:49.115"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:49.116" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:50:49.115" endtime="20200421 15:50:49.185"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:50:49.187" level="INFO">${random_name} = xQCMfPNFcrecoKWkHUlVAGgiAQTaGtrRwatjuwoTuFeVLzHuiGFCZWNRgqefOnRWAukiGBzwhPgyzBikVpKapsazTSXyaFcXQqjUiEwOVEAljXWfoGNVDjSoySlTvBtwgSeKJfGUgmZvIacjuZMKHgNUngTswJScXsfoDfclUkTTOwDlnIhgJenfPDbDRTxHlCklnOSU...</msg>
+<status status="PASS" starttime="20200421 15:50:49.186" endtime="20200421 15:50:49.187"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:50:49.190" level="INFO">${random_description} = WnDBeXTQHyCOTGjFTmIuVDEaMMBgsksUZCIyfnZUgEiZUxEapuhxkIqeWFLsDzVkDdDXFyrcdyBeOqMijsYRVJcBQwEQEAyeXoGaDIAgbalSJMTiZgGMWMcGBtZxLdJfmHxBGfxxvRGHoAMOjSOPQVvCiiRiJmiadkWBOpQLzWnnQzIFrVnroOCoOjiFPUuNfnIQqgrn...</msg>
+<status status="PASS" starttime="20200421 15:50:49.188" endtime="20200421 15:50:49.190"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:49.191" level="INFO">Typing text 'xQCMfPNFcrecoKWkHUlVAGgiAQTaGtrRwatjuwoTuFeVLzHuiGFCZWNRgqefOnRWAukiGBzwhPgyzBikVpKapsazTSXyaFcXQqjUiEwOVEAljXWfoGNVDjSoySlTvBtwgSeKJfGUgmZvIacjuZMKHgNUngTswJScXsfoDfclUkTTOwDlnIhgJenfPDbDRTxHlCklnOSUGQEIPrhTCNljAZjutpKmDWqKzPlzrOmMRPxhtxYSXvQNhdUJw' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:50:49.191" endtime="20200421 15:50:50.272"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:50.272" level="INFO">Typing text 'WnDBeXTQHyCOTGjFTmIuVDEaMMBgsksUZCIyfnZUgEiZUxEapuhxkIqeWFLsDzVkDdDXFyrcdyBeOqMijsYRVJcBQwEQEAyeXoGaDIAgbalSJMTiZgGMWMcGBtZxLdJfmHxBGfxxvRGHoAMOjSOPQVvCiiRiJmiadkWBOpQLzWnnQzIFrVnroOCoOjiFPUuNfnIQqgrnGHgKLJqUznuJNNgkLZwTObqxIkLATqLcMsFVYiknBiPhLBkynBbRMXhOFwhMAIfuHqaReXlVJFAfrPVjEbUCmQolhvzRzaLubBxjeoiVQnawgzBMINgMEODmzJaXsrCRMOLZOrKVstAzWRDeKgJBuQUBrcItPGKGSUmztKDUFFRHvbfSOwLqzIBoaluIAdORdMcjDsUHhtTYxwHaHdzscxePTIpDBcXaCFRriNxYlRPCzfFRERQtNeGvlMpyqYtMUwwHIqxQcTlkejsETlmhXJrIJfsYsrknQzmyNVAmWBFFumGUWcvHJDtTnyPVEwSlVBHjsVGjAPPBZsQOGCFWkNBOeMRPqSThQkiDJKSBpOZmLApQrHlekyrXszoaHwaPXVVLLnDdtYePxYHgTcJZfFGJisifmwNcFWfDGaFagWoencxuGulRJrgJKyRwWEhTxtxGfkicshzDrxByvGHkwrAwmZtovWdivGGdblGbRwFrIEPrMgYPiXsqtTKpCkSdffygXiNpQxvfXxKsNFUzFfkGKgBxTfLvACjOrgMLstVZYxSkRzoqqvBMgLwZMCNiyHMUTZdKkTnomzGPfhOGiYlpLCnOwzVRqKGzbmfoPUxVQRpKgWcYZpazAHpXrDTwNSHzOIltOqtDlQshWUjmZWHDmUauRiNKelpwTUKfpWZDAHQmdIQhwkJGfucQpjracycAZGDSFymQgmJMGWEnacneJiEGFOXJTQLpjFarKfNOjmjpffXdBdCTnidKCwbcFQUfQdGoLxsqhaElNknGeJtKDQsKdLZ' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:50:50.272" endtime="20200421 15:50:54.118"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:54.119" level="INFO">${CurrentDate} = 2020-04-21</msg>
+<status status="PASS" starttime="20200421 15:50:54.119" endtime="20200421 15:50:54.119"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>1 day</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:54.120" level="INFO">${NewDate} = 2020-04-22 00:00:00.000</msg>
+<status status="PASS" starttime="20200421 15:50:54.119" endtime="20200421 15:50:54.120"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:54.121" level="INFO">${StartDate} = 22-04-2020</msg>
+<status status="PASS" starttime="20200421 15:50:54.120" endtime="20200421 15:50:54.121"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:54.121" level="INFO">Typing text '22-04-2020' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:50:54.121" endtime="20200421 15:50:54.203"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>2 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:54.204" level="INFO">${NewDate} = 2020-04-23 00:00:00.000</msg>
+<status status="PASS" starttime="20200421 15:50:54.204" endtime="20200421 15:50:54.204"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<msg timestamp="20200421 15:50:54.205" level="INFO">${EndDate} = 23-04-2020</msg>
+<status status="PASS" starttime="20200421 15:50:54.204" endtime="20200421 15:50:54.205"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:50:54.205" level="INFO">Typing text '23-04-2020' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:50:54.205" endtime="20200421 15:50:54.282"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:50:54.283" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:50:54.283" endtime="20200421 15:50:54.347"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:50:59.348" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:50:54.347" endtime="20200421 15:50:59.348"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:59.348" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:50:59.348" endtime="20200421 15:50:59.382"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:50:59.383" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:50:59.383" endtime="20200421 15:50:59.431"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:50:59.432" endtime="20200421 15:51:00.266"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:05.268" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:00.267" endtime="20200421 15:51:05.268"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:51:05.268" endtime="20200421 15:51:07.331"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу c датой начала позже, чем текущая дата. Ожидаем, что задача будет успешно создана.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:50:40.559" endtime="20200421 15:51:07.331" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Create new task with start_date later than end_date">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:07.335" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:51:07.334" endtime="20200421 15:51:10.919"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:51:07.334" endtime="20200421 15:51:10.919"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:15.921" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:10.920" endtime="20200421 15:51:15.921"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:15.921" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:51:15.921" endtime="20200421 15:51:15.987"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:51:15.989" level="INFO">${random_name} = SUgxaRBktEUNWQXxGxTSgucdyfnYkjeHSPdfxkUrPkvzhGDrldhBYRjrcCegtokbKlYxBHMOIiWyXlmGnRKvPdBVEbkmYiVsjxiOnqOQUIYOlIgscEaUcHZYOwVieRqTIvIdDeNujeufHhkiYmCWLWWfwInepvQDgppHzLxYkOtlyxtOjkGVHqAOmtAIfyvdODecEKcv...</msg>
+<status status="PASS" starttime="20200421 15:51:15.988" endtime="20200421 15:51:15.989"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:51:15.991" level="INFO">${random_description} = nJygzCFItihbIJMTjHPmNhjWGbKuubhFlsYHJmyqqWyFlymDTISoYQUkFmTIBtqkKrCKrizEhIhPTmVSyNIGwjYKyOsIZJsZwLBreCoAsYwiRKQhUAqDBuPCLFyApAtuGssHPUHJhwlZxBFYHjYluSoulnlpBHVclcyUDUamIBmGcexPVsFAJUCVMrhDKsbBWSQKVixO...</msg>
+<status status="PASS" starttime="20200421 15:51:15.989" endtime="20200421 15:51:15.991"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:15.992" level="INFO">Typing text 'SUgxaRBktEUNWQXxGxTSgucdyfnYkjeHSPdfxkUrPkvzhGDrldhBYRjrcCegtokbKlYxBHMOIiWyXlmGnRKvPdBVEbkmYiVsjxiOnqOQUIYOlIgscEaUcHZYOwVieRqTIvIdDeNujeufHhkiYmCWLWWfwInepvQDgppHzLxYkOtlyxtOjkGVHqAOmtAIfyvdODecEKcvTPuqqgzucjkZjCohShtxfIJVItVDYRIMKfhUgpvnyzOkkUscD' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:51:15.991" endtime="20200421 15:51:17.037"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:17.038" level="INFO">Typing text 'nJygzCFItihbIJMTjHPmNhjWGbKuubhFlsYHJmyqqWyFlymDTISoYQUkFmTIBtqkKrCKrizEhIhPTmVSyNIGwjYKyOsIZJsZwLBreCoAsYwiRKQhUAqDBuPCLFyApAtuGssHPUHJhwlZxBFYHjYluSoulnlpBHVclcyUDUamIBmGcexPVsFAJUCVMrhDKsbBWSQKVixOQNraWgasFxNjHOeoeIgVSwzlytJNPSfPoEJSSvTBZjLMleJYYaTmxNVZHztZVDoyPmaxkUnEkHhzCyfaQovAtmjvHDRvmpGHApokhBDtyqzUwnpEecoJfTivdTxlRcrqOIldewopROyiCcJzjlTnnxcdryhWAtctxxIHxgLzWRAZOaofQtIZWNLMDtvgsyAPzAASymIJrVXLgaMvdunorkyEjYHdBqrfpibBforUTnWaQOnFMTgqmrClfCazgXqpaRpLpNcAGSiNYbdOfMOCVvnrchnQVyxPWxSSuEQiUmDGMDqcLWCmMZAJDtVFRxwjIZoMjOKTIEqOUWJeVywXjOoKKslndvNfaFrNzCaarfVLhAeKahhLBXeQlVkjQHLqCTTxEHZczlntouINGHbuSrBhVKCgLDLMROJqlELTvsOhYpIyExjyBEwGEsVvfVsmaDISFimLQMbwtgRijGVeQAHxuvsykpMFQctJMvCYCjNChZGXLiKPuYAymwDlRwBCaOtFjyIPkVNsSaAWqzqPohEsaukhAWGtANXwETcMHcMAiEPwzrHBHuQuNKtrQzpAJIXFvVVIqIevHhZPxSYNcFGZxfOtFutXbxzMhbaCpECzkNOkaGSWtKeqVnMihCNfKNWtsFcBRVOpeZOzLkTgOVRAbTdFbzFfDLJyihvcTIZKhBucWsJMzLUhckZsFMzNQCEnaMBvkeEgtoroxXDuCgrCkPbiBnDQugMUXvhbVmoyHrveFmXWVCAPCoMGSCksitWwXLDLPbMmfzPYpknZpTXbQSwewAZ' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:51:17.037" endtime="20200421 15:51:21.028"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:21.029" level="INFO">${CurrentDate} = 2020-04-21</msg>
+<status status="PASS" starttime="20200421 15:51:21.028" endtime="20200421 15:51:21.029"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>2 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:21.029" level="INFO">${NewDate} = 2020-04-23 00:00:00.000</msg>
+<status status="PASS" starttime="20200421 15:51:21.029" endtime="20200421 15:51:21.029"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:21.030" level="INFO">${StartDate} = 23-04-2020</msg>
+<status status="PASS" starttime="20200421 15:51:21.030" endtime="20200421 15:51:21.030"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:21.030" level="INFO">Typing text '23-04-2020' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:51:21.030" endtime="20200421 15:51:21.109"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:21.110" level="INFO">${EndDate} = 21-04-2020</msg>
+<status status="PASS" starttime="20200421 15:51:21.109" endtime="20200421 15:51:21.110"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:21.110" level="INFO">Typing text '21-04-2020' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:51:21.110" endtime="20200421 15:51:21.187"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:51:21.188" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:51:21.188" endtime="20200421 15:51:21.254"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:26.255" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:21.254" endtime="20200421 15:51:26.255"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:26.255" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:51:26.255" endtime="20200421 15:51:26.289"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:26.290" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:51:26.289" endtime="20200421 15:51:26.339"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Request failed</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:51:26.339" endtime="20200421 15:51:26.941"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:31.943" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:26.942" endtime="20200421 15:51:31.943"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:51:31.944" endtime="20200421 15:51:34.006"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с датой начала позже, чем дата завершения. Ожидаем ошибку при создании задачи.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:51:07.333" endtime="20200421 15:51:34.006" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Create new task with start_date in February">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:34.009" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:51:34.009" endtime="20200421 15:51:37.587"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:51:34.009" endtime="20200421 15:51:37.588"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:42.590" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:37.588" endtime="20200421 15:51:42.590"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>01</arg>
+</arguments>
+<assign>
+<var>${StartDay}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.591" level="INFO">${StartDay} = 01</msg>
+<status status="PASS" starttime="20200421 15:51:42.591" endtime="20200421 15:51:42.591"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>02</arg>
+</arguments>
+<assign>
+<var>${EndDay}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.591" level="INFO">${EndDay} = 02</msg>
+<status status="PASS" starttime="20200421 15:51:42.591" endtime="20200421 15:51:42.591"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>09</arg>
+</arguments>
+<assign>
+<var>${ResultEndDay}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.592" level="INFO">${ResultEndDay} = 09</msg>
+<status status="PASS" starttime="20200421 15:51:42.592" endtime="20200421 15:51:42.592"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>02</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.593" level="INFO">${Month} = 02</msg>
+<status status="PASS" starttime="20200421 15:51:42.593" endtime="20200421 15:51:42.593"></status>
+</kw>
+<kw name="Convert in start end">
+<tags>
+<tag>converted date</tag>
+</tags>
+<doc>Переводит дату в формат StartDate-EndDate, формат самой даты - год-месяц-день</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${ResultEndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${SearchDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.594" level="INFO">${CurrentDate} = 2020-04-21 15:51:42.594</msg>
+<status status="PASS" starttime="20200421 15:51:42.594" endtime="20200421 15:51:42.594"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.594" level="INFO">${NewDate} = 2021-04-22 15:51:42.594</msg>
+<status status="PASS" starttime="20200421 15:51:42.594" endtime="20200421 15:51:42.594"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.595" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:51:42.595" endtime="20200421 15:51:42.595"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Year}-${Month}-${StartDay} - ${Year}-${Month}-${EndDay}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.595" level="INFO">${NewDate} = 2021-02-01 - 2021-02-09</msg>
+<status status="PASS" starttime="20200421 15:51:42.595" endtime="20200421 15:51:42.595"></status>
+</kw>
+<msg timestamp="20200421 15:51:42.595" level="INFO">${SearchDate} = 2021-02-01 - 2021-02-09</msg>
+<status status="PASS" starttime="20200421 15:51:42.593" endtime="20200421 15:51:42.595"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountBefore}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.606" level="INFO">${CountBefore} = 0</msg>
+<status status="PASS" starttime="20200421 15:51:42.596" endtime="20200421 15:51:42.606"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:42.607" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:51:42.607" endtime="20200421 15:51:42.674"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.676" level="INFO">${random_name} = btxZQgpHZLisATgjSVcBvzTVdCZngOevJVWRZCZQDvRTueQyNieIZEdAcbYsIEsSUtxMMytyeOUBcSImilcyehrPzaUZWnrVAamNRshYmSrrOAVXRoVuqApALyVbDTnNIUmIYQihksEZdtpGdqzucvYYpmUkcTMWloVMVikqqtmaDkdlOuIUTHgGwxriRCulfHAJhjVg...</msg>
+<status status="PASS" starttime="20200421 15:51:42.675" endtime="20200421 15:51:42.676"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:51:42.678" level="INFO">${random_description} = agJtRGEdKKlbzhIRxTYgbprFXVYDEENSWDOpeBBvGBIosbzBnqbgbuelOSyaCuonTMZqvVrhGvmUWAtJmmvFEQramPGdPrdEblChGHZvlWITJtsXhyVXvYCkYEUneGWaCYqAMnigtxqghDCeRMgbsABILhgASDnSkHRAJzbnwIZhmfJhlQzIfStGNPRcAbKKoMnSaQwi...</msg>
+<status status="PASS" starttime="20200421 15:51:42.677" endtime="20200421 15:51:42.678"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:42.679" level="INFO">Typing text 'btxZQgpHZLisATgjSVcBvzTVdCZngOevJVWRZCZQDvRTueQyNieIZEdAcbYsIEsSUtxMMytyeOUBcSImilcyehrPzaUZWnrVAamNRshYmSrrOAVXRoVuqApALyVbDTnNIUmIYQihksEZdtpGdqzucvYYpmUkcTMWloVMVikqqtmaDkdlOuIUTHgGwxriRCulfHAJhjVgSvmFbMalbEbYyuahfAJwhvPnjbQvnuRZHjWnfNOvhnhZJGwqz' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:51:42.679" endtime="20200421 15:51:43.709"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:43.710" level="INFO">Typing text 'agJtRGEdKKlbzhIRxTYgbprFXVYDEENSWDOpeBBvGBIosbzBnqbgbuelOSyaCuonTMZqvVrhGvmUWAtJmmvFEQramPGdPrdEblChGHZvlWITJtsXhyVXvYCkYEUneGWaCYqAMnigtxqghDCeRMgbsABILhgASDnSkHRAJzbnwIZhmfJhlQzIfStGNPRcAbKKoMnSaQwirQKURhlCbYsHqbTRnmUKqhlgqPTVkQbNWdUpzcWDSFVFXOXQloZnIlxDDWOluNaeanHtozeSpcJQBBVgYipFZUIYivUvlChwzmduhHaWkTlTPdEqubqFXiPhEZcvFaRLTkYSVyCHRALFrrldMsSSQvOuEZzCfruWmAukiBgWgVoboHlxSylJByvkgYrdwKJMniqAYDEbDgpkATEGWiKtcFWGYUomiASpqgNpdFwtCJhOSlXPDjaByqSaOWzZMBjoEVzFsNuREadpbJRGejWFLzWXHoMlSANamZGlRrhKoRjnMumRZEVLbsQZJRAOovuuyBZDMkBTDhZdogSdBtOSjvGTBqfkpdlmZTJoAYQmWSqtvwyYCJwZKjYBvkHFXXaKlNYXZynTHhPUUCpTTjYeZFsqLmjdjbVewhTkepAulflabwAoJnnUnarYjFvzTQdFkalRedKCxMRNfGlLehUWsqHUiRmifqwqEQpEinLjzkYzKQMhNPZBdrEUcjKukrJezimmUpOZvCeANleZiLxsFhUTAYzrbchPyHXvHHldMLMwrISBiXFbCZwKiuGTQqzktAJqFNPrQSlosamxLyniWHQYOosQvFEmgfALojBefGmzhPlCOGCmCOSCzfyMBJzMCNmPBzGZtGImdpYZQukzUvMhbzJVMdbPALimRnFnkVOiJONCRorInYRaRbsJQucUVPXKOVydgZiLEdHQiHkuSvAWGAxsaEPEYMbLWjTVuHCumnKfMNbyoddZjRlgqxgfcYIhUKmwouGXmwQvXTerUBJaqClbmFs' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:51:43.710" endtime="20200421 15:51:47.502"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.503" level="INFO">${CurrentDate} = 2020-04-21 15:51:47.503</msg>
+<status status="PASS" starttime="20200421 15:51:47.503" endtime="20200421 15:51:47.503"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.503" level="INFO">${NewDate} = 2021-04-22 15:51:47.503</msg>
+<status status="PASS" starttime="20200421 15:51:47.503" endtime="20200421 15:51:47.503"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.504" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:51:47.504" endtime="20200421 15:51:47.504"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.504" level="INFO">${Day} = 01</msg>
+<status status="PASS" starttime="20200421 15:51:47.504" endtime="20200421 15:51:47.504"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.504" level="INFO">${Month} = 02</msg>
+<status status="PASS" starttime="20200421 15:51:47.504" endtime="20200421 15:51:47.504"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.505" level="INFO">${NewDate} = 01022021</msg>
+<status status="PASS" starttime="20200421 15:51:47.504" endtime="20200421 15:51:47.505"></status>
+</kw>
+<msg timestamp="20200421 15:51:47.505" level="INFO">${StartDate} = 01022021</msg>
+<status status="PASS" starttime="20200421 15:51:47.502" endtime="20200421 15:51:47.505"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${EndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.506" level="INFO">${CurrentDate} = 2020-04-21 15:51:47.506</msg>
+<status status="PASS" starttime="20200421 15:51:47.506" endtime="20200421 15:51:47.506"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.506" level="INFO">${NewDate} = 2021-04-22 15:51:47.506</msg>
+<status status="PASS" starttime="20200421 15:51:47.506" endtime="20200421 15:51:47.506"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.507" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:51:47.506" endtime="20200421 15:51:47.507"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.507" level="INFO">${Day} = 02</msg>
+<status status="PASS" starttime="20200421 15:51:47.507" endtime="20200421 15:51:47.507"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.507" level="INFO">${Month} = 02</msg>
+<status status="PASS" starttime="20200421 15:51:47.507" endtime="20200421 15:51:47.507"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:51:47.508" level="INFO">${NewDate} = 02022021</msg>
+<status status="PASS" starttime="20200421 15:51:47.507" endtime="20200421 15:51:47.508"></status>
+</kw>
+<msg timestamp="20200421 15:51:47.508" level="INFO">${EndDate} = 02022021</msg>
+<status status="PASS" starttime="20200421 15:51:47.505" endtime="20200421 15:51:47.508"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:47.508" level="INFO">Typing text '01022021' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:51:47.508" endtime="20200421 15:51:47.588"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:51:47.589" level="INFO">Typing text '02022021' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:51:47.589" endtime="20200421 15:51:47.667"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:51:47.668" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:51:47.668" endtime="20200421 15:51:47.728"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:52.730" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:47.728" endtime="20200421 15:51:52.730"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:52.730" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:51:52.730" endtime="20200421 15:51:52.764"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:52.765" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:51:52.765" endtime="20200421 15:51:52.813"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:51:52.814" endtime="20200421 15:51:53.647"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Tasks")]</arg>
+</arguments>
+<msg timestamp="20200421 15:51:53.648" level="INFO">Clicking link 'xpath=//a[contains(.,"Tasks")]'.</msg>
+<status status="PASS" starttime="20200421 15:51:53.648" endtime="20200421 15:51:53.707"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountAfter}</var>
+</assign>
+<msg timestamp="20200421 15:51:53.714" level="INFO">${CountAfter} = 1</msg>
+<status status="PASS" starttime="20200421 15:51:53.707" endtime="20200421 15:51:53.714"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${CountAfter}&gt;${CountBefore}</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:51:53.715" endtime="20200421 15:51:53.715"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:51:58.717" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:51:53.716" endtime="20200421 15:51:58.717"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:51:58.717" endtime="20200421 15:52:00.778"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с датой начала в феврале. Ожидаем, что к дате завершения добавится 7 дней.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:51:34.008" endtime="20200421 15:52:00.778" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Create new task with start_date in December">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:00.782" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:52:00.782" endtime="20200421 15:52:04.352"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:52:00.782" endtime="20200421 15:52:04.352"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:52:09.354" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:52:04.353" endtime="20200421 15:52:09.354"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>01</arg>
+</arguments>
+<assign>
+<var>${StartDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.355" level="INFO">${StartDay} = 01</msg>
+<status status="PASS" starttime="20200421 15:52:09.355" endtime="20200421 15:52:09.355"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>02</arg>
+</arguments>
+<assign>
+<var>${EndDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.355" level="INFO">${EndDay} = 02</msg>
+<status status="PASS" starttime="20200421 15:52:09.355" endtime="20200421 15:52:09.355"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>31</arg>
+</arguments>
+<assign>
+<var>${ResultEndDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.356" level="INFO">${ResultEndDay} = 31</msg>
+<status status="PASS" starttime="20200421 15:52:09.356" endtime="20200421 15:52:09.356"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.356" level="INFO">${Month} = 12</msg>
+<status status="PASS" starttime="20200421 15:52:09.356" endtime="20200421 15:52:09.356"></status>
+</kw>
+<kw name="Convert in start end">
+<tags>
+<tag>converted date</tag>
+</tags>
+<doc>Переводит дату в формат StartDate-EndDate, формат самой даты - год-месяц-день</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${ResultEndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${SearchDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.357" level="INFO">${CurrentDate} = 2020-04-21 15:52:09.357</msg>
+<status status="PASS" starttime="20200421 15:52:09.357" endtime="20200421 15:52:09.357"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.358" level="INFO">${NewDate} = 2021-04-22 15:52:09.357</msg>
+<status status="PASS" starttime="20200421 15:52:09.357" endtime="20200421 15:52:09.358"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.358" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:09.358" endtime="20200421 15:52:09.358"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Year}-${Month}-${StartDay} - ${Year}-${Month}-${EndDay}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.358" level="INFO">${NewDate} = 2021-12-01 - 2021-12-31</msg>
+<status status="PASS" starttime="20200421 15:52:09.358" endtime="20200421 15:52:09.358"></status>
+</kw>
+<msg timestamp="20200421 15:52:09.359" level="INFO">${SearchDate} = 2021-12-01 - 2021-12-31</msg>
+<status status="PASS" starttime="20200421 15:52:09.357" endtime="20200421 15:52:09.359"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountBefore}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.370" level="INFO">${CountBefore} = 0</msg>
+<status status="PASS" starttime="20200421 15:52:09.359" endtime="20200421 15:52:09.370"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:09.371" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:09.371" endtime="20200421 15:52:09.436"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.438" level="INFO">${random_name} = HkPrCLejDeShgVmariQuiONwSVkyfwQfhAUMoFYEptewZyFTMtmdGmHsORjHagRIHIFSKKcWnytlXFnqhfwYJNIxYwbvEinmSDXHQkFsozNkgitdRhZquXeRJqVxNYquwsITTFtfoWDIKATlzcvSqIOzCkmyCZvKqPeqBjkQxZhXalSbnHwyyopDTQNvIoGZbLKtAZYs...</msg>
+<status status="PASS" starttime="20200421 15:52:09.437" endtime="20200421 15:52:09.438"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:52:09.440" level="INFO">${random_description} = dyGvpcuVhaYIiThOHmoIvQoAwhNWdTPDDFrYKlPbHRDzYREsPUidiqViNrdvMZKYKadvopKfBSfufevJqzgJaVkkIVfFYueUjDrCOkiwvvjGBUUymSCgGWHiQPpmbMzhtrBEsPCgLAvAyWsRApvHBzJFkraBAMvVzbNlRGqqsllAkvkDnMdnTNreqRKDGGMikZTpXTJh...</msg>
+<status status="PASS" starttime="20200421 15:52:09.438" endtime="20200421 15:52:09.440"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:09.441" level="INFO">Typing text 'HkPrCLejDeShgVmariQuiONwSVkyfwQfhAUMoFYEptewZyFTMtmdGmHsORjHagRIHIFSKKcWnytlXFnqhfwYJNIxYwbvEinmSDXHQkFsozNkgitdRhZquXeRJqVxNYquwsITTFtfoWDIKATlzcvSqIOzCkmyCZvKqPeqBjkQxZhXalSbnHwyyopDTQNvIoGZbLKtAZYsMRenMeYKBbMfJnFcGTjYLAOBOTgNMLnUbjoHNwtATCJUxJPfF' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:52:09.440" endtime="20200421 15:52:10.409"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:10.410" level="INFO">Typing text 'dyGvpcuVhaYIiThOHmoIvQoAwhNWdTPDDFrYKlPbHRDzYREsPUidiqViNrdvMZKYKadvopKfBSfufevJqzgJaVkkIVfFYueUjDrCOkiwvvjGBUUymSCgGWHiQPpmbMzhtrBEsPCgLAvAyWsRApvHBzJFkraBAMvVzbNlRGqqsllAkvkDnMdnTNreqRKDGGMikZTpXTJhBvfJBqCjfBzOLwrHOpQUlKtPBQUdetQlJwYIOESTiJKbredsWergASRRJycUNauTrCzbuDjHCxrKEMfhWRtfDLuQGPgOHAnzkOkSKdlOjKAqhTdxpuCFjSvqpQrABczHDkVZGseRlRrjMUHbqsqpsyWGzoosvVqRMxfYfOFDxWTwjZlCfcDwVcByLbLzMplUXdyCRkaKKPOCyDCnVzmhNRewkWxjuGVymVnmKoqRrBYnWOeGQKjHpUuVYQYHoFhqXLmbklzksaZgsvKikYordpOMCQpCMzyELVJoQeSWIqexWBXqPyyiXZCxrYeOQkfjvGWehYHzDMtMvLgqNuYgOQBVREUHkqvRdsumeyprMVhDVhtWBmLtJGnEMbYdJnrgGOfOChXMgClklDhCsbCKIardekhPaTQjPzUzNvEhNXlmIKcNLOHxpdGfDYiCZtsxrDQHejbcpNeSEfdJhPkhDxtZbcxnWThwYdfWEFvLBfIgrspuxnntxxMktbWioqFmbtVWQUQZOIhstHPQegsgGDlWYvmxTuXNidiveXuqdctZrcxVlutbzKKWbYGpaCoRvLzMfHQjDBoaVMivRREpYJLCAcWNKKcemdWFlWgZDImxTaIVrJMdkArGEqGCiAwLyJiKqzeAxKeusmAoancToYhlhtvLAoilXibJfaLcVUtSNcWMWpPyrGKREnlQDrnOuLjBZbHUpWpUYfPcydTUnyDeiufgctTIZinpKEcxyWyTVoQrplIjnLLCHOUrNWQaUOVwmpGLwdUYAbqUQBZlOJcJeDLDuPk' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:52:10.409" endtime="20200421 15:52:13.994"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.995" level="INFO">${CurrentDate} = 2020-04-21 15:52:13.995</msg>
+<status status="PASS" starttime="20200421 15:52:13.995" endtime="20200421 15:52:13.995"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.996" level="INFO">${NewDate} = 2021-04-22 15:52:13.995</msg>
+<status status="PASS" starttime="20200421 15:52:13.995" endtime="20200421 15:52:13.996"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.996" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:13.996" endtime="20200421 15:52:13.996"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.996" level="INFO">${Day} = 01</msg>
+<status status="PASS" starttime="20200421 15:52:13.996" endtime="20200421 15:52:13.996"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.997" level="INFO">${Month} = 12</msg>
+<status status="PASS" starttime="20200421 15:52:13.996" endtime="20200421 15:52:13.997"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.997" level="INFO">${NewDate} = 01122021</msg>
+<status status="PASS" starttime="20200421 15:52:13.997" endtime="20200421 15:52:13.997"></status>
+</kw>
+<msg timestamp="20200421 15:52:13.997" level="INFO">${StartDate} = 01122021</msg>
+<status status="PASS" starttime="20200421 15:52:13.995" endtime="20200421 15:52:13.997"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${EndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.998" level="INFO">${CurrentDate} = 2020-04-21 15:52:13.998</msg>
+<status status="PASS" starttime="20200421 15:52:13.998" endtime="20200421 15:52:13.998"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.998" level="INFO">${NewDate} = 2021-04-22 15:52:13.998</msg>
+<status status="PASS" starttime="20200421 15:52:13.998" endtime="20200421 15:52:13.998"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.999" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:13.998" endtime="20200421 15:52:13.999"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.999" level="INFO">${Day} = 02</msg>
+<status status="PASS" starttime="20200421 15:52:13.999" endtime="20200421 15:52:13.999"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:13.999" level="INFO">${Month} = 12</msg>
+<status status="PASS" starttime="20200421 15:52:13.999" endtime="20200421 15:52:13.999"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:14.000" level="INFO">${NewDate} = 02122021</msg>
+<status status="PASS" starttime="20200421 15:52:13.999" endtime="20200421 15:52:14.000"></status>
+</kw>
+<msg timestamp="20200421 15:52:14.000" level="INFO">${EndDate} = 02122021</msg>
+<status status="PASS" starttime="20200421 15:52:13.997" endtime="20200421 15:52:14.000"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:14.000" level="INFO">Typing text '01122021' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:52:14.000" endtime="20200421 15:52:14.075"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:14.076" level="INFO">Typing text '02122021' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:52:14.076" endtime="20200421 15:52:14.150"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:52:14.151" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:52:14.151" endtime="20200421 15:52:14.216"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:52:19.218" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:52:14.216" endtime="20200421 15:52:19.218"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:19.219" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:52:19.219" endtime="20200421 15:52:19.250"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:19.252" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:19.251" endtime="20200421 15:52:19.494"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:52:19.494" endtime="20200421 15:52:20.327"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Tasks")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:20.328" level="INFO">Clicking link 'xpath=//a[contains(.,"Tasks")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:20.328" endtime="20200421 15:52:20.398"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountAfter}</var>
+</assign>
+<msg timestamp="20200421 15:52:20.405" level="INFO">${CountAfter} = 1</msg>
+<status status="PASS" starttime="20200421 15:52:20.399" endtime="20200421 15:52:20.405"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${CountAfter}&gt;${CountBefore}</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:52:20.406" endtime="20200421 15:52:20.406"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:52:25.407" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:52:20.407" endtime="20200421 15:52:25.407"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:52:25.408" endtime="20200421 15:52:27.471"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с датой начала в декабре. Ожидаем, что дата завершения станет 31 декабря.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:52:00.780" endtime="20200421 15:52:27.471" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Create new task with start_date in November">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:27.475" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:52:27.475" endtime="20200421 15:52:31.059"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:52:27.474" endtime="20200421 15:52:31.059"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:52:36.061" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:52:31.060" endtime="20200421 15:52:36.061"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>01</arg>
+</arguments>
+<assign>
+<var>${StartDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.062" level="INFO">${StartDay} = 01</msg>
+<status status="PASS" starttime="20200421 15:52:36.061" endtime="20200421 15:52:36.062"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>02</arg>
+</arguments>
+<assign>
+<var>${EndDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.062" level="INFO">${EndDay} = 02</msg>
+<status status="PASS" starttime="20200421 15:52:36.062" endtime="20200421 15:52:36.062"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>31</arg>
+</arguments>
+<assign>
+<var>${ResultEndDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.063" level="INFO">${ResultEndDay} = 31</msg>
+<status status="PASS" starttime="20200421 15:52:36.063" endtime="20200421 15:52:36.063"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>11</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.064" level="INFO">${Month} = 11</msg>
+<status status="PASS" starttime="20200421 15:52:36.064" endtime="20200421 15:52:36.064"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${MonthResult}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.064" level="INFO">${MonthResult} = 12</msg>
+<status status="PASS" starttime="20200421 15:52:36.064" endtime="20200421 15:52:36.064"></status>
+</kw>
+<kw name="Convert in start end">
+<tags>
+<tag>converted date</tag>
+</tags>
+<doc>Переводит дату в формат StartDate-EndDate, формат самой даты - год-месяц-день</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${ResultEndDay}</arg>
+<arg>${MonthResult}</arg>
+</arguments>
+<assign>
+<var>${SearchDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.065" level="INFO">${CurrentDate} = 2020-04-21 15:52:36.065</msg>
+<status status="PASS" starttime="20200421 15:52:36.065" endtime="20200421 15:52:36.065"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.065" level="INFO">${NewDate} = 2021-04-22 15:52:36.065</msg>
+<status status="PASS" starttime="20200421 15:52:36.065" endtime="20200421 15:52:36.065"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.066" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:36.065" endtime="20200421 15:52:36.066"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Year}-${Month}-${StartDay} - ${Year}-${Month}-${EndDay}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.066" level="INFO">${NewDate} = 2021-12-01 - 2021-12-31</msg>
+<status status="PASS" starttime="20200421 15:52:36.066" endtime="20200421 15:52:36.066"></status>
+</kw>
+<msg timestamp="20200421 15:52:36.066" level="INFO">${SearchDate} = 2021-12-01 - 2021-12-31</msg>
+<status status="PASS" starttime="20200421 15:52:36.064" endtime="20200421 15:52:36.066"></status>
+</kw>
+<kw name="Convert in start end">
+<tags>
+<tag>converted date</tag>
+</tags>
+<doc>Переводит дату в формат StartDate-EndDate, формат самой даты - год-месяц-день</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${EndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${RealDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.067" level="INFO">${CurrentDate} = 2020-04-21 15:52:36.067</msg>
+<status status="PASS" starttime="20200421 15:52:36.067" endtime="20200421 15:52:36.067"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.067" level="INFO">${NewDate} = 2021-04-22 15:52:36.067</msg>
+<status status="PASS" starttime="20200421 15:52:36.067" endtime="20200421 15:52:36.067"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.068" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:36.068" endtime="20200421 15:52:36.068"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Year}-${Month}-${StartDay} - ${Year}-${Month}-${EndDay}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.068" level="INFO">${NewDate} = 2021-11-01 - 2021-11-02</msg>
+<status status="PASS" starttime="20200421 15:52:36.068" endtime="20200421 15:52:36.068"></status>
+</kw>
+<msg timestamp="20200421 15:52:36.068" level="INFO">${RealDate} = 2021-11-01 - 2021-11-02</msg>
+<status status="PASS" starttime="20200421 15:52:36.067" endtime="20200421 15:52:36.068"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountBefore}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.080" level="INFO">${CountBefore} = 1</msg>
+<status status="PASS" starttime="20200421 15:52:36.069" endtime="20200421 15:52:36.080"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${RealDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountDateBefore}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.089" level="INFO">${CountDateBefore} = 0</msg>
+<status status="PASS" starttime="20200421 15:52:36.080" endtime="20200421 15:52:36.089"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:36.090" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:36.090" endtime="20200421 15:52:36.157"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.159" level="INFO">${random_name} = evNJoLDGSRGmxmmyOYAAgbLpFFIeAwqBHPPZTkeFMUoMBQxSgSWKKxiyEhBIrygOCXdjQPbJMgjNlmbCKKQyZBRajlxLymtOqXsgdhdzxXaTUmfXdzEeVdKfqtDkjCUssPGGyJDHNiqVynbgghGZyPbDXjqIdOIHNKsbbfOBIVcgmzHexMOnLmKEzdkcvUjogPBTrcwC...</msg>
+<status status="PASS" starttime="20200421 15:52:36.158" endtime="20200421 15:52:36.159"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:52:36.161" level="INFO">${random_description} = PHwbOViWgoCwjCHTjlESrbppuJDhXGoGeLqZEfqsxuOugEbKVrLqmqRsqQzIeGYjgXQQcVjOnpHzwvpPGdGNzHqkyiNlRzcnyMKPDiQEIhKmdXrgESvbZTrAlhkHKhGlnDfRVuMmcjBlzLunqydveBoycXLvNuOATpyrTZAURHGvBRsjnphTEYGWrvRmuWcDcNEFsSVl...</msg>
+<status status="PASS" starttime="20200421 15:52:36.160" endtime="20200421 15:52:36.161"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:36.162" level="INFO">Typing text 'evNJoLDGSRGmxmmyOYAAgbLpFFIeAwqBHPPZTkeFMUoMBQxSgSWKKxiyEhBIrygOCXdjQPbJMgjNlmbCKKQyZBRajlxLymtOqXsgdhdzxXaTUmfXdzEeVdKfqtDkjCUssPGGyJDHNiqVynbgghGZyPbDXjqIdOIHNKsbbfOBIVcgmzHexMOnLmKEzdkcvUjogPBTrcwCWuIjsdLgPeIEStdFweUjeWWwtMPNjdYmcwBmjgOPaozPOqYhG' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:52:36.162" endtime="20200421 15:52:37.195"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:37.195" level="INFO">Typing text 'PHwbOViWgoCwjCHTjlESrbppuJDhXGoGeLqZEfqsxuOugEbKVrLqmqRsqQzIeGYjgXQQcVjOnpHzwvpPGdGNzHqkyiNlRzcnyMKPDiQEIhKmdXrgESvbZTrAlhkHKhGlnDfRVuMmcjBlzLunqydveBoycXLvNuOATpyrTZAURHGvBRsjnphTEYGWrvRmuWcDcNEFsSVlBTqnGNCslkTxWjfswvTXKybSSfDctEoejWomrmLIEUubYoTTxmeSQEIKVRlPwWUFAHnIYXdrembiaEXWaZysFNnPUCpzsZWuCWmBbUgifsNUzlHcPImKePxZPvNWttYdnFTmnabXlbrRVwSrPBzdhkLHETxsUHKSWVnEOojCRepxUbXkVseVvaPHWyjWGsDrIqJiphzyJOSLtNEaqomjHmWsqFdWKRtlESfmkTtAvZWtCjLhkIHasAkAFKjZRgLOvPejEJnpMWkyQQxrfFKWnhUJeIxdTXmlkGcdNREsPlUmSJRZPMoDAUOgKiBmvpfAGNhNuZaApXUUhbNzIcDDmuVJmBYNrwoakAXqPleMaXasopsHuPsDCBocqHwUzcvzeSAahyGHwUBOWbejgUWRvyyuXmpaLgJSgeKTcSAuiHMtMjkwMrnLTWhfQMuurhiHqadBFPkeVJNLHTQCkfXFyIKQvuUEeZVfxvuUfSkfUZernEtaqhjzwuScKDuFGQJZYrmRdnPyfltpwUkhVsJsHfJLLtFoPKbKQLHtUTHCHrnNnxPpJpFbefhEnkQUBPMbLLhhngQDbjRNAUqVkYcuWjyFlImJvTqtQYXZjYABlPzGbEEpSIUhQZYtyQUBhSmxeKKpcjKATmxrwQBccRwdoeVrrlUXPwSjudGIisdFiTvtcnCFHItTJlmXTiucGcVvFlSKnPejVSJYZHLjhThLtSXzjezFVYDsslKZHROjdpUDJYTnrYRxcdZbaNVsjXrnKyKtRXEjQfKmoPISkpLZfDRPPZbjNqt' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:52:37.195" endtime="20200421 15:52:41.293"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.294" level="INFO">${CurrentDate} = 2020-04-21 15:52:41.294</msg>
+<status status="PASS" starttime="20200421 15:52:41.294" endtime="20200421 15:52:41.294"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.295" level="INFO">${NewDate} = 2021-04-22 15:52:41.294</msg>
+<status status="PASS" starttime="20200421 15:52:41.294" endtime="20200421 15:52:41.295"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.295" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:41.295" endtime="20200421 15:52:41.295"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.296" level="INFO">${Day} = 01</msg>
+<status status="PASS" starttime="20200421 15:52:41.295" endtime="20200421 15:52:41.296"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.296" level="INFO">${Month} = 11</msg>
+<status status="PASS" starttime="20200421 15:52:41.296" endtime="20200421 15:52:41.296"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.296" level="INFO">${NewDate} = 01112021</msg>
+<status status="PASS" starttime="20200421 15:52:41.296" endtime="20200421 15:52:41.296"></status>
+</kw>
+<msg timestamp="20200421 15:52:41.296" level="INFO">${StartDate} = 01112021</msg>
+<status status="PASS" starttime="20200421 15:52:41.294" endtime="20200421 15:52:41.296"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${EndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.297" level="INFO">${CurrentDate} = 2020-04-21 15:52:41.297</msg>
+<status status="PASS" starttime="20200421 15:52:41.297" endtime="20200421 15:52:41.297"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.298" level="INFO">${NewDate} = 2021-04-22 15:52:41.297</msg>
+<status status="PASS" starttime="20200421 15:52:41.298" endtime="20200421 15:52:41.298"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.298" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:41.298" endtime="20200421 15:52:41.298"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.298" level="INFO">${Day} = 02</msg>
+<status status="PASS" starttime="20200421 15:52:41.298" endtime="20200421 15:52:41.298"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.299" level="INFO">${Month} = 11</msg>
+<status status="PASS" starttime="20200421 15:52:41.299" endtime="20200421 15:52:41.299"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:41.299" level="INFO">${NewDate} = 02112021</msg>
+<status status="PASS" starttime="20200421 15:52:41.299" endtime="20200421 15:52:41.299"></status>
+</kw>
+<msg timestamp="20200421 15:52:41.299" level="INFO">${EndDate} = 02112021</msg>
+<status status="PASS" starttime="20200421 15:52:41.297" endtime="20200421 15:52:41.299"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:41.300" level="INFO">Typing text '01112021' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:52:41.300" endtime="20200421 15:52:41.381"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:41.382" level="INFO">Typing text '02112021' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:52:41.382" endtime="20200421 15:52:41.466"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:52:41.467" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:52:41.467" endtime="20200421 15:52:41.528"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:52:46.529" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:52:41.528" endtime="20200421 15:52:46.529"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:46.529" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:52:46.529" endtime="20200421 15:52:46.563"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:46.564" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:46.564" endtime="20200421 15:52:46.612"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:52:46.613" endtime="20200421 15:52:47.447"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Tasks")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:47.448" level="INFO">Clicking link 'xpath=//a[contains(.,"Tasks")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:47.448" endtime="20200421 15:52:47.510"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountAfter}</var>
+</assign>
+<msg timestamp="20200421 15:52:47.518" level="INFO">${CountAfter} = 1</msg>
+<status status="PASS" starttime="20200421 15:52:47.511" endtime="20200421 15:52:47.518"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${RealDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountDateAfter}</var>
+</assign>
+<msg timestamp="20200421 15:52:47.526" level="INFO">${CountDateAfter} = 1</msg>
+<status status="PASS" starttime="20200421 15:52:47.519" endtime="20200421 15:52:47.526"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${CountAfter} &gt; ${CountBefore}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:47.527" level="FAIL">'1 &gt; 1' should be true.</msg>
+<status status="FAIL" starttime="20200421 15:52:47.526" endtime="20200421 15:52:47.527"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:52:47.528" endtime="20200421 15:52:49.591"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с датой начала в ноябре. Ожидаем, что дата завершения станет 31 декабря.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="FAIL" starttime="20200421 15:52:27.473" endtime="20200421 15:52:49.591" critical="yes">'1 &gt; 1' should be true.</status>
+</test>
+<test id="s1-t8" name="Create new task with start_date in May">
+<kw name="Open Browser to check" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:49.595" level="INFO">Opening browser 'googlechrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200421 15:52:49.595" endtime="20200421 15:52:53.188"></status>
+</kw>
+<status status="PASS" starttime="20200421 15:52:49.594" endtime="20200421 15:52:53.188"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:52:58.190" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:52:53.189" endtime="20200421 15:52:58.190"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>01</arg>
+</arguments>
+<assign>
+<var>${StartDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.191" level="INFO">${StartDay} = 01</msg>
+<status status="PASS" starttime="20200421 15:52:58.190" endtime="20200421 15:52:58.191"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>02</arg>
+</arguments>
+<assign>
+<var>${EndDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.191" level="INFO">${EndDay} = 02</msg>
+<status status="PASS" starttime="20200421 15:52:58.191" endtime="20200421 15:52:58.191"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>17</arg>
+</arguments>
+<assign>
+<var>${ResultEndDay}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.192" level="INFO">${ResultEndDay} = 17</msg>
+<status status="PASS" starttime="20200421 15:52:58.192" endtime="20200421 15:52:58.192"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>05</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.192" level="INFO">${Month} = 05</msg>
+<status status="PASS" starttime="20200421 15:52:58.192" endtime="20200421 15:52:58.192"></status>
+</kw>
+<kw name="Convert in start end">
+<tags>
+<tag>converted date</tag>
+</tags>
+<doc>Переводит дату в формат StartDate-EndDate, формат самой даты - год-месяц-день</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${ResultEndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${SearchDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.193" level="INFO">${CurrentDate} = 2020-04-21 15:52:58.193</msg>
+<status status="PASS" starttime="20200421 15:52:58.193" endtime="20200421 15:52:58.193"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.194" level="INFO">${NewDate} = 2021-04-22 15:52:58.193</msg>
+<status status="PASS" starttime="20200421 15:52:58.193" endtime="20200421 15:52:58.194"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.194" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:52:58.194" endtime="20200421 15:52:58.194"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Year}-${Month}-${StartDay} - ${Year}-${Month}-${EndDay}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.195" level="INFO">${NewDate} = 2021-05-01 - 2021-05-17</msg>
+<status status="PASS" starttime="20200421 15:52:58.194" endtime="20200421 15:52:58.195"></status>
+</kw>
+<msg timestamp="20200421 15:52:58.195" level="INFO">${SearchDate} = 2021-05-01 - 2021-05-17</msg>
+<status status="PASS" starttime="20200421 15:52:58.193" endtime="20200421 15:52:58.195"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountBefore}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.206" level="INFO">${CountBefore} = 0</msg>
+<status status="PASS" starttime="20200421 15:52:58.195" endtime="20200421 15:52:58.206"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:52:58.207" level="INFO">Clicking link 'xpath=//a[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:52:58.206" endtime="20200421 15:52:58.277"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>249</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_name}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.278" level="INFO">${random_name} = tivuOpAAfRZaGQLBzpeoTtlKwXzaoXdKEnGqTKvBjcYTzWrOOIbaHGFAnsINOuLHeSayTIYjTGoEulWAmXyzmXFatTNxYmQRsBjguxcQFAgdkZRGEEyqjmxkEtgtVaCbGDxTRRbuUqDgwTpwNsicBHHhJIGIaiWoXNnMTwcHLupsfDKwNOYjiKHWUIYludZWESqwqDQw...</msg>
+<status status="PASS" starttime="20200421 15:52:58.277" endtime="20200421 15:52:58.278"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>999</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_description}</var>
+</assign>
+<msg timestamp="20200421 15:52:58.281" level="INFO">${random_description} = hJxysRzGkzgVfvNEAzVrIqIfiXiSJZPnaDPeXOtMnLuRwuTQIDgCmUOhXDeitWxUNSKrwSjxsOQtFJSklbYZmCDqqajFpSzgurmfukgnKRswiqwLhOSGEbzlmfxGGpyaqnysmvNgkkBYHcBISvOZLjJSHZHgzcDIRwtcRhVVqJDmKsijTTflhwieoYOXrqPurcbnFHDf...</msg>
+<status status="PASS" starttime="20200421 15:52:58.279" endtime="20200421 15:52:58.281"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=task_name</arg>
+<arg>${random_name}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:58.281" level="INFO">Typing text 'tivuOpAAfRZaGQLBzpeoTtlKwXzaoXdKEnGqTKvBjcYTzWrOOIbaHGFAnsINOuLHeSayTIYjTGoEulWAmXyzmXFatTNxYmQRsBjguxcQFAgdkZRGEEyqjmxkEtgtVaCbGDxTRRbuUqDgwTpwNsicBHHhJIGIaiWoXNnMTwcHLupsfDKwNOYjiKHWUIYludZWESqwqDQwIgkIRZcuyGRhvsEmvhVPJrUaCsnPgWDDRJRJTvlNeubfDVJAK' into text field 'name=task_name'.</msg>
+<status status="PASS" starttime="20200421 15:52:58.281" endtime="20200421 15:52:59.320"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${random_description}</arg>
+</arguments>
+<msg timestamp="20200421 15:52:59.321" level="INFO">Typing text 'hJxysRzGkzgVfvNEAzVrIqIfiXiSJZPnaDPeXOtMnLuRwuTQIDgCmUOhXDeitWxUNSKrwSjxsOQtFJSklbYZmCDqqajFpSzgurmfukgnKRswiqwLhOSGEbzlmfxGGpyaqnysmvNgkkBYHcBISvOZLjJSHZHgzcDIRwtcRhVVqJDmKsijTTflhwieoYOXrqPurcbnFHDfBHtPaipkLzmVNHBUkXIzqrYsjfutjCCnqpMmAlgYmhhvhcXxkKVduYgDKOXLGcVGmkZtXfQkdVPAXaHCiTjZHiXydPwSQPwpvfmoCXbKActVSnGFTVwroOjwnCyNawJOvTPmolvYqeAxhMDYSZWwsTQDvvykZakMjscFCEGRiNJPyDvnsTduHtBDfGIwxyAcSXeQrjTWCzoDhcQjgblLIVkZUsCHQHrnpSjDDymWrhFEvjUuoNqnygVujjZmtODQSJBRQIpyFrIvQkSuYFTpcZRdohuIZAavBELrDkDrqOGJVRQOGWRoMvPdnpYOEfyaypYZAZfzpJgWPEZmYiOVYQLqPcxLXiMUdFLTqdqarxJRBtkMoDaJdieTSHHOLtIJXiNXAFPgxohOlEswyEDLROsFgFarbKGPNdsThUXEXlVMpnpZBaUsEoPRIZRzBHeyWdotNxPbRKpOBTgwfdnxNKxJWnUTAXWUgTBlPQNYWMnaOlESXVKOVAnMDcGhPUpUYkBGTdchybZvMXIPagwggMAAhszHyTWHuJnMYqcBvgrJlWLLPMEObyIkHIhwNwLEDsuKreTTHsjWvCKSfUMAuPwTBrpMvLdaHNoQwSRZqpkEsEmYrwajikCEAemuLQDeSotpbHbniLSNGlDsWSgNRpjYGqbuCpfPUdSrQuSMCQJopsZtDIgzuAHkMRkGsbcBNPAKUijwvaebdMGmPCgewgYvlWfUttBsaLDTsFWVvGdfWpsIYbBBFXJGMqbRADIyPPBijMeAtWopyDuAzCxeJqGplrYFXFN' into text field 'name=description'.</msg>
+<status status="PASS" starttime="20200421 15:52:59.321" endtime="20200421 15:53:03.251"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${StartDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${StartDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.252" level="INFO">${CurrentDate} = 2020-04-21 15:53:03.252</msg>
+<status status="PASS" starttime="20200421 15:53:03.252" endtime="20200421 15:53:03.252"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.253" level="INFO">${NewDate} = 2021-04-22 15:53:03.252</msg>
+<status status="PASS" starttime="20200421 15:53:03.252" endtime="20200421 15:53:03.253"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.253" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:53:03.253" endtime="20200421 15:53:03.253"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.253" level="INFO">${Day} = 01</msg>
+<status status="PASS" starttime="20200421 15:53:03.253" endtime="20200421 15:53:03.253"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.254" level="INFO">${Month} = 05</msg>
+<status status="PASS" starttime="20200421 15:53:03.254" endtime="20200421 15:53:03.254"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.254" level="INFO">${NewDate} = 01052021</msg>
+<status status="PASS" starttime="20200421 15:53:03.254" endtime="20200421 15:53:03.254"></status>
+</kw>
+<msg timestamp="20200421 15:53:03.254" level="INFO">${StartDate} = 01052021</msg>
+<status status="PASS" starttime="20200421 15:53:03.252" endtime="20200421 15:53:03.254"></status>
+</kw>
+<kw name="Convert in d.m.y">
+<tags>
+<tag>new date</tag>
+</tags>
+<doc>Переводит заданную дату в формат день.месяц.год</doc>
+<arguments>
+<arg>${EndDay}</arg>
+<arg>${Month}</arg>
+</arguments>
+<assign>
+<var>${EndDate}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${CurrentDate}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.255" level="INFO">${CurrentDate} = 2020-04-21 15:53:03.255</msg>
+<status status="PASS" starttime="20200421 15:53:03.255" endtime="20200421 15:53:03.255"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${CurrentDate}</arg>
+<arg>366 days</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.256" level="INFO">${NewDate} = 2021-04-22 15:53:03.255</msg>
+<status status="PASS" starttime="20200421 15:53:03.255" endtime="20200421 15:53:03.256"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NewDate}</arg>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${Year}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.256" level="INFO">${Year} = 2021</msg>
+<status status="PASS" starttime="20200421 15:53:03.256" endtime="20200421 15:53:03.256"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Day_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Day}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.256" level="INFO">${Day} = 02</msg>
+<status status="PASS" starttime="20200421 15:53:03.256" endtime="20200421 15:53:03.256"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Month_to_convert}</arg>
+</arguments>
+<assign>
+<var>${Month}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.257" level="INFO">${Month} = 05</msg>
+<status status="PASS" starttime="20200421 15:53:03.256" endtime="20200421 15:53:03.257"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'${Day}${Month}${Year}'</arg>
+</arguments>
+<assign>
+<var>${NewDate}</var>
+</assign>
+<msg timestamp="20200421 15:53:03.257" level="INFO">${NewDate} = 02052021</msg>
+<status status="PASS" starttime="20200421 15:53:03.257" endtime="20200421 15:53:03.257"></status>
+</kw>
+<msg timestamp="20200421 15:53:03.257" level="INFO">${EndDate} = 02052021</msg>
+<status status="PASS" starttime="20200421 15:53:03.255" endtime="20200421 15:53:03.257"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=start_date</arg>
+<arg>${StartDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:53:03.258" level="INFO">Typing text '01052021' into text field 'name=start_date'.</msg>
+<status status="PASS" starttime="20200421 15:53:03.258" endtime="20200421 15:53:03.337"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=end_date</arg>
+<arg>${EndDate}</arg>
+</arguments>
+<msg timestamp="20200421 15:53:03.338" level="INFO">Typing text '02052021' into text field 'name=end_date'.</msg>
+<status status="PASS" starttime="20200421 15:53:03.338" endtime="20200421 15:53:03.417"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=assignee</arg>
+</arguments>
+<msg timestamp="20200421 15:53:03.418" level="INFO">Clicking element 'name=assignee'.</msg>
+<status status="PASS" starttime="20200421 15:53:03.418" endtime="20200421 15:53:03.488"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:53:08.488" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:53:03.488" endtime="20200421 15:53:08.488"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]</arg>
+</arguments>
+<msg timestamp="20200421 15:53:08.489" level="INFO">Clicking element 'xpath=//select[@name="assignee"]/option[contains(.,'Chernousova Sophia')]'.</msg>
+<status status="PASS" starttime="20200421 15:53:08.489" endtime="20200421 15:53:08.522"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,"Create")]</arg>
+</arguments>
+<msg timestamp="20200421 15:53:08.524" level="INFO">Clicking element 'xpath=//button[contains(.,"Create")]'.</msg>
+<status status="PASS" starttime="20200421 15:53:08.523" endtime="20200421 15:53:08.569"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:53:08.569" endtime="20200421 15:53:09.400"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,"Tasks")]</arg>
+</arguments>
+<msg timestamp="20200421 15:53:09.401" level="INFO">Clicking link 'xpath=//a[contains(.,"Tasks")]'.</msg>
+<status status="PASS" starttime="20200421 15:53:09.401" endtime="20200421 15:53:09.468"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//p[contains(.,'${SearchDate}')]</arg>
+</arguments>
+<assign>
+<var>${CountAfter}</var>
+</assign>
+<msg timestamp="20200421 15:53:09.475" level="INFO">${CountAfter} = 1</msg>
+<status status="PASS" starttime="20200421 15:53:09.468" endtime="20200421 15:53:09.475"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${CountAfter}&gt;${CountBefore}</arg>
+</arguments>
+<status status="PASS" starttime="20200421 15:53:09.476" endtime="20200421 15:53:09.476"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20200421 15:53:14.478" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200421 15:53:09.477" endtime="20200421 15:53:14.478"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200421 15:53:14.478" endtime="20200421 15:53:16.541"></status>
+</kw>
+<doc>Открыть браузер и создать новую задачу с датой начала в мае. Ожидаем, что к дате завершения добавится 15 дней.</doc>
+<tags>
+<tag>create task</tag>
+<tag>seleniumlibrary</tag>
+</tags>
+<status status="PASS" starttime="20200421 15:52:49.594" endtime="20200421 15:53:16.541" critical="yes"></status>
+</test>
+<doc>Autotests</doc>
+<status status="FAIL" starttime="20200421 15:49:46.415" endtime="20200421 15:53:16.544"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="1">Critical Tests</stat>
+<stat pass="7" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="7" fail="1">create task</stat>
+<stat pass="7" fail="1">seleniumlibrary</stat>
+</tag>
+<suite>
+<stat pass="7" fail="1" id="s1" name="Test Suit4">Test Suit4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
