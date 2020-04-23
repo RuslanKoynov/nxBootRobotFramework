@@ -1,0 +1,2288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200423 19:47:54.468" rpa="false">
+<suite id="s1" name="Autotestsuites" source="D:\Robot_framework\практика\autotestsuites">
+<kw name="Py And Npm Starting" type="setup">
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>app.py</arg>
+<arg>shell=True</arg>
+<arg>cwd=D:/Nexign/todo-test-master/server</arg>
+</arguments>
+<msg timestamp="20200423 19:47:54.521" level="INFO">Starting process:
+app.py</msg>
+<status status="PASS" starttime="20200423 19:47:54.521" endtime="20200423 19:47:54.523"></status>
+</kw>
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>npm start</arg>
+<arg>shell=True</arg>
+<arg>cwd=D:/Nexign/nexy-tasks-manager-master</arg>
+</arguments>
+<msg timestamp="20200423 19:47:54.523" level="INFO">Starting process:
+npm start</msg>
+<status status="PASS" starttime="20200423 19:47:54.523" endtime="20200423 19:47:54.526"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>40 seconds</arg>
+</arguments>
+<msg timestamp="20200423 19:48:34.531" level="INFO">Slept 40 seconds</msg>
+<status status="PASS" starttime="20200423 19:47:54.527" endtime="20200423 19:48:34.531"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:47:54.520" endtime="20200423 19:48:34.531"></status>
+</kw>
+<suite id="s1-s1" name="1User" source="D:\Robot_framework\практика\autotestsuites\1user.robot">
+<test id="s1-s1-t1" name="User Creating">
+<kw name="Open Brows" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${site}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 19:48:34.830" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20200423 19:48:34.830" endtime="20200423 19:48:41.056"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:48:34.829" endtime="20200423 19:48:41.057"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Users")]</arg>
+</arguments>
+<msg timestamp="20200423 19:48:41.059" level="INFO">Clicking element 'xpath://*[contains(text(), "Users")]'.</msg>
+<status status="PASS" starttime="20200423 19:48:41.058" endtime="20200423 19:48:41.190"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:48:41.192" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:48:42.284" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:48:42.285" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:48:41.191" endtime="20200423 19:48:42.285"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:48:42.286" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:48:42.286" endtime="20200423 19:48:42.396"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:48:42.398" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:48:43.499" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:48:43.499" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:48:42.397" endtime="20200423 19:48:43.499"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>Hazy</arg>
+</arguments>
+<msg timestamp="20200423 19:48:43.499" level="INFO">Typing text 'Hazy' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200423 19:48:43.499" endtime="20200423 19:48:43.624"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:48:43.625" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:48:44.723" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:48:44.723" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:48:43.624" endtime="20200423 19:48:44.723"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:48:44.723" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:48:44.723" endtime="20200423 19:48:44.793"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:48:44.794" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:48:47.881" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:48:47.881" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:48:44.794" endtime="20200423 19:48:47.881"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:48:47.932" level="INFO">Current page contains text 'User has been created'.</msg>
+<status status="PASS" starttime="20200423 19:48:47.881" endtime="20200423 19:48:47.932"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 19:48:47.932" endtime="20200423 19:48:50.217"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:48:34.826" endtime="20200423 19:48:50.219" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="User Creating With Incorrect User Name">
+<kw name="Open Brows" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${site}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 19:48:50.230" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20200423 19:48:50.230" endtime="20200423 19:48:56.964"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:48:50.229" endtime="20200423 19:48:56.965"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Users")]</arg>
+</arguments>
+<msg timestamp="20200423 19:48:56.967" level="INFO">Clicking element 'xpath://*[contains(text(), "Users")]'.</msg>
+<status status="PASS" starttime="20200423 19:48:56.966" endtime="20200423 19:48:57.103"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:48:57.105" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:48:58.159" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:48:58.159" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:48:57.104" endtime="20200423 19:48:58.159"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:48:58.159" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:48:58.159" endtime="20200423 19:48:58.426"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:48:58.429" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:48:59.495" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:48:59.495" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:48:58.428" endtime="20200423 19:48:59.495"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>TEST250vccsvaajxcxasxcvavvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</arg>
+</arguments>
+<msg timestamp="20200423 19:48:59.495" level="INFO">Typing text 'TEST250vccsvaajxcxasxcvavvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200423 19:48:59.495" endtime="20200423 19:49:02.154"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:02.155" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:03.233" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:49:03.233" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:02.155" endtime="20200423 19:49:03.233"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:49:03.233" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:49:03.233" endtime="20200423 19:49:03.368"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:03.370" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:06.478" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:49:06.478" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:03.370" endtime="20200423 19:49:06.478"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>User has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 19:49:06.823" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 19:49:06.517" endtime="20200423 19:49:06.823"></status>
+</kw>
+<msg timestamp="20200423 19:49:06.823" level="FAIL">Page should not have contained text 'User has been created'.</msg>
+<status status="FAIL" starttime="20200423 19:49:06.479" endtime="20200423 19:49:06.823"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 19:49:06.823" endtime="20200423 19:49:09.354"></status>
+</kw>
+<status status="FAIL" starttime="20200423 19:48:50.226" endtime="20200423 19:49:09.355" critical="yes">Page should not have contained text 'User has been created'.</status>
+</test>
+<test id="s1-s1-t3" name="User Creating Empty User Name">
+<kw name="Open Brows" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${site}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:09.368" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20200423 19:49:09.367" endtime="20200423 19:49:16.141"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:49:09.365" endtime="20200423 19:49:16.142"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Users")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:16.143" level="INFO">Clicking element 'xpath://*[contains(text(), "Users")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:16.143" endtime="20200423 19:49:16.260"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:16.261" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:17.338" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:49:17.339" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:16.261" endtime="20200423 19:49:17.339"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:17.340" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:17.340" endtime="20200423 19:49:17.497"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:17.498" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:18.566" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:49:18.566" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:17.497" endtime="20200423 19:49:18.566"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:49:18.566" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:49:18.566" endtime="20200423 19:49:18.622"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:18.622" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:20.672" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:20.672" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:18.622" endtime="20200423 19:49:20.672"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200423 19:49:20.709" level="INFO">${alert} = Please fill user name</msg>
+<status status="PASS" starttime="20200423 19:49:20.673" endtime="20200423 19:49:20.709"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:49:20.787" level="INFO">Current page does not contain text 'User has been created'.</msg>
+<status status="PASS" starttime="20200423 19:49:20.714" endtime="20200423 19:49:20.788"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 19:49:20.789" endtime="20200423 19:49:22.944"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:49:09.363" endtime="20200423 19:49:22.945" critical="yes"></status>
+</test>
+<doc>Создание пользователя</doc>
+<status status="FAIL" starttime="20200423 19:48:34.531" endtime="20200423 19:49:22.950"></status>
+</suite>
+<suite id="s1-s2" name="2Task" source="D:\Robot_framework\практика\autotestsuites\2task.robot">
+<test id="s1-s2-t1" name="Task Creating With Empty Task Name">
+<kw name="Open Brows" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${site}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:22.979" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20200423 19:49:22.979" endtime="20200423 19:49:29.682"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:49:22.977" endtime="20200423 19:49:29.682"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:29.684" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:29.683" endtime="20200423 19:49:29.793"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:29.794" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:31.817" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:31.817" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:29.793" endtime="20200423 19:49:31.817"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:31.818" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:31.818" endtime="20200423 19:49:31.994"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:31.995" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:34.056" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:34.056" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:31.995" endtime="20200423 19:49:34.056"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:34.057" level="INFO">Typing text '' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:49:34.057" endtime="20200423 19:49:34.144"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:34.145" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:36.193" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:36.193" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:34.145" endtime="20200423 19:49:36.193"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:36.194" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:49:36.193" endtime="20200423 19:49:36.456"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:36.457" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:38.498" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:38.498" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:36.457" endtime="20200423 19:49:38.498"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:38.502" level="INFO">Typing text '23042020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:49:38.501" endtime="20200423 19:49:38.902"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:38.904" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:40.983" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:40.983" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:38.903" endtime="20200423 19:49:40.983"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:40.986" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:49:40.985" endtime="20200423 19:49:41.292"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:41.294" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:43.359" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:43.359" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:41.293" endtime="20200423 19:49:43.360"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:49:43.362" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:49:43.362" endtime="20200423 19:49:43.607"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:43.610" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:45.631" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:45.632" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:43.609" endtime="20200423 19:49:45.632"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:45.635" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:45.634" endtime="20200423 19:49:45.768"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:45.771" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:47.801" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:47.801" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:45.770" endtime="20200423 19:49:47.802"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:49:47.806" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:49:47.805" endtime="20200423 19:49:48.013"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:48.027" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:51.094" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:49:51.094" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:48.026" endtime="20200423 19:49:51.094"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200423 19:49:51.115" level="INFO">${alert} = Please fill all form data</msg>
+<status status="PASS" starttime="20200423 19:49:51.097" endtime="20200423 19:49:51.115"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:49:51.237" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 19:49:51.119" endtime="20200423 19:49:51.238"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:51.240" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:51.240" endtime="20200423 19:49:51.414"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:51.416" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:53.480" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:53.480" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:51.416" endtime="20200423 19:49:53.481"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:49:22.975" endtime="20200423 19:49:53.482" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Task Creating With Empty Desc">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:53.489" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:53.489" endtime="20200423 19:49:53.609"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:53.613" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:55.658" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:55.658" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:53.612" endtime="20200423 19:49:55.658"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:49:55.661" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:49:55.660" endtime="20200423 19:49:55.865"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:55.869" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:49:57.916" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:49:57.916" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:55.868" endtime="20200423 19:49:57.916"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:49:57.922" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:49:57.921" endtime="20200423 19:49:58.383"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:49:58.385" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:00.484" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:00.484" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:49:58.384" endtime="20200423 19:50:00.484"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:00.485" level="INFO">Typing text '' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:50:00.484" endtime="20200423 19:50:00.565"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:00.566" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:02.625" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:02.625" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:00.565" endtime="20200423 19:50:02.625"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:02.629" level="INFO">Typing text '23042020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:50:02.628" endtime="20200423 19:50:02.980"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:02.982" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:05.006" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:05.007" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:02.982" endtime="20200423 19:50:05.007"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:05.010" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:50:05.009" endtime="20200423 19:50:05.359"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:05.363" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:07.457" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:07.457" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:05.362" endtime="20200423 19:50:07.457"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:50:07.461" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:50:07.460" endtime="20200423 19:50:07.653"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:07.655" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:09.679" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:09.679" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:07.655" endtime="20200423 19:50:09.679"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:09.682" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:09.682" endtime="20200423 19:50:09.820"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:09.823" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:11.900" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:11.900" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:09.822" endtime="20200423 19:50:11.900"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:50:11.903" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:50:11.903" endtime="20200423 19:50:12.075"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:12.076" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:15.133" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:50:15.133" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:12.076" endtime="20200423 19:50:15.133"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200423 19:50:15.153" level="INFO">${alert} = Please fill all form data</msg>
+<status status="PASS" starttime="20200423 19:50:15.136" endtime="20200423 19:50:15.153"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:50:15.228" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 19:50:15.155" endtime="20200423 19:50:15.228"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:15.228" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:15.228" endtime="20200423 19:50:15.392"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:15.395" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:17.448" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:17.448" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:15.394" endtime="20200423 19:50:17.448"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:49:53.486" endtime="20200423 19:50:17.448" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Task Creating">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:17.453" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:17.453" endtime="20200423 19:50:17.569"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:17.571" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:19.581" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:19.581" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:17.570" endtime="20200423 19:50:19.581"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:19.581" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:19.581" endtime="20200423 19:50:19.757"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:19.760" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:21.831" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:21.831" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:19.759" endtime="20200423 19:50:21.831"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:21.832" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:50:21.832" endtime="20200423 19:50:22.295"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:22.296" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:24.353" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:24.353" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:22.296" endtime="20200423 19:50:24.353"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:24.353" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:50:24.353" endtime="20200423 19:50:24.880"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:24.882" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:26.942" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:26.942" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:24.882" endtime="20200423 19:50:26.942"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:26.942" level="INFO">Typing text '23042020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:50:26.942" endtime="20200423 19:50:27.295"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:27.298" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:29.385" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:29.385" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:27.297" endtime="20200423 19:50:29.385"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:29.385" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:50:29.385" endtime="20200423 19:50:29.732"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:29.732" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:31.802" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:31.802" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:29.732" endtime="20200423 19:50:31.802"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:50:31.805" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:50:31.804" endtime="20200423 19:50:32.057"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:32.060" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:34.148" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:34.148" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:32.060" endtime="20200423 19:50:34.148"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:34.150" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:34.149" endtime="20200423 19:50:34.289"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:34.291" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:36.375" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:36.375" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:34.290" endtime="20200423 19:50:36.376"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:50:36.378" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:50:36.377" endtime="20200423 19:50:36.598"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:36.602" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:39.685" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:50:39.685" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:36.601" endtime="20200423 19:50:39.685"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:50:39.741" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 19:50:39.687" endtime="20200423 19:50:39.741"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:39.741" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:39.741" endtime="20200423 19:50:40.002"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:40.004" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:42.119" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:42.119" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:40.003" endtime="20200423 19:50:42.119"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:50:17.453" endtime="20200423 19:50:42.119" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Task Creating With Empty Assignee">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:42.119" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:42.119" endtime="20200423 19:50:42.233"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:42.235" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:44.295" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:44.295" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:42.234" endtime="20200423 19:50:44.295"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:50:44.295" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:50:44.295" endtime="20200423 19:50:44.483"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:44.485" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:46.547" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:46.547" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:44.485" endtime="20200423 19:50:46.547"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:46.547" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:50:46.547" endtime="20200423 19:50:46.985"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:46.988" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:49.025" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:49.025" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:46.986" endtime="20200423 19:50:49.025"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:49.029" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:50:49.028" endtime="20200423 19:50:49.584"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:49.587" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:51.663" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:51.663" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:49.586" endtime="20200423 19:50:51.663"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:51.663" level="INFO">Typing text '23042020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:50:51.663" endtime="20200423 19:50:52.014"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:52.014" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:54.087" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:54.087" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:52.014" endtime="20200423 19:50:54.087"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:50:54.087" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:50:54.087" endtime="20200423 19:50:54.438"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:54.439" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:56.532" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:50:56.532" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:54.439" endtime="20200423 19:50:56.532"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:50:56.532" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:50:56.532" endtime="20200423 19:50:56.691"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:50:56.696" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:50:59.755" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:50:59.755" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:50:56.694" endtime="20200423 19:50:59.756"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 19:51:00.233" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 19:50:59.770" endtime="20200423 19:51:00.233"></status>
+</kw>
+<msg timestamp="20200423 19:51:00.233" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200423 19:50:59.757" endtime="20200423 19:51:00.233"></status>
+</kw>
+<status status="FAIL" starttime="20200423 19:50:42.119" endtime="20200423 19:51:00.233" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s2-t5" name="Task Creating Month February">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:00.245" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:00.245" endtime="20200423 19:51:00.374"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:00.376" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:01.437" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:01.437" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:00.376" endtime="20200423 19:51:01.437"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:01.438" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:01.438" endtime="20200423 19:51:01.549"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:01.551" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:02.575" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:02.575" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:01.550" endtime="20200423 19:51:02.577"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:51:02.577" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:51:02.577" endtime="20200423 19:51:03.015"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:03.017" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:04.112" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:04.112" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:03.017" endtime="20200423 19:51:04.112"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:51:04.114" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:51:04.114" endtime="20200423 19:51:04.630"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:04.630" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:05.639" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:05.639" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:04.630" endtime="20200423 19:51:05.639"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>01022021</arg>
+</arguments>
+<msg timestamp="20200423 19:51:05.641" level="INFO">Typing text '01022021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:51:05.641" endtime="20200423 19:51:05.981"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:05.982" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:07.067" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:07.067" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:05.982" endtime="20200423 19:51:07.067"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>01022021</arg>
+</arguments>
+<msg timestamp="20200423 19:51:07.073" level="INFO">Typing text '01022021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:51:07.069" endtime="20200423 19:51:07.399"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:07.402" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:08.482" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:08.482" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:07.401" endtime="20200423 19:51:08.482"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:51:08.485" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:51:08.484" endtime="20200423 19:51:08.728"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:08.729" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:09.825" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:09.825" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:08.729" endtime="20200423 19:51:09.825"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:09.825" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:09.825" endtime="20200423 19:51:09.971"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:09.973" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:10.995" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:51:10.995" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:09.972" endtime="20200423 19:51:10.995"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:51:10.997" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:51:10.997" endtime="20200423 19:51:11.182"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:11.185" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:14.231" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:51:14.231" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:11.185" endtime="20200423 19:51:14.231"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:51:14.289" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 19:51:14.234" endtime="20200423 19:51:14.290"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:14.291" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:14.291" endtime="20200423 19:51:14.432"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:14.435" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:16.463" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:16.464" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:14.434" endtime="20200423 19:51:16.464"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:51:00.233" endtime="20200423 19:51:16.467" critical="yes"></status>
+</test>
+<test id="s1-s2-t6" name="Task Verification February Month">
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:16.478" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:18.594" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:18.594" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:16.477" endtime="20200423 19:51:18.594"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:#root &gt; div &gt; div &gt; main &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div.card-body &gt; p:nth-child(3)</arg>
+</arguments>
+<assign>
+<var>${dmy}</var>
+</assign>
+<msg timestamp="20200423 19:51:18.683" level="INFO">${dmy} = 2021-02-01 - 2021-02-08</msg>
+<status status="PASS" starttime="20200423 19:51:18.594" endtime="20200423 19:51:18.683"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${dmy}' == '2021-02-01 - 2021-02-08'</arg>
+<arg>log</arg>
+<arg>Test passes</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test passes</arg>
+</arguments>
+<msg timestamp="20200423 19:51:18.686" level="INFO">Test passes</msg>
+<status status="PASS" starttime="20200423 19:51:18.686" endtime="20200423 19:51:18.686"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:51:18.685" endtime="20200423 19:51:18.686"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${dmy}' == '2021-02-01 - 2021-02-08'</arg>
+<arg>Fail</arg>
+<arg>Test fails</arg>
+</arguments>
+<status status="PASS" starttime="20200423 19:51:18.686" endtime="20200423 19:51:18.686"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:18.686" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:18.686" endtime="20200423 19:51:18.810"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:18.812" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:20.888" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:20.888" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:18.812" endtime="20200423 19:51:20.889"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:51:16.474" endtime="20200423 19:51:20.890" critical="yes"></status>
+</test>
+<test id="s1-s2-t7" name="Task Creating With Incorrect Description">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:20.902" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:20.901" endtime="20200423 19:51:21.036"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:21.039" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:23.097" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:23.097" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:21.038" endtime="20200423 19:51:23.097"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:23.101" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:23.100" endtime="20200423 19:51:23.296"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:23.302" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:25.313" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:25.313" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:23.301" endtime="20200423 19:51:25.313"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:51:25.315" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:51:25.315" endtime="20200423 19:51:25.670"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:25.671" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:27.733" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:27.733" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:25.670" endtime="20200423 19:51:27.733"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>Темнел московский серый зимний день, холодно зажигался газ в фонарях, тепло освещались витрины магазинов — и разгоралась вечерняя, освобождающаяся от дневных дел московская жизнь: гуще и бодрей неслись извозчичьи санки, тяжелей гремели переполненные, ныряющие трамваи, — в сумраке уже видно было, как с шипением сыпались с проводов зеленые звезды — оживленнее спешили по снежным тротуарам мутно чернеющие прохожие... Каждый вечер мчал меня в этот час на вытягивающемся рысаке мой кучер — от Красных ворот к храму Христа Спасителя: она жила против него; каждый вечер я возил ее обедать в «Прагу», в «Эрмитаж», в «Метрополь», после обеда в театры, на концерты, а там к «Яру», в «Стрельну»... Чем все это должно кончиться, я не знал и старался не думать, не додумывать: было бесполезно — так же, как говорить с ней об этом: она раз навсегда отвела разговоры о нашем будущем; она была загадочна, непонятна для меня, странны были и наши с ней отношения — совсем близки мы все еще не были; и все это без конца держало меня в неразрешающемся напряжении, в мучительном ожидании — и вместе с тем был я несказанно счастлив каждым часом, проведенным возле нее.</arg>
+</arguments>
+<msg timestamp="20200423 19:51:27.736" level="INFO">Typing text 'Темнел московский серый зимний день, холодно зажигался газ в фонарях, тепло освещались витрины магазинов — и разгоралась вечерняя, освобождающаяся от дневных дел московская жизнь: гуще и бодрей неслись извозчичьи санки, тяжелей гремели переполненные, ныряющие трамваи, — в сумраке уже видно было, как с шипением сыпались с проводов зеленые звезды — оживленнее спешили по снежным тротуарам мутно чернеющие прохожие... Каждый вечер мчал меня в этот час на вытягивающемся рысаке мой кучер — от Красных ворот к храму Христа Спасителя: она жила против него; каждый вечер я возил ее обедать в «Прагу», в «Эрмитаж», в «Метрополь», после обеда в театры, на концерты, а там к «Яру», в «Стрельну»... Чем все это должно кончиться, я не знал и старался не думать, не додумывать: было бесполезно — так же, как говорить с ней об этом: она раз навсегда отвела разговоры о нашем будущем; она была загадочна, непонятна для меня, странны были и наши с ней отношения — совсем близки мы все еще не были; и все это без конца держало меня в неразрешающемся напряжении, в мучительном ожидании — и вместе с тем был я несказанно счастлив каждым часом, проведенным возле нее.' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:51:27.736" endtime="20200423 19:51:40.365"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:40.367" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:42.430" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:42.430" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:40.366" endtime="20200423 19:51:42.430"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:51:42.433" level="INFO">Typing text '23042020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:51:42.432" endtime="20200423 19:51:42.727"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:42.729" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:44.831" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:44.831" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:42.729" endtime="20200423 19:51:44.831"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:51:44.834" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:51:44.834" endtime="20200423 19:51:45.166"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:45.168" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:47.169" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:47.169" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:45.167" endtime="20200423 19:51:47.169"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:51:47.173" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:51:47.172" endtime="20200423 19:51:47.387"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:47.388" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:49.467" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:49.467" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:47.388" endtime="20200423 19:51:49.467"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:49.469" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:49.469" endtime="20200423 19:51:49.603"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:49.605" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:51.709" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:51.709" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:49.605" endtime="20200423 19:51:51.709"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:51:51.712" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:51:51.711" endtime="20200423 19:51:51.906"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:51.911" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:54.997" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:51:54.997" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:51.910" endtime="20200423 19:51:54.997"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 19:51:55.530" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 19:51:55.078" endtime="20200423 19:51:55.530"></status>
+</kw>
+<msg timestamp="20200423 19:51:55.530" level="FAIL">Page should not have contained text 'Task has been created'.</msg>
+<status status="FAIL" starttime="20200423 19:51:55.000" endtime="20200423 19:51:55.530"></status>
+</kw>
+<status status="FAIL" starttime="20200423 19:51:20.898" endtime="20200423 19:51:55.530" critical="yes">Page should not have contained text 'Task has been created'.</status>
+</test>
+<test id="s1-s2-t8" name="Task Creating With Empty End Date">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:55.539" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:55.539" endtime="20200423 19:51:55.738"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:55.740" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:51:57.793" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:51:57.793" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:55.739" endtime="20200423 19:51:57.793"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:51:57.793" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:51:57.793" endtime="20200423 19:51:57.998"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:51:58.000" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:00.078" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:00.078" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:51:57.999" endtime="20200423 19:52:00.078"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:00.078" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:52:00.078" endtime="20200423 19:52:00.506"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:00.509" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:02.539" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:02.539" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:00.508" endtime="20200423 19:52:02.539"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:02.539" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:52:02.539" endtime="20200423 19:52:02.996"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:02.997" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:05.049" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:05.049" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:02.997" endtime="20200423 19:52:05.050"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:05.052" level="INFO">Typing text '23042020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:52:05.052" endtime="20200423 19:52:05.373"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:05.376" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:07.482" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:07.482" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:05.375" endtime="20200423 19:52:07.482"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:52:07.486" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:52:07.485" endtime="20200423 19:52:07.674"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:07.675" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:09.766" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:09.766" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:07.675" endtime="20200423 19:52:09.766"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:09.770" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:09.769" endtime="20200423 19:52:09.892"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:09.895" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:11.899" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:11.899" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:09.894" endtime="20200423 19:52:11.899"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:52:11.903" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:52:11.902" endtime="20200423 19:52:12.075"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:12.080" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:15.127" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:52:15.127" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:12.080" endtime="20200423 19:52:15.127"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 19:52:15.740" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 19:52:15.139" endtime="20200423 19:52:15.740"></status>
+</kw>
+<msg timestamp="20200423 19:52:15.740" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200423 19:52:15.127" endtime="20200423 19:52:15.740"></status>
+</kw>
+<status status="FAIL" starttime="20200423 19:51:55.530" endtime="20200423 19:52:15.740" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s2-t9" name="Task Creating With Empty Start Date">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:15.755" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:15.755" endtime="20200423 19:52:15.927"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:15.929" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:17.985" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:17.985" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:15.928" endtime="20200423 19:52:17.985"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:17.985" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:17.985" endtime="20200423 19:52:18.183"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:18.184" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:20.278" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:20.278" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:18.184" endtime="20200423 19:52:20.278"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:20.278" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:52:20.278" endtime="20200423 19:52:20.702"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:20.702" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:22.755" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:22.755" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:20.702" endtime="20200423 19:52:22.755"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:22.759" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:52:22.755" endtime="20200423 19:52:23.254"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:23.254" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:25.354" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:25.354" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:23.254" endtime="20200423 19:52:25.354"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:25.354" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:52:25.354" endtime="20200423 19:52:25.597"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:25.597" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:27.629" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:27.629" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:25.597" endtime="20200423 19:52:27.629"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:52:27.629" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:52:27.629" endtime="20200423 19:52:27.859"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:27.862" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:29.916" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:29.916" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:27.861" endtime="20200423 19:52:29.916"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:29.916" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:29.916" endtime="20200423 19:52:30.067"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:30.070" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:32.156" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:32.156" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:30.069" endtime="20200423 19:52:32.156"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:52:32.160" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:52:32.156" endtime="20200423 19:52:32.327"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:32.329" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:35.387" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:52:35.387" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:32.329" endtime="20200423 19:52:35.387"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 19:52:35.874" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 19:52:35.396" endtime="20200423 19:52:35.874"></status>
+</kw>
+<msg timestamp="20200423 19:52:35.875" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200423 19:52:35.389" endtime="20200423 19:52:35.875"></status>
+</kw>
+<status status="FAIL" starttime="20200423 19:52:15.740" endtime="20200423 19:52:35.875" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s2-t10" name="Task Creating With Start Date Earlier Than Current Date">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:35.882" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:35.881" endtime="20200423 19:52:36.074"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:36.076" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:38.137" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:38.137" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:36.075" endtime="20200423 19:52:38.138"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Create")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:38.138" level="INFO">Clicking element 'xpath://*[contains(text(), "Create")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:38.138" endtime="20200423 19:52:38.338"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:38.340" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:40.379" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:40.379" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:38.340" endtime="20200423 19:52:40.379"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${task_name}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:40.379" level="INFO">Typing text 'First Task' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 19:52:40.379" endtime="20200423 19:52:40.689"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:40.689" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:42.754" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:42.754" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:40.689" endtime="20200423 19:52:42.754"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:42.754" level="INFO">Typing text 'The task's desc' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 19:52:42.754" endtime="20200423 19:52:43.279"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:43.282" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:45.345" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:45.345" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:43.281" endtime="20200423 19:52:45.345"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>22042021</arg>
+</arguments>
+<msg timestamp="20200423 19:52:45.345" level="INFO">Typing text '22042021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 19:52:45.345" endtime="20200423 19:52:45.688"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:45.690" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:47.716" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:47.716" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:45.690" endtime="20200423 19:52:47.716"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end_date}</arg>
+</arguments>
+<msg timestamp="20200423 19:52:47.716" level="INFO">Typing text '23042020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 19:52:47.716" endtime="20200423 19:52:48.061"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:48.064" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:50.120" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:50.120" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:48.062" endtime="20200423 19:52:50.120"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='custom-select d-block w-100']</arg>
+</arguments>
+<msg timestamp="20200423 19:52:50.124" level="INFO">Clicking element 'xpath://*[@class='custom-select d-block w-100']'.</msg>
+<status status="PASS" starttime="20200423 19:52:50.123" endtime="20200423 19:52:50.317"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:50.318" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:52.331" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:52.331" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:50.317" endtime="20200423 19:52:52.331"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Cyle")]</arg>
+</arguments>
+<msg timestamp="20200423 19:52:52.334" level="INFO">Clicking element 'xpath://*[contains(text(), "Cyle")]'.</msg>
+<status status="PASS" starttime="20200423 19:52:52.333" endtime="20200423 19:52:52.470"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=2 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:52.471" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:54.573" level="INFO">Process did not complete in 2 seconds.</msg>
+<msg timestamp="20200423 19:52:54.573" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:52.471" endtime="20200423 19:52:54.573"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20200423 19:52:54.577" level="INFO">Clicking element 'xpath://*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20200423 19:52:54.576" endtime="20200423 19:52:54.776"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:52:54.782" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:52:57.818" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:52:57.818" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:52:54.782" endtime="20200423 19:52:57.818"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 19:52:57.909" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 19:52:57.821" endtime="20200423 19:52:57.909"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 19:52:57.912" endtime="20200423 19:53:00.198"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:52:35.881" endtime="20200423 19:53:00.199" critical="yes"></status>
+</test>
+<doc>Создание задачи</doc>
+<status status="FAIL" starttime="20200423 19:49:22.959" endtime="20200423 19:53:00.204"></status>
+</suite>
+<suite id="s1-s3" name="3Edit" source="D:\Robot_framework\практика\autotestsuites\3edit.robot">
+<test id="s1-s3-t1" name="Editing Task">
+<kw name="Open Brows" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${site}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 19:53:00.254" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20200423 19:53:00.254" endtime="20200423 19:53:07.306"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:53:00.253" endtime="20200423 19:53:07.306"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:53:07.308" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:53:07.307" endtime="20200423 19:53:07.450"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:07.452" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:08.535" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:53:08.535" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:07.451" endtime="20200423 19:53:08.535"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Edit")]</arg>
+</arguments>
+<msg timestamp="20200423 19:53:08.536" level="INFO">Clicking element 'xpath://*[contains(text(), "Edit")]'.</msg>
+<status status="PASS" starttime="20200423 19:53:08.536" endtime="20200423 19:53:08.613"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:08.614" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:09.699" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:53:09.699" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:08.614" endtime="20200423 19:53:09.699"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_status</arg>
+</arguments>
+<msg timestamp="20200423 19:53:09.699" level="INFO">Clicking element 'name:task_status'.</msg>
+<status status="PASS" starttime="20200423 19:53:09.699" endtime="20200423 19:53:09.771"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:09.772" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:10.855" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:53:10.855" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:09.772" endtime="20200423 19:53:10.855"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Closed")]</arg>
+</arguments>
+<msg timestamp="20200423 19:53:10.856" level="INFO">Clicking element 'xpath://*[contains(text(), "Closed")]'.</msg>
+<status status="PASS" starttime="20200423 19:53:10.855" endtime="20200423 19:53:10.895"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:10.896" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:11.979" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:53:11.979" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:10.895" endtime="20200423 19:53:11.979"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Update")]</arg>
+</arguments>
+<msg timestamp="20200423 19:53:11.980" level="INFO">Clicking element 'xpath://*[contains(text(), "Update")]'.</msg>
+<status status="PASS" starttime="20200423 19:53:11.979" endtime="20200423 19:53:12.048"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:12.049" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:15.108" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:53:15.108" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:12.048" endtime="20200423 19:53:15.108"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been updated</arg>
+</arguments>
+<msg timestamp="20200423 19:53:15.171" level="INFO">Current page contains text 'Task has been updated'.</msg>
+<status status="PASS" starttime="20200423 19:53:15.110" endtime="20200423 19:53:15.171"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 19:53:15.173" endtime="20200423 19:53:17.370"></status>
+</kw>
+<doc>Изменение поля Status</doc>
+<status status="PASS" starttime="20200423 19:53:00.251" endtime="20200423 19:53:17.372" critical="yes"></status>
+</test>
+<doc>Редактирование задачи</doc>
+<status status="PASS" starttime="20200423 19:53:00.228" endtime="20200423 19:53:17.379"></status>
+</suite>
+<suite id="s1-s4" name="4Delete" source="D:\Robot_framework\практика\autotestsuites\4delete.robot">
+<test id="s1-s4-t1" name="Deleting Task">
+<kw name="Open Brows" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${site}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 19:53:17.417" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20200423 19:53:17.417" endtime="20200423 19:53:24.148"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:53:17.416" endtime="20200423 19:53:24.148"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Tasks")]</arg>
+</arguments>
+<msg timestamp="20200423 19:53:24.149" level="INFO">Clicking element 'xpath://*[contains(text(), "Tasks")]'.</msg>
+<status status="PASS" starttime="20200423 19:53:24.149" endtime="20200423 19:53:24.265"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=1 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:24.267" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:25.355" level="INFO">Process did not complete in 1 second.</msg>
+<msg timestamp="20200423 19:53:25.355" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:24.266" endtime="20200423 19:53:25.355"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Delete")]</arg>
+</arguments>
+<msg timestamp="20200423 19:53:25.358" level="INFO">Clicking element 'xpath://*[contains(text(), "Delete")]'.</msg>
+<status status="PASS" starttime="20200423 19:53:25.357" endtime="20200423 19:53:25.515"></status>
+</kw>
+<kw name="Wait For Process" library="Process">
+<doc>Waits for the process to complete or to reach the given timeout.</doc>
+<arguments>
+<arg>timeout=3 secs</arg>
+</arguments>
+<msg timestamp="20200423 19:53:25.517" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200423 19:53:28.561" level="INFO">Process did not complete in 3 seconds.</msg>
+<msg timestamp="20200423 19:53:28.561" level="INFO">Leaving process intact.</msg>
+<status status="PASS" starttime="20200423 19:53:25.517" endtime="20200423 19:53:28.561"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been deleted</arg>
+</arguments>
+<msg timestamp="20200423 19:53:28.588" level="INFO">Current page contains text 'Task has been deleted'.</msg>
+<status status="PASS" starttime="20200423 19:53:28.562" endtime="20200423 19:53:28.588"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 19:53:28.588" endtime="20200423 19:53:30.750"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:53:17.411" endtime="20200423 19:53:30.751" critical="yes"></status>
+</test>
+<doc>Удаление задачи</doc>
+<status status="PASS" starttime="20200423 19:53:17.393" endtime="20200423 19:53:30.758"></status>
+</suite>
+<kw name="Stopping Processes" type="teardown">
+<kw name="Terminate Process" library="Process">
+<doc>Stops the process gracefully or forcefully.</doc>
+<msg timestamp="20200423 19:53:30.776" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20200423 19:54:00.879" level="INFO">Graceful termination failed.</msg>
+<msg timestamp="20200423 19:54:00.879" level="INFO">Forcefully killing process.</msg>
+<msg timestamp="20200423 19:54:00.995" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20200423 19:53:30.776" endtime="20200423 19:54:00.995"></status>
+</kw>
+<status status="PASS" starttime="20200423 19:53:30.776" endtime="20200423 19:54:00.995"></status>
+</kw>
+<doc>Автотестирование основной функциональности</doc>
+<status status="FAIL" starttime="20200423 19:47:54.474" endtime="20200423 19:54:00.995"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="5">Critical Tests</stat>
+<stat pass="10" fail="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="5" id="s1" name="Autotestsuites">Autotestsuites</stat>
+<stat pass="2" fail="1" id="s1-s1" name="1User">Autotestsuites.1User</stat>
+<stat pass="6" fail="4" id="s1-s2" name="2Task">Autotestsuites.2Task</stat>
+<stat pass="1" fail="0" id="s1-s3" name="3Edit">Autotestsuites.3Edit</stat>
+<stat pass="1" fail="0" id="s1-s4" name="4Delete">Autotestsuites.4Delete</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
