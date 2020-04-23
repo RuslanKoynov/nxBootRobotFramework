@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200423 13:13:00.630" rpa="false">
+<suite id="s1" name="Testsuites" source="D:\Tasks\testsuites">
+<suite id="s1-s1" name="Currweather" source="D:\Tasks\testsuites\currweather.robot">
+<test id="s1-s1-t1" name="Temperature">
+<kw name="Temp 25" library="currweather">
+<assign>
+<var>${DICT}</var>
+</assign>
+<msg timestamp="20200423 13:13:53.667" level="INFO">${DICT} = {}</msg>
+<status status="PASS" starttime="20200423 13:13:00.687" endtime="20200423 13:13:53.667"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>log dictionary</arg>
+<arg>${DICT}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 13:13:53.669" endtime="20200423 13:13:53.670"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>Fail</arg>
+<arg>Таких городов нет</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Таких городов нет</arg>
+</arguments>
+<msg timestamp="20200423 13:13:53.674" level="FAIL">Таких городов нет</msg>
+<status status="FAIL" starttime="20200423 13:13:53.672" endtime="20200423 13:13:53.674"></status>
+</kw>
+<status status="FAIL" starttime="20200423 13:13:53.671" endtime="20200423 13:13:53.674"></status>
+</kw>
+<doc>Города, с температурой выше 25 градусов</doc>
+<tags>
+<tag>final task</tag>
+</tags>
+<timeout value="4 minutes"></timeout>
+<status status="FAIL" starttime="20200423 13:13:00.683" endtime="20200423 13:13:53.676" critical="yes">Таких городов нет</status>
+</test>
+<test id="s1-s1-t2" name="Vis And Speed">
+<kw name="Vis Speed" library="currweather">
+<assign>
+<var>${DICT}</var>
+</assign>
+<msg timestamp="20200423 13:14:46.315" level="INFO">${DICT} = {'Lapas': 'Good conditions', 'Lagkada': 'Good conditions', 'Lamia': 'Good conditions', 'Lambírion': 'Good conditions', 'Lalas': 'Good conditions', 'Nomós Lakonías': 'Good conditions', 'Lakkion': 'Good...</msg>
+<status status="PASS" starttime="20200423 13:13:53.685" endtime="20200423 13:14:46.315"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>log dictionary</arg>
+<arg>${DICT}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${DICT}</arg>
+</arguments>
+<msg timestamp="20200423 13:14:46.317" level="INFO">Dictionary size is 163 and it contains following items:
+Alimos: Good conditions
+Chaidari: Good conditions
+Chalandritsa: Good conditions
+Chalki: Good conditions
+Chalkiades: Good conditions
+Chalkida: Good conditions
+Chania: Good conditions
+Chavarion: Good conditions
+Chios: Good conditions
+Cholargos: Good conditions
+Chora: Good conditions
+Epitalion: Good conditions
+Eresos: Good conditions
+Eretria: Good conditions
+Ermoupolis: Good conditions
+Erythres: Good conditions
+Falanna: Good conditions
+Faros: Good conditions
+Farsala: Good conditions
+Filiates: Good conditions
+Filiatra: Good conditions
+Filippiada: Good conditions
+Filla: Good conditions
+Filotion: Good conditions
+Fitiai: Good conditions
+Folegandros: Good conditions
+Fry: Good conditions
+Fyli: Good conditions
+Gaitanion: Good conditions
+Galatas: Good conditions
+Galatsi: Good conditions
+Gargalianoi: Good conditions
+Gastouni: Good conditions
+Gavalou: Good conditions
+Gazi: Good conditions
+Glyfada: Good conditions
+Gomfoi: Good conditions
+Gonnoi: Good conditions
+Goumeron: Good conditions
+Gouria: Good conditions
+Gournes: Good conditions
+Gouvai: Good conditions
+Graikochorion: Good conditions
+Graikós: Good conditions
+Grammatiko: Good conditions
+Grammatikou: Good conditions
+Grammenitsa: Good conditions
+Grizanon: Good conditions
+Igoumenitsa: Good conditions
+Ioannina: Good conditions
+Ios: Good conditions
+Ippoforvíon: Good conditions
+Irakleio: Good conditions
+Irakleion: Good conditions
+Isthmia: Good conditions
+Istiaia: Good conditions
+Istérnia: Good conditions
+Itea: Good conditions
+Ithaki: Good conditions
+Ixós: Good conditions
+Kainouryion: Good conditions
+Kaisariani: Good conditions
+Kalamata: Good conditions
+Kalamia: Good conditions
+Kalamos: Good conditions
+Kalavryta: Good conditions
+Kalivai: Good conditions
+Kallifonion: Good conditions
+Kallithea: Good conditions
+Kallithiron: Good conditions
+Kalloni: Good conditions
+Kalymnos: Good conditions
+Kalyvia Thorikou: Good conditions
+Kamarai: Good conditions
+Kamarion: Good conditions
+Kamena Vourla: Good conditions
+Kampi: Good conditions
+Kanalaki: Good conditions
+Kanalia: Good conditions
+Kandila: Good conditions
+Kaparellion: Good conditions
+Karatoulas: Good conditions
+Kardamaina: Good conditions
+Kardamas: Good conditions
+Karditsa: Good conditions
+Karditsomagoula: Good conditions
+Kariai: Good conditions
+Karpathos: Good conditions
+Karpokhorion: Good conditions
+Karpásion: Good conditions
+Karystos: Good conditions
+Karés: Good conditions
+Kastella: Good conditions
+Kastelli: Good conditions
+Katastarion: Good conditions
+Kato Achaia: Good conditions
+Kato Asitai: Good conditions
+Kato Glikovrisi: Good conditions
+Kato Lekhonia: Good conditions
+Kato Mazarakion: Good conditions
+Kato Soulion: Good conditions
+Katouna: Good conditions
+Katsikas: Good conditions
+Katákali: Good conditions
+Kavasilas: Good conditions
+Kea: Good conditions
+Kefalos: Good conditions
+Keratea: Good conditions
+Keratsini: Good conditions
+Khalandrion: Good conditions
+Khalki: Good conditions
+Khalkoutsion: Good conditions
+Khora: Good conditions
+Kifisia: Good conditions
+Kimolos: Good conditions
+Kineta: Good conditions
+Kiprianós: Good conditions
+Kipseli: Good conditions
+Kissamos: Good conditions
+Kokkarion: Good conditions
+Kokkini Hani: Good conditions
+Kolimvarion: Good conditions
+Kompoti: Good conditions
+Koroni: Good conditions
+Koropi: Good conditions
+Kos: Good conditions
+Kostakioi: Good conditions
+Kouroúpi: Good conditions
+Koutselion: Good conditions
+Kouvaras: Good conditions
+Kranea Elassonos: Good conditions
+Krestena: Good conditions
+Krikellos: Good conditions
+Krokeai: Good conditions
+Krouson: Good conditions
+Kryoneri: Good conditions
+Kyllini: Good conditions
+Kymi: Good conditions
+Kyparissia: Good conditions
+Kyras Vrysi: Good conditions
+Kythira: Good conditions
+Kythnos: Good conditions
+Káto Patísia: Good conditions
+Káto Vlasía: Good conditions
+Lagkada: Good conditions
+Lakkion: Good conditions
+Lalas: Good conditions
+Lambírion: Good conditions
+Lamia: Good conditions
+Lapas: Good conditions
+Magoula: Good conditions
+Nomós Chaniás: Good conditions
+Nomós Evvoías: Good conditions
+Nomós Fthiótidos: Good conditions
+Nomós Ileías: Good conditions
+Nomós Ioannínon: Good conditions
+Nomós Irakleíou: Good conditions
+Nomós Kardhítsas: Good conditions
+Nomós Kefallinías: Good conditions
+Nomós Kykládon: Good conditions
+Nomós Lakonías: Good conditions
+Taxiarchai: Good conditions
+Ydroussa: Good conditions</msg>
+<status status="PASS" starttime="20200423 13:14:46.316" endtime="20200423 13:14:46.317"></status>
+</kw>
+<status status="PASS" starttime="20200423 13:14:46.316" endtime="20200423 13:14:46.317"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>Fail</arg>
+<arg>Таких городов нет</arg>
+</arguments>
+<status status="PASS" starttime="20200423 13:14:46.318" endtime="20200423 13:14:46.318"></status>
+</kw>
+<doc>Города, видимость &gt; 300м, скоростью ветра &lt; 20м/c</doc>
+<tags>
+<tag>final task</tag>
+</tags>
+<timeout value="4 minutes"></timeout>
+<status status="PASS" starttime="20200423 13:13:53.683" endtime="20200423 13:14:46.319" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Snowy Cities">
+<kw name="Snow" library="currweather">
+<assign>
+<var>${DICT}</var>
+</assign>
+<msg timestamp="20200423 13:15:38.985" level="INFO">${DICT} = {}</msg>
+<status status="PASS" starttime="20200423 13:14:46.321" endtime="20200423 13:15:38.985"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>log dictionary</arg>
+<arg>${DICT}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 13:15:38.985" endtime="20200423 13:15:38.985"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>Fail</arg>
+<arg>Таких городов нет</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Таких городов нет</arg>
+</arguments>
+<msg timestamp="20200423 13:15:38.987" level="FAIL">Таких городов нет</msg>
+<status status="FAIL" starttime="20200423 13:15:38.986" endtime="20200423 13:15:38.987"></status>
+</kw>
+<status status="FAIL" starttime="20200423 13:15:38.986" endtime="20200423 13:15:38.987"></status>
+</kw>
+<doc>Снежные города</doc>
+<tags>
+<tag>final task</tag>
+</tags>
+<timeout value="4 minutes"></timeout>
+<status status="FAIL" starttime="20200423 13:14:46.321" endtime="20200423 13:15:38.987" critical="yes">Таких городов нет</status>
+</test>
+<test id="s1-s1-t4" name="Hum And Press">
+<kw name="Hum Press" library="currweather">
+<assign>
+<var>${DICT}</var>
+</assign>
+<msg timestamp="20200423 13:16:31.706" level="INFO">${DICT} = {'Kranea Elassonos': '81 1021', 'Koutselion': '76 1017', 'Katsikas': '76 1017', 'Katákali': '81 1021', 'Nomós Ioannínon': '76 1017', 'Ioannina': '76 1017', 'Igoumenitsa': '87 1015', 'Graikochorion': '...</msg>
+<status status="PASS" starttime="20200423 13:15:38.991" endtime="20200423 13:16:31.706"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>log dictionary</arg>
+<arg>${DICT}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${DICT}</arg>
+</arguments>
+<msg timestamp="20200423 13:16:31.711" level="INFO">Dictionary size is 9 and it contains following items:
+Filiates: 87 1015
+Graikochorion: 87 1015
+Igoumenitsa: 87 1015
+Ioannina: 76 1017
+Katsikas: 76 1017
+Katákali: 81 1021
+Koutselion: 76 1017
+Kranea Elassonos: 81 1021
+Nomós Ioannínon: 76 1017</msg>
+<status status="PASS" starttime="20200423 13:16:31.709" endtime="20200423 13:16:31.711"></status>
+</kw>
+<status status="PASS" starttime="20200423 13:16:31.708" endtime="20200423 13:16:31.711"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>Fail</arg>
+<arg>Таких городов нет</arg>
+</arguments>
+<status status="PASS" starttime="20200423 13:16:31.712" endtime="20200423 13:16:31.713"></status>
+</kw>
+<doc>Влажность &gt; 75%, атм. давление &gt; 700мм.рт.ст</doc>
+<tags>
+<tag>final task</tag>
+</tags>
+<timeout value="4 minutes"></timeout>
+<status status="PASS" starttime="20200423 13:15:38.990" endtime="20200423 13:16:31.715" critical="yes"></status>
+</test>
+<doc>Тест-кейсы для current weather</doc>
+<status status="FAIL" starttime="20200423 13:13:00.654" endtime="20200423 13:16:31.721"></status>
+</suite>
+<suite id="s1-s2" name="Fivedays" source="D:\Tasks\testsuites\fivedays.robot">
+<test id="s1-s2-t1" name="Cloudy">
+<kw name="Cloudy" library="fivedays">
+<assign>
+<var>${DICT}</var>
+</assign>
+<msg timestamp="20200423 13:17:02.228" level="INFO">${DICT} = {'Larymna  2020-04-23 12:00:00+00:00': '100%', 'Larymna  2020-04-23 15:00:00+00:00': '98%', 'Larymna  2020-04-23 18:00:00+00:00': '98%', 'Larymna  2020-04-25 15:00:00+00:00': '93%', 'Larymna  2020-04-...</msg>
+<status status="PASS" starttime="20200423 13:16:31.743" endtime="20200423 13:17:02.228"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>log dictionary</arg>
+<arg>${DICT}</arg>
+</arguments>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${DICT}</arg>
+</arguments>
+<msg timestamp="20200423 13:17:02.230" level="INFO">Dictionary size is 625 and it contains following items:
+Chalandri  2020-04-26 09:00:00+00:00: 100%
+Chalandri  2020-04-26 12:00:00+00:00: 100%
+Chalandri  2020-04-26 15:00:00+00:00: 99%
+Chalandri  2020-04-26 18:00:00+00:00: 97%
+Chalandrítsa  2020-04-23 21:00:00+00:00: 98%
+Chalandrítsa  2020-04-26 09:00:00+00:00: 100%
+Chalandrítsa  2020-04-26 12:00:00+00:00: 100%
+Chalandrítsa  2020-04-26 15:00:00+00:00: 98%
+Chalandrítsa  2020-04-26 18:00:00+00:00: 94%
+Chalcis  2020-04-23 15:00:00+00:00: 93%
+Chalcis  2020-04-23 18:00:00+00:00: 95%
+Chalcis  2020-04-26 09:00:00+00:00: 100%
+Chalcis  2020-04-26 12:00:00+00:00: 99%
+Chalcis  2020-04-26 15:00:00+00:00: 100%
+Chalcis  2020-04-26 18:00:00+00:00: 97%
+Chalkiades  2020-04-23 15:00:00+00:00: 95%
+Chalkiades  2020-04-23 18:00:00+00:00: 98%
+Chalkiades  2020-04-23 21:00:00+00:00: 100%
+Chalkiades  2020-04-24 00:00:00+00:00: 92%
+Chalkiades  2020-04-26 09:00:00+00:00: 100%
+Chalkiades  2020-04-26 12:00:00+00:00: 100%
+Chalkiades  2020-04-26 15:00:00+00:00: 100%
+Chalkoutsi  2020-04-23 15:00:00+00:00: 95%
+Chalkoutsi  2020-04-23 18:00:00+00:00: 92%
+Chalkoutsi  2020-04-26 09:00:00+00:00: 100%
+Chalkoutsi  2020-04-26 12:00:00+00:00: 99%
+Chalkoutsi  2020-04-26 15:00:00+00:00: 100%
+Chalkoutsi  2020-04-26 18:00:00+00:00: 96%
+Chania  2020-04-23 15:00:00+00:00: 108%
+Chania  2020-04-23 18:00:00+00:00: 102%
+Chania  2020-04-23 21:00:00+00:00: 100%
+Chania  2020-04-24 00:00:00+00:00: 100%
+Chania  2020-04-24 03:00:00+00:00: 91%
+Chania  2020-04-24 06:00:00+00:00: 92%
+Chania  2020-04-26 09:00:00+00:00: 100%
+Chania  2020-04-26 12:00:00+00:00: 100%
+Chania  2020-04-26 15:00:00+00:00: 93%
+Chaniotis  2020-04-23 12:00:00+00:00: 100%
+Chaniotis  2020-04-23 15:00:00+00:00: 98%
+Chaniotis  2020-04-26 15:00:00+00:00: 100%
+Chaïdári  2020-04-26 09:00:00+00:00: 100%
+Chaïdári  2020-04-26 12:00:00+00:00: 100%
+Chaïdári  2020-04-26 15:00:00+00:00: 100%
+Chaïdári  2020-04-26 18:00:00+00:00: 97%
+Chiliomodi  2020-04-23 12:00:00+00:00: 94%
+Chiliomodi  2020-04-23 15:00:00+00:00: 98%
+Chiliomodi  2020-04-23 18:00:00+00:00: 98%
+Chiliomodi  2020-04-23 21:00:00+00:00: 93%
+Chiliomodi  2020-04-26 09:00:00+00:00: 100%
+Chiliomodi  2020-04-26 12:00:00+00:00: 100%
+Chiliomodi  2020-04-26 15:00:00+00:00: 97%
+Chiliomodi  2020-04-26 18:00:00+00:00: 95%
+Chios  2020-04-23 12:00:00+00:00: 95%
+Chios  2020-04-23 21:00:00+00:00: 98%
+Chios  2020-04-26 15:00:00+00:00: 100%
+Chios  2020-04-26 18:00:00+00:00: 96%
+Chios  2020-04-26 21:00:00+00:00: 96%
+Chios Prefecture  2020-04-23 12:00:00+00:00: 97%
+Chios Prefecture  2020-04-23 21:00:00+00:00: 97%
+Chios Prefecture  2020-04-24 00:00:00+00:00: 93%
+Chios Prefecture  2020-04-26 15:00:00+00:00: 100%
+Chios Prefecture  2020-04-26 18:00:00+00:00: 98%
+Chios Prefecture  2020-04-26 21:00:00+00:00: 97%
+Cholargós  2020-04-26 09:00:00+00:00: 100%
+Cholargós  2020-04-26 12:00:00+00:00: 100%
+Cholargós  2020-04-26 15:00:00+00:00: 99%
+Cholargós  2020-04-26 18:00:00+00:00: 97%
+Chora  2020-04-23 18:00:00+00:00: 96%
+Chora  2020-04-23 21:00:00+00:00: 97%
+Chora  2020-04-24 00:00:00+00:00: 94%
+Chora  2020-04-24 03:00:00+00:00: 91%
+Chora  2020-04-26 09:00:00+00:00: 100%
+Chora  2020-04-26 12:00:00+00:00: 100%
+Chora  2020-04-26 15:00:00+00:00: 95%
+Chora  2020-04-26 18:00:00+00:00: 92%
+Chora  2020-04-26 21:00:00+00:00: 100%
+Chora  2020-04-28 09:00:00+00:00: 93%
+Chálki  2020-04-23 15:00:00+00:00: 104%
+Chálki  2020-04-23 18:00:00+00:00: 101%
+Chálki  2020-04-23 21:00:00+00:00: 100%
+Chálki  2020-04-24 00:00:00+00:00: 100%
+Chálki  2020-04-24 03:00:00+00:00: 100%
+Chálki  2020-04-24 06:00:00+00:00: 100%
+Chálki  2020-04-24 09:00:00+00:00: 94%
+Chálki  2020-04-26 09:00:00+00:00: 94%
+Chálki  2020-04-26 12:00:00+00:00: 91%
+Chálki  2020-04-26 15:00:00+00:00: 100%
+Chálki  2020-04-26 18:00:00+00:00: 100%
+Chálki  2020-04-26 21:00:00+00:00: 100%
+Chálki  2020-04-27 00:00:00+00:00: 100%
+Chávari  2020-04-23 21:00:00+00:00: 92%
+Chávari  2020-04-26 09:00:00+00:00: 100%
+Chávari  2020-04-26 12:00:00+00:00: 99%
+Chávari  2020-04-26 15:00:00+00:00: 96%
+Chávari  2020-04-26 18:00:00+00:00: 94%
+Corinth  2020-04-23 12:00:00+00:00: 93%
+Corinth  2020-04-23 15:00:00+00:00: 96%
+Corinth  2020-04-23 18:00:00+00:00: 97%
+Corinth  2020-04-23 21:00:00+00:00: 95%
+Corinth  2020-04-26 06:00:00+00:00: 92%
+Corinth  2020-04-26 09:00:00+00:00: 100%
+Corinth  2020-04-26 12:00:00+00:00: 100%
+Corinth  2020-04-26 15:00:00+00:00: 99%
+Corinth  2020-04-26 18:00:00+00:00: 99%
+Corinth  2020-04-26 21:00:00+00:00: 95%
+Corinthia  2020-04-23 12:00:00+00:00: 91%
+Corinthia  2020-04-23 15:00:00+00:00: 99%
+Corinthia  2020-04-23 18:00:00+00:00: 99%
+Corinthia  2020-04-23 21:00:00+00:00: 96%
+Corinthia  2020-04-26 06:00:00+00:00: 95%
+Corinthia  2020-04-26 09:00:00+00:00: 100%
+Corinthia  2020-04-26 12:00:00+00:00: 100%
+Corinthia  2020-04-26 15:00:00+00:00: 97%
+Corinthia  2020-04-26 18:00:00+00:00: 91%
+Cythera  2020-04-23 15:00:00+00:00: 102%
+Cythera  2020-04-23 18:00:00+00:00: 101%
+Cythera  2020-04-23 21:00:00+00:00: 96%
+Cythera  2020-04-24 00:00:00+00:00: 98%
+Cythera  2020-04-26 09:00:00+00:00: 100%
+Cythera  2020-04-26 12:00:00+00:00: 100%
+Cythera  2020-04-26 15:00:00+00:00: 99%
+Cythera  2020-04-26 18:00:00+00:00: 98%
+Cythera  2020-04-26 21:00:00+00:00: 95%
+Domvraína  2020-04-23 12:00:00+00:00: 95%
+Domvraína  2020-04-23 15:00:00+00:00: 95%
+Domvraína  2020-04-23 18:00:00+00:00: 97%
+Domvraína  2020-04-26 09:00:00+00:00: 100%
+Domvraína  2020-04-26 12:00:00+00:00: 100%
+Domvraína  2020-04-26 15:00:00+00:00: 100%
+Domvraína  2020-04-26 18:00:00+00:00: 100%
+Kares Apokorronou  2020-04-23 15:00:00+00:00: 107%
+Kares Apokorronou  2020-04-23 18:00:00+00:00: 102%
+Kares Apokorronou  2020-04-23 21:00:00+00:00: 100%
+Kares Apokorronou  2020-04-24 00:00:00+00:00: 100%
+Kares Apokorronou  2020-04-26 09:00:00+00:00: 100%
+Kares Apokorronou  2020-04-26 12:00:00+00:00: 100%
+Karpathos  2020-04-23 15:00:00+00:00: 99%
+Karpathos  2020-04-23 18:00:00+00:00: 99%
+Karpathos  2020-04-23 21:00:00+00:00: 100%
+Karpathos  2020-04-24 00:00:00+00:00: 100%
+Karpathos  2020-04-24 03:00:00+00:00: 100%
+Karpathos  2020-04-24 06:00:00+00:00: 100%
+Karpathos  2020-04-26 12:00:00+00:00: 91%
+Karpathos  2020-04-26 15:00:00+00:00: 100%
+Karpathos  2020-04-26 18:00:00+00:00: 98%
+Karpathos  2020-04-26 21:00:00+00:00: 99%
+Karpenisi  2020-04-23 12:00:00+00:00: 100%
+Karpenisi  2020-04-23 15:00:00+00:00: 100%
+Karpenisi  2020-04-23 18:00:00+00:00: 100%
+Karpenisi  2020-04-23 21:00:00+00:00: 99%
+Karpenisi  2020-04-24 00:00:00+00:00: 93%
+Karpenisi  2020-04-26 09:00:00+00:00: 100%
+Karpenisi  2020-04-26 12:00:00+00:00: 100%
+Karpenisi  2020-04-26 15:00:00+00:00: 100%
+Karpochóri  2020-04-23 15:00:00+00:00: 95%
+Karpochóri  2020-04-23 18:00:00+00:00: 97%
+Karpochóri  2020-04-23 21:00:00+00:00: 91%
+Karpochóri  2020-04-26 09:00:00+00:00: 100%
+Karpochóri  2020-04-26 12:00:00+00:00: 100%
+Karpochóri  2020-04-26 15:00:00+00:00: 100%
+Karpásion  2020-04-23 18:00:00+00:00: 96%
+Karpásion  2020-04-26 15:00:00+00:00: 100%
+Karpásion  2020-04-26 18:00:00+00:00: 99%
+Karyés  2020-04-23 18:00:00+00:00: 95%
+Karyés  2020-04-23 21:00:00+00:00: 97%
+Karyés  2020-04-24 15:00:00+00:00: 96%
+Karyés  2020-04-24 18:00:00+00:00: 94%
+Karyés  2020-04-26 09:00:00+00:00: 100%
+Karyés  2020-04-26 12:00:00+00:00: 99%
+Karyés  2020-04-26 15:00:00+00:00: 94%
+Kastaniótissa  2020-04-23 12:00:00+00:00: 100%
+Kastaniótissa  2020-04-23 15:00:00+00:00: 99%
+Kastaniótissa  2020-04-23 18:00:00+00:00: 99%
+Kastaniótissa  2020-04-25 15:00:00+00:00: 99%
+Kastaniótissa  2020-04-26 09:00:00+00:00: 98%
+Kastaniótissa  2020-04-26 12:00:00+00:00: 99%
+Kastaniótissa  2020-04-26 15:00:00+00:00: 99%
+Kastaniótissa  2020-04-26 18:00:00+00:00: 99%
+Kastraki  2020-04-23 12:00:00+00:00: 100%
+Kastraki  2020-04-23 15:00:00+00:00: 100%
+Kastraki  2020-04-23 18:00:00+00:00: 99%
+Kastraki  2020-04-26 09:00:00+00:00: 100%
+Kastraki  2020-04-26 12:00:00+00:00: 100%
+Kastélla  2020-04-23 15:00:00+00:00: 94%
+Kastélla  2020-04-23 18:00:00+00:00: 95%
+Kastélla  2020-04-26 09:00:00+00:00: 99%
+Kastélla  2020-04-26 12:00:00+00:00: 98%
+Kastélla  2020-04-26 15:00:00+00:00: 100%
+Kastélla  2020-04-26 18:00:00+00:00: 97%
+Kastélli  2020-04-23 15:00:00+00:00: 111%
+Kastélli  2020-04-23 18:00:00+00:00: 94%
+Kastélli  2020-04-23 21:00:00+00:00: 100%
+Kastélli  2020-04-24 00:00:00+00:00: 100%
+Kastélli  2020-04-24 03:00:00+00:00: 100%
+Kastélli  2020-04-26 09:00:00+00:00: 97%
+Kastélli  2020-04-26 12:00:00+00:00: 99%
+Katastari  2020-04-23 18:00:00+00:00: 92%
+Katastari  2020-04-24 09:00:00+00:00: 99%
+Katastari  2020-04-24 12:00:00+00:00: 95%
+Katastari  2020-04-26 03:00:00+00:00: 96%
+Katastari  2020-04-26 06:00:00+00:00: 98%
+Katastari  2020-04-26 09:00:00+00:00: 100%
+Katastari  2020-04-26 12:00:00+00:00: 100%
+Katastari  2020-04-26 15:00:00+00:00: 92%
+Katastari  2020-04-26 18:00:00+00:00: 92%
+Katastari  2020-04-28 09:00:00+00:00: 94%
+Kato Assos  2020-04-23 12:00:00+00:00: 91%
+Kato Assos  2020-04-23 15:00:00+00:00: 97%
+Kato Assos  2020-04-23 18:00:00+00:00: 98%
+Kato Assos  2020-04-23 21:00:00+00:00: 96%
+Kato Assos  2020-04-26 06:00:00+00:00: 94%
+Kato Assos  2020-04-26 09:00:00+00:00: 100%
+Kato Assos  2020-04-26 12:00:00+00:00: 100%
+Kato Assos  2020-04-26 15:00:00+00:00: 98%
+Kato Assos  2020-04-26 18:00:00+00:00: 95%
+Kato Chorio  2020-04-23 15:00:00+00:00: 100%
+Kato Chorio  2020-04-23 18:00:00+00:00: 93%
+Kato Chorio  2020-04-23 21:00:00+00:00: 100%
+Kato Chorio  2020-04-24 00:00:00+00:00: 100%
+Kato Chorio  2020-04-24 03:00:00+00:00: 100%
+Kato Chorio  2020-04-26 09:00:00+00:00: 98%
+Kato Chorio  2020-04-26 12:00:00+00:00: 94%
+Kato Souli  2020-04-26 09:00:00+00:00: 100%
+Kato Souli  2020-04-26 12:00:00+00:00: 99%
+Kato Souli  2020-04-26 15:00:00+00:00: 99%
+Kato Souli  2020-04-26 18:00:00+00:00: 95%
+Katoúna  2020-04-23 15:00:00+00:00: 95%
+Katoúna  2020-04-23 18:00:00+00:00: 98%
+Katoúna  2020-04-23 21:00:00+00:00: 95%
+Katoúna  2020-04-26 09:00:00+00:00: 100%
+Katoúna  2020-04-26 12:00:00+00:00: 100%
+Katoúna  2020-04-26 15:00:00+00:00: 100%
+Katsikas  2020-04-23 12:00:00+00:00: 95%
+Katsikas  2020-04-23 15:00:00+00:00: 98%
+Katsikas  2020-04-23 18:00:00+00:00: 99%
+Katsikas  2020-04-23 21:00:00+00:00: 100%
+Katsikas  2020-04-24 00:00:00+00:00: 99%
+Katsikas  2020-04-26 09:00:00+00:00: 100%
+Katsikas  2020-04-26 12:00:00+00:00: 100%
+Katsikas  2020-04-26 15:00:00+00:00: 94%
+Katákali  2020-04-23 15:00:00+00:00: 95%
+Katákali  2020-04-23 18:00:00+00:00: 97%
+Katákali  2020-04-26 09:00:00+00:00: 100%
+Katákali  2020-04-26 12:00:00+00:00: 100%
+Kavásila  2020-04-26 09:00:00+00:00: 100%
+Kavásila  2020-04-26 12:00:00+00:00: 99%
+Kavásila  2020-04-26 15:00:00+00:00: 95%
+Kavásila  2020-04-26 18:00:00+00:00: 95%
+Kerasochóri  2020-04-23 12:00:00+00:00: 100%
+Kerasochóri  2020-04-23 15:00:00+00:00: 100%
+Kerasochóri  2020-04-23 18:00:00+00:00: 100%
+Kerasochóri  2020-04-23 21:00:00+00:00: 100%
+Kerasochóri  2020-04-24 00:00:00+00:00: 96%
+Kerasochóri  2020-04-26 09:00:00+00:00: 100%
+Kerasochóri  2020-04-26 12:00:00+00:00: 100%
+Kerasochóri  2020-04-26 15:00:00+00:00: 100%
+Keratea  2020-04-26 09:00:00+00:00: 100%
+Keratea  2020-04-26 12:00:00+00:00: 100%
+Keratea  2020-04-26 15:00:00+00:00: 99%
+Keratea  2020-04-26 18:00:00+00:00: 98%
+Keratsini  2020-04-26 09:00:00+00:00: 100%
+Keratsini  2020-04-26 12:00:00+00:00: 100%
+Keratsini  2020-04-26 15:00:00+00:00: 100%
+Keratsini  2020-04-26 18:00:00+00:00: 97%
+Kiato  2020-04-23 15:00:00+00:00: 97%
+Kiato  2020-04-23 18:00:00+00:00: 98%
+Kiato  2020-04-23 21:00:00+00:00: 96%
+Kiato  2020-04-26 06:00:00+00:00: 95%
+Kiato  2020-04-26 09:00:00+00:00: 100%
+Kiato  2020-04-26 12:00:00+00:00: 100%
+Kiato  2020-04-26 15:00:00+00:00: 99%
+Kiato  2020-04-26 18:00:00+00:00: 94%
+Kifissia  2020-04-26 09:00:00+00:00: 100%
+Kifissia  2020-04-26 12:00:00+00:00: 100%
+Kifissia  2020-04-26 15:00:00+00:00: 99%
+Kifissia  2020-04-26 18:00:00+00:00: 96%
+Kimolos  2020-04-23 18:00:00+00:00: 97%
+Kimolos  2020-04-23 21:00:00+00:00: 100%
+Kimolos  2020-04-24 00:00:00+00:00: 100%
+Kimolos  2020-04-26 09:00:00+00:00: 100%
+Kimolos  2020-04-26 12:00:00+00:00: 100%
+Kimolos  2020-04-26 15:00:00+00:00: 100%
+Kimolos  2020-04-26 18:00:00+00:00: 100%
+Kimolos  2020-04-26 21:00:00+00:00: 100%
+Kimolos  2020-04-27 00:00:00+00:00: 100%
+Kineta  2020-04-26 09:00:00+00:00: 100%
+Kineta  2020-04-26 12:00:00+00:00: 100%
+Kineta  2020-04-26 15:00:00+00:00: 100%
+Kineta  2020-04-26 18:00:00+00:00: 99%
+Kissamos  2020-04-23 15:00:00+00:00: 106%
+Kissamos  2020-04-23 18:00:00+00:00: 102%
+Kissamos  2020-04-23 21:00:00+00:00: 100%
+Kissamos  2020-04-24 00:00:00+00:00: 100%
+Kissamos  2020-04-26 09:00:00+00:00: 100%
+Kissamos  2020-04-26 12:00:00+00:00: 100%
+Kissamos  2020-04-26 15:00:00+00:00: 95%
+Koilada  2020-04-23 12:00:00+00:00: 99%
+Koilada  2020-04-23 15:00:00+00:00: 98%
+Koilada  2020-04-23 18:00:00+00:00: 96%
+Koilada  2020-04-26 09:00:00+00:00: 100%
+Koilada  2020-04-26 12:00:00+00:00: 100%
+Koilada  2020-04-26 15:00:00+00:00: 96%
+Koilada  2020-04-26 18:00:00+00:00: 95%
+Kokkari  2020-04-23 21:00:00+00:00: 98%
+Kokkari  2020-04-24 00:00:00+00:00: 93%
+Kokkari  2020-04-26 12:00:00+00:00: 92%
+Kokkari  2020-04-26 15:00:00+00:00: 97%
+Kokkari  2020-04-26 21:00:00+00:00: 100%
+Kokkini Chani  2020-04-23 15:00:00+00:00: 108%
+Kokkini Chani  2020-04-23 18:00:00+00:00: 97%
+Kokkini Chani  2020-04-23 21:00:00+00:00: 100%
+Kokkini Chani  2020-04-24 00:00:00+00:00: 100%
+Kokkini Chani  2020-04-24 03:00:00+00:00: 100%
+Kokkini Chani  2020-04-26 09:00:00+00:00: 94%
+Kokkini Chani  2020-04-26 12:00:00+00:00: 97%
+Kokkoni  2020-04-23 15:00:00+00:00: 97%
+Kokkoni  2020-04-23 18:00:00+00:00: 98%
+Kokkoni  2020-04-23 21:00:00+00:00: 97%
+Kokkoni  2020-04-26 06:00:00+00:00: 95%
+Kokkoni  2020-04-26 09:00:00+00:00: 100%
+Kokkoni  2020-04-26 12:00:00+00:00: 100%
+Kokkoni  2020-04-26 15:00:00+00:00: 98%
+Kokkoni  2020-04-26 18:00:00+00:00: 94%
+Kolimbári  2020-04-23 15:00:00+00:00: 107%
+Kolimbári  2020-04-23 18:00:00+00:00: 102%
+Kolimbári  2020-04-23 21:00:00+00:00: 100%
+Kolimbári  2020-04-24 00:00:00+00:00: 100%
+Kolimbári  2020-04-26 09:00:00+00:00: 100%
+Kolimbári  2020-04-26 12:00:00+00:00: 100%
+Kolimbári  2020-04-26 15:00:00+00:00: 95%
+Kompóti  2020-04-23 15:00:00+00:00: 95%
+Kompóti  2020-04-23 18:00:00+00:00: 98%
+Kompóti  2020-04-23 21:00:00+00:00: 100%
+Kompóti  2020-04-24 00:00:00+00:00: 91%
+Kompóti  2020-04-26 09:00:00+00:00: 100%
+Kompóti  2020-04-26 12:00:00+00:00: 100%
+Kompóti  2020-04-26 15:00:00+00:00: 100%
+Koropí  2020-04-26 09:00:00+00:00: 100%
+Koropí  2020-04-26 12:00:00+00:00: 100%
+Koropí  2020-04-26 15:00:00+00:00: 99%
+Koropí  2020-04-26 18:00:00+00:00: 98%
+Koróni  2020-04-23 15:00:00+00:00: 94%
+Koróni  2020-04-23 18:00:00+00:00: 98%
+Koróni  2020-04-26 09:00:00+00:00: 100%
+Koróni  2020-04-26 12:00:00+00:00: 100%
+Koróni  2020-04-26 15:00:00+00:00: 93%
+Kos  2020-04-23 15:00:00+00:00: 104%
+Kos  2020-04-23 18:00:00+00:00: 101%
+Kos  2020-04-23 21:00:00+00:00: 99%
+Kos  2020-04-24 00:00:00+00:00: 100%
+Kos  2020-04-24 03:00:00+00:00: 100%
+Kos  2020-04-24 06:00:00+00:00: 100%
+Kos  2020-04-24 09:00:00+00:00: 96%
+Kos  2020-04-26 15:00:00+00:00: 100%
+Kos  2020-04-26 18:00:00+00:00: 100%
+Kos  2020-04-26 21:00:00+00:00: 100%
+Kos  2020-04-27 00:00:00+00:00: 100%
+Kos  2020-04-27 03:00:00+00:00: 98%
+Kostakioi  2020-04-23 15:00:00+00:00: 95%
+Kostakioi  2020-04-23 18:00:00+00:00: 98%
+Kostakioi  2020-04-23 21:00:00+00:00: 100%
+Kostakioi  2020-04-24 00:00:00+00:00: 91%
+Kostakioi  2020-04-26 09:00:00+00:00: 100%
+Kostakioi  2020-04-26 12:00:00+00:00: 100%
+Kostakioi  2020-04-26 15:00:00+00:00: 100%
+Kouroúpi  2020-04-23 15:00:00+00:00: 91%
+Kouroúpi  2020-04-23 18:00:00+00:00: 95%
+Kouroúpi  2020-04-23 21:00:00+00:00: 100%
+Kouroúpi  2020-04-24 00:00:00+00:00: 92%
+Kouroúpi  2020-04-26 09:00:00+00:00: 98%
+Kouroúpi  2020-04-26 12:00:00+00:00: 98%
+Kouroúpi  2020-04-26 15:00:00+00:00: 100%
+Kouroúpi  2020-04-26 18:00:00+00:00: 97%
+Kouroúpi  2020-04-26 21:00:00+00:00: 100%
+Kouroúpi  2020-04-27 00:00:00+00:00: 100%
+Koutselio  2020-04-23 12:00:00+00:00: 95%
+Koutselio  2020-04-23 15:00:00+00:00: 98%
+Koutselio  2020-04-23 18:00:00+00:00: 99%
+Koutselio  2020-04-23 21:00:00+00:00: 100%
+Koutselio  2020-04-24 00:00:00+00:00: 99%
+Koutselio  2020-04-26 09:00:00+00:00: 100%
+Koutselio  2020-04-26 12:00:00+00:00: 100%
+Koutselio  2020-04-26 15:00:00+00:00: 95%
+Kouvarás  2020-04-26 09:00:00+00:00: 100%
+Kouvarás  2020-04-26 12:00:00+00:00: 100%
+Kouvarás  2020-04-26 15:00:00+00:00: 99%
+Kouvarás  2020-04-26 18:00:00+00:00: 98%
+Kranidi  2020-04-23 12:00:00+00:00: 99%
+Kranidi  2020-04-23 15:00:00+00:00: 97%
+Kranidi  2020-04-23 18:00:00+00:00: 96%
+Kranidi  2020-04-26 09:00:00+00:00: 100%
+Kranidi  2020-04-26 12:00:00+00:00: 100%
+Kranidi  2020-04-26 15:00:00+00:00: 97%
+Kranidi  2020-04-26 18:00:00+00:00: 95%
+Kraniá Elassónas  2020-04-23 15:00:00+00:00: 95%
+Kraniá Elassónas  2020-04-23 18:00:00+00:00: 95%
+Kraniá Elassónas  2020-04-26 09:00:00+00:00: 100%
+Kraniá Elassónas  2020-04-26 12:00:00+00:00: 100%
+Kraniá Elassónas  2020-04-26 15:00:00+00:00: 97%
+Krestena  2020-04-23 18:00:00+00:00: 93%
+Krestena  2020-04-26 09:00:00+00:00: 100%
+Krestena  2020-04-26 12:00:00+00:00: 97%
+Krestena  2020-04-26 15:00:00+00:00: 99%
+Kritsa  2020-04-23 15:00:00+00:00: 100%
+Kritsa  2020-04-23 18:00:00+00:00: 92%
+Kritsa  2020-04-23 21:00:00+00:00: 100%
+Kritsa  2020-04-24 00:00:00+00:00: 100%
+Kritsa  2020-04-24 03:00:00+00:00: 100%
+Kritsa  2020-04-26 09:00:00+00:00: 97%
+Kritsa  2020-04-26 12:00:00+00:00: 96%
+Krokeés  2020-04-23 18:00:00+00:00: 97%
+Krokeés  2020-04-23 21:00:00+00:00: 97%
+Krokeés  2020-04-26 09:00:00+00:00: 100%
+Krokeés  2020-04-26 12:00:00+00:00: 100%
+Krokeés  2020-04-26 15:00:00+00:00: 99%
+Krousón  2020-04-23 15:00:00+00:00: 106%
+Krousón  2020-04-23 18:00:00+00:00: 96%
+Krousón  2020-04-23 21:00:00+00:00: 100%
+Krousón  2020-04-24 00:00:00+00:00: 100%
+Krousón  2020-04-24 03:00:00+00:00: 100%
+Krousón  2020-04-26 09:00:00+00:00: 91%
+Krousón  2020-04-26 12:00:00+00:00: 96%
+Kryonéri  2020-04-26 09:00:00+00:00: 100%
+Kryonéri  2020-04-26 12:00:00+00:00: 99%
+Kryonéri  2020-04-26 15:00:00+00:00: 100%
+Kryonéri  2020-04-26 18:00:00+00:00: 96%
+Kríkellos  2020-04-23 15:00:00+00:00: 95%
+Kríkellos  2020-04-23 18:00:00+00:00: 98%
+Kríkellos  2020-04-23 21:00:00+00:00: 99%
+Kríkellos  2020-04-24 00:00:00+00:00: 91%
+Kríkellos  2020-04-26 09:00:00+00:00: 100%
+Kríkellos  2020-04-26 12:00:00+00:00: 100%
+Kríkellos  2020-04-26 15:00:00+00:00: 100%
+Kyllini  2020-04-26 06:00:00+00:00: 93%
+Kyllini  2020-04-26 09:00:00+00:00: 100%
+Kyllini  2020-04-26 12:00:00+00:00: 100%
+Kyllini  2020-04-26 15:00:00+00:00: 97%
+Kyllini  2020-04-26 18:00:00+00:00: 97%
+Kyparissía  2020-04-23 18:00:00+00:00: 96%
+Kyparissía  2020-04-26 09:00:00+00:00: 100%
+Kyparissía  2020-04-26 12:00:00+00:00: 98%
+Kyparissía  2020-04-26 15:00:00+00:00: 97%
+Kyprianos  2020-04-26 09:00:00+00:00: 100%
+Kyprianos  2020-04-26 12:00:00+00:00: 100%
+Kyprianos  2020-04-26 15:00:00+00:00: 99%
+Kyprianos  2020-04-26 18:00:00+00:00: 98%
+Kypseli  2020-04-26 09:00:00+00:00: 100%
+Kypseli  2020-04-26 12:00:00+00:00: 100%
+Kypseli  2020-04-26 15:00:00+00:00: 100%
+Kypseli  2020-04-26 18:00:00+00:00: 97%
+Kyras Vrysi  2020-04-23 18:00:00+00:00: 93%
+Kyras Vrysi  2020-04-23 21:00:00+00:00: 93%
+Kyras Vrysi  2020-04-26 06:00:00+00:00: 91%
+Kyras Vrysi  2020-04-26 09:00:00+00:00: 100%
+Kyras Vrysi  2020-04-26 12:00:00+00:00: 100%
+Kyras Vrysi  2020-04-26 15:00:00+00:00: 99%
+Kyras Vrysi  2020-04-26 18:00:00+00:00: 99%
+Kyras Vrysi  2020-04-26 21:00:00+00:00: 95%
+Kyriáki  2020-04-23 12:00:00+00:00: 97%
+Kyriáki  2020-04-23 15:00:00+00:00: 94%
+Kyriáki  2020-04-23 18:00:00+00:00: 92%
+Kyriáki  2020-04-26 09:00:00+00:00: 100%
+Kyriáki  2020-04-26 12:00:00+00:00: 100%
+Kyriáki  2020-04-26 15:00:00+00:00: 99%
+Kyriáki  2020-04-26 18:00:00+00:00: 98%
+Kárystos  2020-04-23 18:00:00+00:00: 94%
+Kárystos  2020-04-26 09:00:00+00:00: 99%
+Kárystos  2020-04-26 12:00:00+00:00: 99%
+Kárystos  2020-04-26 21:00:00+00:00: 96%
+Káto Achaḯa  2020-04-23 21:00:00+00:00: 96%
+Káto Achaḯa  2020-04-26 09:00:00+00:00: 100%
+Káto Achaḯa  2020-04-26 12:00:00+00:00: 100%
+Káto Achaḯa  2020-04-26 15:00:00+00:00: 97%
+Káto Achaḯa  2020-04-26 18:00:00+00:00: 97%
+Káto Asítai  2020-04-23 15:00:00+00:00: 107%
+Káto Asítai  2020-04-23 18:00:00+00:00: 95%
+Káto Asítai  2020-04-23 21:00:00+00:00: 100%
+Káto Asítai  2020-04-24 00:00:00+00:00: 100%
+Káto Asítai  2020-04-24 03:00:00+00:00: 100%
+Káto Asítai  2020-04-26 09:00:00+00:00: 92%
+Káto Asítai  2020-04-26 12:00:00+00:00: 96%
+Káto Glykóvrysi  2020-04-23 18:00:00+00:00: 95%
+Káto Glykóvrysi  2020-04-23 21:00:00+00:00: 96%
+Káto Glykóvrysi  2020-04-26 09:00:00+00:00: 100%
+Káto Glykóvrysi  2020-04-26 12:00:00+00:00: 100%
+Káto Glykóvrysi  2020-04-26 15:00:00+00:00: 99%
+Káto Lekhónia  2020-04-23 15:00:00+00:00: 95%
+Káto Lekhónia  2020-04-23 18:00:00+00:00: 96%
+Káto Lekhónia  2020-04-26 12:00:00+00:00: 91%
+Káto Lekhónia  2020-04-26 15:00:00+00:00: 100%
+Káto Lekhónia  2020-04-26 18:00:00+00:00: 98%
+Káto Mazaráki  2020-04-23 21:00:00+00:00: 98%
+Káto Mazaráki  2020-04-26 09:00:00+00:00: 100%
+Káto Mazaráki  2020-04-26 12:00:00+00:00: 100%
+Káto Mazaráki  2020-04-26 15:00:00+00:00: 97%
+Káto Mazaráki  2020-04-26 18:00:00+00:00: 95%
+Káto Patísia  2020-04-26 09:00:00+00:00: 100%
+Káto Patísia  2020-04-26 12:00:00+00:00: 100%
+Káto Patísia  2020-04-26 15:00:00+00:00: 100%
+Káto Patísia  2020-04-26 18:00:00+00:00: 97%
+Káto Tithoréa  2020-04-23 12:00:00+00:00: 100%
+Káto Tithoréa  2020-04-23 15:00:00+00:00: 93%
+Káto Tithoréa  2020-04-26 09:00:00+00:00: 100%
+Káto Tithoréa  2020-04-26 12:00:00+00:00: 100%
+Káto Tithoréa  2020-04-26 15:00:00+00:00: 99%
+Káto Tithoréa  2020-04-26 18:00:00+00:00: 98%
+Káto Vlasía  2020-04-23 21:00:00+00:00: 98%
+Káto Vlasía  2020-04-26 09:00:00+00:00: 100%
+Káto Vlasía  2020-04-26 12:00:00+00:00: 100%
+Káto Vlasía  2020-04-26 15:00:00+00:00: 99%
+Kéa  2020-04-23 18:00:00+00:00: 93%
+Kéa  2020-04-26 09:00:00+00:00: 100%
+Kéa  2020-04-26 12:00:00+00:00: 100%
+Kéa  2020-04-26 15:00:00+00:00: 98%
+Kéa  2020-04-26 18:00:00+00:00: 97%
+Kéa  2020-04-26 21:00:00+00:00: 93%
+Kéa  2020-04-27 00:00:00+00:00: 92%
+Kéfalos  2020-04-23 15:00:00+00:00: 100%
+Kéfalos  2020-04-23 18:00:00+00:00: 100%
+Kéfalos  2020-04-23 21:00:00+00:00: 100%
+Kéfalos  2020-04-24 00:00:00+00:00: 100%
+Kéfalos  2020-04-24 03:00:00+00:00: 100%
+Kéfalos  2020-04-24 06:00:00+00:00: 100%
+Kéfalos  2020-04-26 09:00:00+00:00: 93%
+Kéfalos  2020-04-26 12:00:00+00:00: 96%
+Kéfalos  2020-04-26 15:00:00+00:00: 100%
+Kéfalos  2020-04-26 18:00:00+00:00: 100%
+Kéfalos  2020-04-26 21:00:00+00:00: 100%
+Kéfalos  2020-04-27 00:00:00+00:00: 100%
+Kéfalos  2020-04-27 03:00:00+00:00: 97%
+Kírra  2020-04-23 12:00:00+00:00: 98%
+Kírra  2020-04-26 09:00:00+00:00: 100%
+Kírra  2020-04-26 12:00:00+00:00: 100%
+Kírra  2020-04-26 15:00:00+00:00: 99%
+Kírra  2020-04-26 18:00:00+00:00: 98%
+Kými  2020-04-23 15:00:00+00:00: 96%
+Kými  2020-04-23 18:00:00+00:00: 91%
+Kými  2020-04-26 09:00:00+00:00: 96%
+Kými  2020-04-26 12:00:00+00:00: 96%
+Kými  2020-04-26 15:00:00+00:00: 100%
+Kými  2020-04-26 18:00:00+00:00: 94%
+Kýthnos  2020-04-23 12:00:00+00:00: 97%
+Kýthnos  2020-04-23 15:00:00+00:00: 99%
+Kýthnos  2020-04-23 18:00:00+00:00: 99%
+Kýthnos  2020-04-23 21:00:00+00:00: 99%
+Kýthnos  2020-04-26 09:00:00+00:00: 100%
+Kýthnos  2020-04-26 12:00:00+00:00: 100%
+Kýthnos  2020-04-26 15:00:00+00:00: 100%
+Kýthnos  2020-04-26 18:00:00+00:00: 99%
+Kýthnos  2020-04-26 21:00:00+00:00: 95%
+Kýthnos  2020-04-27 00:00:00+00:00: 96%
+Laconia  2020-04-23 18:00:00+00:00: 95%
+Laconia  2020-04-23 21:00:00+00:00: 94%
+Laconia  2020-04-26 09:00:00+00:00: 100%
+Laconia  2020-04-26 12:00:00+00:00: 100%
+Laconia  2020-04-26 15:00:00+00:00: 98%
+Laconia  2020-04-26 21:00:00+00:00: 93%
+Lagkada  2020-04-23 12:00:00+00:00: 99%
+Lagkada  2020-04-23 21:00:00+00:00: 98%
+Lagkada  2020-04-26 15:00:00+00:00: 100%
+Lagkada  2020-04-26 18:00:00+00:00: 99%
+Lagkada  2020-04-26 21:00:00+00:00: 99%
+Lakkí  2020-04-23 15:00:00+00:00: 101%
+Lakkí  2020-04-23 18:00:00+00:00: 100%
+Lakkí  2020-04-23 21:00:00+00:00: 99%
+Lakkí  2020-04-24 00:00:00+00:00: 99%
+Lakkí  2020-04-24 03:00:00+00:00: 100%
+Lakkí  2020-04-24 06:00:00+00:00: 99%
+Lakkí  2020-04-26 12:00:00+00:00: 94%
+Lakkí  2020-04-26 15:00:00+00:00: 100%
+Lakkí  2020-04-26 18:00:00+00:00: 100%
+Lakkí  2020-04-26 21:00:00+00:00: 100%
+Lakkí  2020-04-27 00:00:00+00:00: 97%
+Lambírion  2020-04-23 18:00:00+00:00: 93%
+Lambírion  2020-04-23 21:00:00+00:00: 98%
+Lambírion  2020-04-26 09:00:00+00:00: 100%
+Lambírion  2020-04-26 12:00:00+00:00: 100%
+Lambírion  2020-04-26 15:00:00+00:00: 100%
+Lambírion  2020-04-26 18:00:00+00:00: 96%
+Lamia  2020-04-23 15:00:00+00:00: 93%
+Lamia  2020-04-23 18:00:00+00:00: 94%
+Lamia  2020-04-23 21:00:00+00:00: 91%
+Lamia  2020-04-26 09:00:00+00:00: 100%
+Lamia  2020-04-26 12:00:00+00:00: 100%
+Lamia  2020-04-26 15:00:00+00:00: 100%
+Larymna  2020-04-23 12:00:00+00:00: 100%
+Larymna  2020-04-23 15:00:00+00:00: 98%
+Larymna  2020-04-23 18:00:00+00:00: 98%
+Larymna  2020-04-25 15:00:00+00:00: 93%
+Larymna  2020-04-26 09:00:00+00:00: 99%
+Larymna  2020-04-26 12:00:00+00:00: 99%
+Larymna  2020-04-26 15:00:00+00:00: 100%
+Larymna  2020-04-26 18:00:00+00:00: 99%
+Lálas  2020-04-23 18:00:00+00:00: 92%
+Lálas  2020-04-26 09:00:00+00:00: 100%
+Lálas  2020-04-26 12:00:00+00:00: 98%
+Lálas  2020-04-26 15:00:00+00:00: 98%
+Lápas  2020-04-23 21:00:00+00:00: 95%
+Lápas  2020-04-26 09:00:00+00:00: 100%
+Lápas  2020-04-26 12:00:00+00:00: 100%
+Lápas  2020-04-26 15:00:00+00:00: 97%
+Lápas  2020-04-26 18:00:00+00:00: 97%
+Nomós Kefallinías  2020-04-23 15:00:00+00:00: 95%
+Nomós Kefallinías  2020-04-23 18:00:00+00:00: 98%
+Nomós Kefallinías  2020-04-23 21:00:00+00:00: 99%
+Nomós Kefallinías  2020-04-26 03:00:00+00:00: 96%
+Nomós Kefallinías  2020-04-26 06:00:00+00:00: 98%
+Nomós Kefallinías  2020-04-26 09:00:00+00:00: 100%
+Nomós Kefallinías  2020-04-26 12:00:00+00:00: 100%
+Nomós Kefallinías  2020-04-28 09:00:00+00:00: 97%
+Nomós Kykládon  2020-04-23 15:00:00+00:00: 92%
+Nomós Kykládon  2020-04-23 18:00:00+00:00: 96%
+Nomós Kykládon  2020-04-23 21:00:00+00:00: 100%
+Nomós Kykládon  2020-04-24 00:00:00+00:00: 91%
+Nomós Kykládon  2020-04-26 09:00:00+00:00: 98%
+Nomós Kykládon  2020-04-26 12:00:00+00:00: 99%
+Nomós Kykládon  2020-04-26 15:00:00+00:00: 100%
+Nomós Kykládon  2020-04-26 18:00:00+00:00: 97%
+Nomós Kykládon  2020-04-26 21:00:00+00:00: 99%
+Nomós Kykládon  2020-04-27 00:00:00+00:00: 100%
+Taxiárches  2020-04-23 15:00:00+00:00: 95%
+Taxiárches  2020-04-23 18:00:00+00:00: 96%
+Taxiárches  2020-04-26 09:00:00+00:00: 100%
+Taxiárches  2020-04-26 12:00:00+00:00: 100%
+Taxiárches  2020-04-26 15:00:00+00:00: 98%</msg>
+<status status="PASS" starttime="20200423 13:17:02.229" endtime="20200423 13:17:02.230"></status>
+</kw>
+<status status="PASS" starttime="20200423 13:17:02.228" endtime="20200423 13:17:02.230"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>Fail</arg>
+<arg>Таких городов нет</arg>
+</arguments>
+<status status="PASS" starttime="20200423 13:17:02.231" endtime="20200423 13:17:02.231"></status>
+</kw>
+<doc>Города, облачность выше 90%</doc>
+<tags>
+<tag>final task</tag>
+</tags>
+<timeout value="4 minutes"></timeout>
+<status status="PASS" starttime="20200423 13:16:31.742" endtime="20200423 13:17:02.231" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Rainy">
+<kw name="Rainy" library="fivedays">
+<assign>
+<var>${DICT}</var>
+</assign>
+<msg timestamp="20200423 13:17:29.061" level="INFO">${DICT} = {}</msg>
+<status status="PASS" starttime="20200423 13:17:02.235" endtime="20200423 13:17:29.061"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>log dictionary</arg>
+<arg>${DICT}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 13:17:29.062" endtime="20200423 13:17:29.062"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${DICT}</arg>
+<arg>Fail</arg>
+<arg>Таких городов нет</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Таких городов нет</arg>
+</arguments>
+<msg timestamp="20200423 13:17:29.063" level="FAIL">Таких городов нет</msg>
+<status status="FAIL" starttime="20200423 13:17:29.063" endtime="20200423 13:17:29.063"></status>
+</kw>
+<status status="FAIL" starttime="20200423 13:17:29.063" endtime="20200423 13:17:29.064"></status>
+</kw>
+<doc>Города, c ливневым дождем</doc>
+<tags>
+<tag>final task</tag>
+</tags>
+<timeout value="4 minutes"></timeout>
+<status status="FAIL" starttime="20200423 13:17:02.234" endtime="20200423 13:17:29.064" critical="yes">Таких городов нет</status>
+</test>
+<doc>Тест-кейсы для five days/three hours weather</doc>
+<status status="FAIL" starttime="20200423 13:16:31.734" endtime="20200423 13:17:29.066"></status>
+</suite>
+<doc>Файл инициализации</doc>
+<status status="FAIL" starttime="20200423 13:13:00.631" endtime="20200423 13:17:29.070"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="3">Critical Tests</stat>
+<stat pass="3" fail="3">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="3">final task</stat>
+</tag>
+<suite>
+<stat pass="3" fail="3" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="2" fail="2" id="s1-s1" name="Currweather">Testsuites.Currweather</stat>
+<stat pass="1" fail="1" id="s1-s2" name="Fivedays">Testsuites.Fivedays</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
