@@ -1,0 +1,3565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200423 21:09:36.522" rpa="false">
+<suite id="s1" name="Nexy Task Manager" source="C:\Users\Pepega\Desktop\nx_bootcamp_proj2\nexy_task_manager">
+<kw name="Clear Database" type="setup">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>AppAccess</arg>
+<arg>${base url}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:36.641" level="INFO">Creating Session using : alias=AppAccess, url=http://localhost:5001, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200423 21:09:36.641" endtime="20200423 21:09:36.641"></status>
+</kw>
+<kw name="Delete Request" library="RequestsLibrary">
+<doc>Send a DELETE request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>AppAccess</arg>
+<arg>/db</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200423 21:09:36.641" level="INFO">DELETE Request using : uri=/db, params=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.21.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+data=None 
+json=None</msg>
+<msg timestamp="20200423 21:09:38.693" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<status status="PASS" starttime="20200423 21:09:36.641" endtime="20200423 21:09:38.693"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+<arg>${204}</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:09:38.693" endtime="20200423 21:09:38.693"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:09:36.640" endtime="20200423 21:09:38.693"></status>
+</kw>
+<suite id="s1-s1" name="01 Users Page" source="C:\Users\Pepega\Desktop\nx_bootcamp_proj2\nexy_task_manager\01_Users_Page.robot">
+<test id="s1-s1-t1" name="Check Title">
+<kw name="Open Users Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${users page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:38.834" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200423 21:09:38.834" endtime="20200423 21:09:42.489"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:09:38.834" endtime="20200423 21:09:42.489"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Title Text}</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20200423 21:09:42.523" level="INFO">${title} = Tasks</msg>
+<status status="PASS" starttime="20200423 21:09:42.490" endtime="20200423 21:09:42.523"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${title}' == 'Users'</arg>
+<arg>log</arg>
+<arg>Correct title</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>Wrong title</arg>
+</arguments>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+<arg>Wrong title</arg>
+</arguments>
+<msg timestamp="20200423 21:09:42.525" level="FAIL">Wrong title</msg>
+<status status="FAIL" starttime="20200423 21:09:42.524" endtime="20200423 21:09:42.525"></status>
+</kw>
+<status status="FAIL" starttime="20200423 21:09:42.524" endtime="20200423 21:09:42.525"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:09:42.525" endtime="20200423 21:09:44.612"></status>
+</kw>
+<doc>Check title on users page</doc>
+<tags>
+<tag>title</tag>
+<tag>user</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:09:38.833" endtime="20200423 21:09:44.614" critical="yes">Wrong title</status>
+</test>
+<test id="s1-s1-t2" name="Create New User">
+<kw name="Open Users Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${users page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:44.627" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200423 21:09:44.626" endtime="20200423 21:09:48.229"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:09:44.625" endtime="20200423 21:09:48.229"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:48.230" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:09:48.230" endtime="20200423 21:09:48.309"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:48.310" level="INFO">Typing text 'Kostya_Filippov' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200423 21:09:48.309" endtime="20200423 21:09:48.430"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:48.431" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:09:48.430" endtime="20200423 21:09:48.468"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:09:49.469" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200423 21:09:48.469" endtime="20200423 21:09:49.469"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:09:49.482" level="INFO">Current page contains text 'User has been created'.</msg>
+<status status="PASS" starttime="20200423 21:09:49.470" endtime="20200423 21:09:49.482"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:09:49.483" endtime="20200423 21:09:51.567"></status>
+</kw>
+<doc>Test ability to create new user</doc>
+<tags>
+<tag>user</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:09:44.622" endtime="20200423 21:09:51.567" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Create User With Existing User Name">
+<kw name="Open Users Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${users page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:51.570" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200423 21:09:51.569" endtime="20200423 21:09:55.169"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:09:51.569" endtime="20200423 21:09:55.169"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:55.170" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:09:55.170" endtime="20200423 21:09:55.292"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:55.293" level="INFO">Typing text 'Kostya_Filippov' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200423 21:09:55.293" endtime="20200423 21:09:55.427"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:55.428" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:09:55.427" endtime="20200423 21:09:55.471"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:09:56.473" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200423 21:09:55.472" endtime="20200423 21:09:56.474"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:09:56.508" level="INFO">Current page does not contain text 'User has been created'.</msg>
+<status status="PASS" starttime="20200423 21:09:56.475" endtime="20200423 21:09:56.508"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:09:56.508" endtime="20200423 21:09:58.617"></status>
+</kw>
+<doc>Test ability to create new user with existing user name</doc>
+<tags>
+<tag>user</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:09:51.568" endtime="20200423 21:09:58.619" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Create User With Empty name">
+<kw name="Open Users Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${users page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:09:58.625" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200423 21:09:58.625" endtime="20200423 21:10:02.274"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:09:58.625" endtime="20200423 21:10:02.275"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:02.275" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:02.275" endtime="20200423 21:10:02.392"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:02.393" level="INFO">Typing text '' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200423 21:10:02.393" endtime="20200423 21:10:02.454"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:02.455" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:02.455" endtime="20200423 21:10:02.500"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:10:03.503" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200423 21:10:02.500" endtime="20200423 21:10:03.503"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<assign>
+<var>${alert message}</var>
+</assign>
+<msg timestamp="20200423 21:10:03.508" level="INFO">${alert message} = Please fill user name</msg>
+<status status="PASS" starttime="20200423 21:10:03.503" endtime="20200423 21:10:03.508"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${alert message}</arg>
+<arg>Please fill user name</arg>
+</arguments>
+<status status="PASS" starttime="20200423 21:10:03.508" endtime="20200423 21:10:03.509"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:10:03.536" level="INFO">Current page does not contain text 'User has been created'.</msg>
+<status status="PASS" starttime="20200423 21:10:03.509" endtime="20200423 21:10:03.536"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:03.537" endtime="20200423 21:10:05.621"></status>
+</kw>
+<doc>Test if it's possible to create new user with empty username field</doc>
+<tags>
+<tag>empty</tag>
+<tag>user</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:09:58.624" endtime="20200423 21:10:05.622" critical="yes"></status>
+</test>
+<doc>Test users page of nexy task manager</doc>
+<status status="FAIL" starttime="20200423 21:09:38.693" endtime="20200423 21:10:05.623"></status>
+</suite>
+<suite id="s1-s2" name="02 Create Task Tasks Page" source="C:\Users\Pepega\Desktop\nx_bootcamp_proj2\nexy_task_manager\02_Create_Task_Tasks_Page.robot">
+<test id="s1-s2-t1" name="Check Tasks Page Title">
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:05.634" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:05.634" endtime="20200423 21:10:09.287"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:05.634" endtime="20200423 21:10:09.287"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Title Text}</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20200423 21:10:09.322" level="INFO">${title} = Tasks</msg>
+<status status="PASS" starttime="20200423 21:10:09.287" endtime="20200423 21:10:09.322"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${title}' == 'Tasks'</arg>
+<arg>log</arg>
+<arg>Correct title</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>Wrong title</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Correct title</arg>
+</arguments>
+<msg timestamp="20200423 21:10:09.324" level="INFO">Correct title</msg>
+<status status="PASS" starttime="20200423 21:10:09.324" endtime="20200423 21:10:09.324"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:09.323" endtime="20200423 21:10:09.324"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:09.324" endtime="20200423 21:10:11.408"></status>
+</kw>
+<doc>Check title of tasks page</doc>
+<tags>
+<tag>tasks</tag>
+<tag>title</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:10:05.632" endtime="20200423 21:10:11.409" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Create New Task">
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:11.412" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:11.411" endtime="20200423 21:10:11.412"></status>
+</kw>
+<msg timestamp="20200423 21:10:11.412" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:11.411" endtime="20200423 21:10:11.412"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:11.413" level="INFO">${today} = 2020-04-23 21:10:11.413</msg>
+<status status="PASS" starttime="20200423 21:10:11.412" endtime="20200423 21:10:11.413"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:10:11.417" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:11.413" endtime="20200423 21:10:11.417"></status>
+</kw>
+<msg timestamp="20200423 21:10:11.417" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:11.412" endtime="20200423 21:10:11.417"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:11.418" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:11.418" endtime="20200423 21:10:15.053"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:11.418" endtime="20200423 21:10:15.054"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.054" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.054" endtime="20200423 21:10:15.173"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.174" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.174" endtime="20200423 21:10:15.266"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:15.174" endtime="20200423 21:10:15.266"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.266" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.266" endtime="20200423 21:10:15.390"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:15.266" endtime="20200423 21:10:15.390"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.391" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.390" endtime="20200423 21:10:15.497"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:15.390" endtime="20200423 21:10:15.497"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.498" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.498" endtime="20200423 21:10:15.589"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:15.497" endtime="20200423 21:10:15.589"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.589" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:10:15.589" endtime="20200423 21:10:15.655"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.671" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.655" endtime="20200423 21:10:15.671"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:15.672" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:15.671" endtime="20200423 21:10:15.720"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:11.417" endtime="20200423 21:10:15.720"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:10:17.723" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:10:15.721" endtime="20200423 21:10:17.723"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:10:17.734" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:10:17.723" endtime="20200423 21:10:17.735"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:17.735" endtime="20200423 21:10:19.815"></status>
+</kw>
+<doc>Check ability to create new task</doc>
+<tags>
+<tag>create</tag>
+<tag>tasks</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:10:11.411" endtime="20200423 21:10:19.815" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Create New Task With Empty Task Name">
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:19.817" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:19.817" endtime="20200423 21:10:19.817"></status>
+</kw>
+<msg timestamp="20200423 21:10:19.817" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:19.816" endtime="20200423 21:10:19.817"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:19.818" level="INFO">${today} = 2020-04-23 21:10:19.818</msg>
+<status status="PASS" starttime="20200423 21:10:19.818" endtime="20200423 21:10:19.818"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:10:19.818" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:19.818" endtime="20200423 21:10:19.818"></status>
+</kw>
+<msg timestamp="20200423 21:10:19.818" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:19.817" endtime="20200423 21:10:19.818"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>${Empty}</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:19.820" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:19.819" endtime="20200423 21:10:23.434"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:19.819" endtime="20200423 21:10:23.434"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:23.435" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:23.434" endtime="20200423 21:10:23.546"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:23.547" level="INFO">Typing text '' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:10:23.547" endtime="20200423 21:10:23.611"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:23.547" endtime="20200423 21:10:23.611"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:23.612" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:10:23.612" endtime="20200423 21:10:23.744"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:23.611" endtime="20200423 21:10:23.744"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:23.745" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:23.745" endtime="20200423 21:10:23.850"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:23.744" endtime="20200423 21:10:23.850"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:23.850" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:23.850" endtime="20200423 21:10:23.939"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:23.850" endtime="20200423 21:10:23.939"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:23.939" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:10:23.939" endtime="20200423 21:10:24.010"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:24.023" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:10:24.010" endtime="20200423 21:10:24.023"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:24.023" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:24.023" endtime="20200423 21:10:24.069"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:19.819" endtime="20200423 21:10:24.069"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:10:26.072" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:10:24.070" endtime="20200423 21:10:26.072"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" starttime="20200423 21:10:26.074" endtime="20200423 21:10:26.088"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:10:26.116" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:10:26.090" endtime="20200423 21:10:26.116"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:26.117" endtime="20200423 21:10:28.197"></status>
+</kw>
+<doc>Check ability to create new task with empty task name</doc>
+<tags>
+<tag>create</tag>
+<tag>empty</tag>
+<tag>tasks</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:10:19.816" endtime="20200423 21:10:28.199" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Create New Task With Empty Description">
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:28.201" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:28.201" endtime="20200423 21:10:28.202"></status>
+</kw>
+<msg timestamp="20200423 21:10:28.202" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:28.201" endtime="20200423 21:10:28.202"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:28.203" level="INFO">${today} = 2020-04-23 21:10:28.202</msg>
+<status status="PASS" starttime="20200423 21:10:28.202" endtime="20200423 21:10:28.203"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:10:28.203" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:28.203" endtime="20200423 21:10:28.203"></status>
+</kw>
+<msg timestamp="20200423 21:10:28.203" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:28.202" endtime="20200423 21:10:28.203"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>${Empty}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:28.204" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:28.204" endtime="20200423 21:10:31.832"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:28.204" endtime="20200423 21:10:31.832"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:31.833" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:31.832" endtime="20200423 21:10:31.970"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:31.970" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:10:31.970" endtime="20200423 21:10:32.068"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:31.970" endtime="20200423 21:10:32.068"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:32.069" level="INFO">Typing text '' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:10:32.069" endtime="20200423 21:10:32.130"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:32.068" endtime="20200423 21:10:32.130"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:32.130" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:32.130" endtime="20200423 21:10:32.225"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:32.130" endtime="20200423 21:10:32.225"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:32.225" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:32.225" endtime="20200423 21:10:32.319"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:32.225" endtime="20200423 21:10:32.319"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:32.320" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:10:32.320" endtime="20200423 21:10:32.382"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:32.397" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:10:32.382" endtime="20200423 21:10:32.397"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:32.398" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:32.397" endtime="20200423 21:10:32.444"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:28.203" endtime="20200423 21:10:32.445"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:10:34.447" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:10:32.445" endtime="20200423 21:10:34.447"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" starttime="20200423 21:10:34.448" endtime="20200423 21:10:34.460"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:10:34.485" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:10:34.462" endtime="20200423 21:10:34.485"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:34.485" endtime="20200423 21:10:36.572"></status>
+</kw>
+<doc>Check ability to create new task with empty description</doc>
+<tags>
+<tag>create</tag>
+<tag>empty</tag>
+<tag>tasks</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:10:28.200" endtime="20200423 21:10:36.574" critical="yes"></status>
+</test>
+<test id="s1-s2-t5" name="Create New Task With Name Over 250 Symbols">
+<kw name="Generate String">
+<doc>Generate random string of given length</doc>
+<arguments>
+<arg>${251}</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${generated}</var>
+</assign>
+<msg timestamp="20200423 21:10:36.585" level="INFO">${generated} = psqrwfphciargpdqccbzjbxqiqhsvnxnfeiiamndlfhlokrikufrbjjormzxvuvpzdctzqxlfbvstngiegynnyeclclhwrlltdbpliwjoczczuikggupyzciztskldopwvpowapxypcieoulnyeekxuxeqhzyrdkdqkqhtqjscurntwqvhupdkcqkiwjlmdvajkhfgsn...</msg>
+<status status="PASS" starttime="20200423 21:10:36.584" endtime="20200423 21:10:36.585"></status>
+</kw>
+<msg timestamp="20200423 21:10:36.585" level="INFO">${name} = psqrwfphciargpdqccbzjbxqiqhsvnxnfeiiamndlfhlokrikufrbjjormzxvuvpzdctzqxlfbvstngiegynnyeclclhwrlltdbpliwjoczczuikggupyzciztskldopwvpowapxypcieoulnyeekxuxeqhzyrdkdqkqhtqjscurntwqvhupdkcqkiwjlmdvajkhfgsn...</msg>
+<status status="PASS" starttime="20200423 21:10:36.583" endtime="20200423 21:10:36.585"></status>
+</kw>
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:36.586" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:36.586" endtime="20200423 21:10:36.586"></status>
+</kw>
+<msg timestamp="20200423 21:10:36.586" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:36.585" endtime="20200423 21:10:36.586"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:36.587" level="INFO">${today} = 2020-04-23 21:10:36.587</msg>
+<status status="PASS" starttime="20200423 21:10:36.587" endtime="20200423 21:10:36.587"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:10:36.587" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:36.587" endtime="20200423 21:10:36.587"></status>
+</kw>
+<msg timestamp="20200423 21:10:36.587" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:36.586" endtime="20200423 21:10:36.587"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>${name}</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:36.589" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:36.588" endtime="20200423 21:10:40.230"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:36.588" endtime="20200423 21:10:40.230"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:40.230" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:40.230" endtime="20200423 21:10:40.318"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:40.319" level="INFO">Typing text 'psqrwfphciargpdqccbzjbxqiqhsvnxnfeiiamndlfhlokrikufrbjjormzxvuvpzdctzqxlfbvstngiegynnyeclclhwrlltdbpliwjoczczuikggupyzciztskldopwvpowapxypcieoulnyeekxuxeqhzyrdkdqkqhtqjscurntwqvhupdkcqkiwjlmdvajkhfgsnfokypsathxsognjdhyuatsdmondzkdqcvjbystgxsvcdrzqyuxz' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:10:40.319" endtime="20200423 21:10:41.456"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:40.318" endtime="20200423 21:10:41.456"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:41.456" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:10:41.456" endtime="20200423 21:10:41.562"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:41.456" endtime="20200423 21:10:41.562"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:41.563" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:41.563" endtime="20200423 21:10:41.648"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:41.562" endtime="20200423 21:10:41.648"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:41.649" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:41.649" endtime="20200423 21:10:41.736"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:41.648" endtime="20200423 21:10:41.736"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:41.737" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:10:41.736" endtime="20200423 21:10:41.805"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:41.817" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:10:41.805" endtime="20200423 21:10:41.818"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:41.818" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:41.818" endtime="20200423 21:10:41.877"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:36.588" endtime="20200423 21:10:41.877"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:10:43.880" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:10:41.877" endtime="20200423 21:10:43.880"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:10:44.148" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:10:43.895" endtime="20200423 21:10:44.148"></status>
+</kw>
+<msg timestamp="20200423 21:10:44.149" level="FAIL">Page should not have contained text 'Task has been created'.</msg>
+<status status="FAIL" starttime="20200423 21:10:43.880" endtime="20200423 21:10:44.149"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:44.150" endtime="20200423 21:10:46.234"></status>
+</kw>
+<doc>Check ability to create new task with name over 250 symbols</doc>
+<tags>
+<tag>create</tag>
+<tag>name</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:10:36.579" endtime="20200423 21:10:46.234" critical="yes">Page should not have contained text 'Task has been created'.</status>
+</test>
+<test id="s1-s2-t6" name="Create New Task With Description Over 1000 Symbols">
+<kw name="Generate String">
+<doc>Generate random string of given length</doc>
+<arguments>
+<arg>${1001}</arg>
+</arguments>
+<assign>
+<var>${description}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${generated}</var>
+</assign>
+<msg timestamp="20200423 21:10:46.239" level="INFO">${generated} = sbllgdbzqxvzzsggkluraoaqkesciyymfyuvgwlxhsgarvpwokexvhiazdzxbdwwbbygotwgofqqdrbklrphakvtnpnsvtvkybmckaxlgigainifbmebhngnmjyeqnbzfaiygllvujpxzkifnhmvrpmezrqcaiiabjrovvzfddbfiyrhwkurtbubmggxqzrnibzhxojb...</msg>
+<status status="PASS" starttime="20200423 21:10:46.238" endtime="20200423 21:10:46.239"></status>
+</kw>
+<msg timestamp="20200423 21:10:46.239" level="INFO">${description} = sbllgdbzqxvzzsggkluraoaqkesciyymfyuvgwlxhsgarvpwokexvhiazdzxbdwwbbygotwgofqqdrbklrphakvtnpnsvtvkybmckaxlgigainifbmebhngnmjyeqnbzfaiygllvujpxzkifnhmvrpmezrqcaiiabjrovvzfddbfiyrhwkurtbubmggxqzrnibzhxojb...</msg>
+<status status="PASS" starttime="20200423 21:10:46.238" endtime="20200423 21:10:46.239"></status>
+</kw>
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:46.240" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:46.240" endtime="20200423 21:10:46.240"></status>
+</kw>
+<msg timestamp="20200423 21:10:46.240" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:46.240" endtime="20200423 21:10:46.240"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:46.241" level="INFO">${today} = 2020-04-23 21:10:46.241</msg>
+<status status="PASS" starttime="20200423 21:10:46.241" endtime="20200423 21:10:46.241"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:10:46.241" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:46.241" endtime="20200423 21:10:46.241"></status>
+</kw>
+<msg timestamp="20200423 21:10:46.242" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:46.241" endtime="20200423 21:10:46.242"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>${description}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:46.243" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:46.242" endtime="20200423 21:10:49.844"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:46.242" endtime="20200423 21:10:49.844"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:49.844" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:49.844" endtime="20200423 21:10:49.990"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:49.990" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:10:49.990" endtime="20200423 21:10:50.101"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:49.990" endtime="20200423 21:10:50.102"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:50.103" level="INFO">Typing text 'sbllgdbzqxvzzsggkluraoaqkesciyymfyuvgwlxhsgarvpwokexvhiazdzxbdwwbbygotwgofqqdrbklrphakvtnpnsvtvkybmckaxlgigainifbmebhngnmjyeqnbzfaiygllvujpxzkifnhmvrpmezrqcaiiabjrovvzfddbfiyrhwkurtbubmggxqzrnibzhxojbwktiiecpxbuiegcevdaeipskfdysgyokdwmobgrqzdwcadlrblqopowwvigdrxbdydmxvremjqdyzovhodluijjvkiqzhkdczonkzuhwzgpltwiprlhpowfbqhefeilvqnnharorergvyuqiwnxjfcxopxiyutpcpsnwkerjyhjnkojcwtyjeehsfhkrkfxkvtoezdaxgmyjjvounzzquqeapdmjoedwbyvhpedaqfexlfkyztrpjjoxfhiwxeelgnbgmnouvbgfknvurcpmclulrgtxkpevmifykrcfgabuufupcnknxrnzofjomykucalfdyzuljaohjvorazzqtopptoocbtfnyapslybbhpjrzqhoglqtzmgsjgamrzpxlqkitavffwidbzxbjnmwjdzlruziyejsourkmeixhhsfzakdvnadqbftsdeibzrszryvdgbecyiidyticzwxwinxskrmrvfslekrwrrohhoopkjedjmxtwigjtlysufqoqxcwfxpxvwpfxboyghyypmaznksylvqavawrxbelhwqjidpfvzswexnbusgrsclwowkbwhduskfuuhbshptwrndqkiebyccwdrvbgwvhqtimzzaxogjtomwfsjfefrhvvpzzvintuwtkwipvdscnefdxtksqijiuzjtlelwjchlbfvetnmjtbaddocvrkmjgsimahbamhjfyqatrwnuqrpbwsbcevyvilviqlyiampgasfglulpzxmjmqdhgkxaiyzeuejyrzkhavmtamexagkljytbinsr' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:10:50.102" endtime="20200423 21:10:53.989"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:50.102" endtime="20200423 21:10:53.990"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:53.990" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:53.990" endtime="20200423 21:10:54.085"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:53.990" endtime="20200423 21:10:54.085"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:54.086" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:10:54.085" endtime="20200423 21:10:54.172"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:54.085" endtime="20200423 21:10:54.172"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:54.173" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:10:54.173" endtime="20200423 21:10:54.239"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:54.250" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:10:54.240" endtime="20200423 21:10:54.251"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:54.251" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:10:54.251" endtime="20200423 21:10:54.294"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:46.242" endtime="20200423 21:10:54.294"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:10:56.295" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:10:54.295" endtime="20200423 21:10:56.295"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:10:56.579" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:10:56.311" endtime="20200423 21:10:56.579"></status>
+</kw>
+<msg timestamp="20200423 21:10:56.580" level="FAIL">Page should not have contained text 'Task has been created'.</msg>
+<status status="FAIL" starttime="20200423 21:10:56.296" endtime="20200423 21:10:56.580"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:10:56.580" endtime="20200423 21:10:58.666"></status>
+</kw>
+<doc>Check ability to create new task with description over 1000 symbols</doc>
+<tags>
+<tag>create</tag>
+<tag>description</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:10:46.237" endtime="20200423 21:10:58.667" critical="yes">Page should not have contained text 'Task has been created'.</status>
+</test>
+<test id="s1-s2-t7" name="Create New Task With Start Date Before Today">
+<kw name="Get Date Yesterday">
+<doc>Get date of yesterday</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:58.678" level="INFO">${today} = 2020-04-23 21:10:58.678</msg>
+<status status="PASS" starttime="20200423 21:10:58.677" endtime="20200423 21:10:58.678"></status>
+</kw>
+<kw name="Subtract Time From Date" library="DateTime">
+<doc>Subtracts time from date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${yesterday}</var>
+</assign>
+<msg timestamp="20200423 21:10:58.680" level="INFO">${yesterday} = 22-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:58.679" endtime="20200423 21:10:58.680"></status>
+</kw>
+<msg timestamp="20200423 21:10:58.681" level="INFO">${start_date} = 22-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:58.676" endtime="20200423 21:10:58.681"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:10:58.683" level="INFO">${today} = 2020-04-23 21:10:58.683</msg>
+<status status="PASS" starttime="20200423 21:10:58.683" endtime="20200423 21:10:58.684"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:10:58.685" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:58.684" endtime="20200423 21:10:58.685"></status>
+</kw>
+<msg timestamp="20200423 21:10:58.685" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:10:58.682" endtime="20200423 21:10:58.685"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:10:58.688" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:10:58.688" endtime="20200423 21:11:02.331"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:58.687" endtime="20200423 21:11:02.331"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:02.332" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:02.331" endtime="20200423 21:11:02.433"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:02.434" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:02.434" endtime="20200423 21:11:02.537"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:02.433" endtime="20200423 21:11:02.537"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:02.538" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:02.538" endtime="20200423 21:11:02.674"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:02.538" endtime="20200423 21:11:02.674"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:02.674" level="INFO">Typing text '22-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:02.674" endtime="20200423 21:11:02.782"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:02.674" endtime="20200423 21:11:02.783"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:02.784" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:02.783" endtime="20200423 21:11:02.914"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:02.783" endtime="20200423 21:11:02.914"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:02.915" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:02.915" endtime="20200423 21:11:02.994"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:03.011" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:02.995" endtime="20200423 21:11:03.011"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:03.012" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:03.012" endtime="20200423 21:11:03.070"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:10:58.686" endtime="20200423 21:11:03.071"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:05.071" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:03.071" endtime="20200423 21:11:05.071"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:11:05.093" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:11:05.072" endtime="20200423 21:11:05.093"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:11:05.094" endtime="20200423 21:11:07.188"></status>
+</kw>
+<doc>Check ability to create new task with start date earlier than today</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>tasks</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:10:58.674" endtime="20200423 21:11:07.188" critical="yes"></status>
+</test>
+<test id="s1-s2-t8" name="Create New Task With End Date Before Start Date">
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:11:07.191" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:07.191" endtime="20200423 21:11:07.192"></status>
+</kw>
+<msg timestamp="20200423 21:11:07.192" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:07.191" endtime="20200423 21:11:07.192"></status>
+</kw>
+<kw name="Get Date Yesterday">
+<doc>Get date of yesterday</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:11:07.192" level="INFO">${today} = 2020-04-23 21:11:07.192</msg>
+<status status="PASS" starttime="20200423 21:11:07.192" endtime="20200423 21:11:07.192"></status>
+</kw>
+<kw name="Subtract Time From Date" library="DateTime">
+<doc>Subtracts time from date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${yesterday}</var>
+</assign>
+<msg timestamp="20200423 21:11:07.193" level="INFO">${yesterday} = 22-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:07.193" endtime="20200423 21:11:07.193"></status>
+</kw>
+<msg timestamp="20200423 21:11:07.193" level="INFO">${end_date} = 22-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:07.192" endtime="20200423 21:11:07.193"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:07.195" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:11:07.194" endtime="20200423 21:11:10.838"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:07.194" endtime="20200423 21:11:10.838"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:10.839" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:10.838" endtime="20200423 21:11:10.955"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:10.956" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:10.956" endtime="20200423 21:11:11.049"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:10.955" endtime="20200423 21:11:11.049"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:11.049" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:11.049" endtime="20200423 21:11:11.171"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:11.049" endtime="20200423 21:11:11.171"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:11.172" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:11.172" endtime="20200423 21:11:11.281"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:11.172" endtime="20200423 21:11:11.281"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:11.281" level="INFO">Typing text '22-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:11.281" endtime="20200423 21:11:11.374"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:11.281" endtime="20200423 21:11:11.374"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:11.375" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:11.375" endtime="20200423 21:11:11.437"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:11.454" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:11.438" endtime="20200423 21:11:11.454"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:11.454" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:11.454" endtime="20200423 21:11:11.500"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:07.194" endtime="20200423 21:11:11.500"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:13.502" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:11.501" endtime="20200423 21:11:13.502"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:11:13.523" level="INFO">Current page does not contain text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:11:13.503" endtime="20200423 21:11:13.523"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:11:13.524" endtime="20200423 21:11:15.606"></status>
+</kw>
+<doc>Check ability to create new task with end date earlier than start date</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>tasks</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:11:07.190" endtime="20200423 21:11:15.608" critical="yes"></status>
+</test>
+<test id="s1-s2-t9" name="Create New Task With No Start Date">
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:11:15.619" level="INFO">${today} = 2020-04-23 21:11:15.618</msg>
+<status status="PASS" starttime="20200423 21:11:15.618" endtime="20200423 21:11:15.619"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:11:15.621" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:15.619" endtime="20200423 21:11:15.621"></status>
+</kw>
+<msg timestamp="20200423 21:11:15.621" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:15.617" endtime="20200423 21:11:15.621"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>${Empty}</arg>
+<arg>${end_date}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:15.625" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:11:15.624" endtime="20200423 21:11:19.251"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:15.623" endtime="20200423 21:11:19.251"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.252" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.252" endtime="20200423 21:11:19.357"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.358" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.357" endtime="20200423 21:11:19.446"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:19.357" endtime="20200423 21:11:19.446"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.447" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.447" endtime="20200423 21:11:19.569"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:19.446" endtime="20200423 21:11:19.569"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.570" level="INFO">Typing text '' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.570" endtime="20200423 21:11:19.630"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:19.569" endtime="20200423 21:11:19.630"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.631" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.631" endtime="20200423 21:11:19.732"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:19.630" endtime="20200423 21:11:19.732"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.733" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:19.733" endtime="20200423 21:11:19.799"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.812" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.800" endtime="20200423 21:11:19.813"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:19.813" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:19.813" endtime="20200423 21:11:19.854"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:15.622" endtime="20200423 21:11:19.854"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:21.856" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:19.854" endtime="20200423 21:11:21.857"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:11:22.158" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:11:21.866" endtime="20200423 21:11:22.158"></status>
+</kw>
+<msg timestamp="20200423 21:11:22.159" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200423 21:11:21.858" endtime="20200423 21:11:22.160"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:11:22.160" endtime="20200423 21:11:24.249"></status>
+</kw>
+<doc>Check ability to create new task with empty start date</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:11:15.613" endtime="20200423 21:11:24.249" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s2-t10" name="Create New Task With No End Date">
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:11:24.252" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:24.251" endtime="20200423 21:11:24.252"></status>
+</kw>
+<msg timestamp="20200423 21:11:24.252" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:11:24.251" endtime="20200423 21:11:24.252"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${Empty}</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:24.253" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:11:24.253" endtime="20200423 21:11:27.841"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:24.252" endtime="20200423 21:11:27.841"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:27.841" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:27.841" endtime="20200423 21:11:27.969"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:27.970" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:27.970" endtime="20200423 21:11:28.065"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:27.970" endtime="20200423 21:11:28.065"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:28.066" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:28.065" endtime="20200423 21:11:28.180"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:28.065" endtime="20200423 21:11:28.180"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:28.181" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:28.180" endtime="20200423 21:11:28.287"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:28.180" endtime="20200423 21:11:28.287"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:28.288" level="INFO">Typing text '' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:28.288" endtime="20200423 21:11:28.346"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:28.287" endtime="20200423 21:11:28.346"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:28.347" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:28.346" endtime="20200423 21:11:28.413"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:28.425" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:28.413" endtime="20200423 21:11:28.425"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:28.425" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:28.425" endtime="20200423 21:11:28.463"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:24.252" endtime="20200423 21:11:28.463"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:30.465" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:28.464" endtime="20200423 21:11:30.465"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:11:30.768" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:11:30.468" endtime="20200423 21:11:30.769"></status>
+</kw>
+<msg timestamp="20200423 21:11:30.770" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200423 21:11:30.465" endtime="20200423 21:11:30.770"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:11:30.770" endtime="20200423 21:11:33.092"></status>
+</kw>
+<doc>Check ability to create new task with empty end date</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:11:24.250" endtime="20200423 21:11:33.093" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s2-t11" name="Create New Task Start Date February">
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>10-02-2021</arg>
+<arg>12-02-2021</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:33.096" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:11:33.096" endtime="20200423 21:11:36.695"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:33.096" endtime="20200423 21:11:36.695"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:36.695" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:36.695" endtime="20200423 21:11:36.801"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:36.802" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:36.802" endtime="20200423 21:11:36.892"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:36.801" endtime="20200423 21:11:36.893"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:36.893" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:36.893" endtime="20200423 21:11:37.010"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:36.893" endtime="20200423 21:11:37.010"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:37.011" level="INFO">Typing text '10-02-2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:37.010" endtime="20200423 21:11:37.111"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:37.010" endtime="20200423 21:11:37.111"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:37.112" level="INFO">Typing text '12-02-2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:37.112" endtime="20200423 21:11:37.205"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:37.111" endtime="20200423 21:11:37.205"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:37.205" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:37.205" endtime="20200423 21:11:37.271"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:37.287" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:37.272" endtime="20200423 21:11:37.287"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:37.287" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:37.287" endtime="20200423 21:11:37.346"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:33.095" endtime="20200423 21:11:37.347"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:39.348" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:37.347" endtime="20200423 21:11:39.348"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:11:39.379" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:11:39.351" endtime="20200423 21:11:39.380"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:39.380" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200423 21:11:39.380" endtime="20200423 21:11:39.461"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:41.463" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:39.461" endtime="20200423 21:11:41.463"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div/main/div/div[2]/div[4]/div/p[4]</arg>
+</arguments>
+<assign>
+<var>${date february}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:11:41.759" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:11:41.473" endtime="20200423 21:11:41.759"></status>
+</kw>
+<msg timestamp="20200423 21:11:41.760" level="FAIL">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[4]/div/p[4]' not found.</msg>
+<status status="FAIL" starttime="20200423 21:11:41.463" endtime="20200423 21:11:41.761"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:11:41.761" endtime="20200423 21:11:43.861"></status>
+</kw>
+<doc>Check if task with start date in february has end date + 7 days</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>february</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:11:33.095" endtime="20200423 21:11:43.861" critical="yes">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[4]/div/p[4]' not found.</status>
+</test>
+<test id="s1-s2-t12" name="Create New Task Start Date November">
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>10-11-2021</arg>
+<arg>13-11-2021</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:43.866" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:11:43.865" endtime="20200423 21:11:47.504"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:43.865" endtime="20200423 21:11:47.504"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:47.505" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:47.504" endtime="20200423 21:11:47.600"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:47.601" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:47.600" endtime="20200423 21:11:47.693"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:47.600" endtime="20200423 21:11:47.693"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:47.694" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:47.694" endtime="20200423 21:11:47.829"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:47.693" endtime="20200423 21:11:47.830"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:47.831" level="INFO">Typing text '10-11-2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:47.830" endtime="20200423 21:11:47.947"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:47.830" endtime="20200423 21:11:47.947"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:47.948" level="INFO">Typing text '13-11-2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:47.948" endtime="20200423 21:11:48.045"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:47.948" endtime="20200423 21:11:48.045"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:48.045" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:48.045" endtime="20200423 21:11:48.113"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:48.128" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:48.113" endtime="20200423 21:11:48.128"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:48.128" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:48.128" endtime="20200423 21:11:48.195"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:43.865" endtime="20200423 21:11:48.195"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:50.196" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:48.196" endtime="20200423 21:11:50.196"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:11:50.209" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:11:50.196" endtime="20200423 21:11:50.209"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:50.210" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200423 21:11:50.210" endtime="20200423 21:11:50.296"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:11:52.299" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:50.298" endtime="20200423 21:11:52.299"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div/main/div/div[2]/div[5]/div/p[4]</arg>
+</arguments>
+<assign>
+<var>${date february}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:11:52.566" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:11:52.308" endtime="20200423 21:11:52.566"></status>
+</kw>
+<msg timestamp="20200423 21:11:52.567" level="FAIL">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[5]/div/p[4]' not found.</msg>
+<status status="FAIL" starttime="20200423 21:11:52.299" endtime="20200423 21:11:52.567"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:11:52.567" endtime="20200423 21:11:54.690"></status>
+</kw>
+<doc>Check if task with start date in november has end on 31 of december</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>november</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:11:43.864" endtime="20200423 21:11:54.690" critical="yes">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[5]/div/p[4]' not found.</status>
+</test>
+<test id="s1-s2-t13" name="Create New Task Start Date December">
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>10-12-2021</arg>
+<arg>12-12-2021</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:54.693" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:11:54.693" endtime="20200423 21:11:58.295"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:54.692" endtime="20200423 21:11:58.295"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.296" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.296" endtime="20200423 21:11:58.402"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.403" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.403" endtime="20200423 21:11:58.490"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:58.402" endtime="20200423 21:11:58.491"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.491" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.491" endtime="20200423 21:11:58.613"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:58.491" endtime="20200423 21:11:58.613"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.614" level="INFO">Typing text '10-12-2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.613" endtime="20200423 21:11:58.715"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:58.613" endtime="20200423 21:11:58.715"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.716" level="INFO">Typing text '12-12-2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.715" endtime="20200423 21:11:58.804"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:58.715" endtime="20200423 21:11:58.805"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.805" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:11:58.805" endtime="20200423 21:11:58.868"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.884" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.868" endtime="20200423 21:11:58.884"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:11:58.884" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:11:58.884" endtime="20200423 21:11:58.930"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:11:54.692" endtime="20200423 21:11:58.931"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:00.933" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:11:58.931" endtime="20200423 21:12:00.933"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:12:00.946" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:12:00.933" endtime="20200423 21:12:00.946"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:00.946" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200423 21:12:00.946" endtime="20200423 21:12:01.023"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:03.026" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:01.024" endtime="20200423 21:12:03.026"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div/main/div/div[2]/div[6]/div/p[4]</arg>
+</arguments>
+<assign>
+<var>${date february}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:12:03.326" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:12:03.052" endtime="20200423 21:12:03.326"></status>
+</kw>
+<msg timestamp="20200423 21:12:03.327" level="FAIL">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[6]/div/p[4]' not found.</msg>
+<status status="FAIL" starttime="20200423 21:12:03.028" endtime="20200423 21:12:03.327"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:12:03.327" endtime="20200423 21:12:05.417"></status>
+</kw>
+<doc>Check if task with start date in december has end on 31 of decembe</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>december</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:11:54.691" endtime="20200423 21:12:05.419" critical="yes">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[6]/div/p[4]' not found.</status>
+</test>
+<test id="s1-s2-t14" name="Create New Task Start Date May">
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>10-05-2021</arg>
+<arg>12-05-2021</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:05.429" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:12:05.428" endtime="20200423 21:12:09.039"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:05.428" endtime="20200423 21:12:09.039"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.040" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.040" endtime="20200423 21:12:09.164"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.165" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.165" endtime="20200423 21:12:09.262"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:09.164" endtime="20200423 21:12:09.262"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.262" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.262" endtime="20200423 21:12:09.387"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:09.262" endtime="20200423 21:12:09.388"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.388" level="INFO">Typing text '10-05-2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.388" endtime="20200423 21:12:09.495"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:09.388" endtime="20200423 21:12:09.495"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.496" level="INFO">Typing text '12-05-2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.496" endtime="20200423 21:12:09.592"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:09.495" endtime="20200423 21:12:09.593"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.593" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:12:09.593" endtime="20200423 21:12:09.664"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.680" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.664" endtime="20200423 21:12:09.680"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:09.680" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:12:09.680" endtime="20200423 21:12:09.735"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:05.428" endtime="20200423 21:12:09.735"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:11.737" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:09.736" endtime="20200423 21:12:11.737"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200423 21:12:11.773" level="INFO">Current page contains text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200423 21:12:11.739" endtime="20200423 21:12:11.773"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:11.774" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200423 21:12:11.774" endtime="20200423 21:12:11.850"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:13.851" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:11.851" endtime="20200423 21:12:13.852"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div/main/div/div[2]/div[7]/div/p[4]</arg>
+</arguments>
+<assign>
+<var>${date february}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:12:14.129" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:12:13.875" endtime="20200423 21:12:14.129"></status>
+</kw>
+<msg timestamp="20200423 21:12:14.130" level="FAIL">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[7]/div/p[4]' not found.</msg>
+<status status="FAIL" starttime="20200423 21:12:13.854" endtime="20200423 21:12:14.130"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:12:14.130" endtime="20200423 21:12:16.220"></status>
+</kw>
+<doc>Check if task with start date in May has end date +15 days</doc>
+<tags>
+<tag>create</tag>
+<tag>date</tag>
+<tag>may</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:12:05.426" endtime="20200423 21:12:16.221" critical="yes">Element with locator 'xpath=//*[@id="root"]/div/div/main/div/div[2]/div[7]/div/p[4]' not found.</status>
+</test>
+<test id="s1-s2-t15" name="Create New Task Without Assignee">
+<kw name="Get Date Today">
+<doc>Get current date</doc>
+<assign>
+<var>${start_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:12:16.234" level="INFO">${today} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:12:16.234" endtime="20200423 21:12:16.235"></status>
+</kw>
+<msg timestamp="20200423 21:12:16.235" level="INFO">${start_date} = 23-04-2020</msg>
+<status status="PASS" starttime="20200423 21:12:16.233" endtime="20200423 21:12:16.235"></status>
+</kw>
+<kw name="Get Date Tomorrow">
+<doc>Get tomorrow date</doc>
+<assign>
+<var>${end_date}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200423 21:12:16.237" level="INFO">${today} = 2020-04-23 21:12:16.237</msg>
+<status status="PASS" starttime="20200423 21:12:16.237" endtime="20200423 21:12:16.237"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>${today}</arg>
+<arg>1day</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${tomorrow}</var>
+</assign>
+<msg timestamp="20200423 21:12:16.238" level="INFO">${tomorrow} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:12:16.238" endtime="20200423 21:12:16.239"></status>
+</kw>
+<msg timestamp="20200423 21:12:16.239" level="INFO">${end_date} = 24-04-2020</msg>
+<status status="PASS" starttime="20200423 21:12:16.236" endtime="20200423 21:12:16.239"></status>
+</kw>
+<kw name="Create Task">
+<doc>Create new task with given arguments</doc>
+<arguments>
+<arg>Test</arg>
+<arg>Automated Test</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>0</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:16.241" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:12:16.241" endtime="20200423 21:12:19.845"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:16.240" endtime="20200423 21:12:19.845"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Page}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:19.845" level="INFO">Clicking element '//a[@class="btn btn-sm btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:12:19.845" endtime="20200423 21:12:19.949"></status>
+</kw>
+<kw name="Fill Task Name">
+<arguments>
+<arg>${task name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:19.950" level="INFO">Typing text 'Test' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200423 21:12:19.950" endtime="20200423 21:12:20.043"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:19.949" endtime="20200423 21:12:20.043"></status>
+</kw>
+<kw name="Fill Description">
+<arguments>
+<arg>${task description}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:20.043" level="INFO">Typing text 'Automated Test' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200423 21:12:20.043" endtime="20200423 21:12:20.169"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:20.043" endtime="20200423 21:12:20.169"></status>
+</kw>
+<kw name="Fill Start Date">
+<arguments>
+<arg>${start date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start date}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:20.169" level="INFO">Typing text '23-04-2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200423 21:12:20.169" endtime="20200423 21:12:20.274"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:20.169" endtime="20200423 21:12:20.274"></status>
+</kw>
+<kw name="Fill End Date">
+<arguments>
+<arg>${end date}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end date}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:20.275" level="INFO">Typing text '24-04-2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200423 21:12:20.275" endtime="20200423 21:12:20.368"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:20.274" endtime="20200423 21:12:20.369"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${assignee}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:20.369" level="INFO">Selecting options from selection list 'name:assignee' by index 0.</msg>
+<status status="PASS" starttime="20200423 21:12:20.369" endtime="20200423 21:12:20.411"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:20.423" level="INFO">Current page contains text 'Kostya_Filippov'.</msg>
+<status status="PASS" starttime="20200423 21:12:20.411" endtime="20200423 21:12:20.423"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Create Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:20.423" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20200423 21:12:20.423" endtime="20200423 21:12:20.472"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:16.240" endtime="20200423 21:12:20.472"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:22.474" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:20.473" endtime="20200423 21:12:22.474"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been created</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200423 21:12:22.750" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 21:12:22.477" endtime="20200423 21:12:22.750"></status>
+</kw>
+<msg timestamp="20200423 21:12:22.751" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200423 21:12:22.474" endtime="20200423 21:12:22.751"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:12:22.751" endtime="20200423 21:12:25.089"></status>
+</kw>
+<doc>Check if task without assignee has status "created"</doc>
+<tags>
+<tag>assignee</tag>
+<tag>create</tag>
+<tag>created</tag>
+<tag>tasks</tag>
+</tags>
+<status status="FAIL" starttime="20200423 21:12:16.229" endtime="20200423 21:12:25.089" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<doc>Test tasks page of nexy task manager</doc>
+<status status="FAIL" starttime="20200423 21:10:05.627" endtime="20200423 21:12:25.093"></status>
+</suite>
+<suite id="s1-s3" name="03 Tasks Page Update Tasks" source="C:\Users\Pepega\Desktop\nx_bootcamp_proj2\nexy_task_manager\03_Tasks_Page_Update_Tasks.robot">
+<test id="s1-s3-t1" name="Change Status To Expired">
+<kw name="Change Status">
+<doc>Change status of task in dropdown list with status with given index</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:25.108" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:12:25.108" endtime="20200423 21:12:28.722"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:25.108" endtime="20200423 21:12:28.722"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:30.724" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:28.722" endtime="20200423 21:12:30.724"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Edit Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:30.726" level="INFO">Clicking element '//*[contains(text(),'Edit')]'.</msg>
+<status status="PASS" starttime="20200423 21:12:30.725" endtime="20200423 21:12:30.814"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:task_status</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:30.815" level="INFO">Selecting options from selection list 'name:task_status' by index 1.</msg>
+<status status="PASS" starttime="20200423 21:12:30.815" endtime="20200423 21:12:30.881"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Update Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:30.881" level="INFO">Clicking element '//*[contains(text(),'Update')]'.</msg>
+<status status="PASS" starttime="20200423 21:12:30.881" endtime="20200423 21:12:30.929"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:32.932" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:30.929" endtime="20200423 21:12:32.932"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been updated</arg>
+</arguments>
+<msg timestamp="20200423 21:12:32.944" level="INFO">Current page contains text 'Task has been updated'.</msg>
+<status status="PASS" starttime="20200423 21:12:32.932" endtime="20200423 21:12:32.944"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:25.107" endtime="20200423 21:12:32.944"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:12:32.945" endtime="20200423 21:12:35.035"></status>
+</kw>
+<doc>Check if it's possible to change task status to "Expired"</doc>
+<tags>
+<tag>status</tag>
+<tag>task</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:12:25.107" endtime="20200423 21:12:35.035" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Change Status To In Progress">
+<kw name="Change Status">
+<doc>Change status of task in dropdown list with status with given index</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:35.038" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:12:35.038" endtime="20200423 21:12:38.674"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:35.038" endtime="20200423 21:12:38.674"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:40.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:38.674" endtime="20200423 21:12:40.675"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Edit Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:40.675" level="INFO">Clicking element '//*[contains(text(),'Edit')]'.</msg>
+<status status="PASS" starttime="20200423 21:12:40.675" endtime="20200423 21:12:40.748"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:task_status</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:40.748" level="INFO">Selecting options from selection list 'name:task_status' by index 2.</msg>
+<status status="PASS" starttime="20200423 21:12:40.748" endtime="20200423 21:12:40.819"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Update Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:40.819" level="INFO">Clicking element '//*[contains(text(),'Update')]'.</msg>
+<status status="PASS" starttime="20200423 21:12:40.819" endtime="20200423 21:12:40.866"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:42.867" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:40.866" endtime="20200423 21:12:42.867"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been updated</arg>
+</arguments>
+<msg timestamp="20200423 21:12:42.880" level="INFO">Current page contains text 'Task has been updated'.</msg>
+<status status="PASS" starttime="20200423 21:12:42.867" endtime="20200423 21:12:42.880"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:35.037" endtime="20200423 21:12:42.880"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:12:42.881" endtime="20200423 21:12:44.971"></status>
+</kw>
+<doc>Check if it's possible to change task status to "In progress"</doc>
+<tags>
+<tag>status</tag>
+<tag>task</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:12:35.037" endtime="20200423 21:12:44.973" critical="yes"></status>
+</test>
+<test id="s1-s3-t3" name="Change Status To Waiting">
+<kw name="Change Status">
+<doc>Change status of task in dropdown list with status with given index</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:44.985" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:12:44.984" endtime="20200423 21:12:48.602"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:44.983" endtime="20200423 21:12:48.602"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:50.602" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:48.602" endtime="20200423 21:12:50.602"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Edit Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:50.602" level="INFO">Clicking element '//*[contains(text(),'Edit')]'.</msg>
+<status status="PASS" starttime="20200423 21:12:50.602" endtime="20200423 21:12:50.672"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:task_status</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:50.673" level="INFO">Selecting options from selection list 'name:task_status' by index 3.</msg>
+<status status="PASS" starttime="20200423 21:12:50.672" endtime="20200423 21:12:50.742"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Update Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:50.743" level="INFO">Clicking element '//*[contains(text(),'Update')]'.</msg>
+<status status="PASS" starttime="20200423 21:12:50.742" endtime="20200423 21:12:50.797"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:12:52.799" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:50.798" endtime="20200423 21:12:52.799"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been updated</arg>
+</arguments>
+<msg timestamp="20200423 21:12:52.833" level="INFO">Current page contains text 'Task has been updated'.</msg>
+<status status="PASS" starttime="20200423 21:12:52.800" endtime="20200423 21:12:52.833"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:44.981" endtime="20200423 21:12:52.833"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:12:52.833" endtime="20200423 21:12:54.910"></status>
+</kw>
+<doc>Check if it's possible to change task status to "Waiting"</doc>
+<tags>
+<tag>status</tag>
+<tag>task</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:12:44.978" endtime="20200423 21:12:54.910" critical="yes"></status>
+</test>
+<test id="s1-s3-t4" name="Change Status To Cancelled">
+<kw name="Change Status">
+<doc>Change status of task in dropdown list with status with given index</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:12:54.912" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:12:54.911" endtime="20200423 21:12:58.540"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:54.911" endtime="20200423 21:12:58.540"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:13:00.543" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:12:58.540" endtime="20200423 21:13:00.543"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Edit Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:00.543" level="INFO">Clicking element '//*[contains(text(),'Edit')]'.</msg>
+<status status="PASS" starttime="20200423 21:13:00.543" endtime="20200423 21:13:00.611"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:task_status</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:00.612" level="INFO">Selecting options from selection list 'name:task_status' by index 4.</msg>
+<status status="PASS" starttime="20200423 21:13:00.611" endtime="20200423 21:13:00.688"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Update Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:00.689" level="INFO">Clicking element '//*[contains(text(),'Update')]'.</msg>
+<status status="PASS" starttime="20200423 21:13:00.688" endtime="20200423 21:13:00.729"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:13:02.732" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:13:00.729" endtime="20200423 21:13:02.732"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been updated</arg>
+</arguments>
+<msg timestamp="20200423 21:13:02.744" level="INFO">Current page contains text 'Task has been updated'.</msg>
+<status status="PASS" starttime="20200423 21:13:02.732" endtime="20200423 21:13:02.744"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:12:54.911" endtime="20200423 21:13:02.744"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:13:02.744" endtime="20200423 21:13:04.835"></status>
+</kw>
+<doc>Check if it's possible to change task status to "Cancelled"</doc>
+<tags>
+<tag>status</tag>
+<tag>task</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:12:54.910" endtime="20200423 21:13:04.836" critical="yes"></status>
+</test>
+<test id="s1-s3-t5" name="Change Status To Closed">
+<kw name="Change Status">
+<doc>Change status of task in dropdown list with status with given index</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:04.847" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:13:04.846" endtime="20200423 21:13:08.524"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:13:04.844" endtime="20200423 21:13:08.524"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:13:10.525" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:13:08.524" endtime="20200423 21:13:10.525"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Edit Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:10.525" level="INFO">Clicking element '//*[contains(text(),'Edit')]'.</msg>
+<status status="PASS" starttime="20200423 21:13:10.525" endtime="20200423 21:13:10.599"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:task_status</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:10.599" level="INFO">Selecting options from selection list 'name:task_status' by index 5.</msg>
+<status status="PASS" starttime="20200423 21:13:10.599" endtime="20200423 21:13:10.679"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Update Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:10.679" level="INFO">Clicking element '//*[contains(text(),'Update')]'.</msg>
+<status status="PASS" starttime="20200423 21:13:10.679" endtime="20200423 21:13:10.721"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:13:12.722" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:13:10.721" endtime="20200423 21:13:12.722"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been updated</arg>
+</arguments>
+<msg timestamp="20200423 21:13:12.734" level="INFO">Current page contains text 'Task has been updated'.</msg>
+<status status="PASS" starttime="20200423 21:13:12.722" endtime="20200423 21:13:12.734"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:13:04.843" endtime="20200423 21:13:12.734"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:13:12.735" endtime="20200423 21:13:14.821"></status>
+</kw>
+<doc>Check if it's possible to change task status to "Close"</doc>
+<tags>
+<tag>status</tag>
+<tag>task</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:13:04.841" endtime="20200423 21:13:14.822" critical="yes"></status>
+</test>
+<test id="s1-s3-t6" name="Delete Task">
+<kw name="Open Tasks Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${tasks page url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:14.825" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200423 21:13:14.825" endtime="20200423 21:13:18.470"></status>
+</kw>
+<status status="PASS" starttime="20200423 21:13:14.824" endtime="20200423 21:13:18.470"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:13:20.472" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:13:18.471" endtime="20200423 21:13:20.472"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Delete Button}</arg>
+</arguments>
+<msg timestamp="20200423 21:13:20.476" level="INFO">Clicking element '//*[contains(text(),'Delete')]'.</msg>
+<status status="PASS" starttime="20200423 21:13:20.474" endtime="20200423 21:13:20.538"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200423 21:13:22.540" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 21:13:20.538" endtime="20200423 21:13:22.540"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Task has been deleted</arg>
+</arguments>
+<msg timestamp="20200423 21:13:22.553" level="INFO">Current page contains text 'Task has been deleted'.</msg>
+<status status="PASS" starttime="20200423 21:13:22.540" endtime="20200423 21:13:22.553"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200423 21:13:22.553" endtime="20200423 21:13:24.641"></status>
+</kw>
+<doc>Check if it's possible to delete task</doc>
+<tags>
+<tag>delete</tag>
+<tag>task</tag>
+</tags>
+<status status="PASS" starttime="20200423 21:13:14.824" endtime="20200423 21:13:24.641" critical="yes"></status>
+</test>
+<doc>Test editing on tasks page of nexy task manager</doc>
+<status status="PASS" starttime="20200423 21:12:25.101" endtime="20200423 21:13:24.649"></status>
+</suite>
+<doc>Nexy Task Manager Test Suit</doc>
+<status status="FAIL" starttime="20200423 21:09:36.523" endtime="20200423 21:13:24.663"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="15" fail="10">Critical Tests</stat>
+<stat pass="15" fail="10">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">assignee</stat>
+<stat pass="5" fail="9">create</stat>
+<stat pass="0" fail="1">created</stat>
+<stat pass="2" fail="6">date</stat>
+<stat pass="0" fail="1">december</stat>
+<stat pass="1" fail="0">delete</stat>
+<stat pass="0" fail="1">description</stat>
+<stat pass="3" fail="0">empty</stat>
+<stat pass="0" fail="1">february</stat>
+<stat pass="0" fail="1">may</stat>
+<stat pass="0" fail="1">name</stat>
+<stat pass="0" fail="1">november</stat>
+<stat pass="5" fail="0">status</stat>
+<stat pass="6" fail="0">task</stat>
+<stat pass="6" fail="9">tasks</stat>
+<stat pass="1" fail="1">title</stat>
+<stat pass="3" fail="1">user</stat>
+</tag>
+<suite>
+<stat pass="15" fail="10" id="s1" name="Nexy Task Manager">Nexy Task Manager</stat>
+<stat pass="3" fail="1" id="s1-s1" name="01 Users Page">Nexy Task Manager.01 Users Page</stat>
+<stat pass="6" fail="9" id="s1-s2" name="02 Create Task Tasks Page">Nexy Task Manager.02 Create Task Tasks Page</stat>
+<stat pass="6" fail="0" id="s1-s3" name="03 Tasks Page Update Tasks">Nexy Task Manager.03 Tasks Page Update Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
