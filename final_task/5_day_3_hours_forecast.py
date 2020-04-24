@@ -6,7 +6,7 @@ owm = pyowm.OWM(api_key)
 
 def api_list_of_citys_2():
 	with open("D:/Robot/final_task/city.list.json", "r", encoding='utf-8') as read_file:
-		json_object = json.load(read_file)[0:29]
+		json_object = json.load(read_file)[0:30]
 	list_of_citys_id = []
 	for city_id in json_object:
 		list_of_citys_id.append(city_id["id"])
