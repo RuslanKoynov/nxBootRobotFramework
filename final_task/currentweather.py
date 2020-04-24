@@ -7,7 +7,7 @@ owm = pyowm.OWM(api_key)
 
 def api_list_of_citys():
 	with open("D:/Robot/final_task/city.list.json", "r", encoding='utf-8') as read_file:
-		json_object = json.load(read_file)[0:199] #чтение 200 городов из списка
+		json_object = json.load(read_file)[0:200] #чтение 200 городов из списка
 	#api_link = "http://api.openweathermap.org/data/2.5/weather?"
 	#api_key = "a0529df520ec195c2f2c28b653271404"
 	list_of_citys_id = []
