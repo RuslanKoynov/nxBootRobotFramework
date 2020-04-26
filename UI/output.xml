@@ -1,0 +1,3075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200427 01:59:20.405" rpa="false">
+<suite id="s1" name="UI" source="C:\Users\kulso\PycharmProjects\nexign\task_manager_auto\UI">
+<suite id="s1-s1" name="01 Interface" source="C:\Users\kulso\PycharmProjects\nexign\task_manager_auto\UI\01_interface.robot">
+<test id="s1-s1-t1" name="Task Window">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>${url1}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:20.700" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200427 01:59:20.700" endtime="20200427 01:59:24.777"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:20.699" endtime="20200427 01:59:24.777"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 01:59:24.778" endtime="20200427 01:59:26.929"></status>
+</kw>
+<kw name="Element Visibility">
+<kw name="Header" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Task Manager Tool</arg>
+</arguments>
+<msg timestamp="20200427 01:59:26.935" level="INFO">Page title is 'Task Manager Tool'.</msg>
+<status status="PASS" starttime="20200427 01:59:26.930" endtime="20200427 01:59:26.935"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:26.929" endtime="20200427 01:59:26.935"></status>
+</kw>
+<kw name="Task Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[1]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:26.957" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="1dfa067d-70e9-4d23-b256-298db5be81f8")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:26.935" endtime="20200427 01:59:26.957"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:26.980" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="1dfa067d-70e9-4d23-b256-298db5be81f8")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:26.957" endtime="20200427 01:59:26.981"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:26.981" endtime="20200427 01:59:27.006"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Tasks</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.006" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="1dfa067d-70e9-4d23-b256-298db5be81f8")&gt;' contains exact text 'Tasks'.</msg>
+<status status="PASS" starttime="20200427 01:59:27.006" endtime="20200427 01:59:27.025"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:26.935" endtime="20200427 01:59:27.025"></status>
+</kw>
+<kw name="User Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[2]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:27.042" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="bc9ce8dd-4a01-4e7a-b922-2b38733958f0")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:27.025" endtime="20200427 01:59:27.042"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.066" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="bc9ce8dd-4a01-4e7a-b922-2b38733958f0")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:27.043" endtime="20200427 01:59:27.067"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:27.067" endtime="20200427 01:59:27.090"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Users</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.091" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="bc9ce8dd-4a01-4e7a-b922-2b38733958f0")&gt;' contains exact text 'Users'.</msg>
+<status status="PASS" starttime="20200427 01:59:27.091" endtime="20200427 01:59:27.109"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:27.025" endtime="20200427 01:59:27.109"></status>
+</kw>
+<kw name="Button" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:27.126" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="7af19aab-10f6-4316-a0c0-5bc658d14629")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:27.110" endtime="20200427 01:59:27.126"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.145" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="7af19aab-10f6-4316-a0c0-5bc658d14629")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:27.126" endtime="20200427 01:59:27.146"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:27.146" endtime="20200427 01:59:27.177"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Create</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.178" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="7af19aab-10f6-4316-a0c0-5bc658d14629")&gt;' contains exact text 'Create'.</msg>
+<status status="PASS" starttime="20200427 01:59:27.177" endtime="20200427 01:59:27.202"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:27.110" endtime="20200427 01:59:27.203"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:26.929" endtime="20200427 01:59:27.203"></status>
+</kw>
+<kw name="Tasks Title Visibility" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>tag:h2</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20200427 01:59:27.225" level="INFO">${title} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="75537da5-8f06-4b8e-b11c-f15ce4e630ea")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:27.205" endtime="20200427 01:59:27.225"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>tag:h2</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.257" level="INFO">Element 'tag:h2' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:27.225" endtime="20200427 01:59:27.258"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>Tasks</arg>
+</arguments>
+<msg timestamp="20200427 01:59:27.258" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="6eb303661740afa8b75e177ee11882f6", element="75537da5-8f06-4b8e-b11c-f15ce4e630ea")&gt;' contains exact text 'Tasks'.</msg>
+<status status="PASS" starttime="20200427 01:59:27.258" endtime="20200427 01:59:27.281"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:27.203" endtime="20200427 01:59:27.281"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 01:59:27.283" endtime="20200427 01:59:29.421"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:20.698" endtime="20200427 01:59:29.423" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="User Window">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>${url2}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:29.431" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200427 01:59:29.430" endtime="20200427 01:59:33.286"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:29.429" endtime="20200427 01:59:33.287"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 01:59:33.287" endtime="20200427 01:59:35.438"></status>
+</kw>
+<kw name="Element Visibility">
+<kw name="Header" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Task Manager Tool</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.449" level="INFO">Page title is 'Task Manager Tool'.</msg>
+<status status="PASS" starttime="20200427 01:59:35.440" endtime="20200427 01:59:35.449"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:35.439" endtime="20200427 01:59:35.450"></status>
+</kw>
+<kw name="Task Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[1]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:35.468" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="c5d71d8f-fa6e-4948-abad-a6794e0e85e2")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:35.450" endtime="20200427 01:59:35.468"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.496" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="c5d71d8f-fa6e-4948-abad-a6794e0e85e2")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:35.468" endtime="20200427 01:59:35.496"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:35.496" endtime="20200427 01:59:35.527"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Tasks</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.527" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="c5d71d8f-fa6e-4948-abad-a6794e0e85e2")&gt;' contains exact text 'Tasks'.</msg>
+<status status="PASS" starttime="20200427 01:59:35.527" endtime="20200427 01:59:35.546"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:35.450" endtime="20200427 01:59:35.546"></status>
+</kw>
+<kw name="User Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[2]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:35.568" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="8b33e0dd-5f08-4e51-ad6c-16b6a21beb3d")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:35.547" endtime="20200427 01:59:35.568"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.592" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="8b33e0dd-5f08-4e51-ad6c-16b6a21beb3d")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:35.568" endtime="20200427 01:59:35.593"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:35.593" endtime="20200427 01:59:35.613"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Users</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.614" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="8b33e0dd-5f08-4e51-ad6c-16b6a21beb3d")&gt;' contains exact text 'Users'.</msg>
+<status status="PASS" starttime="20200427 01:59:35.614" endtime="20200427 01:59:35.638"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:35.546" endtime="20200427 01:59:35.638"></status>
+</kw>
+<kw name="Button" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:35.663" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="462eb565-9efa-436b-9bb3-0eea79f31ff6")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:35.639" endtime="20200427 01:59:35.663"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.683" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="462eb565-9efa-436b-9bb3-0eea79f31ff6")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:35.663" endtime="20200427 01:59:35.684"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:35.684" endtime="20200427 01:59:35.713"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Create</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.714" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="462eb565-9efa-436b-9bb3-0eea79f31ff6")&gt;' contains exact text 'Create'.</msg>
+<status status="PASS" starttime="20200427 01:59:35.713" endtime="20200427 01:59:35.737"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:35.638" endtime="20200427 01:59:35.738"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:35.439" endtime="20200427 01:59:35.738"></status>
+</kw>
+<kw name="Users Title Visibility" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>tag:h2</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20200427 01:59:35.760" level="INFO">${title} = &lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="48d13cfb-4e52-4655-8c0e-0c818f0ad8ee")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:35.739" endtime="20200427 01:59:35.760"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.781" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="48d13cfb-4e52-4655-8c0e-0c818f0ad8ee")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 01:59:35.760" endtime="20200427 01:59:35.781"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>Users</arg>
+</arguments>
+<msg timestamp="20200427 01:59:35.782" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="48d13cfb-4e52-4655-8c0e-0c818f0ad8ee")&gt;' contains exact text 'Users'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 01:59:36.236" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:35.805" endtime="20200427 01:59:36.236"></status>
+</kw>
+<msg timestamp="20200427 01:59:36.237" level="FAIL">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="48d13cfb-4e52-4655-8c0e-0c818f0ad8ee")&gt;' should have been 'Users' but it was 'Tasks'.</msg>
+<status status="FAIL" starttime="20200427 01:59:35.781" endtime="20200427 01:59:36.237"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:35.739" endtime="20200427 01:59:36.237"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 01:59:36.238" endtime="20200427 01:59:38.380"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:29.427" endtime="20200427 01:59:38.382" critical="yes">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="230eb9a3ce191c8c5fa5f3ee01542629", element="48d13cfb-4e52-4655-8c0e-0c818f0ad8ee")&gt;' should have been 'Users' but it was 'Tasks'.</status>
+</test>
+<test id="s1-s1-t3" name="Task Window Size Adaptability">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>${url1}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:38.391" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200427 01:59:38.390" endtime="20200427 01:59:42.270"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:38.388" endtime="20200427 01:59:42.270"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>600</arg>
+<arg>600</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:42.271" endtime="20200427 01:59:44.389"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200427 01:59:46.390" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200427 01:59:44.390" endtime="20200427 01:59:46.390"></status>
+</kw>
+<kw name="Element Visibility">
+<kw name="Header" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Task Manager Tool</arg>
+</arguments>
+<msg timestamp="20200427 01:59:46.402" level="INFO">Page title is 'Task Manager Tool'.</msg>
+<status status="PASS" starttime="20200427 01:59:46.392" endtime="20200427 01:59:46.402"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:46.392" endtime="20200427 01:59:46.402"></status>
+</kw>
+<kw name="Task Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[1]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:46.427" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="63010ad6dd066ebc4c5dbf22fe1c676d", element="38a02a02-a3b4-4b5d-9020-b5077cd9cad9")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:46.403" endtime="20200427 01:59:46.427"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 01:59:46.740" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:46.455" endtime="20200427 01:59:46.740"></status>
+</kw>
+<msg timestamp="20200427 01:59:46.741" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="63010ad6dd066ebc4c5dbf22fe1c676d", element="38a02a02-a3b4-4b5d-9020-b5077cd9cad9")&gt;' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20200427 01:59:46.427" endtime="20200427 01:59:46.741"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:46.402" endtime="20200427 01:59:46.741"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:46.391" endtime="20200427 01:59:46.741"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 01:59:46.743" endtime="20200427 01:59:48.847"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:38.386" endtime="20200427 01:59:48.849" critical="yes">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="63010ad6dd066ebc4c5dbf22fe1c676d", element="38a02a02-a3b4-4b5d-9020-b5077cd9cad9")&gt;' should be visible, but it is not.</status>
+</test>
+<test id="s1-s1-t4" name="User Window Size Adaptability">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>${url2}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:48.859" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200427 01:59:48.858" endtime="20200427 01:59:52.896"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:48.857" endtime="20200427 01:59:52.896"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>600</arg>
+<arg>600</arg>
+</arguments>
+<status status="PASS" starttime="20200427 01:59:52.897" endtime="20200427 01:59:55.023"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200427 01:59:57.025" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200427 01:59:55.024" endtime="20200427 01:59:57.025"></status>
+</kw>
+<kw name="Element Visibility">
+<kw name="Header" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Task Manager Tool</arg>
+</arguments>
+<msg timestamp="20200427 01:59:57.038" level="INFO">Page title is 'Task Manager Tool'.</msg>
+<status status="PASS" starttime="20200427 01:59:57.027" endtime="20200427 01:59:57.038"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:57.027" endtime="20200427 01:59:57.038"></status>
+</kw>
+<kw name="Task Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[1]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 01:59:57.063" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="db192f5df48d088f6ebba17d9eeaf9f9", element="6f4bc2fc-9c6e-4798-a2c2-15741ef4e476")&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:57.040" endtime="20200427 01:59:57.063"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 01:59:57.370" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 01:59:57.090" endtime="20200427 01:59:57.370"></status>
+</kw>
+<msg timestamp="20200427 01:59:57.370" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="db192f5df48d088f6ebba17d9eeaf9f9", element="6f4bc2fc-9c6e-4798-a2c2-15741ef4e476")&gt;' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20200427 01:59:57.063" endtime="20200427 01:59:57.370"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:57.038" endtime="20200427 01:59:57.371"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:57.026" endtime="20200427 01:59:57.371"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 01:59:57.372" endtime="20200427 01:59:59.469"></status>
+</kw>
+<status status="FAIL" starttime="20200427 01:59:48.853" endtime="20200427 01:59:59.471" critical="yes">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="db192f5df48d088f6ebba17d9eeaf9f9", element="6f4bc2fc-9c6e-4798-a2c2-15741ef4e476")&gt;' should be visible, but it is not.</status>
+</test>
+<test id="s1-s1-t5" name="Go To User Creation Page">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>${url2}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 01:59:59.480" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users'.</msg>
+<status status="PASS" starttime="20200427 01:59:59.479" endtime="20200427 02:00:03.325"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:59.477" endtime="20200427 02:00:03.325"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:03.326" endtime="20200427 02:00:05.451"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:05.472" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:05.470" endtime="20200427 02:00:05.606"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${names}</var>
+</assign>
+<msg timestamp="20200427 02:00:05.615" level="INFO">${names} = http://localhost:3000/users/create</msg>
+<status status="PASS" starttime="20200427 02:00:05.608" endtime="20200427 02:00:05.615"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${names}</arg>
+<arg>http://localhost:3000/users/create</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:05.616" endtime="20200427 02:00:05.617"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:00:05.617" endtime="20200427 02:00:07.746"></status>
+</kw>
+<status status="PASS" starttime="20200427 01:59:59.476" endtime="20200427 02:00:07.747" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="Go To Task Creation Page">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>${url1}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:07.752" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks'.</msg>
+<status status="PASS" starttime="20200427 02:00:07.751" endtime="20200427 02:00:11.789"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:07.751" endtime="20200427 02:00:11.790"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:11.790" endtime="20200427 02:00:13.915"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:13.916" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:13.916" endtime="20200427 02:00:14.045"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${names}</var>
+</assign>
+<msg timestamp="20200427 02:00:14.054" level="INFO">${names} = http://localhost:3000/tasks/create</msg>
+<status status="PASS" starttime="20200427 02:00:14.045" endtime="20200427 02:00:14.054"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${names}</arg>
+<arg>http://localhost:3000/tasks/create</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:14.054" endtime="20200427 02:00:14.056"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:00:14.056" endtime="20200427 02:00:16.188"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:07.750" endtime="20200427 02:00:16.189" critical="yes"></status>
+</test>
+<test id="s1-s1-t7" name="Create User Window">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>http://localhost:3000/users/create</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:16.198" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users/create'.</msg>
+<status status="PASS" starttime="20200427 02:00:16.197" endtime="20200427 02:00:20.072"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:16.195" endtime="20200427 02:00:20.072"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:20.072" endtime="20200427 02:00:22.202"></status>
+</kw>
+<kw name="Element Visibility">
+<kw name="Header" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Task Manager Tool</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.217" level="INFO">Page title is 'Task Manager Tool'.</msg>
+<status status="PASS" starttime="20200427 02:00:22.205" endtime="20200427 02:00:22.217"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:22.203" endtime="20200427 02:00:22.217"></status>
+</kw>
+<kw name="Task Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[1]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 02:00:22.238" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="be19f381-86cd-4508-b5a3-81272a31cd36")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:22.217" endtime="20200427 02:00:22.238"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.262" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="be19f381-86cd-4508-b5a3-81272a31cd36")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:22.238" endtime="20200427 02:00:22.262"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:22.262" endtime="20200427 02:00:22.287"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Tasks</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.288" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="be19f381-86cd-4508-b5a3-81272a31cd36")&gt;' contains exact text 'Tasks'.</msg>
+<status status="PASS" starttime="20200427 02:00:22.287" endtime="20200427 02:00:22.311"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:22.217" endtime="20200427 02:00:22.311"></status>
+</kw>
+<kw name="User Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[2]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 02:00:22.332" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="07e720fc-f929-424e-b99e-d1966d352052")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:22.312" endtime="20200427 02:00:22.332"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.351" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="07e720fc-f929-424e-b99e-d1966d352052")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:22.332" endtime="20200427 02:00:22.352"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:22.352" endtime="20200427 02:00:22.371"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Users</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.372" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="07e720fc-f929-424e-b99e-d1966d352052")&gt;' contains exact text 'Users'.</msg>
+<status status="PASS" starttime="20200427 02:00:22.371" endtime="20200427 02:00:22.389"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:22.312" endtime="20200427 02:00:22.389"></status>
+</kw>
+<kw name="Button" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 02:00:22.407" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="49180c31-3158-469d-8f90-0fdb29de4d6c")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:22.391" endtime="20200427 02:00:22.407"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.420" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="49180c31-3158-469d-8f90-0fdb29de4d6c")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:22.407" endtime="20200427 02:00:22.420"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:22.420" endtime="20200427 02:00:22.439"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Create</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.439" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="49180c31-3158-469d-8f90-0fdb29de4d6c")&gt;' contains exact text 'Create'.</msg>
+<status status="PASS" starttime="20200427 02:00:22.439" endtime="20200427 02:00:22.455"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:22.389" endtime="20200427 02:00:22.455"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:22.203" endtime="20200427 02:00:22.455"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>tag:h2</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20200427 02:00:22.468" level="INFO">${title} = &lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="99254158-4e12-4b56-88a2-365b3e3ddc86")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:22.456" endtime="20200427 02:00:22.468"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.481" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="99254158-4e12-4b56-88a2-365b3e3ddc86")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:22.469" endtime="20200427 02:00:22.481"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>Create user</arg>
+</arguments>
+<msg timestamp="20200427 02:00:22.482" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="3d47e61851301970ed89d7cf4c423c9a", element="99254158-4e12-4b56-88a2-365b3e3ddc86")&gt;' contains exact text 'Create user'.</msg>
+<status status="PASS" starttime="20200427 02:00:22.481" endtime="20200427 02:00:22.497"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:00:22.498" endtime="20200427 02:00:24.629"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:16.194" endtime="20200427 02:00:24.631" critical="yes"></status>
+</test>
+<test id="s1-s1-t8" name="Create Task Window">
+<kw name="Open Browser Keyword">
+<arguments>
+<arg>http://localhost:3000/tasks/create</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:24.638" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks/create'.</msg>
+<status status="PASS" starttime="20200427 02:00:24.637" endtime="20200427 02:00:28.545"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:24.636" endtime="20200427 02:00:28.545"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:28.547" endtime="20200427 02:00:30.672"></status>
+</kw>
+<kw name="Element Visibility">
+<kw name="Header" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Task Manager Tool</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.683" level="INFO">Page title is 'Task Manager Tool'.</msg>
+<status status="PASS" starttime="20200427 02:00:30.674" endtime="20200427 02:00:30.683"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:30.673" endtime="20200427 02:00:30.685"></status>
+</kw>
+<kw name="Task Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[1]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 02:00:30.706" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="ab9d7bc0-689c-4306-bcb6-acb34e4ec0d5")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:30.687" endtime="20200427 02:00:30.706"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.728" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="ab9d7bc0-689c-4306-bcb6-acb34e4ec0d5")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:30.706" endtime="20200427 02:00:30.728"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:30.729" endtime="20200427 02:00:30.754"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Tasks</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.755" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="ab9d7bc0-689c-4306-bcb6-acb34e4ec0d5")&gt;' contains exact text 'Tasks'.</msg>
+<status status="PASS" starttime="20200427 02:00:30.755" endtime="20200427 02:00:30.780"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:30.686" endtime="20200427 02:00:30.780"></status>
+</kw>
+<kw name="User Link" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="root"]/div/div/nav/div/ul/li[2]/a</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 02:00:30.805" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="1e191406-1757-4edb-96c2-057bc0270156")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:30.781" endtime="20200427 02:00:30.805"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.831" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="1e191406-1757-4edb-96c2-057bc0270156")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:30.805" endtime="20200427 02:00:30.831"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:30.831" endtime="20200427 02:00:30.850"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Users</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.851" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="1e191406-1757-4edb-96c2-057bc0270156")&gt;' contains exact text 'Users'.</msg>
+<status status="PASS" starttime="20200427 02:00:30.850" endtime="20200427 02:00:30.866"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:30.780" endtime="20200427 02:00:30.866"></status>
+</kw>
+<kw name="Button" library="resource">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<msg timestamp="20200427 02:00:30.879" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="d79b7557-4dd8-495b-86c2-ca461742ca30")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:30.867" endtime="20200427 02:00:30.879"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.892" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="d79b7557-4dd8-495b-86c2-ca461742ca30")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:30.879" endtime="20200427 02:00:30.892"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:30.892" endtime="20200427 02:00:30.910"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${link}</arg>
+<arg>Create</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.910" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="d79b7557-4dd8-495b-86c2-ca461742ca30")&gt;' contains exact text 'Create'.</msg>
+<status status="PASS" starttime="20200427 02:00:30.910" endtime="20200427 02:00:30.925"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:30.866" endtime="20200427 02:00:30.925"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:30.673" endtime="20200427 02:00:30.926"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>tag:h2</arg>
+</arguments>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20200427 02:00:30.939" level="INFO">${title} = &lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="5c98b1d1-482b-443f-a335-7d5871b421ca")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:30.926" endtime="20200427 02:00:30.939"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.952" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="5c98b1d1-482b-443f-a335-7d5871b421ca")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20200427 02:00:30.939" endtime="20200427 02:00:30.952"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>Create task</arg>
+</arguments>
+<msg timestamp="20200427 02:00:30.953" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="363bd34ae7ac29560a421fd7c907af0f", element="5c98b1d1-482b-443f-a335-7d5871b421ca")&gt;' contains exact text 'Create task'.</msg>
+<status status="PASS" starttime="20200427 02:00:30.953" endtime="20200427 02:00:30.969"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:00:30.970" endtime="20200427 02:00:33.090"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:24.635" endtime="20200427 02:00:33.092" critical="yes"></status>
+</test>
+<doc>Проверка доступности основных элементов интерфейса</doc>
+<status status="FAIL" starttime="20200427 01:59:20.441" endtime="20200427 02:00:33.097"></status>
+</suite>
+<suite id="s1-s2" name="02 Users" source="C:\Users\kulso\PycharmProjects\nexign\task_manager_auto\UI\02_users.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/users/create</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200427 02:00:33.128" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/users/create'.</msg>
+<status status="PASS" starttime="20200427 02:00:33.127" endtime="20200427 02:00:37.018"></status>
+</kw>
+<test id="s1-s2-t1" name="Register User With Valid Name">
+<kw name="User Registration Keyword" library="resource">
+<tags>
+<tag>registration</tag>
+<tag>user</tag>
+</tags>
+<arguments>
+<arg>Иван Иванов</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:37.022" endtime="20200427 02:00:39.147"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:39.148" level="INFO">Typing text 'Иван Иванов' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200427 02:00:39.148" endtime="20200427 02:00:39.370"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:39.371" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:39.371" endtime="20200427 02:00:39.437"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:37.021" endtime="20200427 02:00:39.437"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:00:40.438" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:00:39.438" endtime="20200427 02:00:40.438"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:00:40.474" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1898ec29e3af51780a156d9dad3ab598", element="d8c7ce72-7224-4703-bfba-37f680bff6a0")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:40.440" endtime="20200427 02:00:40.474"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:00:40.475" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1898ec29e3af51780a156d9dad3ab598", element="d8c7ce72-7224-4703-bfba-37f680bff6a0")&gt;' contains exact text 'User has been created'.</msg>
+<status status="PASS" starttime="20200427 02:00:40.475" endtime="20200427 02:00:40.498"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:37.019" endtime="20200427 02:00:40.498" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Register User With Invalid Name">
+<kw name="User Registration Keyword" library="resource">
+<tags>
+<tag>registration</tag>
+<tag>user</tag>
+</tags>
+<arguments>
+<arg>@#&amp;.</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:40.502" endtime="20200427 02:00:40.510"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:40.510" level="INFO">Typing text '@#&amp;.' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200427 02:00:40.510" endtime="20200427 02:00:40.614"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:40.615" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:40.615" endtime="20200427 02:00:40.672"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:40.501" endtime="20200427 02:00:40.672"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:00:41.673" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:00:40.673" endtime="20200427 02:00:41.673"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:00:41.685" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1898ec29e3af51780a156d9dad3ab598", element="d8c7ce72-7224-4703-bfba-37f680bff6a0")&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:41.674" endtime="20200427 02:00:41.685"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>User has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:00:41.688" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1898ec29e3af51780a156d9dad3ab598", element="d8c7ce72-7224-4703-bfba-37f680bff6a0")&gt;' does not contain exact text 'User has been created'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:00:42.086" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:41.698" endtime="20200427 02:00:42.086"></status>
+</kw>
+<msg timestamp="20200427 02:00:42.087" level="FAIL">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1898ec29e3af51780a156d9dad3ab598", element="d8c7ce72-7224-4703-bfba-37f680bff6a0")&gt;' was not supposed to be 'User has been created'.</msg>
+<status status="FAIL" starttime="20200427 02:00:41.687" endtime="20200427 02:00:42.088"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:00:40.500" endtime="20200427 02:00:42.089" critical="yes">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1898ec29e3af51780a156d9dad3ab598", element="d8c7ce72-7224-4703-bfba-37f680bff6a0")&gt;' was not supposed to be 'User has been created'.</status>
+</test>
+<test id="s1-s2-t3" name="Register User With Empty Name">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:42.092" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:42.092" endtime="20200427 02:00:42.144"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:00:43.147" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:00:42.145" endtime="20200427 02:00:43.148"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>Please fill user name</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:00:43.149" endtime="20200427 02:00:43.164"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:42.091" endtime="20200427 02:00:43.166" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Register User With Space Name">
+<kw name="User Registration Keyword" library="resource">
+<tags>
+<tag>registration</tag>
+<tag>user</tag>
+</tags>
+<arguments>
+<arg>${space}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:43.177" endtime="20200427 02:00:43.186"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:user_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:43.187" level="INFO">Typing text ' ' into text field 'name:user_name'.</msg>
+<status status="PASS" starttime="20200427 02:00:43.186" endtime="20200427 02:00:43.265"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:43.266" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:43.266" endtime="20200427 02:00:43.323"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:43.175" endtime="20200427 02:00:43.323"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:00:44.324" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:00:43.324" endtime="20200427 02:00:44.324"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>Please fill user name</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:00:49.770" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:00:49.391" endtime="20200427 02:00:49.770"></status>
+</kw>
+<msg timestamp="20200427 02:00:49.771" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20200427 02:00:44.326" endtime="20200427 02:00:49.772"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:00:43.172" endtime="20200427 02:00:49.772" critical="yes">Alert not found in 5 seconds.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:00:49.775" endtime="20200427 02:00:51.923"></status>
+</kw>
+<doc>Примеры проверки регистрации пользователя с различными значениями имени</doc>
+<status status="FAIL" starttime="20200427 02:00:33.111" endtime="20200427 02:00:51.924"></status>
+</suite>
+<suite id="s1-s3" name="03 Tasks Name" source="C:\Users\kulso\PycharmProjects\nexign\task_manager_auto\UI\03_tasks_name.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks/create</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200427 02:00:51.955" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks/create'.</msg>
+<status status="PASS" starttime="20200427 02:00:51.954" endtime="20200427 02:00:55.977"></status>
+</kw>
+<test id="s1-s3-t1" name="Register Task With Valid Data">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:00:55.980" endtime="20200427 02:00:58.125"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:58.125" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:00:58.125" endtime="20200427 02:00:58.322"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:58.322" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:00:58.322" endtime="20200427 02:00:58.567"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:58.568" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:00:58.567" endtime="20200427 02:00:58.771"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:58.772" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:00:58.772" endtime="20200427 02:00:58.915"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:00:58.915" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:00:58.915" endtime="20200427 02:00:59.026"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:00:59.027" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:00:59.026" endtime="20200427 02:00:59.123"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:55.979" endtime="20200427 02:00:59.124"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:00.126" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:00:59.125" endtime="20200427 02:01:00.126"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:01:00.155" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1a75e7a95a9efaa5738c375674f500d3", element="8e66f874-3a44-43b8-b1a6-2469e7519ef9")&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:00.127" endtime="20200427 02:01:00.155"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:01:00.155" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1a75e7a95a9efaa5738c375674f500d3", element="8e66f874-3a44-43b8-b1a6-2469e7519ef9")&gt;' contains exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:01:00.155" endtime="20200427 02:01:00.192"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:00:55.978" endtime="20200427 02:01:00.192" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Register Task With Empty Fields">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:00.196" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:00.195" endtime="20200427 02:01:00.246"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:01.250" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:00.247" endtime="20200427 02:01:01.250"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>Please fill all form data</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:01:01.251" endtime="20200427 02:01:01.257"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:00.194" endtime="20200427 02:01:01.258" critical="yes"></status>
+</test>
+<test id="s1-s3-t3" name="Register Task With More Than 250 Symbols In Name">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex</arg>
+<arg>${task_description}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:01.263" endtime="20200427 02:01:01.270"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:01.271" level="INFO">Typing text 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:01.270" endtime="20200427 02:01:02.849"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:02.850" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:02.849" endtime="20200427 02:01:03.007"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:03.007" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:03.007" endtime="20200427 02:01:03.119"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:03.120" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:03.119" endtime="20200427 02:01:03.226"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:03.226" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:03.226" endtime="20200427 02:01:03.295"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:03.295" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:03.295" endtime="20200427 02:01:03.358"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:01.261" endtime="20200427 02:01:03.358"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:04.360" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:03.359" endtime="20200427 02:01:04.360"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:01:04.372" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1a75e7a95a9efaa5738c375674f500d3", element="8e66f874-3a44-43b8-b1a6-2469e7519ef9")&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:04.361" endtime="20200427 02:01:04.372"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:01:04.373" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1a75e7a95a9efaa5738c375674f500d3", element="8e66f874-3a44-43b8-b1a6-2469e7519ef9")&gt;' does not contain exact text 'Task has been created'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:04.760" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:04.382" endtime="20200427 02:01:04.760"></status>
+</kw>
+<msg timestamp="20200427 02:01:04.760" level="FAIL">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1a75e7a95a9efaa5738c375674f500d3", element="8e66f874-3a44-43b8-b1a6-2469e7519ef9")&gt;' was not supposed to be 'Task has been created'.</msg>
+<status status="FAIL" starttime="20200427 02:01:04.373" endtime="20200427 02:01:04.760"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:01.260" endtime="20200427 02:01:04.761" critical="yes">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1a75e7a95a9efaa5738c375674f500d3", element="8e66f874-3a44-43b8-b1a6-2469e7519ef9")&gt;' was not supposed to be 'Task has been created'.</status>
+</test>
+<test id="s1-s3-t4" name="Register Task With Empty Name">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${empty}</arg>
+<arg>${task_description}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:04.764" endtime="20200427 02:01:04.769"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:04.769" level="INFO">Typing text '' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:04.769" endtime="20200427 02:01:04.831"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:04.832" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:04.831" endtime="20200427 02:01:04.994"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:04.995" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:04.994" endtime="20200427 02:01:05.106"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:05.106" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:05.106" endtime="20200427 02:01:05.217"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:05.217" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:05.217" endtime="20200427 02:01:05.286"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:05.287" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:05.286" endtime="20200427 02:01:05.328"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:04.763" endtime="20200427 02:01:05.328"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:06.330" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:05.328" endtime="20200427 02:01:06.330"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:06.755" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:06.341" endtime="20200427 02:01:06.755"></status>
+</kw>
+<msg timestamp="20200427 02:01:06.759" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200427 02:01:06.332" endtime="20200427 02:01:06.759"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:04.763" endtime="20200427 02:01:06.760" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s3-t5" name="Register Task With Space Name">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${space}</arg>
+<arg>${task_description}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:06.764" endtime="20200427 02:01:06.771"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:06.771" level="INFO">Typing text ' ' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:06.771" endtime="20200427 02:01:06.877"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:06.878" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:06.878" endtime="20200427 02:01:07.069"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:07.069" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:07.069" endtime="20200427 02:01:07.186"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:07.187" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:07.187" endtime="20200427 02:01:07.313"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:07.313" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:07.313" endtime="20200427 02:01:07.391"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:07.392" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:07.392" endtime="20200427 02:01:07.455"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:06.764" endtime="20200427 02:01:07.456"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:08.459" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:07.457" endtime="20200427 02:01:08.459"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>Please fill all form data</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:13.918" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-63.png"&gt;&lt;img src="selenium-screenshot-63.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:13.523" endtime="20200427 02:01:13.918"></status>
+</kw>
+<msg timestamp="20200427 02:01:13.919" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20200427 02:01:08.461" endtime="20200427 02:01:13.919"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:06.763" endtime="20200427 02:01:13.920" critical="yes">Alert not found in 5 seconds.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:01:13.923" endtime="20200427 02:01:16.062"></status>
+</kw>
+<doc>Примеры регистрации задачи с различными вариантами заполнения названия.</doc>
+<status status="FAIL" starttime="20200427 02:00:51.935" endtime="20200427 02:01:16.062"></status>
+</suite>
+<suite id="s1-s4" name="04 Task Description" source="C:\Users\kulso\PycharmProjects\nexign\task_manager_auto\UI\04_task_description.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks/create</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200427 02:01:16.095" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks/create'.</msg>
+<status status="PASS" starttime="20200427 02:01:16.094" endtime="20200427 02:01:20.237"></status>
+</kw>
+<test id="s1-s4-t1" name="More Than 1000 Symbols In Description">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:20.240" endtime="20200427 02:01:22.363"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:22.363" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:22.363" endtime="20200427 02:01:22.557"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:22.558" level="INFO">Typing text 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:22.558" endtime="20200427 02:01:28.456"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:28.457" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:28.456" endtime="20200427 02:01:28.632"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:28.633" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:28.633" endtime="20200427 02:01:28.805"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:28.805" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:28.805" endtime="20200427 02:01:28.957"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:28.958" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:28.958" endtime="20200427 02:01:29.035"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:20.239" endtime="20200427 02:01:29.035"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:30.037" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:29.036" endtime="20200427 02:01:30.037"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:01:30.078" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ef51729a03bbf548a743a7f07e64e32c", element="dad4fa59-2097-464e-af6e-254cbfd594e2")&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:30.039" endtime="20200427 02:01:30.078"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:01:30.081" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef51729a03bbf548a743a7f07e64e32c", element="dad4fa59-2097-464e-af6e-254cbfd594e2")&gt;' does not contain exact text 'Task has been created'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:30.510" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:30.106" endtime="20200427 02:01:30.510"></status>
+</kw>
+<msg timestamp="20200427 02:01:30.510" level="FAIL">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef51729a03bbf548a743a7f07e64e32c", element="dad4fa59-2097-464e-af6e-254cbfd594e2")&gt;' was not supposed to be 'Task has been created'.</msg>
+<status status="FAIL" starttime="20200427 02:01:30.080" endtime="20200427 02:01:30.511"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:20.238" endtime="20200427 02:01:30.512" critical="yes">The text of element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef51729a03bbf548a743a7f07e64e32c", element="dad4fa59-2097-464e-af6e-254cbfd594e2")&gt;' was not supposed to be 'Task has been created'.</status>
+</test>
+<test id="s1-s4-t2" name="Empty Description">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${empty}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:30.515" endtime="20200427 02:01:30.521"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:30.522" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:30.521" endtime="20200427 02:01:30.692"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:30.693" level="INFO">Typing text '' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:30.692" endtime="20200427 02:01:30.790"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:30.791" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:30.791" endtime="20200427 02:01:30.906"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:30.907" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:30.906" endtime="20200427 02:01:31.078"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:31.078" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:31.078" endtime="20200427 02:01:31.194"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:31.195" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:31.195" endtime="20200427 02:01:31.263"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:30.514" endtime="20200427 02:01:31.263"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.266" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:31.264" endtime="20200427 02:01:32.266"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>Please fill all form data</arg>
+</arguments>
+<status status="PASS" starttime="20200427 02:01:32.268" endtime="20200427 02:01:32.282"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:30.514" endtime="20200427 02:01:32.283" critical="yes"></status>
+</test>
+<test id="s1-s4-t3" name="Space Description">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${space}</arg>
+<arg>${start_date}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:32.292" endtime="20200427 02:01:32.306"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.307" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:32.306" endtime="20200427 02:01:32.489"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.490" level="INFO">Typing text ' ' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:32.489" endtime="20200427 02:01:32.611"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.612" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:32.612" endtime="20200427 02:01:32.746"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.746" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:32.746" endtime="20200427 02:01:32.881"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.881" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:32.881" endtime="20200427 02:01:32.933"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:32.934" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:32.933" endtime="20200427 02:01:33.017"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:32.290" endtime="20200427 02:01:33.017"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:34.019" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:33.018" endtime="20200427 02:01:34.019"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>Please fill all form data</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:39.497" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:39.082" endtime="20200427 02:01:39.497"></status>
+</kw>
+<msg timestamp="20200427 02:01:39.498" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20200427 02:01:34.020" endtime="20200427 02:01:39.498"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:32.287" endtime="20200427 02:01:39.499" critical="yes">Alert not found in 5 seconds.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:01:39.503" endtime="20200427 02:01:41.633"></status>
+</kw>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20200427 02:01:16.075" endtime="20200427 02:01:41.633"></status>
+</suite>
+<suite id="s1-s5" name="05 Task Date" source="C:\Users\kulso\PycharmProjects\nexign\task_manager_auto\UI\05_task_date.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks/create</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200427 02:01:41.663" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/tasks/create'.</msg>
+<status status="PASS" starttime="20200427 02:01:41.662" endtime="20200427 02:01:45.629"></status>
+</kw>
+<test id="s1-s5-t1" name="Empty Start Date">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>${empty}</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:45.631" endtime="20200427 02:01:47.778"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:47.778" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:47.778" endtime="20200427 02:01:47.997"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:47.998" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:47.998" endtime="20200427 02:01:48.205"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:48.206" level="INFO">Typing text '' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:48.205" endtime="20200427 02:01:48.299"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:48.300" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:48.299" endtime="20200427 02:01:48.452"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:48.453" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:48.452" endtime="20200427 02:01:48.559"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:48.560" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:48.559" endtime="20200427 02:01:48.628"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:45.630" endtime="20200427 02:01:48.628"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:49.630" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:48.629" endtime="20200427 02:01:49.631"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:50.007" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:49.634" endtime="20200427 02:01:50.007"></status>
+</kw>
+<msg timestamp="20200427 02:01:50.008" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200427 02:01:49.631" endtime="20200427 02:01:50.008"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:45.629" endtime="20200427 02:01:50.008" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s5-t2" name="Invalid Date">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>51.40.2020</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:50.012" endtime="20200427 02:01:50.016"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:50.017" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:50.017" endtime="20200427 02:01:50.149"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:50.150" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:50.150" endtime="20200427 02:01:50.319"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:50.320" level="INFO">Typing text '51.40.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:50.319" endtime="20200427 02:01:50.428"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:50.428" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:50.428" endtime="20200427 02:01:50.541"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:50.542" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:50.542" endtime="20200427 02:01:50.591"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:50.592" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:50.591" endtime="20200427 02:01:50.648"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:50.011" endtime="20200427 02:01:50.649"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:51.652" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:50.650" endtime="20200427 02:01:51.652"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:01:51.667" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="f8ff05d2-c8fc-4bfc-a5f1-583d1efe8ded")&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:51.653" endtime="20200427 02:01:51.667"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:01:51.668" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="f8ff05d2-c8fc-4bfc-a5f1-583d1efe8ded")&gt;' does not contain exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:01:51.668" endtime="20200427 02:01:51.683"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:50.010" endtime="20200427 02:01:51.683" critical="yes"></status>
+</test>
+<test id="s1-s5-t3" name="Start Date Before Current Date">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>01.01.2020</arg>
+<arg>${end_date}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:51.686" endtime="20200427 02:01:51.690"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:51.691" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:51.691" endtime="20200427 02:01:51.800"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:51.800" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:51.800" endtime="20200427 02:01:51.967"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:51.967" level="INFO">Typing text '01.01.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:51.967" endtime="20200427 02:01:52.077"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:52.078" level="INFO">Typing text '03.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:52.077" endtime="20200427 02:01:52.196"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:52.197" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:52.196" endtime="20200427 02:01:52.274"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:52.274" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:52.274" endtime="20200427 02:01:52.332"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:51.685" endtime="20200427 02:01:52.332"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:53.333" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:52.333" endtime="20200427 02:01:53.333"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:01:53.358" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="f8ff05d2-c8fc-4bfc-a5f1-583d1efe8ded")&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:53.335" endtime="20200427 02:01:53.358"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:01:53.360" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="f8ff05d2-c8fc-4bfc-a5f1-583d1efe8ded")&gt;' does not contain exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:01:53.360" endtime="20200427 02:01:53.384"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:51.685" endtime="20200427 02:01:53.385" critical="yes"></status>
+</test>
+<test id="s1-s5-t4" name="Start Date After End Date">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>31.12.2020</arg>
+<arg>30.12.2020</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:53.391" endtime="20200427 02:01:53.399"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:53.400" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:53.399" endtime="20200427 02:01:53.547"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:53.548" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:53.547" endtime="20200427 02:01:53.751"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:53.752" level="INFO">Typing text '31.12.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:53.751" endtime="20200427 02:01:53.916"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:53.917" level="INFO">Typing text '30.12.2020' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:53.916" endtime="20200427 02:01:54.085"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:54.086" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:54.085" endtime="20200427 02:01:54.200"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:54.200" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:54.200" endtime="20200427 02:01:54.257"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:53.390" endtime="20200427 02:01:54.257"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.259" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:54.258" endtime="20200427 02:01:55.259"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:01:55.283" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="f8ff05d2-c8fc-4bfc-a5f1-583d1efe8ded")&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:55.260" endtime="20200427 02:01:55.283"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.286" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="f8ff05d2-c8fc-4bfc-a5f1-583d1efe8ded")&gt;' does not contain exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:01:55.285" endtime="20200427 02:01:55.310"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:53.388" endtime="20200427 02:01:55.312" critical="yes"></status>
+</test>
+<test id="s1-s5-t5" name="Empty End Date">
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>${start_date}</arg>
+<arg>${empty}</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:55.321" endtime="20200427 02:01:55.334"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.335" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:55.334" endtime="20200427 02:01:55.469"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.469" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:55.469" endtime="20200427 02:01:55.668"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.669" level="INFO">Typing text '03.09.2020' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:55.668" endtime="20200427 02:01:55.810"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.811" level="INFO">Typing text '' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:55.811" endtime="20200427 02:01:55.907"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:55.907" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:55.907" endtime="20200427 02:01:56.028"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:56.028" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:56.028" endtime="20200427 02:01:56.072"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:55.319" endtime="20200427 02:01:56.072"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:57.074" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:56.073" endtime="20200427 02:01:57.074"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:01:57.521" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:01:57.080" endtime="20200427 02:01:57.521"></status>
+</kw>
+<msg timestamp="20200427 02:01:57.522" level="FAIL">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</msg>
+<status status="FAIL" starttime="20200427 02:01:57.075" endtime="20200427 02:01:57.522"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:01:55.317" endtime="20200427 02:01:57.523" critical="yes">UnexpectedAlertPresentException: Alert Text: Please fill all form data
+Message: unexpected alert open: {Alert text : Please fill all form data}
+  (Session info: chrome=81.0.4044.122)
+</status>
+</test>
+<test id="s1-s5-t6" name="Start In February">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:01:58.528" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:01:57.528" endtime="20200427 02:01:58.528"></status>
+</kw>
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>01.02.2021</arg>
+<arg>10.02.2021</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:01:58.532" endtime="20200427 02:01:58.544"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:58.545" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:01:58.544" endtime="20200427 02:01:58.696"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:58.697" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:01:58.697" endtime="20200427 02:01:58.889"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:58.889" level="INFO">Typing text '01.02.2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:58.889" endtime="20200427 02:01:59.021"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:59.022" level="INFO">Typing text '10.02.2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:01:59.021" endtime="20200427 02:01:59.131"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:01:59.132" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:01:59.132" endtime="20200427 02:01:59.203"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:01:59.204" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:01:59.203" endtime="20200427 02:01:59.280"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:58.530" endtime="20200427 02:01:59.280"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200427 02:02:01.283" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200427 02:01:59.281" endtime="20200427 02:02:01.283"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:02:01.307" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="ad4f88bc-c363-449c-8315-144a7cbc4456")&gt;</msg>
+<status status="PASS" starttime="20200427 02:02:01.285" endtime="20200427 02:02:01.307"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:02:01.309" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="ad4f88bc-c363-449c-8315-144a7cbc4456")&gt;' contains exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:02:01.308" endtime="20200427 02:02:01.347"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks</arg>
+</arguments>
+<msg timestamp="20200427 02:02:01.349" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200427 02:02:01.349" endtime="20200427 02:02:01.824"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>class:card</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200427 02:02:01.865" level="INFO">${date} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="9410c3fd-41ab-4214-ad8d-542849bb9f23")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20200427 02:02:01.825" endtime="20200427 02:02:01.865"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${date}[-1]</arg>
+<arg>2021-02-01 - 2021-02-17</arg>
+</arguments>
+<msg timestamp="20200427 02:02:01.891" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="b3b53a98-f2f6-45b9-b497-dccff1a34f75")&gt;' contains text '2021-02-01 - 2021-02-17'.</msg>
+<status status="PASS" starttime="20200427 02:02:01.868" endtime="20200427 02:02:01.891"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary" type="teardown">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200427 02:02:01.892" endtime="20200427 02:02:01.991"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:01:57.526" endtime="20200427 02:02:01.993" critical="yes"></status>
+</test>
+<test id="s1-s5-t7" name="Start In May">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:02:02.999" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:02:01.996" endtime="20200427 02:02:02.999"></status>
+</kw>
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>01.05.2021</arg>
+<arg>10.05.2021</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:02:03.002" endtime="20200427 02:02:03.015"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:03.016" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:02:03.015" endtime="20200427 02:02:03.227"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:03.227" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:02:03.227" endtime="20200427 02:02:03.498"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:03.499" level="INFO">Typing text '01.05.2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:02:03.499" endtime="20200427 02:02:03.711"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:03.712" level="INFO">Typing text '10.05.2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:02:03.712" endtime="20200427 02:02:03.921"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:03.922" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:02:03.921" endtime="20200427 02:02:04.065"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:02:04.066" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:02:04.065" endtime="20200427 02:02:04.143"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:02:03.000" endtime="20200427 02:02:04.143"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200427 02:02:06.145" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200427 02:02:04.144" endtime="20200427 02:02:06.145"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:02:06.171" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="8d849202-7064-4dbc-bba9-d25fe32a6357")&gt;</msg>
+<status status="PASS" starttime="20200427 02:02:06.148" endtime="20200427 02:02:06.171"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:02:06.173" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="8d849202-7064-4dbc-bba9-d25fe32a6357")&gt;' contains exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:02:06.172" endtime="20200427 02:02:06.208"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks</arg>
+</arguments>
+<msg timestamp="20200427 02:02:06.209" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200427 02:02:06.208" endtime="20200427 02:02:06.311"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>class:card</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200427 02:02:06.343" level="INFO">${date} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="a19887d3-19d3-493b-83cd-64c86caf52ad")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20200427 02:02:06.311" endtime="20200427 02:02:06.343"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${date}[-1]</arg>
+<arg>2021-05-01 - 2021-05-25</arg>
+</arguments>
+<msg timestamp="20200427 02:02:06.370" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="325fe483-bd28-4d66-b87b-b4df7ecbc142")&gt;' contains text '2021-05-01 - 2021-05-25'.</msg>
+<status status="PASS" starttime="20200427 02:02:06.345" endtime="20200427 02:02:06.371"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary" type="teardown">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200427 02:02:06.374" endtime="20200427 02:02:06.465"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:02:01.996" endtime="20200427 02:02:06.466" critical="yes"></status>
+</test>
+<test id="s1-s5-t8" name="Start In November">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:02:07.470" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:02:06.469" endtime="20200427 02:02:07.470"></status>
+</kw>
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>01.11.2021</arg>
+<arg>10.11.2021</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:02:07.473" endtime="20200427 02:02:07.485"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:07.486" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:02:07.486" endtime="20200427 02:02:07.713"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:07.714" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:02:07.713" endtime="20200427 02:02:07.917"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:07.917" level="INFO">Typing text '01.11.2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:02:07.917" endtime="20200427 02:02:08.116"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:08.117" level="INFO">Typing text '10.11.2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:02:08.116" endtime="20200427 02:02:08.322"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:08.322" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:02:08.322" endtime="20200427 02:02:08.437"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:02:08.438" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:02:08.438" endtime="20200427 02:02:08.504"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:02:07.472" endtime="20200427 02:02:08.504"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200427 02:02:10.505" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200427 02:02:08.504" endtime="20200427 02:02:10.505"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:02:10.518" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="39bf67d5-a470-4f24-896d-7d8de6aec45f")&gt;</msg>
+<status status="PASS" starttime="20200427 02:02:10.506" endtime="20200427 02:02:10.518"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:02:10.519" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="39bf67d5-a470-4f24-896d-7d8de6aec45f")&gt;' contains exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:02:10.519" endtime="20200427 02:02:10.538"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks</arg>
+</arguments>
+<msg timestamp="20200427 02:02:10.539" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200427 02:02:10.539" endtime="20200427 02:02:10.655"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>class:card</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200427 02:02:10.673" level="INFO">${date} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="cc06707c-d232-46db-9273-be29eb0cb7a6")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20200427 02:02:10.656" endtime="20200427 02:02:10.673"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${date}[-1]</arg>
+<arg>2021-11-01 - 2021-12-31</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200427 02:02:11.224" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200427 02:02:10.706" endtime="20200427 02:02:11.225"></status>
+</kw>
+<msg timestamp="20200427 02:02:11.225" level="FAIL">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="ee603020-c3b9-4b9f-8ebc-627f1e0ec994")&gt;' should have contained text '2021-11-01 - 2021-12-31' but its text was 'Иван Иванов
+task one
+this is task one
+2021-11-01 - 2021-11-10
+Assigned
+Edit
+Delete'.</msg>
+<status status="FAIL" starttime="20200427 02:02:10.675" endtime="20200427 02:02:11.226"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary" type="teardown">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200427 02:02:11.227" endtime="20200427 02:02:11.335"></status>
+</kw>
+<status status="FAIL" starttime="20200427 02:02:06.468" endtime="20200427 02:02:11.337" critical="yes">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="ee603020-c3b9-4b9f-8ebc-627f1e0ec994")&gt;' should have contained text '2021-11-01 - 2021-12-31' but its text was 'Иван Иванов
+task one
+this is task one
+2021-11-01 - 2021-11-10
+Assigned
+Edit
+Delete'.</status>
+</test>
+<test id="s1-s5-t9" name="Start In December">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200427 02:02:12.343" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200427 02:02:11.341" endtime="20200427 02:02:12.343"></status>
+</kw>
+<kw name="Tasks Registration Keyword" library="resource">
+<arguments>
+<arg>${task_name}</arg>
+<arg>${task_description}</arg>
+<arg>01.12.2021</arg>
+<arg>10.12.2021</arg>
+<arg>${label}</arg>
+</arguments>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200427 02:02:12.346" endtime="20200427 02:02:12.359"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:task_name</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:12.360" level="INFO">Typing text 'task one' into text field 'name:task_name'.</msg>
+<status status="PASS" starttime="20200427 02:02:12.360" endtime="20200427 02:02:12.517"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:12.519" level="INFO">Typing text 'this is task one' into text field 'name:description'.</msg>
+<status status="PASS" starttime="20200427 02:02:12.517" endtime="20200427 02:02:12.746"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:start_date</arg>
+<arg>${start}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:12.747" level="INFO">Typing text '01.12.2021' into text field 'name:start_date'.</msg>
+<status status="PASS" starttime="20200427 02:02:12.746" endtime="20200427 02:02:12.882"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:end_date</arg>
+<arg>${end}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:12.882" level="INFO">Typing text '10.12.2021' into text field 'name:end_date'.</msg>
+<status status="PASS" starttime="20200427 02:02:12.882" endtime="20200427 02:02:13.050"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:assignee</arg>
+<arg>${label}</arg>
+</arguments>
+<msg timestamp="20200427 02:02:13.050" level="INFO">Selecting options from selection list 'name:assignee' by index 1.</msg>
+<status status="PASS" starttime="20200427 02:02:13.050" endtime="20200427 02:02:13.145"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:btn</arg>
+</arguments>
+<msg timestamp="20200427 02:02:13.146" level="INFO">Clicking element 'class:btn'.</msg>
+<status status="PASS" starttime="20200427 02:02:13.145" endtime="20200427 02:02:13.218"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:02:12.345" endtime="20200427 02:02:13.218"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200427 02:02:15.222" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200427 02:02:13.219" endtime="20200427 02:02:15.222"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>class:alert</arg>
+</arguments>
+<assign>
+<var>${alert}</var>
+</assign>
+<msg timestamp="20200427 02:02:15.246" level="INFO">${alert} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="98145a43-8d85-4972-8ce2-cbe9d0a40dc8")&gt;</msg>
+<status status="PASS" starttime="20200427 02:02:15.224" endtime="20200427 02:02:15.246"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${alert}</arg>
+<arg>Task has been created</arg>
+</arguments>
+<msg timestamp="20200427 02:02:15.249" level="INFO">Verifying element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="98145a43-8d85-4972-8ce2-cbe9d0a40dc8")&gt;' contains exact text 'Task has been created'.</msg>
+<status status="PASS" starttime="20200427 02:02:15.247" endtime="20200427 02:02:15.282"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://localhost:3000/tasks</arg>
+</arguments>
+<msg timestamp="20200427 02:02:15.282" level="INFO">Opening url 'http://localhost:3000/tasks'</msg>
+<status status="PASS" starttime="20200427 02:02:15.282" endtime="20200427 02:02:15.371"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>class:card</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200427 02:02:15.403" level="INFO">${date} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="327a5d77-d7e0-4ca4-a3ad-42e1a84e0653")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20200427 02:02:15.371" endtime="20200427 02:02:15.403"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${date}[-1]</arg>
+<arg>2021-12-01 - 2021-12-31</arg>
+</arguments>
+<msg timestamp="20200427 02:02:15.426" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ab79b4cdbee078aa9a6ce092857a0d9c", element="6916a953-71dc-4310-a352-4c1235a637e0")&gt;' contains text '2021-12-01 - 2021-12-31'.</msg>
+<status status="PASS" starttime="20200427 02:02:15.404" endtime="20200427 02:02:15.426"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary" type="teardown">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200427 02:02:15.427" endtime="20200427 02:02:15.508"></status>
+</kw>
+<status status="PASS" starttime="20200427 02:02:11.340" endtime="20200427 02:02:15.509" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200427 02:02:15.513" endtime="20200427 02:02:17.657"></status>
+</kw>
+<doc>Проверка ввода данных даты начала и окончания задачи.</doc>
+<status status="FAIL" starttime="20200427 02:01:41.643" endtime="20200427 02:02:17.658"></status>
+</suite>
+<status status="FAIL" starttime="20200427 01:59:20.407" endtime="20200427 02:02:17.683"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="13">Critical Tests</stat>
+<stat pass="16" fail="13">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="16" fail="13" id="s1" name="UI">UI</stat>
+<stat pass="5" fail="3" id="s1-s1" name="01 Interface">UI.01 Interface</stat>
+<stat pass="2" fail="2" id="s1-s2" name="02 Users">UI.02 Users</stat>
+<stat pass="2" fail="3" id="s1-s3" name="03 Tasks Name">UI.03 Tasks Name</stat>
+<stat pass="1" fail="2" id="s1-s4" name="04 Task Description">UI.04 Task Description</stat>
+<stat pass="6" fail="3" id="s1-s5" name="05 Task Date">UI.05 Task Date</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
